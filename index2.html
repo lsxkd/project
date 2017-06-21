@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>店铺详情(实体店)</title>
+	<link rel="stylesheet" href="css/shop_style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/shop_decor.js"></script>
+	<script type="text/javascript" src="js/maps.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=34lczXtIwLp5RoLXkEqqXVvT"></script>
+	<script>
+	$(function(){
+
+		//图片上传预览
+		$("#upload_imgs").change(function(){
+			var objUrl = getObjectURL(this.files[0]) ;
+			//console.log("objUrl = "+objUrl) ;
+			if (objUrl) {
+				$(".shop_fors").attr("src", objUrl);
+				$(".shop_titless").html("修改")
+			}
+		}) ;
+		//图片上传预览
+	})	
+	//图片上传预览
+	//建立一個可存取到該file的url
+	function getObjectURL(file) {
+		var url = null ; 
+		if (window.createObjectURL!=undefined) { // basic
+			url = window.createObjectURL(file) ;
+		} else if (window.URL!=undefined) { // mozilla(firefox)
+			url = window.URL.createObjectURL(file) ;
+		} else if (window.webkitURL!=undefined) { // webkit or chrome
+			url = window.webkitURL.createObjectURL(file) ;
+		}
+		return url ;
+	}//图片上传预览
+	</script>
+</head>
+<body>
+	<div style="width:840px;margin:0 auto;">
+		<div class="shop_decor">
+			<div class="shop_decor_cls">
+				<div class="shop_decor_left" style="min-height:20px;">
+					<div class="decor_left_wrap">
+						<div class="shop_details_box">
+							<!-- 店招图片  start -->
+							<div class="shop_details_item">
+								<h2>店招图<em>*</em></h2>
+								<div class="details_item_upload">
+									<div class="details_item_upload_img">
+										<img class="shop_fors" src="images/img_2.jpg" alt="">
+									</div>
+									<label class="details_item_upload_label" for="upload_imgs">
+										<a class="details_item_upload_btn" href="javascript:void(0);">
+											<span class="shop_titless">点击上传</span>
+											<input id="upload_imgs" type="file">
+										</a>
+										
+									</label>
+								</div>
+							</div>
+							<!-- 店招图片  end -->
+							<!-- 人均消费  start -->
+							<div class="shop_details_item">
+								<h2>人均消费<em>*</em></h2>
+								<div class="details_item_expense">
+									<span class="expense_input">
+										<input type="text" placeholder="0.0">
+									</span>
+									<span>元/人</span>
+								</div>
+							</div>
+							<!-- 人均消费  end -->
+							<!-- 店铺位置  start -->
+							<div class="shop_details_item">
+								<h2>店铺位置<em>*</em></h2>
+								<div class="details_item_expense">
+									<span class="expense_input">
+										<input type="text" id="address">
+										<input type="hidden" id="lat">
+										<input type="hidden" id="lng">
+									</span>
+								</div>
+								<div class="shop_details_item_maps">
+									<div class="" id="allmap" style="position:fixed;top:0;right:0;width:100%;height:100%;"></div>
+								</div>
+							</div>
+							<!-- 店铺位置  end -->
+							<!-- 营业时间  start -->
+							<div class="shop_details_item">
+								<h2>营业时间</h2>
+								<div class="details_item_expense">
+									<div class="date_weeks">
+										<span class="date_weeks_w">
+											<select name="" id="">
+												<option value="0">周一</option>
+												<option value="1">周二</option>
+												<option value="2">周三</option>
+												<option value="3">周四</option>
+												<option value="4">周五</option>
+												<option value="5">周六</option>
+												<option value="6">周日</option>
+											</select>
+											<em>至</em>
+											<select name="" id="">
+												<option value="0">周一</option>
+												<option value="1">周二</option>
+												<option value="2">周三</option>
+												<option value="3">周四</option>
+												<option value="4">周五</option>
+												<option value="5">周六</option>
+												<option value="6">周日</option>
+											</select>
+										</span>
+
+										<span class="date_weeks_t">
+											<span class="date_weeks_t_start">00:00</span>
+											<em>至</em>
+											<span class="date_weeks_t_end">00:00</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- 营业时间  end -->
+							<!-- 店铺实景/商品  start -->
+							<div class="shop_details_item">
+								<h2>店铺实景/商品</h2>
+								<div class="details_item_goods">
+									<!-- 上传图片 重复区  start -->
+									<div class="goods_item">
+										<div class="goods_item_img">
+											<img src="images/default_bg_icon.jpg" alt="请上传图片">
+											<!-- <span class="goods_item_img_tips">请上传图片</span> -->
+										</div>
+										<a href="javascript:void(0);" class="goods_item_btns">
+											<span class="goods_item_btns_font">点击上传</span>
+											<input type="file">
+										</a>
+										<a href="javascript:void(0);" class="goods_item_del"></a>
+									</div>
+									<!-- 上传图片 重复区  end -->
+									<!-- 添加按钮  start -->
+									<div class="goods_item copy_marks">
+										<div class="goods_item_add">
+											<img src="images/add_img_plus.png" alt="">
+										</div>
+									</div>
+									<!-- 添加按钮  end -->
+								</div>
+							</div>
+							<!-- 店铺实景/商品  end -->
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="shop_decor_right">
+					<div class="decor_right_wrap">
+						<div class="right_wrap_phone">
+							<div class="phone_bg_top"></div>
+							<div class="phone_bg_center">
+								<div class="phone_bg_center_top"></div>
+								<div class="phone_bg_center_con">
+									<div class="preview_phone">
+										<!-- 店铺logo start -->
+										<div class="preview_phone_logo">
+											<img class="shop_fors" src="images/img_2.jpg" alt="">
+										</div>
+										<!-- 店铺logo start -->
+										<div class="preview_phone_title">
+											<h2>广东酒家【体育东路店】 第一百零一分店 空间站科技电池健康</h2>
+											<p>
+												<span>评分：8.0</span>
+												<span class="preview_phone_title_s">生活服务<em>￥120</em>/人</span>
+												<span class="position_span">距离您1.2km</span>
+											</p>
+										</div>
+
+										<div class="coupon_details_top_detail">
+											<ul>
+												<li>
+													<span class="top_detail_l"></span>
+													<span class="top_detail_c">羊城国际商贸中心-西塔</span>
+													<span class="top_detail_r"></span>
+												</li>
+												<li class="switchover_clicks" id="suib">
+													<span class="top_detail_l top_detail_l_details"></span>
+													<span class="top_detail_c">营业时间：09:00 - 18:00</span>
+													
+												</li>
+												<li class="telephone_call">
+													<span class="top_detail_l top_detail_l_phone"></span>
+													<span class="top_detail_c">15218707203</span>
+													<span class="top_detail_r"></span>
+												</li>
+												
+											</ul>
+										</div>
+
+										<!-- 商家推荐 -->
+										<div class="phone_bg_center_con_recommend">
+											<div class="recommend_box">
+												<div class="recommend_box_title">
+													<h2>商家推荐</h2>
+												</div>
+												<!-- 重复区 start-->
+												<div class="imagesa_item">
+													<img src="images/img_1.jpg" alt="">
+													<img src="images/img_1.jpg" alt="">
+													<img src="images/img_1.jpg" alt="">
+													<img src="images/img_1.jpg" alt="">
+												</div>
+												<!-- 重复区 end-->
+												
+											</div>
+											
+										</div>
+										<!-- 商家推荐 -->
+									</div>
+								</div>
+								
+							</div>
+							<div class="phone_bg_bottom"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="shop_decor_btns">
+				<div class="shop_decor_btns_box">
+					<button type="submit" value="" class="shop_decor_btns_submit"></button>
+					<button type="button" class="shop_decor_btns_preview" ></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
