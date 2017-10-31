@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机店铺装修(实体店)</title>
+	<link rel="stylesheet" href="css/shop_style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/shop_decor.js"></script>
+</head>
+<body>
+	<div class="cover_layer" style="display: none;"></div>
+	<div class="pop_layer" id="goods_set" style="display:none;">
+		<div class="product_con">
+			<div class="product_con_title">
+				<h2>
+					<span>选择商品:</span>
+					<a onclick="close_pop('goods_set')" href="javascript:void(0);" class="close_id"></a>
+				</h2>
+				<div class="product_con_title_info">
+					<div class="title_infos">
+						<span class="title_infos_se">
+							<select name="" id="">
+								<option value="">商品名称查找</option>
+								<option value="">商品名称查找</option>
+								<option value="">商品名称查找</option>
+							</select>
+							<input type="text">
+						</span>
+						<span class="title_infos_me">
+							佣金：<input type="text"> -- <input type="text">
+						</span>
+						<span class="title_infos_search">
+							<a href="javascript:void(0);">搜索</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="product_box tab_box" tabsname="tabName">
+				<div class="product_box_top top_bg">
+					<div class="product_box_top_nav">
+						<ul class="tab_nav" tabsname="tabName">
+                            <li class="current" validatesname="validateOne">待参加的商品</li>
+                            <li class="" validatesname="validateOne">已参加的商品（<em>0</em>）</li>
+                        </ul>
+					</div>
+					<div class="product_box_top_info">
+						<span class="product_box_top_info_s">您已选择 <em>0</em> 个商品，还可以添加 <em>30</em> 个商品参加本活动</span>
+					</div>
+				</div>
+
+				<div class="product_box_center">
+					<!--表格信息 重复区 start -->
+					<div class="tab_sole" validatesname="validateOne">
+						<table class="table_list">
+	                    	<colgroup>
+	                        	<col width="70">
+	                        	<col width="220">
+	                            <col width="70">
+	                            <col width="70">
+	                            <col width="70">
+	                            <col>
+	                        </colgroup>
+	                    	<thead>
+	                        	<tr>
+	                            	<th colspan="2">商品价格</th>
+	                                <th>价格</th>
+	                                <th>佣金</th>
+	                                <th>折扣价</th>
+	                                <th>操作</th>
+	                                <th class="move-title">移动</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                        	<!-- 重复区 -->
+	                        	<tr>
+	                        		<td class="table_imgs">
+	                        			<img class="activity-img" src="images/img_2.jpg" alt="">
+	                        		</td>
+	                        		<td class="td_title">
+	                        			<div class="td_title_name">
+	                        				<a href="#" target="_blank">测试商品77777</a>
+	                        			</div>
+	                        			<div class="">库存：100</div>
+	                        		</td>
+	                        		<td class="td_price">53</td>
+	                        		<td class="td_price">190.3</td>
+	                        		<td class="td_price">
+	                        			<span class="f_red">53</span>
+	                        		</td>
+	                        		<td class="0">
+	                        			<a href="javascript:;" class="btn_jion">取消推荐</a>
+	                        		</td>
+	                        		<td class="td_move">
+	                        			<a class="move_up" href="#">上移</a> 
+	                        			<a class="move_down" href="#">下移</a>
+	                        		</td>
+	                        	</tr>
+	                        	<!-- 重复区 -->
+	                        	<!-- 重复区 -->
+	                        	<tr>
+	                        		<td class="table_imgs">
+	                        			<img class="activity-img" src="images/img_2.jpg" alt="">
+	                        		</td>
+	                        		<td class="td_title">
+	                        			<div class="td_title_name">
+	                        				<a href="#" target="_blank">测试商品99999</a>
+	                        			</div>
+	                        			<div class="">库存：100</div>
+	                        		</td>
+	                        		<td class="td_price">57</td>
+	                        		<td class="td_price">5656.3</td>
+	                        		<td class="td_price">
+	                        			<span class="f_red">57</span>
+	                        		</td>
+	                        		<td class="0">
+	                        			<a href="javascript:;" class="btn_jion">取消推荐</a>
+	                        		</td>
+	                        		<td class="td_move">
+	                        			<a class="move_up" href="#">上移</a> 
+	                        			<a class="move_down" href="#">下移</a>
+	                        		</td>
+	                        	</tr>
+	                        	<!-- 重复区 -->
+	                        	<!-- 重复区 -->
+	                        	<tr>
+	                        		<td class="table_imgs">
+	                        			<img class="activity-img" src="images/img_2.jpg" alt="">
+	                        		</td>
+	                        		<td class="td_title">
+	                        			<div class="td_title_name">
+	                        				<a href="#" target="_blank">测试商品asdfasdf</a>
+	                        			</div>
+	                        			<div class="">库存：100</div>
+	                        		</td>
+	                        		<td class="td_price">69</td>
+	                        		<td class="td_price">588888.3</td>
+	                        		<td class="td_price">
+	                        			<span class="f_red">69</span>
+	                        		</td>
+	                        		<td class="0">
+	                        			<a href="javascript:;" class="btn_jion">取消推荐</a>
+	                        		</td>
+	                        		<td class="td_move">
+	                        			<a class="move_up" href="#">上移</a> 
+	                        			<a class="move_down" href="#">下移</a>
+	                        		</td>
+	                        	</tr>
+	                        	<!-- 重复区 -->
+
+	                        </tbody>
+	                        
+	                	</table>
+	                	<div class="pages">
+	                		<div class="pages_box">
+	                			<div class="pages_list">
+	                				<ul>
+	                					<li><a href="javascript:void(0);">1</a></li>
+	                					<li><a href="javascript:void(0);">2</a></li>
+	                					<li><a href="javascript:void(0);">3</a></li>
+	                					<li><a href="javascript:void(0);">共3页</a></li>
+	                				</ul>
+	                			</div>
+	                		</div>
+	                	</div>
+                	</div>
+                	<!-- 表格信息 重复区 end -->
+
+                	<!--表格信息 重复区 start -->
+					<div class="tab_sole" validatesname="validateOne">
+						<table class="table_list">
+	                    	<colgroup>
+	                        	<col width="70">
+	                        	<col width="220">
+	                            <col width="70">
+	                            <col width="70">
+	                            <col width="70">
+	                            <col>
+	                        </colgroup>
+	                    	<thead>
+	                        	<tr>
+	                            	<th colspan="2">商品价格</th>
+	                                <th>价格</th>
+	                                <th>佣金</th>
+	                                <th>折扣价</th>
+	                                <th>操作</th>
+	                                <th class="move-title">移动</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                        	<!-- 重复区 -->
+	                        	<tr>
+	                        		<td class="table_imgs">
+	                        			<img class="activity-img" src="images/img_2.jpg" alt="">
+	                        		</td>
+	                        		<td class="td_title">
+	                        			<div class="td_title_name">
+	                        				<a href="#" target="_blank">测试商品52</a>
+	                        			</div>
+	                        			<div class="">库存：100</div>
+	                        		</td>
+	                        		<td class="td_price">52</td>
+	                        		<td class="td_price">190.3</td>
+	                        		<td class="td_price">
+	                        			<span class="f_red">52</span>
+	                        		</td>
+	                        		<td class="0">
+	                        			<a href="javascript:;" class="btn_jion">取消推荐</a>
+	                        		</td>
+	                        		<td class="td_move">
+	                        			<a class="move_up" href="#">上移</a> 
+	                        			<a class="move_down" href="#">下移</a>
+	                        		</td>
+	                        	</tr>
+	                        	<!-- 重复区 -->
+	                        	<!-- 重复区 -->
+	                        	<tr>
+	                        		<td class="table_imgs">
+	                        			<img class="activity-img" src="images/img_2.jpg" alt="">
+	                        		</td>
+	                        		<td class="td_title">
+	                        			<div class="td_title_name">
+	                        				<a href="#" target="_blank">测试商品52</a>
+	                        			</div>
+	                        			<div class="">库存：100</div>
+	                        		</td>
+	                        		<td class="td_price">52</td>
+	                        		<td class="td_price">190.3</td>
+	                        		<td class="td_price">
+	                        			<span class="f_red">52</span>
+	                        		</td>
+	                        		<td class="0">
+	                        			<a href="javascript:;" class="btn_jion">取消推荐</a>
+	                        		</td>
+	                        		<td class="td_move">
+	                        			<a class="move_up" href="#">上移</a> 
+	                        			<a class="move_down" href="#">下移</a>
+	                        		</td>
+	                        	</tr>
+	                        	<!-- 重复区 -->
+
+	                        </tbody>
+	                        
+	                	</table>
+	                	<div class="pages">
+	                		<div class="pages_box">
+	                			<div class="pages_list">
+	                				<ul>
+	                					<li><a href="javascript:void(0);">1</a></li>
+	                					<li><a href="javascript:void(0);">2</a></li>
+	                					<li><a href="javascript:void(0);">共2页</a></li>
+	                				</ul>
+	                			</div>
+	                		</div>
+	                	</div>
+                	</div>
+                	<!-- 表格信息 重复区 end -->
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div style="width:840px;margin:0 auto;">
+		<div class="shop_decor">
+			<div class="shop_decor_cls">
+				<div class="shop_decor_left" style="min-height:20px;">
+					<div class="decor_left_wrap">
+						<div class="decor_left_wrap_box">
+							<h2>推荐商品设置</h2>
+							<div class="decor_left_wrap_btn">
+								<a class="create_bg" href="javascript:void(0);">
+									<span  class="create_bg" onclick="open_pop('goods_set')">商品设置</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="shop_decor_right">
+					<div class="decor_right_wrap">
+						<div class="right_wrap_phone">
+							<div class="phone_bg_top"></div>
+							<div class="phone_bg_center">
+								<div class="phone_bg_center_top"></div>
+								<div class="phone_bg_center_con">
+									<!-- 店铺数据展示 -->
+									<div class="phone_bg_center_con_head">
+										<div class="head_item">
+											<div class="head_item_img">
+												<img src="images/img_2.jpg" alt="">
+											</div>
+											<div class="head_item_con">
+												<h3>wintest测试产品测试产品测试产品测试产品测试产品测试产品测试产品测试产品测试产品</h3>
+												<p class="head_item_con_sco">评分:8.0</p>
+												<p class="head_item_con_sco">生活服务</p>
+												<div class="price_item_pople">￥120/人</div>
+											</div>
+										</div>
+									</div>
+									<!-- 店铺数据展示 -->
+									<!-- 商家推荐 -->
+									<div class="phone_bg_center_con_recommend">
+										<div class="recommend_box">
+											<div class="recommend_box_title">
+												<h2>商家推荐</h2>
+											</div>
+											<!-- 重复区 start-->
+											<div class="recommend_item">
+												<div class="recommend_item_img">
+													<img src="images/img_1.jpg" alt="">
+												</div>
+												<div class="recommend_item_con">
+													<h3>婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影</h3>
+													<div class="price_item">￥120.00</div>
+												</div>
+											</div>
+											<!-- 重复区 end-->
+											<!-- 重复区 start-->
+											<div class="recommend_item">
+												<div class="recommend_item_img">
+													<img src="images/img_1.jpg" alt="">
+												</div>
+												<div class="recommend_item_con">
+													<h3>婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影</h3>
+													<div class="price_item">￥120.00</div>
+												</div>
+											</div>
+											<!-- 重复区 end-->
+										</div>
+										
+									</div>
+									<!-- 商家推荐 -->
+
+
+									<!-- 全部商家  start-->
+									<div class="phone_bg_center_con_recommend">
+										<div class="recommend_box">
+											<div class="recommend_box_title">
+												<h2>全部商家</h2>
+											</div>
+											<!-- 重复区 start-->
+											<div class="recommend_item">
+												<div class="recommend_item_img">
+													<img src="images/img_1.jpg" alt="">
+												</div>
+												<div class="recommend_item_con">
+													<h3>婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影</h3>
+													<div class="price_item">￥120.00</div>
+												</div>
+											</div>
+											<!-- 重复区 end-->
+											<!-- 重复区 start-->
+											<div class="recommend_item">
+												<div class="recommend_item_img">
+													<img src="images/img_1.jpg" alt="">
+												</div>
+												<div class="recommend_item_con">
+													<h3>婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影婚纱摄影</h3>
+													<div class="price_item">￥120.00</div>
+												</div>
+											</div>
+											<!-- 重复区 end-->
+										</div>
+										
+									</div>
+									<!-- 全部商家 end-->
+
+								</div>
+							</div>
+							<div class="phone_bg_bottom"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
