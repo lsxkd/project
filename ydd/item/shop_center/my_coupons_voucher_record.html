@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/shop_center_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/shop_center.js"  charset="UTF-8"></script>
+	<script src="js/js.js"  charset="UTF-8"></script>
+	<title>券记录</title>
+	
+	
+</head>
+<body>
+	<div id="wrap" class="twoCard">
+		<!-- 遮罩层  start -->
+		<div class="pop_cover_bg" style="display:none;"></div>
+		<!-- 遮罩层  end -->
+
+		<!-- 弹出框start -->
+		<div class="mask" style="display: none;"></div>
+		<div class="dataAlert" style="display: none;">
+			<div class="dataContainer">
+				<div class="dataInt">
+					<div class="meney_mode">按时间</div>
+					<div class="closeTime">
+
+						<input type="text"  class="mode_time time_select_pop" placeholder="开始时间">
+						<div class="icom_h">—</div>
+						<input type="text"  class="mode_time" placeholder="结束时间">
+					</div>
+				</div>
+				
+			</div>
+			<div class="footerbtn">
+				<div class="Frebuild">重设</div>
+				<div class="Fsure closeBtn">确定</div>
+			</div>
+		</div>
+		<!-- 弹出框end -->
+
+		<!-- 日期选择弹出框  start -->
+		<div class="area_select_pops"  style="display:none;">
+			<div class="area_select_pops_box">
+				<div class="area_select_pops_title">
+					<div class="area_select_pops_title_cancle area_select_reset">
+						<span>取消</span>
+					</div>
+					<!-- <div class="area_select_pops_title_con">
+						<span><input type="text" placeholder="搜索区域" /></span>
+					</div> -->
+					<div class="area_select_pops_title_save area_select_right">
+						<span>保存</span>
+					</div>
+				</div>
+				<div class="area_select_pops_con">
+					<!-- <div class="area_select_pops_con_top_pop"></div> -->
+					
+					<div class="selects_area_pop"></div>
+
+					<div class="area_select_pops_con_box main_box_all">
+						<div class="area_select_pops_con_uls area_select_pops_con_one">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_ones">
+								<li>2015年</li>
+								<li>2016年</li>
+								<li>2017年</li>
+								<li>2018年</li>
+								<li>2019年</li>
+								<li>2020年</li>
+								<li>2021年</li>
+								<li>2022年</li>
+								<li>2023年</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_two">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_twos">
+								<li>01月</li>
+								<li>02月</li>
+								<li>03月</li>
+								<li>04月</li>
+								<li>05月</li>
+								<li>06月</li>
+								<li>07月</li>
+								<li>08月</li>
+								<li>09月</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_three">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_threes">
+								<li>01日</li>
+								<li>02日</li>
+								<li>03日</li>
+								<li>04日</li>
+								<li>05日</li>
+								<li>06日</li>
+								<li>07日</li>
+								<li>08日</li>
+								<li>09日</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						
+					</div>
+					<!-- <div class="area_select_pops_con_bottom_pop"></div> -->
+				</div>
+			</div>
+		</div>
+		<!-- 日期选择弹出框  end -->
+
+		<header></header>
+		<!-- 头部 -->
+		<div class="wrapHeader" style="display: none;"></div>
+		<!-- 内容区start -->
+		<div class="wrapMain">
+			<!-- 选择筛选区start -->
+			<div class="data_screen" id="redPage_popup">
+				<div class="data_screen_header">
+					<div class="data_screen_right">
+						筛选
+					</div>
+					<ul class="data_screen_left data_tab">
+						<li><a class="on" href="javascript:">日</a></li>
+						<li><a href="javascript:">周</a></li>
+						<li><a href="javascript:">月</a></li>
+						<li><a href="javascript:">总</a></li>
+					</ul>
+				</div>
+				<!-- 日收益 start -->
+				<div class="tabIndex">
+					<div class="data_screen_container">
+						<div class="Profit">总领券量(张)</div>
+						<div class="red_money_mun"><div></div></div>
+						<div class="Meney" style="display:none;">400</div>
+					</div>
+					<ul class="data_screen_footer">
+						<li>
+							<div class="aboutMeney">900</div>
+							<div class="data_screen_text">已使用(张)</div>
+						</li>
+						<li>
+							<div class="aboutMeney">0.00</div>
+							<div class="data_screen_text">收益额(元)</div>
+							
+						</li>
+						<div class="linesa"></div>
+						<li>
+							<div class="aboutMeney">0.00</div>
+							<div class="data_screen_text">交易额(元)</div>
+							
+						</li>
+						<li>
+							<div class="aboutMeney">-0.00</div>
+							<div class="data_screen_text">券抵扣(元)</div>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 内容筛选区end -->
+			<!-- 本月收益内容区start -->
+			<div class="same_month">
+				<div class="same_month_all">
+					<!-- <div class="same_month_left">
+						<div>本月收益</div>
+						<div class="sameText">220笔</div>
+					</div>
+					<div class="same_month_right">
+						<div>+6666.00</div>
+						<div class="sameText">营业额：886.00</div>
+					</div> -->
+					<div class="same_month_all_font" style="color:#000;font-size:1.6rem;">
+						2017年3月
+					</div>
+				</div>
+				<ul class="everyday_money">
+					<!-- 今日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>今日</div>
+								<div class="sameText">3-27</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：4</div>
+								<div class="sameText">已使用：3</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li style="opacity:0.6;">
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div style="font-size:1.4rem;">未使用</div>
+											<div></div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 今日end -->
+					<!-- 昨日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>昨日</div>
+								<div class="sameText">3-26</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：4</div>
+								<div class="sameText">已使用：3</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 昨日end -->
+					<!-- 前日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>周六</div>
+								<div class="sameText">3-25</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：5</div>
+								<div class="sameText">已使用：2</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 前日end -->
+				</ul>
+			</div>
+			<!-- 本月收益内容区end -->
+
+
+
+			<!-- 上月收益内容区start -->
+			<div class="same_month">
+				<div class="same_month_all">
+					<!-- <div class="same_month_left">
+						<div>本月收益</div>
+						<div class="sameText">220笔</div>
+					</div>
+					<div class="same_month_right">
+						<div>+6666.00</div>
+						<div class="sameText">营业额：886.00</div>
+					</div> -->
+					<div class="same_month_all_font" style="color:#000;font-size:1.6rem;">
+						2017年2月
+					</div>
+				</div>
+				<ul class="everyday_money">
+					<!-- 今日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>今日</div>
+								<div class="sameText">3-27</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：4</div>
+								<div class="sameText">已使用：3</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 今日end -->
+					<!-- 昨日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>昨日</div>
+								<div class="sameText">3-26</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：4</div>
+								<div class="sameText">已使用：3</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 昨日end -->
+					<!-- 前日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>周六</div>
+								<div class="sameText">3-25</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：5</div>
+								<div class="sameText">已使用：2</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 前日end -->
+				</ul>
+			</div>
+			<!-- 上月收益内容区end -->
+			<!-- 上月收益内容区start -->
+			<div class="same_month">
+				<div class="same_month_all">
+					<!-- <div class="same_month_left">
+						<div>本月收益</div>
+						<div class="sameText">220笔</div>
+					</div>
+					<div class="same_month_right">
+						<div>+6666.00</div>
+						<div class="sameText">营业额：886.00</div>
+					</div> -->
+					<div class="same_month_all_font" style="color:#000;font-size:1.6rem;">
+						2017年1月
+					</div>
+				</div>
+				<ul class="everyday_money">
+					<!-- 今日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>今日</div>
+								<div class="sameText">3-27</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：4</div>
+								<div class="sameText">已使用：3</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 今日end -->
+					<!-- 昨日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>昨日</div>
+								<div class="sameText">3-26</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：4</div>
+								<div class="sameText">已使用：3</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 昨日end -->
+					<!-- 前日start -->
+					<li>
+						<div class="everyday_idit">
+							<div class="everyday_money_left">
+								<div>周六</div>
+								<div class="sameText">3-25</div>
+							</div>
+							<i class="icon_down"></i>
+							<div class="everyday_money_right">
+								<div>已领：5</div>
+								<div class="sameText">已使用：2</div>
+							</div>
+						</div>
+						<ul class="submenu">
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">	
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="twoCode_details.html">
+									<div class="backLogo">
+										<img src="./images/vip_member_img.png" alt="">
+									</div>
+									<div class="backMoney">
+										<div class="everyday_money_left">
+											<div>15888888888</div>
+											<div>领券时间：2017-02-08</div>
+										</div>
+										
+										<div class="everyday_money_right">
+											<div>收益额：3000</div>
+											<div>交易额：46.00</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- 前日end -->
+				</ul>
+			</div>
+			<!-- 上月收益内容区end -->
+			<!-- 底部logo start -->
+			<div class="bottom_logos">
+				<img src="./images/bottom_logo.png" alt="">
+			</div>
+			<!-- 底部logo end -->
+		</div>
+		<!-- 内容区end -->
+		<!-- 回到顶部start -->
+		<div class="back_to_top scroll_top" style="bottom:2rem;">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<!-- 回到顶部end -->
+		<!-- 底部 start -->
+			<footer></footer>
+		<!-- 底部 end -->
+
+		<footer></footer>
+	</div>
+	<div class="posH"></div>
+
+	<script>
+		$(function(){
+			$(".time_select_pop").on({
+				"tap":function(){
+					$(".area_select_pops,.pop_cover_bg").show();
+					$(".change_this").removeClass("change_this")
+					$(this).addClass("change_this");
+				}
+			});
+
+			$(".type_select_pop").on({
+				"tap":function(){
+					$(".times_selects_pop_type,.pop_cover_bg").show();
+					$(".change_this").removeClass("change_this")
+					$(this).addClass("change_this")
+				}
+			})
+
+
+		$(".addr_pop_item").on({
+			"tap":function(){
+				$(".change_this").removeClass("change_this")
+				$(this).addClass("change_this");
+				$(".area_time_select_pops,.pop_cover_bg").show();
+			}
+		})
+
+			$(".times_selects_pop_item").on({
+				"tap":function(){
+					var htmls=$(this).find(".times_selects_pop_item_font").html();
+					$(".change_this").find("input").val($(this).find(".times_selects_pop_item_font").html());
+					$(this).addClass("on").siblings().removeClass("on")
+					if(htmls=='永久有效') {
+						$(".change_this").closest(".business_certification_item").next(".business_certification_item").hide();
+					}else{
+						$(".change_this").closest(".business_certification_item").next(".business_certification_item").show();
+					}
+				
+					$(".times_selects_pop,.pop_cover_bg").hide();
+					$(".change_this").removeClass("change_this");
+					return false;
+				}
+			})
+
+
+			$(".area_select_pops_title_save ").on({
+				"tap":function(){
+					var prent=$(this).closest(".area_select_pops");
+					var htmls="";
+					$(".area_select_pops_con_uls",prent).each(function(){
+						htmls+=$("ul",$(this)).find("li").eq(-parseInt($("ul",$(this)).css("marginTop"))/$("li",$(this)).outerHeight()).html();
+					})
+					$(".change_this input").val(htmls);				
+					$(".change_this").removeClass("change_this");
+					$(".area_select_pops,.pop_cover_bg").hide();
+					return false;
+				}
+			})
+			 
+
+			 // 关闭日期选择
+			  $(".times_selects_pop_closes").on({
+			    "tap":function(){
+			      $(".times_selects_pop,.pop_cover_bg").hide();
+			      return false;
+			    }
+			  })
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body{ font-family:Microsoft YaHei; font-size:16px; background:#e7e8eb;}
+.red_font{ color:red;}
+.white_bg{ background:#fff; }
+.pending{width:1198px;height:218px;border:1px solid #dcdcdd;margin:20px auto 0 auto;}
+.pending_title{width:1182px;height:17px;padding-left:16px;padding-top:16px;font-size:16px;font-family:Microsoft YaHei;}
+.pending_cases{height:185px;width:1198px; text-align:center;}
+.pending_case_bg{background:url(../../resources/images/index/v_line.png) no-repeat center right;}
+.pending_case{width:399px;height:155px;text-align:center; padding-top:30px; font-size:16px;}
+.pending_case img{ margin:auto;}
+.pending_case div,.pending_case_end div{padding-top:10px;}
+
+.earnings_totle{width:1200px;height:220px;margin:20px auto 0 auto; position:relative;}
+.earnings_totle_left{ position:absolute;top:0;left:0;}
+.earnings_totle_right{ position:absolute;top:0;left:609px;}
+.earnings_totle_left,.earnings_totle_right{width:589px;height:218px;border:1px solid #dcdcdd;}
+.earnings_totle_title{height:36px;line-height:36px;font-size:16px;border-bottom:1px solid #dcdcdd; }
+.earnings_padding_left{padding-left:16px;}
+.earnings_padding_right{padding-right:24px;}
+.end_time{position:absolute;display:block;width:539px;height:30px;top:52px;left:50px;color:#a9a9a9;}
+.earnings_totle_details{padding-left:50px; position:absolute;top:82px;}
+.earnings_totle_left_circle{width:84px;height:84px;line-height:84px;border-radius:50%; text-align:center;border:1px solid #ff0808;color:#000; font-size:20px; color:#ff0202;}
+.white_color{color:#fff;}
+.fuhao{width:39px;height:86px;line-height:86px;font-size:13px;color:#727272;text-align:center;}
+
+
+.earnings_totle_left_circle_red_bg{background:#ff6c60; border:#ff6c60;}
+.earnings_menus_padding_left{padding-left:50px; position:absolute;top:166px;}
+.earnings_menus{width:86px;padding-top:10px;margin-right:39px;text-align:center; font-size:14px;}
+
+.business_remind_table{ position:absolute;top:82px;width:472px;left:50px;margin-right:50px;border-top:1px solid #e2e2e4;border-left:1px solid #e2e2e4;}
+.business_remind_row{height:40px;}
+.business_remind_cell{width:220px;padding-left:15px;height:39px;line-height:39px; font-size:16px;border-bottom:1px solid #e2e2e4;border-right:1px solid #e2e2e4;}
+.business_remind_cell_num{width:100px;color:red; display:inline-block; float:right; text-align:right;padding-right:15px;}
+.kpi{width:1166px;height:37px;line-height:37px;margin:20px auto 0 auto;border:1px solid #e2e2e4;padding-left:16px;padding-right:16px;}
+.kpi_pic{width:1198px;height:402px; padding-top:20px;border-left:1px solid #dcdcdd;border-right:1px solid #dcdcdd;border-bottom:1px solid #dcdcdd;margin:0 auto;}
+.recent_seven{color:red;}
+.data_to{ width:40px; text-align:center;}
+.date_start,.date_end{display:inline-block;width:90px;height:37px;text-align:center;}
+
+.date_start input,.data_end input{width:90px;height:36px;line-height:36px;border:0;}
+.date_img{width:11px;height:37px; line-height:37px;margin:0 5px; position:relative;}
+.date_img ul{z-index:100; background:#fff;position:absolute;top:37px;right:-21px;border-bottom:1px solid #e2e2e4;border-left:1px solid #e2e2e4;border-right:1px solid #e2e2e4;}
+.date_img ul li{padding-left:14px;padding-right:14px;;height:35px;line-height:35px;font-size:14px;color:#3c3c3d;text-align:left; white-space:nowrap;}
+.date_img ul li:hover{color:#fc4747;background:#f3f3f4;}
+.date_img img{ float:left; height:35px;}
+.recent_fifteen,.recent_seven,.recent_thirty{width:90px;margin-right:20px; text-align:center;}
+.orders{margin-left:20px;margin-right:20px;text-align:center;}
+.add{margin:20px auto;width:1200px;}
+
+.hot_goods{width:1198px;border:1px solid #dcdcdd;margin:0 auto;}
+.hot_goods_title{width:1166px;padding-top:16px; font-size:16px;height:25px;margin-left:16px;margin-right:16px;border-bottom:2px solid #000;}
+.hot_goods_cases{margin-top:23px;}
+.hot_goods_case{width:250px;height:346px;padding-top:14px;padding-left:14px;padding-right:14px;border:1px solid #ebebeb;margin-left:16px;margin-bottom:16px; display:inline-block;float:left;}
+.hot_goods_case img{width:250px;height:250px;}
+.hot_goods_case_end{margin-right:0;}
+
+.hot_goods_case_name{display:block; width:250px;height:24px;line-height:24px;font-size:14px;line-height:14px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.hot_goods_price,.hot_goods_commission,.hot_goods_shop{display:block; font-size:12px;height:20px;line-height:20px;}
+.vip_price,.commission_price{display:inline-block;margin-right:36px;}
+.vip_price,.market_price{color:red;}
+.commission_price{color:#fa9a42;}
+
+.hot_merchant{width:1198px;height:220px;border:1px solid #dcdcdd;margin:20px auto 40px auto;}
+.success_case_title{padding-left:16px;width:1182px;height:56px;line-height:56px;font-size:16px;}
+
+.succes_cases{width:1198px;height:92px;margin:0 auto;}
+.succes_cases_list li{display:inline-block;float:left;width:92px;height:92px;margin:0 39px;}
+.succes_cases_list li .div_circle{width:90px;height:90px;border-radius:50%;border:1px solid #ccc;}
+.case_name{height:40px;text-align:center;margin-top:10px; font-size:14px; overflow:hidden;}
+
+

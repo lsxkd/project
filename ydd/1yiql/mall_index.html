@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/mall.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+<div class="Cover_layer" id="DIV2" style="display:none;"></div>
+<!--遮罩曾 end-->
+<div class="Pop_layer" id="DIV1" style="display:none;">
+	<div class="latest_activity_pop">
+    	<div class="latest_activity_pop_close">
+        	<a class="latest_activity_pop_close_a" onClick="myHide()" href="javascript:void(0);"></a>
+        </div>
+        <div class="latest_activity_pop_con">
+        	<div class="latest_activity_pop_con_t">
+            	温馨提示
+            </div>
+            <div class="latest_activity_pop_con_c">
+            	是否确认删除模板，删除该模板中的数据也将一并删除
+            </div>
+        </div>
+        <div class="latest_activity_pop_btn">
+        	<a class="latest_activity_pop_btn_follow" id="btnChageColor" onClick="myHide(),myCollection()" href="javascript:void(0);">确认</a>
+            <a class="latest_activity_pop_btn_no"  onClick="myHide()" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--弹出层 start-->
+<div class="Pop_layer" id="DIV3">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">上线商城</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onClick="myHide1()" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="online_mall_pop">            
+            <div class="online_mall_pop_box">
+            	<div class="online_mall_pop_item">
+                	<span class="online_mall_pop_item_title">选择公众号上线</span>
+                    <span class="online_mall_pop_item_con">
+                    	<select>
+                        	<option>一号公众号</option>
+                            <option>二号公众号</option>
+                            <option>三号公众号</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="online_mall_pop_item">
+                	<span class="online_mall_pop_item_title">选择菜单位置</span>
+                    <span class="online_mall_pop_item_con">
+                    	<select>
+                        	<option>位置一</option>
+                            <option>位置一</option>
+                            <option>位置一</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure" onClick="myHide1()" href="javascript:void(0);">确定</a>
+            <a class="perfect_information_pop_button_cancel" onClick="myHide1()" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--添加图片 end-->
+<!--弹出层 end-->
+
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content content_padding_top">
+	<div class="content_box content_box_border">
+    	<!--微商城 start-->
+        
+        <!--内容title start-->
+        <div class="mall_title">
+        	<div class="mall_title_box">
+            	<span>我的商城列表</span>
+            </div>
+        </div>
+        <!--内容title end-->
+        
+        <!--子导航 start-->
+        <div class="mall_subnav">
+        	<div class="mall_subnav_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">微商城</a>
+                </div>
+            </div>
+        </div>
+        <!--子导航 end-->
+        
+        <!--内容更换部分 start-->
+        
+        <!--微商城首页内容 start-->
+        <div class="mall_index">
+        	<div class="mall_index_box">
+            	<div class="mall_index_font">
+                	<span>请创建商城后，可以复制商城链接来推广，可通过自定义菜单、图文消息群发来推广。</span>
+                </div>
+                <div class="mall_index_add_btn">
+                	<a href="create_mall_templates.html"><i></i></a>
+                </div>
+                <div class="mall_index_con">
+                	<div class="mall_index_con_grid">
+                        <div class="mall_index_con_box">
+                        
+                            <!--重复区 start-->
+                            <div class="mall_index_con_item">
+                                <div class="mall_index_con_item_box mall_index_con_item_box_select">
+                                    <!--选中标记 可隐藏 start-->
+                                    <div class="mall_index_con_item_tips">
+                                        <div class="mall_index_con_item_tips_show">
+                                            <span>正在使用</span><span class="mall_index_con_item_tips_show_max">XXX公众号</span><i></i>
+                                        </div>
+                                    </div>
+                                    <!--选中标记 可隐藏 end-->
+                                    <div class="mall_index_con_item_phone">
+                                        <div class="mall_index_con_item_phone_box">
+                                            <div class="mall_index_con_item_phone_t">
+                                                <span class="mall_index_con_item_phone_t_font">美丽世界饰品店</span>
+                                                <span class="mall_index_con_item_phone_t_input"  style="display:none;"><input type="text" placeholder="请输入商城名" /></span>
+                                                <span class="mall_index_con_item_phone_t_edit">
+                                                    <a href="javascript:void(0);">修改</a>
+                                                </span>
+                                            </div>
+                                            <div class="mall_index_con_item_phone_c">
+                                                <div class="mall_item_phone_c_t">
+                                                    <span>美丽世界饰品店</span>
+                                                </div>
+                                                
+                                                <div class="mall_item_phone_c_c">
+                                                    <!--手机页面区域 start-->
+                                                    <img src="../resources/images/mall/shilie.png" style="width:100%; height:100%;" />
+                                                    <!--手机页面区域end-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mall_index_con_item_btn">
+                                        <a class="mall_index_con_item_btn_l" href="javascript:void(0);">编辑</a>
+                                        <a class="mall_index_con_item_btn_c" href="javascript:void(0);">下线</a>
+                                        <a class="mall_index_con_item_btn_r" onClick="mySwitch()" href="javascript:void(0);">删除</a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="line_bottom"></div>
+                            </div>
+                            <!--重复区 end-->
+                            
+                            <!--重复区 start-->
+                            <div class="mall_index_con_item">
+                                <div class="mall_index_con_item_box ">
+                                    <!--选中标记 可隐藏 start-->
+                                    <div class="mall_index_con_item_tips" style="display:none;">
+                                        <div class="mall_index_con_item_tips_show">
+                                            <span>正在使用</span><span class="mall_index_con_item_tips_show_max">XXX公众号</span><i></i>
+                                        </div>
+                                    </div>
+                                    <!--选中标记 可隐藏 end-->
+                                    <div class="mall_index_con_item_phone">
+                                        <div class="mall_index_con_item_phone_box">
+                                            <div class="mall_index_con_item_phone_t">
+                                                <span class="mall_index_con_item_phone_t_font">美丽世界饰品店</span>
+                                                <span class="mall_index_con_item_phone_t_input"  style="display:none;"><input type="text" placeholder="请输入商城名" /></span>
+                                                <span class="mall_index_con_item_phone_t_edit">
+                                                    <a href="javascript:void(0);">修改</a>
+                                                </span>
+                                            </div>
+                                            <div class="mall_index_con_item_phone_c">
+                                                <div class="mall_item_phone_c_t">
+                                                    <span>美丽世界饰品店</span>
+                                                </div>
+                                                
+                                                <div class="mall_item_phone_c_c">
+                                                    <!--手机页面区域 start-->
+                                                    <img src="../resources/images/mall/shilie.png" style="width:100%; height:100%;" />
+                                                    <!--手机页面区域end-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mall_index_con_item_btn">
+                                        <a class="mall_index_con_item_btn_l" href="javascript:void(0);">编辑</a>
+                                        <a class="mall_index_con_item_btn_c" onClick="mySwitch1()" href="javascript:void(0);">上线</a>
+                                        <a class="mall_index_con_item_btn_r" onClick="mySwitch()" href="javascript:void(0);">删除</a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="line_bottom"></div>
+                            </div>
+                            <!--重复区 end-->
+                            
+                            <!--重复区 start-->
+                            <div class="mall_index_con_item">
+                                <div class="mall_index_con_item_box ">
+                                    <!--选中标记 可隐藏 start-->
+                                    <div class="mall_index_con_item_tips" style="display:none;">
+                                        <div class="mall_index_con_item_tips_show">
+                                            <span>正在使用</span><span class="mall_index_con_item_tips_show_max">XXX公众号</span><i></i>
+                                        </div>
+                                    </div>
+                                    <!--选中标记 可隐藏 end-->
+                                    <div class="mall_index_con_item_phone">
+                                        <div class="mall_index_con_item_phone_box">
+                                            <div class="mall_index_con_item_phone_t">
+                                                <span class="mall_index_con_item_phone_t_font">美丽世界饰品店</span>
+                                                <span class="mall_index_con_item_phone_t_input"  style="display:none;"><input type="text" placeholder="请输入商城名" /></span>
+                                                <span class="mall_index_con_item_phone_t_edit">
+                                                    <a href="javascript:void(0);">修改</a>
+                                                </span>
+                                            </div>
+                                            <div class="mall_index_con_item_phone_c">
+                                                <div class="mall_item_phone_c_t">
+                                                    <span>美丽世界饰品店</span>
+                                                </div>
+                                                
+                                                <div class="mall_item_phone_c_c">
+                                                    <!--手机页面区域 start-->
+                                                    <img src="../resources/images/mall/shilie.png" style="width:100%; height:100%;" />
+                                                    <!--手机页面区域end-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mall_index_con_item_btn">
+                                        <a class="mall_index_con_item_btn_l" href="javascript:void(0);">编辑</a>
+                                        <a class="mall_index_con_item_btn_c" href="javascript:void(0);">上线</a>
+                                        <a class="mall_index_con_item_btn_r" onClick="mySwitch()" href="javascript:void(0);">删除</a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="line_bottom"></div>
+                            </div>
+                            <!--重复区 end-->
+                            
+                            <!--重复区 start-->
+                            <div class="mall_index_con_item">
+                                <div class="mall_index_con_item_box ">
+                                    <!--选中标记 可隐藏 start-->
+                                    <div class="mall_index_con_item_tips" style="display:none;">
+                                        <div class="mall_index_con_item_tips_show">
+                                            <span>正在使用</span><span class="mall_index_con_item_tips_show_max">XXX公众号</span><i></i>
+                                        </div>
+                                    </div>
+                                    <!--选中标记 可隐藏 end-->
+                                    <div class="mall_index_con_item_phone">
+                                        <div class="mall_index_con_item_phone_box">
+                                            <div class="mall_index_con_item_phone_t">
+                                                <span class="mall_index_con_item_phone_t_font">美丽世界饰品店</span>
+                                                <span class="mall_index_con_item_phone_t_input"  style="display:none;"><input type="text" placeholder="请输入商城名" /></span>
+                                                <span class="mall_index_con_item_phone_t_edit">
+                                                    <a href="javascript:void(0);">修改</a>
+                                                </span>
+                                            </div>
+                                            <div class="mall_index_con_item_phone_c">
+                                                <div class="mall_item_phone_c_t">
+                                                    <span>美丽世界饰品店</span>
+                                                </div>
+                                                
+                                                <div class="mall_item_phone_c_c">
+                                                    <!--手机页面区域 start-->
+                                                    <img src="../resources/images/mall/shilie.png" style="width:100%; height:100%;" />
+                                                    <!--手机页面区域end-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mall_index_con_item_btn">
+                                        <a class="mall_index_con_item_btn_l" href="javascript:void(0);">编辑</a>
+                                        <a class="mall_index_con_item_btn_c" href="javascript:void(0);">上线</a>
+                                        <a class="mall_index_con_item_btn_r" onClick="mySwitch()" href="javascript:void(0);">删除</a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="line_bottom"></div>
+                            </div>
+                            <!--重复区 end-->
+                            <div class=" clear"></div>
+                        </div>
+                	</div>
+                </div>
+            </div>
+        </div>
+        <!--微商城首页内容 end-->
+        
+        <!--内容更换部分 end-->
+        
+        <!--微商城 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+<script language="javascript">
+function mySwitch(){ 
+	document.getElementById('DIV1').style.display = "block";//显示
+	document.getElementById('DIV2').style.display = "block";//显示
+}
+function myHide(){
+	document.getElementById('DIV1').style.display = "none";//隐藏
+	document.getElementById('DIV2').style.display = "none";//隐藏
+	}
+function mySwitch1(){ 
+	document.getElementById('DIV3').style.display = "block";//显示
+	document.getElementById('DIV2').style.display = "block";//显示
+}
+function myHide1(){
+	document.getElementById('DIV3').style.display = "none";//隐藏
+	document.getElementById('DIV2').style.display = "none";//隐藏
+	}
+
+
+</script>
+<script type="text/javascript">
+		$('#DIV1').css('left', ($(window).width()-($('#DIV1').width()))/2)
+	  	$('#DIV1').css('top', $(window).height() / 2 - ($('#DIV1').height() / 2))
+		$('#DIV3').css('left', ($(window).width()-($('#DIV3').width()))/2)
+	  	$('#DIV3').css('top', $(window).height() / 2 - ($('#DIV3').height() / 2))
+
+</script>
+</body>
+</html>

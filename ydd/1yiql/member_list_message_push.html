@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/member/member_list.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+        <script type="text/javascript">
+        	$(function(){
+				$(".item_textarea_keyup").on({
+				"change":function(){
+					$(".item_textarea_keyup_font").html(500-$(this).val().length)
+					},
+				"keyup":function(){
+					$(".item_textarea_keyup_font").html(500-$(this).val().length)
+					}
+				
+					
+				})
+			});
+        </script>
+        
+	</head>
+
+<body >
+<div class="Cover_layer"  style="display: none;"></div>
+<!--弹出层 start-->
+
+<!--会员 创建消息 弹出框 start-->
+<div class="Pop_layer" popName="popCreateMassage" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">创建消息</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a click_close_id" popName="popCreateMassage" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="create_activity_pop">            
+            <div class="create_activity_pop_box">
+            	<!--重复区 start-->
+            	<div class="create_activity_pop_item">
+                	<span class="create_activity_pop_item_t">
+                    	请选择发送渠道
+                    </span>
+                    <span class="create_activity_pop_item_c">
+                    	<a class="create_activity_pop_item_c_select" href="javascript:void(0);">短信</a>
+                        <a class="create_activity_pop_item_c_a" href="javascript:void(0);">微信</a>
+                    </span>
+                    <span class="create_activity_pop_item_tips">
+                    	<span class="create_activity_pop_item_tips_s">选择微信渠道发送时，将直接跳到微信。</span>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_out"></i>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_in"></i>
+                    </span>
+                </div>
+                <!--重复区 end-->
+                <!--重复区 start-->
+            	<div class="create_activity_pop_item item_border">
+                	<span class="create_activity_pop_item_t item_t_border">
+                    	请输入消息内容
+                    </span>
+                    <div class="item_con_fonts">
+                    	<span class="item_con_fonts_t">
+                        	<textarea maxlength="500" class="item_textarea_keyup"></textarea>
+                        </span>
+                        <span class="item_con_fonts_tips ">
+                        	您还可以输入<em class="item_textarea_keyup_font" style="color:#FF0202; font-style:normal;">500</em>个字！
+                        </span>
+                    </div>
+                </div>
+                <!--重复区 end-->
+                <!--重复区 start-->
+                <div class="create_activity_pop_item">
+                	<span class="create_activity_pop_item_t">
+                    	请选择发送时间
+                    </span>
+                    <span class="create_activity_pop_item_c">
+                    	<input type="text" />
+                    </span>
+                    <span class="create_activity_pop_item_tips">
+                    	<span class="create_activity_pop_item_tips_s">您可以在这里为消息发送设定时间。</span>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_out"></i>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_in"></i>
+                    </span>
+                </div>
+                <!--重复区 end-->
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure click_open_id" popName="popCreateMassageNext" href="javascript:void(0);">下一步</a>
+            <a class="perfect_information_pop_button_cancel click_close_id" popName="popCreateMassage" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--会员 创建消息 弹出框 end-->
+
+<!--会员 创建消息下一步 弹出框 start-->
+<div class="Pop_layer" popName="popCreateMassageNext" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">选择会员</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a click_close_id" popName="popCreateMassageNext" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="create_activity_pop create_activity_pop_wd">            
+            <div class="create_activity_pop_box">
+            	<div class="member_list">
+                	<div class="member_list_search">
+                    	<table class="member_list_search_table">
+                        	<tbody>
+                                <tr>
+                                    <td class="member_list_search_td_t">余&nbsp;&nbsp;&nbsp;额：</td>
+                                    <td class="member_list_search_td" >
+                                    	<input type="text" /><span class="member_list_search_td_line">-</span><input type="text" />
+                                    </td>
+                                    <td class="member_list_search_td_t">总&nbsp;消&nbsp;费：</td>
+                                    <td class="member_list_search_td" >
+                                    	<input type="text" /><span class="member_list_search_td_line">-</span><input type="text" />
+                                    </td>
+                                </tr>
+                                <tr><td height="20"></td></tr>
+                                <tr>
+                                    <td class="member_list_search_td_t">来&nbsp;&nbsp;&nbsp;源：</td>
+                                    <td class="member_list_search_td" >
+                                    	<select>
+                                        	<option>全部</option>
+                                            <option>全部</option>
+                                            <option>全部</option>
+                                        </select>
+                                        <span class="member_list_search_td_fonts">卡类型：</span>
+                                        <select>
+                                        	<option>全部</option>
+                                            <option>全部</option>
+                                            <option>全部</option>
+                                        </select>
+                                    </td>
+                                    <td class="member_list_search_td_t">关&nbsp;键&nbsp;字：</td>
+                                    <td class="member_list_search_td" >
+                                    	<input type="text" />
+                                        <a class="member_list_search_td_a_select" href="javascript:void(0);">清空条件</a>
+                                        <a class="member_list_search_td_btn" href="javascript:void(0);">查询</a>
+                                    </td>
+                                </tr>
+                        	</tbody>
+                        </table>
+                        <div class="table_check_all">
+                            <span class="table_check_all_span">全选（261）<i class="table_check_all_i"></i></span>
+                            <a class="table_check_all_a" href="javascript:void(0);">全选</a>
+                        </div>
+                    </div>
+                    <div class="member_list_con" style="margin-top:20px;">
+						<table class="member_list_con_table"><tbody>
+                        	<tr>
+                            	<th class="member_list_con_td_t"><input type="checkbox" /></th>
+                            	<th class="member_list_con_td_t">会员名称</th>
+                                <th class="member_list_con_td_t">卡号</th>
+                                <th class="member_list_con_td_t">手机号</th>
+                                <th class="member_list_con_td_t">总消费</th>
+                                <th class="member_list_con_td_t">开卡时间</th>
+                                <th class="member_list_con_td_t">余额</th>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <div class="latest_activity_page">
+                    	asdfasfasdf
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+        	<a class="perfect_information_pop_button_cancel click_open_id" popName="popCreateMassage" href="javascript:void(0);">上一步</a>
+            <a class="perfect_information_pop_button_sure click_close_id" popName="popCreateMassageNext" href="javascript:void(0);">确认</a>
+            <a class="perfect_information_pop_button_cancel click_close_id" popName="popCreateMassageNext" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--会员 创建活动下一步 弹出框 end-->
+
+
+<!--会员 编辑活动 弹出框 start-->
+<div class="Pop_layer" popName="popEditMassage" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">编辑活动</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a click_close_id" popName="popEditMassage" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="create_activity_pop">            
+            <div class="create_activity_pop_box">
+            	<!--重复区 start-->
+            	<div class="create_activity_pop_item">
+                	<span class="create_activity_pop_item_t">
+                    	请选择发送渠道
+                    </span>
+                    <span class="create_activity_pop_item_c">
+                    	<a class="create_activity_pop_item_c_select" href="javascript:void(0);">短信</a>
+                        <a class="create_activity_pop_item_c_a" href="javascript:void(0);">微信</a>
+                    </span>
+                    <span class="create_activity_pop_item_tips">
+                    	<span class="create_activity_pop_item_tips_s">选择微信渠道发送时，将直接跳到微信。</span>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_out"></i>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_in"></i>
+                    </span>
+                </div>
+                <!--重复区 end-->
+                <!--重复区 start-->
+            	<div class="create_activity_pop_item item_border">
+                	<span class="create_activity_pop_item_t item_t_border">
+                    	请输入消息内容
+                    </span>
+                    <div class="item_con_fonts">
+                    	<span class="item_con_fonts_t">
+                        	<textarea></textarea>
+                        </span>
+                        <span class="item_con_fonts_tips">
+                        	您还可以输入500个字！
+                        </span>
+                    </div>
+                </div>
+                <!--重复区 end-->
+                <!--重复区 start-->
+                <div class="create_activity_pop_item">
+                	<span class="create_activity_pop_item_t">
+                    	请选择发送时间
+                    </span>
+                    <span class="create_activity_pop_item_c">
+                    	<input type="text" />
+                    </span>
+                    <span class="create_activity_pop_item_tips">
+                    	<span class="create_activity_pop_item_tips_s">您可以在这里为消息发送设定时间。</span>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_out"></i>
+                        <i class="create_activity_pop_item_tips_i activity_arrow_in"></i>
+                    </span>
+                </div>
+                <!--重复区 end-->
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure click_open_id" popName="popEditMassageNext" href="javascript:void(0);">下一步</a>
+            <a class="perfect_information_pop_button_cancel click_close_id" popName="popEditMassage" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--会员 编辑活动 弹出框 end-->
+
+<!--会员 编辑活动下一步 弹出框 start-->
+<div class="Pop_layer" popName="popEditMassageNext" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">选择会员</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a click_close_id" popName="popEditMassageNext" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="create_activity_pop create_activity_pop_wd">            
+            <div class="create_activity_pop_box">
+            	<div class="member_list">
+                	<div class="member_list_search">
+                    	<table class="member_list_search_table">
+                        	<tbody>
+                                <tr>
+                                    <td class="member_list_search_td_t">余&nbsp;&nbsp;&nbsp;额：</td>
+                                    <td class="member_list_search_td" >
+                                    	<input type="text" /><span class="member_list_search_td_line">-</span><input type="text" />
+                                    </td>
+                                    <td class="member_list_search_td_t">总&nbsp;消&nbsp;费：</td>
+                                    <td class="member_list_search_td" >
+                                    	<input type="text" /><span class="member_list_search_td_line">-</span><input type="text" />
+                                    </td>
+                                </tr>
+                                <tr><td height="20"></td></tr>
+                                <tr>
+                                    <td class="member_list_search_td_t">来&nbsp;&nbsp;&nbsp;源：</td>
+                                    <td class="member_list_search_td" >
+                                    	<select>
+                                        	<option>全部</option>
+                                            <option>全部</option>
+                                            <option>全部</option>
+                                        </select>
+                                        <span class="member_list_search_td_fonts">卡类型：</span>
+                                        <select>
+                                        	<option>全部</option>
+                                            <option>全部</option>
+                                            <option>全部</option>
+                                        </select>
+                                    </td>
+                                    <td class="member_list_search_td_t">关&nbsp;键&nbsp;字：</td>
+                                    <td class="member_list_search_td" >
+                                    	<input type="text" />
+                                        <a class="member_list_search_td_a_select" href="javascript:void(0);">清空条件</a>
+                                        <a class="member_list_search_td_btn" href="javascript:void(0);">查询</a>
+                                    </td>
+                                </tr>
+                        	</tbody>
+                        </table>
+                    </div>
+                    <div class="member_list_con" style="margin-top:20px;">
+						<table class="member_list_con_table"><tbody>
+                        	<tr>
+                            	<th class="member_list_con_td_t"><input type="checkbox" /></th>
+                            	<th class="member_list_con_td_t">会员名称</th>
+                                <th class="member_list_con_td_t">卡号</th>
+                                <th class="member_list_con_td_t">手机号</th>
+                                <th class="member_list_con_td_t">总消费</th>
+                                <th class="member_list_con_td_t">开卡时间</th>
+                                <th class="member_list_con_td_t">余额</th>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                            <tr>
+                            	<td class="member_list_con_td"><input type="checkbox" /></td>
+                            	<td class="member_list_con_td">蓝色星空岛</td>
+                                <td class="member_list_con_td">No.1321231231</td>
+                                <td class="member_list_con_td">15888888888</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                                <td class="member_list_con_td">2016-12-12 12:12</td>
+                                <td class="member_list_con_td">￥10000.00</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <div class="latest_activity_page">
+                    	asdfasfasdf
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+        	<a class="perfect_information_pop_button_cancel click_open_id" popName="popEditMassage" href="javascript:void(0);">上一步</a>
+            <a class="perfect_information_pop_button_sure click_close_id" popName="popEditMassageNext" href="javascript:void(0);">确认</a>
+            <a class="perfect_information_pop_button_cancel click_close_id" popName="popEditMassageNext" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--会员 编辑活动下一步 弹出框 end-->
+
+
+
+<!--会员列表 删除 弹出框 start-->
+<div class="Pop_layer" popName="popCreateMassageDel" style="display:none;">
+	<div class="latest_activity_pop">
+    	<div class="latest_activity_pop_close">
+        	<a class="latest_activity_pop_close_a click_close_id"  popName="popCreateMassageDel" href="javascript:void(0);"></a>
+        </div>
+        <div class="latest_activity_pop_con">
+        	<div class="latest_activity_pop_con_t">
+            	删除活动
+            </div>
+            <div class="latest_activity_pop_con_c" style="text-align:center;">
+            	确认删除该活动吗？
+            </div>
+        </div>
+        <div class="latest_activity_pop_btn">
+        	<a class="latest_activity_pop_btn_follow click_close_id" id="btnChageColor" popName="popCreateMassageDel" href="javascript:void(0);">确认</a>
+            <a class="latest_activity_pop_btn_no click_close_id"  popName="popCreateMassageDel" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--会员列表 删除 弹出框 end-->
+
+
+
+<!--弹出层 end-->
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>会员管理</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="member_list.html">会员列表<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="member_list_deal_details.html">交易详情<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="member_list_create_coad.html">创建会员卡<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="javascript:void(0);">微信会员卡<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="member_list_create_activity.html">创建活动<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="member_list_message_push.html">消息推送<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="member_list.html">会员管理</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="member_list_message_push.html">消息推送</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--创建会员卡 start-->
+            	<div class="member_list">
+                	<div class="member_create_coad tab_box" tabsName="tabNameActive">
+                    	<div class="member_create_acticity_nav">
+                        	<ul  class="tab_nav" tabsName="tabNameActive">
+                            	<li class="member_create_acticity_nav_li on"><a class="member_create_acticity_nav_a" href="javascript:void(0);">全部</a></li>
+                                <li class="member_create_acticity_nav_li"><a class="member_create_acticity_nav_a" href="javascript:void(0);">已发送</a></li>
+                                <li class="member_create_acticity_nav_li"><a class="member_create_acticity_nav_a" href="javascript:void(0);">未发送</a></li>
+                            </ul>
+                        </div>
+                    	<div class="member_create_coad_div tab_sole">
+                         <!--创建活动 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box click_open_id" popName="popCreateMassage">
+                                    <div class="member_create_coad_item_top">
+                                        
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span"><i class="member_create_coad_item_center_span_i"></i>创建消息</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!--创建活动 end-->
+                        	<!--重复区 start-->
+                        	<div class="member_create_coad_item member_create_coad_item_select">
+                            	<div class="member_create_coad_item_box">
+                                    <div class="member_create_coad_item_top">
+                                        <span class="member_create_coad_item_top_span">已停用</span>
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span">1周年充值活动</span>
+                                    </div>
+                                    <div class="member_create_coad_item_bottom">
+                                        <span class="member_create_coad_item_bottom_l">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popEditMassage"><i></i>编辑</a>
+                                        </span>
+                                        <span class="member_create_coad_item_bottom_r">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popCreateMassageDel"><i></i>删除</a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <!--<div class="member_create_coad_tips">
+                                	<div class="member_create_coad_tips_btn">
+                                        <input type="radio" name="btn" />
+                                        <span class="tips_btn_font">已停用</span>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <!--重复区 end-->
+                            <!--重复区 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box">
+                                    <div class="member_create_coad_item_top">
+                                        <span class="member_create_coad_item_top_span">已启用</span>
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span">1周年折扣活动</span>
+                                    </div>
+                                    <div class="member_create_coad_item_bottom">
+                                        <span class="member_create_coad_item_bottom_l">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popEditMassage"><i></i>编辑</a>
+                                        </span>
+                                        <span class="member_create_coad_item_bottom_r">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popCreateMassageDel"><i></i>删除</a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                               <!-- <div class="member_create_coad_tips">
+                                	<div class="member_create_coad_tips_btn">
+                                        <input type="radio" name="btn" />
+                                        <span class="tips_btn_font_select">已停用</span>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <!--重复区 end-->
+                            <!--重复区 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box">
+                                    <div class="member_create_coad_item_top">
+                                        
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span">1周年折扣活动</span>
+                                    </div>
+                                    <div class="member_create_coad_item_bottom">
+                                        <span class="member_create_coad_item_bottom_l">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popEditMassage"><i></i>编辑</a>
+                                        </span>
+                                        <span class="member_create_coad_item_bottom_r">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popCreateMassageDel"><i></i>删除</a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--重复区 end-->
+                            <!--重复区 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box">
+                                    <div class="member_create_coad_item_top">
+                                        
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span">1周年折扣活动</span>
+                                    </div>
+                                    <div class="member_create_coad_item_bottom">
+                                        <span class="member_create_coad_item_bottom_l">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popEditMassage"><i></i>编辑</a>
+                                        </span>
+                                        <span class="member_create_coad_item_bottom_r">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popCreateMassageDel"><i></i>删除</a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--重复区 end-->
+                           <!--重复区 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box">
+                                    <div class="member_create_coad_item_top">
+                                        
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span">1周年折扣活动</span>
+                                    </div>
+                                    <div class="member_create_coad_item_bottom">
+                                        <span class="member_create_coad_item_bottom_l">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popEditMassage"><i></i>编辑</a>
+                                        </span>
+                                        <span class="member_create_coad_item_bottom_r">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popCreateMassageDel"><i></i>删除</a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--重复区 end-->
+                            
+                            
+                            
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="member_create_coad_div tab_sole">
+                           <!--创建活动 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box click_open_id" popName="popCreateMassage">
+                                    <div class="member_create_coad_item_top">
+                                        
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span"><i class="member_create_coad_item_center_span_i"></i>创建消息</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!--创建活动 end-->
+                        	<!--重复区 start-->
+                        	<div class="member_create_coad_item member_create_coad_item_select">
+                            	<div class="member_create_coad_item_box">
+                                    <div class="member_create_coad_item_top">
+                                        <span class="member_create_coad_item_top_span">已停用</span>
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span">1周年充值活动</span>
+                                    </div>
+                                    <div class="member_create_coad_item_bottom">
+                                        <span class="member_create_coad_item_bottom_l">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popEditMassage"><i></i>编辑</a>
+                                        </span>
+                                        <span class="member_create_coad_item_bottom_r">
+                                            <a class="click_open_id" href="javascript:void(0);" popName="popCreateMassageDel"><i></i>删除</a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <!--<div class="member_create_coad_tips">
+                                	<div class="member_create_coad_tips_btn">
+                                        <input type="radio" name="btn" />
+                                        <span class="tips_btn_font">已停用</span>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <!--重复区 end-->
+      
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="member_create_coad_div tab_sole">
+                           <!--创建活动 start-->
+                            <div class="member_create_coad_item">
+                            	<div class="member_create_coad_item_box click_open_id" popName="popCreateMassage">
+                                    <div class="member_create_coad_item_top">
+                                        
+                                    </div>
+                                    <div class="member_create_coad_item_center">
+                                        <span class="member_create_coad_item_center_span"><i class="member_create_coad_item_center_span_i"></i>创建消息</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!--创建活动 end-->
+                        	
+                            <div class="clear"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="latest_activity_page">
+                    	asdfasfasdf
+                    </div>
+                </div>
+                <!--创建会员卡 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+
+
+<script  type="text/javascript" src="./js/public_js.js"></script> 
+<script language="javascript">
+		$(function(){
+			$(".member_create_coad_item").click(function() {
+					$(this).addClass("member_create_coad_item_select").siblings().removeClass("member_create_coad_item_select");
+				});
+			
+		});	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+/*头部*/
+.ad_head1{ width:100%; height:82px; border-bottom:4px solid #020202; background:#FFF; min-width:1200px;}
+.ad_head_box{ width:1200px; height:82px; margin:0 auto;}
+.ad_head_logo{ float:left; width:40%; height:82px;}
+.ad_head_logo img{ height:41px; margin-top:20px;}
+
+.ad_head_font{ float:right; width:60%; height:82px; text-align:right; line-height:82px; color:#d5d5d5;}
+.ad_head_font a{ font-family:Microsoft YaHei ; font-size:16px; color:#000; padding:0 5px;}
+.ad_head_font a:hover{ color:#F00;}
+a.ad_head_font_red{ color:#F00;}
+
+
+/*最新活动 start*/
+.latest_activity{ width:100%; margin:0 auto;}
+.latest_activity_search{ width:100%;}
+.latest_activity_search_table{ width:100%; margin-top:20px;    font-family: Microsoft YaHei;color: #5a5a5a;}
+.latest_activity_search_table td{  color:#5c5c5c;}
+.latest_activity_search_td{width:14%;padding-right:1%;height:35px; line-height:35px;}
+.latest_activity_search_td_t{ width:9%; text-align:right; padding-right:10px; font-size:14px; color:#5c5c5c;height:35px; line-height:35px;}
+a.latest_activity_search_td_btn{ color:#FFF; background:#ff0202; display:inline-block; width:70%; text-align:center; border-radius:5px;}
+a.latest_activity_search_td_btn:hover{ background:#e50606;}
+.latest_activity_search_td select{ height:35px; line-height:35px; width:100%; border:1px solid #dcdcdd; color:#5c5c5c; text-align:center; vertical-align:middle; padding:0;padding:0 5px;box-sizing: border-box;}
+.latest_activity_search_td input{ height:35px; line-height:35px; width:100%; border:1px solid #dcdcdd; color:#5c5c5c; text-align:left;padding:0 5px;box-sizing: border-box;}
+.latest_activity_search_td select option{color:#5c5c5c; text-align:center;padding:0 5px;box-sizing: border-box;}
+
+.latest_activity_search_nav{ width:100%; margin-top:20px;}
+.latest_activity_search_nav_a{ display:inline-block; width:100px; height:33px; text-align:center; border-radius:30px; border:1px solid #c9c9cc; line-height:33px; margin-left:20px; font-size:14px; color:#5c5c5c;}
+.latest_activity_search_nav_a:hover{border:1px solid #ff0202; color:#ff0202;}
+.latest_activity_search_nav_a_select{ border:1px solid #ff0202; color:#ff0202;}
+a.latest_activity_search_nav_a_select{ color:#ff0202;}
+
+.latest_activity_label{ width:100%; margin:20px auto; margin-bottom:0;}
+.latest_activity_label_box{ width:95%; margin:0 auto; line-height:36px;}
+.latest_activity_label_span{color: #5c5c5c;font-size: 14px;font-family: Microsoft YaHei; display:inline-block; width:90px; }
+.latest_activity_label_span i{ padding:3px 15px; background:url(../../resources/images/content_left_dd_i_select.png) no-repeat center center;height:32px; line-height:32px;}
+.latest_activity_label_one{color: #5c5c5c;font-size: 14px;font-family: Microsoft YaHei; border:1px solid #c9c9cc; display:inline-block; height:32px; line-height:32px; width:150px;  padding-left:10px; padding-right:22px; position:relative; overflow:hidden; vertical-align:middle;margin-right: 8px;}
+.latest_activity_label_one_a{ display:inline-block; background:url(../../resources/images/close_select.png) no-repeat center center; position:absolute; z-index:3; padding:11px 9px; right:5px; top:3px; background-size:80%;}
+
+.latest_activity_con{ width:100%; margin:20px auto; margin-top:0;}
+.latest_activity_con_div{ width:190px; float:left; margin-top:20px; padding:17px 14px; border:1px solid #ececec; margin:20px 6px 0 6px;position:relative;}
+.class_boder_images{background:url(../../resources/images/activity/pinkage_icon.png) no-repeat right top/auto 39px;display:inline-block;width:39px;height:39px;position:absolute;right:0;top:0;}
+.latest_activity_con_div:hover{ border:1px solid #ff1111;}
+.latest_activity_con_div_h2{ width:190px; height:190px; margin:0 auto;}
+.latest_activity_con_div_h2_a{ display:table-cell; vertical-align:middle; text-align:center; width:190px; height:190px;}
+.latest_activity_con_div_h2_a img{height:190px;width:190px; vertical-align:middle;}
+.latest_activity_con_div_p{ width:190px; font-size:14px; color:#222222; height:28px; line-height:28px; overflow:hidden;}
+.latest_activity_con_div_p_a{font-size:14px; color:#222222;}
+.latest_activity_con_div_price{ width:190px; height:22px; line-height:22px; overflow:hidden;}
+.latest_activity_con_div_price_d{ width:49%; overflow:hidden; float:left; font-size:12px; color:#656565;}
+.promotional_price{ width:99%;}
+.align_right{ text-align:right;}
+.vip_price{ display:inline-block; width:75%; overflow:hidden;vertical-align: middle; font-size:18px; color:#ff0202; padding-left:3%;}
+.latest_activity_con_div_price_d del{ display:inline-block; width:60%; overflow:hidden;vertical-align: middle; font-size:14px; color:#ff0202;}
+.commission_price{font-size:14px; color:#f98700;display:inline-block; width:60%; overflow:hidden;vertical-align: middle; }
+
+.latest_activity_con_div_shop{ width:64%; height:22px; line-height:22px; overflow:hidden; float:left; font-size:12px; color:#656565;}
+.latest_activity_con_div_collection{ width:34%; float: right;font-size:12px; color:#656565; overflow:hidden;text-align: right;}
+.latest_activity_con_div_collection a{ display:inline-block;}
+.collection_shop_no{ background: url(../../resources/images/activity/collection_no.png) no-repeat; padding:2px 12px;}
+.collection_shop{ background: url(../../resources/images/activity/collection.png) no-repeat; padding:2px 12px;}
+
+
+.latest_activity_page{ width:100%; margin:40px auto; text-align:center;}
+
+/*最新活动 end*/
+
+
+/*最新活动详情 start*/
+.latest_activity_details{ width:100%; margin:0 auto;}
+
+.l_a_details_top{ border:1px solid #dcdcdd; width:100%;}
+.l_a_details_top_box{ width:95%; margin:20px auto;}
+.l_a_details_top_left{ width:49%; float:left}
+.l_a_details_top_left_big{ width:100%; margin:0 auto; height:430px;}
+.l_a_details_top_left_big img{ width:100%; margin:0 auto; height:430px;}
+
+.l_a_details_top_left_ul{ width:100%; margin:0 auto; height:70px; margin-top:20px;}
+.l_a_details_top_left_li{ width:18%; margin-right:2%; float:left; height:100%;}
+.l_a_details_top_left_li_no{ margin-right:0; float:right;}
+.l_a_details_top_left_li a{ width:100%; height:100%; display:block; border:1px solid #fff;}
+.l_a_details_top_left_li a:hover{ border:1px solid #ff0202;}
+.l_a_details_top_left_li_select a{ border:1px solid #ff0202;}
+.l_a_details_top_left_li a img{ width:100%; height:100%;}
+
+.l_a_details_top_right{width:48%; float:left; margin-left:3%;}
+.l_a_details_top_right_title{ font-size:16px; font-weight:bold; color:#323131;}
+.l_a_details_top_right_details{ width:100%; margin:15px auto;}
+.l_a_details_top_right_details_t{ background:#f3f3f4; width:95%; padding:10px 10px;}
+.l_a_details_top_right_details_li{ width:49%; float:left; line-height:30px; height:30px; font-size:14px; color:#323131; overflow:hidden;}
+.details_title{width:30%; display:block; overflow:hidden; line-height:30px; height:30px; float:left; }
+.details_vip_price{ display:inline-block; width:65%; overflow:hidden;vertical-align: middle; font-size:18px; color:#ff0202; padding-left:3%; line-height:30px; height:30px;display:block; float:right; }
+.details_commission_price{font-size:14px; color:#f98700;display:inline-block; width:65%; overflow:hidden;vertical-align: middle; line-height:30px; height:30px;display:block; float:right;  }
+.l_a_details_top_right_details_b{width:95%; padding:10px 10px; border-bottom:1px dashed #dcdcdd;}
+.details_stock{ width:65%; overflow:hidden;vertical-align: middle; line-height:30px; height:30px;display:block; float:right;  }
+
+.l_a_details_top_right_collect{ width:100%; margin:20px auto; height:40px; line-height:40px; text-align:center;}
+.l_a_details_top_right_collect a{ display:inline-block; border:1px solid #d9d9d9; width:220px; height:32px; text-align:center; line-height:32px; background:url(../../resources/images/activity/collect_bg.png) repeat-x;}
+
+.l_a_details_con{ width:100%; margin:20px auto; border:1px solid #dcdcdd;}
+.l_a_details_con_box{ width:95%; margin:20px auto;}
+.l_a_details_con_title{ width:100%; margin:0 auto; border-bottom:1px dashed #909090; }
+.l_a_details_con_title_zh{ display:inline-block; background:#010101; color:#FFF;height:30px; line-height:30px; font-size:14px; padding:0 10px; margin-bottom:12px;}
+.l_a_details_con_title_en{ padding-left:5px; color:#8d8d8d;}
+
+.l_a_details_con_attributes{ width:90%; margin:20px 0;}
+.l_a_details_con_attributes_table{ width:100%; border:1px solid #e2e2e4;}
+.l_a_details_con_attributes_title{ border-right:1px solid #e2e2e4;border-bottom:1px solid #e2e2e4; width:12%; height:40px; line-height:40px; padding:0 5px; overflow:hidden; background:#efeff2; font-size:14px; color:#222222;}
+.l_a_details_con_attributes_td{border-bottom:1px solid #e2e2e4; border-right:1px solid #e2e2e4; width:35%;height:40px; line-height:40px; padding:0 5px;overflow:hidden;font-size:14px; color:#222222;}
+
+.l_a_details_con_details{width:90%; margin:20px 0;}
+.l_a_details_con_details p{ font-size:12px; color:#222222; line-height:28px;}
+.l_a_details_con_details img{ width:100%; display:block; margin-top:20px;}
+/*最新活动详情 end*/
+
+
+
+/*最新活动卡券 start*/
+.latest_activity_card_coupons{ float:left; width:454px; height:156px; background:url(../../resources/images/activity/card_coupons.png) no-repeat center center; margin:20px 10px 0 0;}
+.card_coupons_left{ float:left; width:220px; height:156px; padding-left:10px;}
+.card_coupons_left_top{ width:220px; text-align:center;}
+.card_coupons_left_top_logo{ display: table-cell; width:50px; height:50px; line-height:65px; text-align:center; vertical-align:middle; float:left; padding-left:10px;}
+.card_coupons_left_top_logo img{ max-height:50px; max-width:50px; text-align:center; vertical-align:middle;}
+.card_coupons_left_top_title{ display:inline-block; width:150px; overflow:hidden; text-align:left; color:#8e94b5; font-size:18px; font-weight: bold; height:50px; line-height:65px;font-family:Microsoft YaHei;}
+.card_coupons_left_name{ height:32px; line-height:22px; width:220px; overflow:hidden;font-family:Microsoft YaHei; font-size:12px; color:#8e94b5; text-align:center;}
+.card_coupons_left_name_one{font-family:Microsoft YaHei; font-size:12px; color:#8e94b5; width:45%; overflow:hidden; height:32px; line-height:22px; text-align:center; padding-right:5px; font-weight:bold;}
+.card_coupons_left_name_one font{ color:#569f9d;}
+.card_coupons_left_date{ color:#8e94b5; font-size:10px; text-align:center; width:215px; overflow:hidden;height: 30px;line-height: 35px;}
+
+
+
+.card_coupons_center{ float:left; width:90px; height:136px; text-align:center; vertical-align:middle;}
+.card_coupons_center_a{ display:table-cell; vertical-align:middle; text-align:center; width:90px; height:135px; }
+.card_coupons_center_a img{ max-height:90px; max-width:90px; vertical-align:middle; text-align:center;}
+
+
+.card_coupons_right{float:right; width:120px; height:156px;}
+.card_coupons_right_top{ height:62px; width:110px; text-align:center; color:#fff; font-size:16px; overflow:hidden;}
+.card_coupons_right_top_span{color:#fff; font-size:48px;display: inline-block;max-width: 61px;}
+.card_coupons_right_p{ width:110px; text-align:center; color:#fff; font-size:16px; overflow:hidden;}
+.card_coupons_right_collection{font-size: 12px;color: #656565;overflow: hidden;text-align: right; width:100px; margin-top:15px;}
+a.card_coupons_right_collection_a{ display:inline-block; color:#fff;}
+.card_coupons_collection_no{background: url(../../resources/images/activity/collection.png) no-repeat; padding: 2px 12px;}
+.card_coupons_collection{background: url(../../resources/images/activity/collection_no.png) no-repeat; padding: 2px 12px;}
+
+
+
+/*最新活动卡券 end*/
+
+/*最新活动卡券详情 start*/
+.latest_activity_card_coupons_border{ border:1px solid #dcdcdc;}
+.latest_activity_card_coupons_details_li{    width:100%;line-height: 30px;font-size: 14px; color: #323131; overflow: hidden;}
+.latest_activity_card_coupons_details_li_title{    width:20%;display: block;overflow: hidden;line-height: 30px; height: 30px;float: left;}
+.latest_activity_card_coupons_details_li_stock{    width:78%;overflow: hidden;vertical-align: middle;line-height: 30px;display: block; float: right;}
+
+.card_coupons_details_abstract{ margin-bottom: 40px;}
+.card_coupons_details_abstract_box{ margin-top:20px;}
+.card_coupons_details_abstract_t{ font-size:14px; color:#222222; line-height:32px; font-weight:bold;}
+.card_coupons_details_abstract_p{font-size:14px; color:#5b5b5b; line-height:32px;}
+
+.l_a_voucher_details{ margin:20px auto; width:100%;}
+.l_a_voucher_details_table{    width: 100%; border: 1px solid #e2e2e4;}
+.l_a_voucher_details_td_title{    border-right: 1px solid #e2e2e4;
+    border-bottom: 1px solid #e2e2e4;
+    width:25%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    overflow: hidden;
+    background: #efeff2;
+    font-size: 14px;
+    color: #222222; text-align:center;}
+.l_a_voucher_details_td{    border-bottom: 1px solid #e2e2e4;
+    border-right: 1px solid #e2e2e4;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #222222;text-align:center;}
+
+
+
+
+/*最新活动卡券详情 end*/
+
+
+
+

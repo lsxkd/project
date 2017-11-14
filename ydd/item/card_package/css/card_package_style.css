@@ -1,0 +1,645 @@
+@charset "utf-8";
+
+*{padding: 0;margin: 0;}
+table,tbody,thead,tfoot,tr,td,ul,ol,li,a,img,b,h1,h2,h3,h4,h5,h6,em,i,b,span,div,p{font-style:normal;vertical-align:middle;font-weight:normal;border-collapse: collapse;border:0;text-decoration: none;list-style-type:none;}
+
+html{font-size:20px;}
+@media all and ( max-width: 3072px ) {
+  html{font-size:80px;}
+}
+
+@media all and ( max-width: 1242px ) {
+  html{font-size:33px;}
+}
+
+@media all and ( max-width: 1120px ) {
+  html{font-size:30px;}
+}
+
+@media all and ( max-width: 1080px ) {
+  html{font-size:28px;}
+}
+
+@media all and ( max-width: 828px ) {
+  html{font-size:22px;}
+}
+
+@media all and ( max-width: 750px ) {
+  html{font-size:20px;}
+    .span_bts_w{margin-top:3rem;}
+}
+
+@media all and ( max-width: 720px ) {
+  html{font-size:18px;}
+}
+
+@media all and ( max-width: 640px ) {
+  html{font-size:16px;}
+
+}
+
+body{font-family:"微软雅黑";font-size:1.5rem;}
+body{
+    -webkit-user-select:none;
+    user-select:none;
+}
+
+
+/*
+*弹出层 start
+ */
+div{outline:none;}
+
+.popup{width:34.5rem;position:fixed;z-index:10;left:50%;margin-left:-17.25rem;top:7rem;display:none;}
+.popup_bg{position:fixed;width:100%;z-index:9;height:100%;top:0;left:0;background:#000;opacity:0.6;display:none;}
+
+
+.pop_list_block{position:fixed;top:0;left:0;z-index:999;width:100%;max-height:70%;overflow: hidden;}
+.condition_clicks_list_divs{max-height:calc(100% - 4.5rem);overflow-y:auto;}
+.condition_clicks_list{line-height:4.5rem;display:none;}
+.pop_list_block .condition_clicks_list li{height:4.5rem;line-height:4.5rem;border-bottom:1px solid #d9d9d9;padding:0 1.5rem;}
+.pop_list_block .condition_clicks_list li:after{content:"";display:block;clear:both;}
+.pop_list_block .condition_clicks_list li .condition_clicks_list_span_l{font-size:1.4rem;color:#ffd105;color:#333333;}
+.pop_list_block .condition_clicks_list li.on .condition_clicks_list_span_l{font-size:1.4rem;color:#ffd105;}
+.pop_list_block .condition_clicks_list li.on .condition_clicks_list_span_r{float:right;display:inline-block;width:1.8rem;height:1.2rem;background:url(../images/dui_icon.png) no-repeat center center/auto 100%;margin-top:1.6rem;}
+.pop_list_block .condition_clicks_list{line-height:4.5rem;display:block;}
+
+.pop_list_block_02{position:fixed;top:0;left:0;z-index:999;width:100%;max-height:70%;overflow: hidden;}
+.condition_clicks_list_02{line-height:4.5rem;display:none;}
+.pop_list_block_02 .condition_clicks_list_02 li{height:4.5rem;line-height:4.5rem;border-bottom:1px solid #d9d9d9;padding:0 1.5rem;}
+.pop_list_block_02 .condition_clicks_list_02 li:after{content:"";display:block;clear:both;}
+.pop_list_block_02 .condition_clicks_list_02 li .condition_clicks_list_span_l{font-size:1.4rem;color:#ffd105;color:#333333;}
+.pop_list_block_02 .condition_clicks_list_02 li.on .condition_clicks_list_span_l{font-size:1.4rem;color:#ffd105;}
+.pop_list_block_02 .condition_clicks_list_02 li.on .condition_clicks_list_span_r{float:right;display:inline-block;width:1.8rem;height:1.2rem;background:url(../images/dui_icon.png) no-repeat center center/auto 100%;margin-top:1.6rem;}
+.pop_list_block_02 .condition_clicks_list_02{line-height:4.5rem;display:block;}
+
+
+	/*
+	获得红包 stsrt
+	 */
+	 .close_popup{position:absolute;width:1.4rem;padding:1rem;height:1.4rem;right:0.5rem;top:0.5rem;background:url(../images/deletebg.png) no-repeat center center/1.4rem 1.4rem;}
+	.redPage_popup {color:#fff;top:0.5rem;box-sizing:border-box;padding-top:2rem;width:29.5rem;margin-left:-14.75rem;}
+	.redPage_popup_box{position:fixed;padding-top:1rem;left:50%;top:50%;width:29.5rem;}
+	.redPage_popup_box:after{c2ontent:"";position:absolute;left:0;top:0;right:0;bottom:0;background:url(../images/atmosphere.png) no-repeat 1.3rem 0.6rem/100% auto;}
+	.redPage_popup_box > img{max-width:100%;margin:0 auto;display:block;}
+	.redPage_popup .close_popup{width:3.6rem;height:3.6rem;top:0.2rem;right:-3.55rem;background:url(../images/close_pupop.png) no-repeat center center/3.6rem auto;}
+	.gain_red_page{text-align:center;position:relative;width:29.5rem;height:29.2rem;background:url(../images/red_page_bg.png) no-repeat center center/100% auto;margin:0 auto;padding-top:10.8rem;box-sizing:border-box;}
+	.gain_red_page .user_ico{overflow:hidden;border:2px solid #e5b46b;box-shadow:0 4px 8px #502026;box-sizing:border-box;border-radius:50rem;width:6.3rem;height:6.3rem;position:absolute;left:50%;top:4rem;margin-left:-3.15rem}
+	.gain_red_page .user_ico img{width:100%;height:100%;}
+	.gain_red_user{font-size:1.4rem;color:#f6ca7b;text-shadow:0 2px 2px #502026;}
+	.gain_red_money{height:10.4rem;line-height:9rem;box-sizing:border-box;padding:0.5rem 0 1.5rem;font-size:1.6rem;color:#f6ca7b;text-shadow:0 5px 5px #990b14;}
+	.red_money_mun{height:10.4rem;line-height:6rem;box-sizing:border-box;display:inline-block;padding:2.5rem 0 1.5rem;font-size:1.6rem;color:#f6ca7b;text-shadow:0 5px 5px #990b14;}
+	.red_money_mun_n{height:6rem;line-height:6rem;overflow:hidden;display:inline-block;width:3.5rem;text-align:center;}
+	.red_money_mun_n li{font-size:6rem;height:6rem;overflow:hidden;}
+	.red_money_mun_n.decimal{width:2rem;font-size:6rem;}
+	.gain_red_money span{vertical-align: bottom;display: inline-block;height: 100%;line-height: 11rem;}
+	.gain_red_type{font-size:2.4rem;color:#f6ca7b;text-shadow:0 5px 5px #990b14;}
+	.gain_red_mess{position:relative;z-index:12;margin-top:1rem;height:8.5rem;line-height:8.5rem;box-sizing:border-box;color:#663619;font-size:2.4rem;padding-left:6.5rem;background:url(../images/red_page_bg01.png) no-repeat center center/100% auto;}
+	.gain_red_link{position:absolute;font-weight: bold;top:0;right:0rem;padding:2rem 0;height:8.5rem;line-height:2.2rem;width:8.5rem;font-size:1.6rem;color:#4c1519;padding-left:2.5rem;box-sizing:border-box;}
+	.gain_red_bus{display:block;width:100%;margin-top:2rem;position:relative;z-index:9;font-size:1.8rem;color:#875d0e;font-weight:bold;text-align:center;height:4.5rem;line-height:4.5rem;background:url(../images/red_page_bg02.png) no-repeat center center/100% auto;}
+	.gain_red_item{margin-top:1rem;font-size:1.4rem;color:#f7f3d5;text-align:center;text-shadow:0 5px 5px #502026;}
+	.card_list_tel.hidden_cursor .reset_nums{display:none !important;}
+	/*
+	获得红包 end
+	 */
+	/*
+	收藏弹出框 stsrt
+	 */
+	.pop_collect{position:fixed;top:50%;left:50%;width:12rem;height:10rem;z-index:3;text-align:center;margin-left:-6rem;margin-top:-5rem;border-radius:1rem;display:none;}
+	.pop_collect_con{width:100%;height:100%;background:#000;opacity: 0.8;border-radius:1rem;position:relative;}
+	.pop_collect_bg{width:100%;height:100%;position:absolute;z-index: 4;left:0;top: 0;}
+	.pop_collect h2{margin-top:2rem;}
+	.pop_collect h2.pop_collect_red{display:block;}
+	.pop_collect h2.pop_collect_empty{display:none;}
+	.pop_collect .show_grayd h2.pop_collect_red{display:none;}
+	.pop_collect .show_grayd h2.pop_collect_empty{display:block;}
+	.pop_collect h2 img{width:3.5rem;height:3.5rem;}
+	.pop_collect p{font-size:1.4rem;color:#FFF;margin-top:1.5rem;}
+
+
+	/*
+	收藏弹出框 end
+	 */
+
+
+/*
+*弹出层 start
+ */
+
+/*
+*光标 start
+ */
+.cursor{display:inline-block;display:none;height:2rem;width:0;margin-left:0.1rem;margin-right:-3px;vertical-align:middle;border-left:4px solid #ffd105;
+	animation: twinkle .5s infinite;
+	-webkit-animation: twinkle .5s infinite;
+}
+@-webkit-keyframes twinkle {
+	0% {opacity:0}
+	25% {opacity:0}
+	50% {opacity:1}
+	75% {opacity:1}
+	100% {opacity:0}
+}
+@keyframes twinkle {
+	0% {opacity:0}
+	25% {opacity:0}
+	50% {opacity:1}
+	75% {opacity:1}
+	100% {opacity:0}
+}
+.focus .cursor{display:inline-block;}
+/*
+*光标 end
+ */
+
+/*
+*通用样式 start*
+ */
+.float_l{float:left;}
+.float_r{float:right;}
+.clear{clear:both;}
+
+
+
+/*
+*通用样式 end
+ */
+
+/*
+*头部 start*
+ */
+
+.address_searchs{background:#ffd105;height:4.4rem;box-sizing:border-box;padding:0.7rem 1.5rem;overflow: hidden;}
+.address_searchs:after{content:"";display:block;clear:both;}
+.address_searchs_left{height:3rem;line-height:3rem;width:3em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:95%;}
+.address_searchs_left span{color:#6a3906;font-size:1.4rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:2.2em;display:inline-block;}
+.address_searchs_left i{display:inline-block;width:1.4rem;height:1.4rem;background:url(../images/drop_down_arrow.png) no-repeat center center/0.6rem auto;}
+
+.address_searchs_right{height:3rem;line-height:3rem;background:#FFF;border-radius:10px;width:calc(100% - 1.5rem - 3em);overflow:hidden;position:relative;text-align:center;}
+.address_searchs_right input{background:url(../images/search_icons_bg.png) no-repeat 1.5rem center/auto 1.8rem;border:0;display:inline-block;padding-left:2.8em;width:4em;padding-right:3em;height:100%;text-align:left;outline:none;font-size:1.4rem;color:#cccccc;}
+.address_searchs_right input.input_width_a{width:100%;box-sizing:border-box;}
+.address_searchs_right input[disabled]{color:#cccccc;opacity:1}
+.address_searchs_right_widths{width:calc(100% - 1.5rem - 2em);}
+.address_searchs_center{height:3rem;line-height:3rem;width:2em;overflow:hidden;text-align:center;}
+.address_searchs_center span{color:#6a3906;font-size:1.4rem;}
+
+/*
+*头部 end
+ */
+
+/*
+*底部logo start
+ */
+.bottom_logos{text-align:center;height:8.7rem;margin:0 auto;overflow:hidden;position:absolute;bottom:0;left:0;right:0;}
+.bottom_logos img{height:8.7rem;}
+
+.back_to_top{position:fixed;right:1.5rem;bottom:7.5rem;width:4.5rem;height:4.5rem;z-index:2;}
+.back_to_top img{width:4.5rem;height:4.5rem;}
+
+.bottoms_back_top{bottom:2.5rem;}
+
+/*
+*底部logo end
+ */
+
+/*
+*footer start
+ */
+.footers_list{padding: 0.5rem 0 0;border-top: 1px solid #D9D8D8;background: #FAFAFA;position:fixed;left:0;right:0;bottom:0;z-index:2;}
+.footers_list ul{width:100%;display:block;}
+.footers_list ul li{ width: 25%; float: left; text-align: center; padding: 0.2rem 0; font-size: 1.6rem;}
+.footer_list_pic{ position: relative; height: 2.5rem; width: 2.5rem; margin: 0 auto 0.1rem;}
+.footer_list_pic em{ position: absolute; right: -0.75rem; top: -0.15rem; width: 1rem; height: 1rem; line-height: 1rem; background: #ff3b2f; border-radius: 50rem; font-size: 0.8rem; color: #fff;}
+.footers_list ul li h5{font-size: 1rem;color:#666666;padding-bottom:0.05rem;}
+/*.footers_list ul li h5.selecteda{color:#000000;}*/
+
+.footers_list ul li.on h5.selecteda{color:#000000;}
+
+
+.vip_icon_bottom_01{background: url(../images/vip_icon_bottom.png) no-repeat center top/100% auto;}
+.footers_list ul li.on .vip_icon_bottom_02{background: url(../images/vip_icon_bottom.png) no-repeat center bottom/100% auto;}
+
+.coupons_icon_bottom_01{background: url(../images/coupons_icon_bottom.png) no-repeat center top/100% auto;}
+.footers_list ul li.on .coupons_icon_bottom_02{background: url(../images/coupons_icon_bottom.png) no-repeat center bottom/100% auto;}
+
+.privilege_icon_bottom_01{background: url(../images/privilege_icon_bottom.png) no-repeat center top/100% auto;}
+.footers_list ul li.on .privilege_icon_bottom_02{background: url(../images/privilege_icon_bottom.png) no-repeat center bottom/100% auto;}
+
+.supermarket_icon_bottom_01{background: url(../images/supermarket_icon_bottom.png) no-repeat center top/100% auto;}
+.footers_list ul li.on .supermarket_icon_bottom_02{background: url(../images/supermarket_icon_bottom.png) no-repeat center bottom/100% auto;}
+
+
+
+/*
+*footer end
+ */
+
+
+/*
+*主体 start
+ */
+
+
+#wrap{background:#f2f2f2;position:relative;}
+.card_package_main_touch{-webkit-overflow-scrolling: touch;}
+.card_package_main{overflow:auto;box-sizing: border-box;min-height: 100%;}
+.card_package_main_box{min-height:100%;position:relative;padding-bottom:8.7rem;box-sizing:border-box;overflow:hidden;}
+.card_package_main_top{background:#FFF;}
+.package_main_top_title{height:4.5rem;line-height: 4.5rem;border-bottom:1px solid #d9d9d9;padding:0 1.5rem;}
+.package_main_top_title_l{font-size:1.6rem;color:#333333;}
+.package_main_top_title_r{background:url(../images/list_bg_rigt.png) no-repeat right center/auto 1.4rem;font-size:1.2rem;color:#999999;padding-right:1.5rem;}
+.banner_view_wrap:after{content:"";display:block;clear:both;}
+.banner_view_wrap_item{float:left;}
+.banner_view_wrap_item ul:after{content:"";display:block;clear:both;}
+.banner_view_wrap_item ul li{width:25%;float:left;text-align:center;margin-top:1.5rem;}
+
+
+.logo_img_span{display:inline-block;position:relative;}
+.logo_i_icons{position:absolute;right:0;bottom:0;background:url(../images/v_icon_bg.png) no-repeat center center/auto 100%;display:inline-block;width:1.1rem;height:1.1rem;}
+
+
+.banner_view_wrap_item ul li img{height:3.5rem;width:3.5rem;}
+.banner_view_wrap_item ul li p{font-size:1.2rem;color:#333333;max-width:90%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; margin:0 auto;margin-top:0.75rem;}
+
+.banner{overflow:hidden;}
+.banner_view{position:relative;left:0;}
+.banner_nav{margin-top:0.5rem;text-align:center;}
+.banner_nav span{height:0.6rem;width:0.6rem;margin:0.5rem 0;display:inline-block;border-radius:50%;border:0.5rem solid #FFF;}
+.on.banner_nav_gray{background:#ffd105;}
+.banner_nav_gray{background:#d9d9d9;}
+
+
+.card_package_main_cons{margin-top:1rem;}
+.card_package_main_cons_title{background:#FFF;}
+.card_package_main_cons_title ul.condition_clicks{display:block;height:4.5rem;border-bottom:1px solid #d9d9d9;}
+.card_package_main_cons_title ul.condition_clicks:after{content:"";display:block;clear:both;}
+.card_package_main_cons_title ul.condition_clicks li{ width: 33.33%; box-sizing: border-box; float: left; text-align: center; height:2rem; line-height:2rem; position: relative;margin-top:1.25rem;}
+.card_package_main_cons_title ul.condition_clicks li.on span:first-child{color:#ffd105;}
+
+.card_package_main_cons_title ul.condition_clicks_width_four li{width:25%;}
+
+.card_package_main_cons_title ul.condition_clicks li:after{ content: "";display: block;border-right: 1px solid #d2d1d1;position: absolute;top: 50%;height: 1.6rem;margin-top: -0.8rem;right: 0;}
+.card_package_main_cons_title ul.condition_clicks li:last-child:after{display:none;}
+.card_package_main_cons_title ul.condition_clicks li span{font-size:1.4rem;color:#333333;}
+.card_package_main_cons_title ul.condition_clicks li .lis_names{font-size:1.4rem;color:#333333;}
+
+.card_package_main_cons_title ul.condition_clicks li .lis_arrows{display:inline-block;width:1rem;}
+.arrow_top_gray{background:url(../images/arrow_top.png) no-repeat center center/auto 100%;display:block;width:0.6rem;height:0.4rem;margin-top:0.2rem;}
+.arrow_bottom_gray{background:url(../images/arrow_bottom.png) no-repeat center center/auto 100%;display:block;width:0.6rem;height:0.4rem;margin-top:0.2rem;}
+.arrow_top_yellow{background:url(../images/arrow_top_yellow.png) no-repeat center center/auto 100%;display:block;width:0.6rem;height:0.4rem;display:none;margin-top:0.2rem;}
+.arrow_bottom_yellow{background:url(../images/arrow_bottom_yellow.png) no-repeat center center/auto 100%;display:block;width:0.6rem;height:0.4rem;display:none;margin-top:0.2rem;}
+
+.yellows_top .arrow_top_gray{display:none;}
+.yellows_top .arrow_top_yellow{display:block;}
+.yellows_bottom .arrow_bottom_yellow{display:block;}
+.yellows_bottom .arrow_bottom_gray{display:none;}
+
+.yellows_show .arrow_bottom_gray{display:none;}
+.yellows_show .arrow_top_yellow{display:block;}
+
+
+.card_package_main_cons_column{}
+.card_package_main_cons_item{padding:1rem 0 0 1.5rem;background:#FFF;position:relative;margin-bottom:1rem;min-height: 9rem;box-sizing: border-box;border-bottom: 1px solid #d9d9d9;}
+.card_package_main_cons_item:last-child{margin-bottom:0;}
+.card_package_main_cons_item_liw{position:absolute;left:0;top:0;z-index:2;width:2.5rem;height:2.5rem;display:inline-block;background:url(../images/icon_l_bg.png) no-repeat center center/auto 100%;}
+
+.main_cons_item_logo{position:absolute;}
+.main_cons_item_logo img{width:7rem;height:7rem;}
+.logo_img_span_02{display:inline-block;position:relative;}
+.logo_i_icons_02{position:absolute;right:0;bottom:0;background:url(../images/v_icon_bg.png) no-repeat center center/auto 100%;display:inline-block;width:1.6rem;height:1.6rem;}
+
+
+.main_cons_item_con{padding-left:8rem;min-height:7rem;}
+.main_cons_item_con_title{padding-right:1.5rem;height:2.5rem;}
+.main_cons_item_con_title:after{content:"";display:block;clear:both;}
+.main_cons_item_con_title_l{font-size:1.6rem;color:#333333;display:inline-block;}
+.main_cons_item_con_title_r{float:right;color:#f77b01;font-size:1rem;}
+.main_cons_item_con_title_r i{display:inline-block;height:1.6rem;width:1.6rem;background:url(../images/naruto_icons.png) no-repeat center center/auto 100%;margin-right:0.5rem;}
+
+.main_cons_item_con_title_card_span{float:right;color:#999999;font-size:1rem;}
+
+.main_cons_item_con_class{height:2.5rem;}
+.main_cons_item_con_class span{color: #666666;font-size: 1.4rem;display: inline-block;max-width: 60%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.main_cons_item_con_class span em{color: #666666;font-size: 1.4rem;display: inline-block;max-width:50%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;vertical-align: bottom;}
+
+.main_cons_item_con_address{padding-right:1.5rem;position:relative;height:2rem;}
+.main_cons_item_con_address:after{content:"";display:block;clear:both;}
+.main_cons_item_con_address_l{background:url(../images/address_icon.png) no-repeat left center/auto 90%;padding-left:2rem;font-size:1.2rem;color:#999999;float:left;display:block;width:60%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.main_cons_item_con_address_r{float:right;font-size:1.4rem;color:#666666;max-width:30%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+.main_cons_item_con_address_btn_yellow{display:inline-block;width:6.25rem;height:2.4rem;line-height:2.4rem;position:absolute;right:1.5rem;top:0;margin-top:-0.8rem;background:#ffd105;border-radius:10px;color:#6a3906;font-size:1.2rem;text-align:center;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.main_cons_item_con_address_btn_white{display:inline-block;width:6.25rem;height:2.4rem;line-height:2.4rem;position:absolute;right:1.5rem;top:0;margin-top:-0.8rem;background:#FFF;border:1px solid #ffd105;border-radius:10px;color:#6a3906;font-size:1.2rem;text-align:center;}
+
+
+.main_cons_item_con_coupon{margin-top:0.5rem;padding-bottom:1rem;border-top: 1px solid #d9d9d9;}
+.main_cons_item_con_coupon p{font-size:1.2rem;color:#666666;width:90%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;vertical-align:top;margin-top:1rem;}
+.main_cons_item_con_coupon p span{vertical-align:top;}
+.main_cons_item_con_coupon p i{display:inline-block;width:1.7rem;height:1.7rem;text-align:center;margin:0 0.3rem;line-height:1.7rem;border-radius:5px;color:#FFF;}
+.cash_coupon i{background:#ffd105;}
+.discount_coupon i{background:#ff5757;}
+
+	/*
+	*优惠券列表 end
+	 */
+
+   	.coupons_lists_box{margin:1rem 1.5rem;}
+   	.coupons_lists_item{position:relative;overflow:hidden;height:10rem;border-radius:10px;margin-bottom:1rem;}
+   	.coupons_lists_item_logo{position:absolute;left:0;top:0;text-align:center;width:9rem;height:10rem;background:#FFF;}
+   	.coupons_lists_item_logo_div{margin:1.5rem auto;padding:0 1rem;}
+   	.coupons_lists_item_logo img{height:7rem;width:7rem;}
+
+   	.coupons_lists_item_con{margin-left:9rem;position:relative;}
+   	.coupons_lists_item_con_left{margin-right:8rem;background:#FFF;padding-top:1rem;overflow:hidden;height:10rem;}
+   	.coupons_lists_item_con_left_title{margin-top:0.5rem;}
+   	.coupons_lists_item_con_left_title span{font-size:1.6rem;color:#333333;}
+   	.coupons_lists_item_con_left_msg{margin-top:1.5rem;vertical-align:bottom;}
+   	.coupons_lists_item_con_left_msg span{color:#ffd105;vertical-align:baseline;display:inline-block;}
+   	.coupons_lists_item_con_left_msg .left_msg_l{font-size:1.8rem;line-height:1.8rem;font-weight:bold;}
+   	.coupons_lists_item_con_left_msg .left_msg_c{font-size:4rem;line-height:4rem;font-weight:bold;}
+   	.coupons_lists_item_con_left_msg .left_msg_r{font-size:1.2rem;line-height:1.2rem;}
+
+   	.red_colors_fonts span{color:#ff5757;}
+
+   	.coupons_lists_item_con_right{position:absolute;right:0;top:0;z-index:1;height:10rem;width:7rem;padding-left:1rem;}
+   	.yellow_bgs{background:url(../images/jag_yellow_icon.png) no-repeat 0 center/auto 100%;}
+   	.red_bgs{background:url(../images/jag_red_icon.png) no-repeat 0 center/auto 100%;}
+   	.yellow_bgs .coupons_lists_item_con_right_box{background:#ffd105;height:10rem;padding-right:0.5rem}
+   	.red_bgs .coupons_lists_item_con_right_box{background:#ff5757;height:10rem;}
+   	.coupons_lists_item_con_right_top{height:5rem;padding-top:1rem}
+   	.coupons_lists_item_con_right_bottom{margin-top:0.4rem;position: relative;z-index: 9999}
+   	.con_right_bottom_box{width:6rem;margin:0 auto;height:1.9rem;line-height:1.9rem;border-radius:50px;background:#FFF;text-align:center;vertical-align:middle;}
+   	.yellow_styles{border:0.3rem solid #ffab00;}
+   	.red_styles{border:0.3rem solid #ff2929;}
+   	.yellow_styles .con_right_bottom_box_span{font-size:1.2rem;color:#ffab00;vertical-align:top;}
+   	.red_styles .con_right_bottom_box_span{font-size:1.2rem;color:#ff2929;vertical-align:top;}
+   	.coupons_lists_item_brought_up{position:absolute;right:0;top:-1rem;z-index: 9998;}
+   	.coupons_lists_item_brought_up img{width:9rem;height:9rem;opacity: 0.2;}
+
+
+     .box{width:5rem;height:5rem;color:#fff;margin:0 auto;background:#FFD105;position:relative;}
+     .box_box{overflow:hidden;width:5rem;height:5rem;position:absolute;left:0;top:0;-webkit-overflow-scrolling: auto;border-radius:10rem;}
+     .ratote{position:relative;width:5rem;height:5rem;margin:0 auto;background:#FFAB00;border-radius:5rem;box-sizing: border-box;overflow:hidden;border:0;transform:rotate(-140deg);}
+     .left{position:absolute;width:2.5rem;background:#FFAB00;height:5rem;transform-origin:right center;z-index:2;}
+     .right{position:absolute;left:2.5rem;width:5rem;background:#fff;height:5rem;transform-origin:left center;z-index:1;transform:rotate(-178deg);}
+     .center{width:4rem;height:4rem;left:0.5rem;text-align:center;line-height:3rem;position:absolute;top:0.5rem;background:#FFD105;z-index:9999;border-radius:25rem;transform:rotate(140deg);}
+     .popu{width: 3rem;height: 3rem;transform: rotate(45deg);margin: 0 auto;margin-top: -1.65rem;margin-bottom:-0.75rem;position: relative;background: #FFD105;}
+     .left:before{content:"";top:-0.25rem;left:1.8rem;position:absolute;width:0.5rem;height:0.5rem;border-radius:2.5rem;background:#ffab00;}
+     .left:after{content:"";left:-0.25rem;top:1.8rem;position:absolute;width:0.5rem;height:0.5rem;border-radius:2.5rem;background:#ffab00;}
+     input{margin:0 auto;width:5rem;z-index:9;position:relative;margin-top:-1rem}
+     .radius_bg{width:100%;height:100%;position:absolute;transform:rotate(71deg);z-index:999}
+     .radius_bg01{width:100%;height:100%;z-index:9;position:absolute;}
+     .radius_bg01 .before{left:2.5rem;width:0.25rem;height:0.5rem;position:absolute;background:#ffd105}
+     .radius_bg01 .before span{width:0.5rem;display:block;height:0.5rem;border-radius:0.5rem;background:#ffab00}
+     .radius_bg01 .after{left: 0rem;width: 0.55rem;top: 2.15rem;height: 0.3rem;position: absolute;background: #ffd105;}
+     .radius_bg01 .after span{width:0.5rem;display:block;height:0.5rem;border-radius:0.5rem;background:#ffab00}
+     .radius_bg div{position:relative;width:100%;height:100%;}
+     .radius_bg span{z-index:10;position:absolute;width:0.5rem;height:0.5rem;left:0.08rem;top:2.45rem;margin-top:-0.65rem;border-radius:0.5rem;background:#fff;}
+     .red_bgs .center,.red_bgs .radius_bg01 .before,.red_bgs .radius_bg01 .after,.red_bgs .popu,.red_bgs .box{background: #ff5757;}
+     .red_bgs .ratote,.red_bgs .left,.red_bgs .left:before,.red_bgs .left:after,.red_bgs .radius_bg01 .before span,.red_bgs .radius_bg01 .after span{background:#FF1E1E}
+     .radius_bg01 .before.changeColor span{background:#fff}
+     .radius_bg01 .after.changeColor span{background:#fff}
+     .box.center_round:after{content:"";border-radius:10rem;background:#FFAB00;width:3.4rem;height:3.4rem;position:absolute;display:block;top:50%;left:50%;margin:-1.7rem}
+     .red_bgs .box.center_round:after{background:#FF1E1E}
+     .percent_num{padding-top:1rem;}
+   	.box_font{width:4rem;height:4rem;left:50%;position:absolute;top:50%;z-index:9999;text-align:center;margin: -2rem;padding-top: 0.3rem;}
+   	.center_span01{font-size:1rem;color:#FFF;display:block;line-height:1.7rem;}
+   	.center_span02{font-size:1rem;color:#FFF;display:block;line-height:1rem;}
+   	.box_grabs{width:7rem;height:1.6rem;line-height:1.6rem;left:50%;position:absolute;top:50%;z-index:9999;text-align:center;margin:-0.8rem -3.5rem;vertical-align:middle;}
+   	.box_grabs_yellow{background: #ffd105;}
+   	.box_grabs_red{background: #ff5757;}
+   	.box_grabs span{font-size:1.2rem;color:#FFF;vertical-align: top;}
+
+
+
+	/*
+	*优惠券列表 end
+	 */
+
+
+
+
+
+
+
+
+
+	/*
+	*优惠券详情 start
+	 */
+	.coupon_details{}
+	.coupon_details_box{height:100%;}
+	.coupon_details_top{background:#f9e17b;height:calc(100% - 6.5rem);position:relative;}
+	.coupon_details_top_auto{overflow:hidden;height:calc(99% - 3.2rem);max-height:calc(99% - 1rem);overflow-y:auto;position:relative;-webkit-overflow-scrolling: touch;}
+	.coupon_details_top_box{margin:0 1.5rem;margin-top:3.5rem;background:#FFF;border-radius:10px;overflow: hidden;position:relative;min-height:calc(100% - 3.5rem);}
+	.coupon_details_top_have_receive{position:absolute;left:-1.5rem;top:-1.5rem;width:9rem;height:9rem;}
+	.coupon_details_top_have_receive img{width:9rem;height:9rem;opacity:0.2}
+
+	.coupon_details_top_logo{width:5rem;height:5rem;position:absolute;top:1rem;left:50%;margin-left:-2.5rem;z-index:8}
+	.coupon_details_top_logo span{display:inline-block;position:relative;}
+	.coupon_details_top_logo span img{width:5rem;height:5rem;}
+	.coupon_details_top_logo span i{ position: absolute; right: 0; bottom: 0;z-index:100; background: url(../images/v_icon_bg.png) no-repeat center center/auto 100%; display: inline-block; width: 1.5rem; height: 1.5rem;}
+	.coupon_details_top_title{text-align:center;padding-top:3.5rem;}
+	.coupon_details_top_title p{font-size:1.4rem;color:#333333;max-width:60%;margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+	.coupon_details_top_sum{text-align:center;height:4rem;line-height:4rem;overflow:hidden;margin-top:1.25rem;margin-bottom:0.5rem;}
+	.coupon_details_top_sum span{color:#ff5757;vertical-align:bottom;}
+
+	.yellow_color_st span{color:#ffd105;}
+
+	.coupon_details_top_sum .coupon_details_top_sum_l{font-size:4rem;vertical-align:baseline;font-weight:bold;}
+	.coupon_details_top_sum .coupon_details_top_sum_r{font-size:1.8rem;vertical-align:baseline;}
+	.coupon_details_top_tipsa{text-align:center;max-width:60%;margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+	.coupon_details_top_tipsa span{font-size:1.6rem;color:#666666;}
+	.coupon_details_top_info{margin-top:1rem;padding:0 1.5rem;}
+	.coupon_details_top_info_table{width:100%;}
+	.coupon_details_top_info_table td{vertical-align: middle;font-size:1rem;color:#999999;text-align:center;}
+	.coupon_details_top_info_table td.info_table_left{text-align:left;}
+	.coupon_details_top_info_table td.info_table_right{text-align:right;}
+	.coupon_details_top_info_table td span{font-size:1rem;color:#999999;vertical-align:middle;}
+	.coupon_details_top_info_table td span i{color:#ff5757;vertical-align:baseline;}
+	.coupon_details_top_border{ height:1rem; line-height:1rem;position: relative;margin-top:0.5rem;}
+	.top_border_bottom{height:0.5rem; line-height:0.5rem; border-bottom:2px dashed #e5e4e4; }
+	.coupon_details_top_border_l{position: absolute; top: 50%; left:-0.5rem; width:1rem; height: 1rem; background:#f9e17b; margin-top: -0.5rem; border-radius: 50px;}
+	.coupon_details_top_border_r{position: absolute; top: 50%; right: -0.5rem; width: 1rem; height: 1rem; background:#f9e17b; margin-top: -0.5rem; border-radius: 50px;}
+	.coupon_details_top_explain{margin-top:1rem;padding:0 1.5rem;padding-bottom:0.5rem;}
+
+	.coupon_details_top_explain{font-size:1.2rem;color:#666666;}
+	.coupon_details_top_explain .top_explain_li{font-size:1.2rem;color:#666666;margin-bottom:1.4rem;height:1.2rem;line-height:1.2rem;overflow:hidden;}
+	.top_explain_li .top_explain_point{display:inline-block;width:0.5rem;height:0.5rem;background:#d9d9d9;border-radius:50%;margin-right:0.5rem;}
+	.top_explain_li .top_explain_cons{font-size:1.2rem;color:#666666;}
+
+	.coupon_details_top_detail{padding:0 1.5rem;}
+	.coupon_details_top_detail ul{}
+	.coupon_details_top_detail ul li{height:4.5rem;line-height:4.5rem;border-bottom:1px solid #d9d9d9;position:relative;}
+	.coupon_details_top_detail ul li:first-child{border-top:1px solid #d9d9d9;}
+	.coupon_details_top_detail ul li .top_detail_l{background:url(../images/address_icon_02.png) no-repeat center center/auto 100%;display:inline-block;width:1.8rem;height:1.8rem;}
+	.coupon_details_top_detail ul li .top_detail_l_phone{background:url(../images/phone_icon.png) no-repeat center center/auto 100%;}
+	.coupon_details_top_detail ul li .top_detail_l_details{background:url(../images/coupon_details_icon.png) no-repeat center center/auto 100%;}
+
+	.coupon_details_top_detail ul li .top_detail_c{font-size:1.4rem;color:#333333;padding-left:0.5rem;padding-right:1.8rem;display:inline-block;max-width:calc(90% - 4.6rem);margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+	.coupon_details_top_detail ul li .top_detail_r{background:url(../images/left_drow_icon.png) no-repeat center center/auto 100%;display:inline-block;width:1.3rem;height:1.3rem;position:absolute;right:0;top:50%;margin-top:-0.65rem;}
+	.coupon_details_top_detail ul li .top_detail_r_bottom{background:url(../images/top_drow_icon_01.png) no-repeat center center/auto;display:inline-block;width:1.3rem;height:1.3rem;position:absolute;right:0;top:50%;margin-top:-0.65rem;}
+	.coupon_details_top_detail ul li .top_detail_r_top{background:url(../images/top_drow_icon.png) no-repeat center center/auto;}
+
+	.coupon_details_top_detail ul li.coupon_details_top_detail_map{height:20rem;}
+
+
+	.coupon_details_bottom{text-align:center;height:4.5rem;line-height:4.5rem;padding:0 1.5rem;position:absolute;left:0;bottom:1rem;right:0;}
+	.coupon_details_bottom a{display:inline-block;width:100%;height:100%;background:#ffd105;border-radius:10px;font-size:1.6rem;color:#333333;outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	a.coupon_details_bottom_a_b{background:#ffd105 url(../images/icon_l_bg.png) no-repeat left top/auto 50%;}
+
+	.coupon_details_top_emptyss{height:4rem;}
+	.coupon_details_top_tip{font-size:1.2rem;color:#004fa2;text-align:center;position:absolute;bottom:1rem;left:0;right:0;}
+	.coupon_details_top_tip span{color:#004fa2;text-align:center;font-size:1.2rem;color:#004fa2;display:inline-block;margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:80%;}
+
+	.switchover_cons{display:none;}
+
+
+	.merchant_description{overflow:hidden;}
+	.merchant_description p{font-size:1.2rem;color:#666666;margin-top:1rem;}
+	.merchant_description img{margin-top:1rem;height:auto;max-width:100%;}
+
+
+	/*
+	*优惠券详情 end
+	 */
+
+	/*
+	*我的券列表 start
+	 */
+	.my_coupons_list{}
+	.my_coupons_list_box{margin: 1rem 1.5rem;}
+	.my_coupons_list_item{position:relative;overflow:hidden;height:10rem;border-radius:10px;margin-bottom:1rem;background:#FFF;}
+	.my_coupons_list_item_left{width:12rem;position:absolute;left:0;top:0;height:10rem;overflow:hidden;border-top-left-radius:10px;}
+	.my_coupons_list_item_left_box{background:#ffd105 url(../images/my_coupons_icon_bg.png) no-repeat -2.3rem -3rem/auto 120%;width:100%;height:10rem;position:relative;border-top-left-radius:10px;border-bottom-left-radius:10px;}
+	.my_coupons_list_item_left_point{display:inline-block;border-radius:50%;width:1.5rem;height:1.5rem;position:absolute;left:-0.75rem;top:50%;margin-top:-0.75rem;background:#f2f2f2;z-index:1;}
+	.my_coupons_list_item_left_title{text-align:center;overflow:hidden;margin:0 auto;overflow:hidden;width:80%;}
+	.my_coupons_list_item_left_title h2{font-size:1.8rem;font-weight:bold;color:#FFF;vertical-align:baseline;height:4rem;line-height:4rem;font-weight:bold;display:inline-block;margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:98%;margin-top:1.7rem;}
+	.my_coupons_list_item_left_title h2 span{font-size:4rem;color:#FFF;vertical-align:text-bottom;font-weight:bold;display:inline-block;margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:90%;}
+	.my_coupons_list_item_left_title p{font-size:1.2rem;color:#FFF;height:1.2rem;line-height:1.2rem;margin-top:0.7rem;}
+
+	.my_coupons_list_item_right{padding-left:12rem;box-sizing: border-box;width:100%;height:10rem;position:relative;border:1px solid #d9d9d9;border-left:0;border-top-right-radius: 10px;border-bottom-right-radius: 10px;}
+	.my_coupons_list_item_right_box{padding:0 1.5rem;overflow:hidden}
+	.my_coupons_list_item_right_new{position:absolute;right:-1px;top:-1px;display:inline-block;width:4.5rem;height:4.5rem;background:url(../images/new_icon_left.png) no-repeat right top/auto 100%;z-index:1;}
+	.my_coupons_list_item_right_title{margin-top:1.7rem;padding-bottom:0.5rem;border-bottom:2px dashed #d9d9d9;}
+	.my_coupons_list_item_right_title h2{font-size:1.6rem;color:#333333;height:1.6rem;line-height:1.6rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:80%;}
+	.my_coupons_list_item_right_tips{margin-top:1.3rem;}
+	.my_coupons_list_item_right_tips ul{}
+	.my_coupons_list_item_right_tips ul li{height:1.2rem;line-height:1.2rem;margin-bottom:0.8rem;}
+	.my_coupons_list_item_right_tips ul li span{font-size:1.2rem;color:#999999;}
+	.my_coupons_list_item_right_tips ul li .item_right_tips_point{display:inline-block;width:0.5rem;height:0.5rem;border-radius:50%;background:#ffd941;}
+	.my_coupons_list_item_right_tips ul li .item_right_tips_font{font-size:1.2rem;color:#999999;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:80%;display:inline-block;}
+
+	.red_style_bgs .my_coupons_list_item_left_box{background:#ff5757 url(../images/my_coupons_icon_bg.png) no-repeat -2.3rem -3rem/auto 120%;}
+	.red_style_bgs .my_coupons_list_item_right_tips ul li .item_right_tips_point{background:#ff5757;}
+
+	.gray_style_bgs .my_coupons_list_item_left_box{background:#d9d9d9 url(../images/my_coupons_icon_bg.png) no-repeat -2.3rem -3rem/auto 120%;}
+	.gray_style_bgs .my_coupons_list_item_right_tips ul li .item_right_tips_point{background:#d9d9d9;}
+
+	.my_coupons_list_item_right_notstarted{display:inline-block;width:6rem;height:6rem;background:url(../images/not_begin_icon.png) no-repeat center center/auto 100%;position:absolute;right:0;top:0;}
+	.my_coupons_list_item_right_stale{display:inline-block;width:6rem;height:6rem;background:url(../images/out_of_date_icon.png) no-repeat center center/auto 100%;position:absolute;right:0;top:0;}
+	.my_coupons_list_item_right_used{display:inline-block;width:6rem;height:6rem;background:url(../images/has_been_used_icon.png) no-repeat center center/auto 100%;position:absolute;right:0;top:0;}
+
+
+	.my_coupons_list_msgs{margin:2rem auto;text-align:center;font-size:1.2rem;height:1.2rem;line-height:1.2rem;}
+	.my_coupons_list_msgs span{color:#999999;display:inline-block;height:1.2rem;padding-right:1rem;border-right:1px solid #999999;}
+	.my_coupons_list_msgs a{display:inline-block;padding:0 2rem 0 1rem;background:url(../images/mark_icons_right.png) no-repeat right center/auto;}
+
+	.my_coupons_list_btns{height:5rem;line-height:5rem;text-align:center;padding:0 1.5rem;}
+	.my_coupons_list_btns a{display:inline-block;font-size:1.8rem;color:#333333;width:100%;height:5rem;background:#ffd105;border-radius:10px;outline:none; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+	
+
+
+
+
+	/*
+	*我的券列表 end
+	 */
+	.my_card_list{}
+	.my_card_list_box{margin: 1rem 1.5rem;}
+	.my_card_list_item{position:relative;overflow:hidden;height:10rem;border-radius:10px;margin-bottom:1rem;background:#FFF;}
+	.my_card_list_item_box{border-left:0.5rem solid #ffd105;height:10rem;position:relative;overflow:hidden;}
+	.my_card_list_item_top{overflow:hidden;border-bottom:2px dashed #d9d9d9;height:6rem;margin:1rem 1.5rem 0 1.5rem;}
+	.my_card_list_item_top_logo{position:absolute;left:1.5rem;top:1rem;}
+	.item_top_logoss{display: inline-block;position: relative;}
+	.item_top_logoss img{width:5rem;height:5rem;}
+	.item_top_logoss .item_top_logoss_i{ position: absolute; right: 0; bottom: 0;z-index: 1; background: url(../images/v_icon_bg.png) no-repeat center center/auto 100%; display: inline-block; width: 1.5rem; height: 1.5rem;}
+
+	.my_card_list_item_top_con{padding-left:6rem;position:relative;padding-right:3rem;overflow:hidden;}
+	.my_card_list_item_top_con_title{margin-top:0.5rem;overflow:hidden;}
+	.my_card_list_item_top_con_title h2{font-size:1.6rem;color:#333333;height:1.6rem;line-height:1.6rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:90%;}
+	.my_card_list_item_top_con_title p{font-size:1.2rem;color:#333333;height:1.2rem;line-height:1.2rem;margin-top:1.5rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:90%;}
+	.my_card_list_item_top_con_heart{position:absolute;width:2.4rem;height:2.4rem;right:-0.8rem;top:50%;margin-top:-2.5rem;z-index:2;padding:1.3rem;}
+	.my_card_list_item_top_con_heart .heart_spans_grays{width:2.4rem;height:2.4rem;display:inline-block;background:url(../images/heart_icons.png) no-repeat center center/100% auto;}
+	.my_card_list_item_top_con_heart .heart_spans_reds{width:2.4rem;height:2.4rem;display:inline-block;background:url(../images/red_heart_icons.png) no-repeat center center/100% auto;}
+
+
+	.my_card_list_item_bottom{padding:0 1.5rem;margin-top:0.5rem;}
+	.my_card_list_item_bottom:after{content:"";display:block;clear:both;}
+	.my_card_list_item_bottom span{font-size:1.2rem;}
+	.my_card_list_item_bottom_l{color:#004fa2;float:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:49%;}
+	.my_card_list_item_bottom_r{color:#999999;float:right;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:49%;}
+
+
+	/*
+	*我的卡列表 start
+	 */
+
+
+	/*
+	*我的卡列表 start
+	 */
+
+
+
+	/*
+	*搜索页 start
+	 */
+	.search_details{}
+	.search_details_title{margin-top:1.2rem;padding:0 1.5rem;}
+	.search_details_title span{font-size:1.2rem;color:#333333;}
+
+	.search_details_item{margin-top:1rem;padding:0 1.5rem;}
+	.search_details_item ul:after{content:"";display:block;clear:both;}
+
+	.search_details_item ul{border-left:1px solid #ccc;}
+	.search_details_item ul li{float:left;width:25%;box-sizing:border-box;text-align:center;height:3.5rem;line-height:3.5rem;background:#FFF;border:0.5px solid #ccc;margin:-1px 0 0 -2px;}
+
+	/*.search_details_item ul li:last-child{border-right:0;}*/
+	.search_details_item ul li.onAction{background:#ffd105;text-align:center;}
+	.search_details_item ul li span{font-size:1.4rem;color:#333333;vertical-align:baseline;display:inline-block;margin:0 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:87%;}
+
+	.search_details_citys{margin-top:0.75rem;}
+	.search_details_citys_item{}
+	.search_details_citys_item ul{}
+	.search_details_citys_item ul li.search_details_citys_item_li{margin-top:1rem;}
+	.search_details_citys_item_div{position:relative;height:4.5rem;line-height:4.5rem;background:#FFF;padding:0 1.5rem;}
+	.search_details_citys_item_div:after{content:"";display:block;clear:both;}
+	.search_details_citys_item_span_l{font-size:1.4rem;color:#333333;vertical-align:baseline;}
+	.search_details_citys_item_span_r{display:inline-block;width:1.3rem;height:1.3rem;position:absolute;right:1.5rem;top:50%;margin-top:-0.65rem;background:url(../images/left_drow_icon.png) no-repeat center center/auto;}
+	.search_details_citys_item_span_r_bottom{display:inline-block;width:1.3rem;height:1.3rem;position:absolute;right:1.5rem;top:50%;margin-top:-0.65rem;background:url(../images/top_drow_icon.png) no-repeat center center/auto;}
+	.citys_item_span_r_top{background:url(../images/top_drow_icon_01.png) no-repeat center center/auto;}
+	
+	.city_close_open{display:none;}
+
+	.search_details_result{margin-top:0.75rem;}
+	.search_details_result_item{}
+	.search_details_result_item ul{}
+	.search_details_result_item ul li.search_details_result_item_li{border-bottom: 1px solid #d9d9d9;}
+	.search_details_result_item_div{position:relative;height:4.5rem;line-height:4.5rem;background:#FFF;padding:0 1.5rem;}
+	.search_details_result_item_div:after{content:"";display:block;clear:both;}
+	.search_details_result_item_span_l{font-size:1.4rem;color:#333333;vertical-align:baseline;}
+	.search_details_result_item_span_r{display:inline-block;width:1.3rem;height:1.3rem;position:absolute;right:1.5rem;top:50%;margin-top:-0.65rem;background:url(../images/left_drow_icon.png) no-repeat center center/auto 100%;}
+	.result_item_span_r_top{background:url(../images/top_drow_icon.png) no-repeat center center/auto;}
+
+
+	.abolish_btns{position:absolute;right:1rem;top:50%;margin-top:-0.9rem;display:inline-block;width:1.8rem;height:1.8rem;background:url(./images/reset_ico.png) no-repeat center center/auto 100%;display:none;z-index:9;}
+
+	/*
+	*搜索页 end
+	 */
+
+
+
+/*
+*主体 end
+ */

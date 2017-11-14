@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+*{padding: 0;margin: 0;}
+table,tbody,thead,tfoot,tr,td,ul,ol,li,a,img,b,h1,h2,h3,h4,h5,h6,em,i,b,span,div,p{font-style:normal;vertical-align:middle;font-weight:normal;border-collapse: collapse;border:0;text-decoration: none;list-style-type:none;}
+
+html{font-size:20px;}
+@media all and ( max-width: 3072px ) {
+  html{font-size:80px;}
+}
+
+@media all and ( max-width: 1242px ) {
+  html{font-size:33px;}
+}
+
+@media all and ( max-width: 1120px ) {
+  html{font-size:30px;}
+}
+
+@media all and ( max-width: 1080px ) {
+  html{font-size:28px;}
+}
+
+@media all and ( max-width: 828px ) {
+  html{font-size:22px;}
+}
+
+@media all and ( max-width: 750px ) {
+  html{font-size:20px;}
+    .span_bts_w{margin-top:3rem;}
+}
+
+@media all and ( max-width: 720px ) {
+  html{font-size:18px;}
+}
+
+@media all and ( max-width: 640px ) {
+  html{font-size:16px;}
+
+}
+
+body{font-family:"微软雅黑";font-size:1.5rem;}
+body{
+    -webkit-user-select:none;
+    user-select:none;
+}
+.bgd9d9d9{background:#d9d9d9;}
+.main{overflow:auto;}
+.main_box{overflow:hidden;box-sizing:border-box;min-height:100%;padding-bottom:8.5rem;}
+.bottom_logo{margin-top:-8.6rem;text-align:center;overflow:hidden;}
+.bottom_logo img{width:12.5rem;}
+:root{ background:#F2F2F2}
+.span_bts_w{display:block;box-sizing:border-box;width:34.5rem;height:5rem;line-height:5rem;margin:1rem auto;background:#FFD105;border-radius:5px;color:#333;font-size:1.8rem;text-align:center;}
+.span_bts_w.disabled{background:#FFED9B !important;color:#fff}
+.flo_lef{float:left;}
+.flo_rig{float:right;}
+.clear_fix:after{content:"";display:block;width:0;height:0;overflow:hidden;font-size:0;clear:both;}
+.pwd_error{padding-left:2.1rem;margin:-2.5rem 0 0;height:1.75rem;line-height:1.75rem;font-size:1.2rem;visibility: hidden;color:#ff0202;background:url(../images/pwd_error.png) no-repeat left center/1.7rem auto;}
+.reset_num{display:inline-block;display:none;width:2.2rem;height:2.2rem;padding:1rem;margin:-1rem;margin-left:0;background:url(../images/reset_ico.png) no-repeat center center/2rem 2rem;border-radius:50px;}
+.focus .reset_nums{display:block;}
+.error{border-color:#ff0202 !important;color:#ff0202 !important;}
+
+.pup_items{height:5rem;line-height:4.5rem;text-align:center;font-size:1.4rem;box-sizing:border-box;border-radius:20px;overflow:hidden;position:fixed;top:50%;left:50%;padding:0 2.2rem;}
+.pup_items:after{position:absolute;content:"";display:block;width:100%;top:0;left:0;height:100%;background:#000;opacity:0.8;}
+.pup_items .pup_items_bg{display:inline-block;width:1.5rem;height:1.5rem;background:url(../images/load.gif) no-repeat center center/100% 100%;}
+.pup_items .pup_items_bg,.pup_items span,.pup_items em{position:relative;z-index:99;color:#fff;}
+
+/*
+*弹出层 start
+ */
+.popup{width:34.5rem;position:fixed;z-index:10;left:50%;margin-left:-17.25rem;top:7rem;display:none;}
+.popup_bg{position:fixed;width:100%;z-index:6;height:100%;top:0;left:0;background:#000;opacity:0.6;display:none;}
+:root .zIndex_9999{z-index:9999;}
+
+/*
+*弹出层 start
+ */
+
+/*
+*光标 start
+ */
+.cursor{display:inline-block;display:none;height:2rem;width:0;margin-left:0.1rem;margin-right:-3px;vertical-align:middle;border-left:4px solid #ffd105;
+	animation: twinkle .5s infinite;
+	-webkit-animation: twinkle .5s infinite;
+}
+@-webkit-keyframes twinkle {
+	0% {opacity:0}
+	25% {opacity:0}
+	50% {opacity:1}
+	75% {opacity:1}
+	100% {opacity:0}
+}
+@keyframes twinkle {
+	0% {opacity:0}
+	25% {opacity:0}
+	50% {opacity:1}
+	75% {opacity:1}
+	100% {opacity:0}
+}
+.focus .cursor{display:inline-block;}
+/*
+*光标 end
+ */
+
+
+/*
+*键盘 start
+ */
+.password_keyboard,.keyboard,.keyboard_num{;width:100%;height:24rem;display:none;position:fixed;bottom:0;background:#fff;border-top:1px solid #e1e1e1;}
+.password_keyboard{height:20rem;}
+.hide_keyboard{height:4rem;background:url(../images/hide_keyboard.png) no-repeat center center/2.3rem auto;}
+.keyboard_box{height:calc(100% - 4rem);}
+.password_keyboard .keyboard_box{height:100%;}
+.keyboard_box table{width:100%;height:100%;}
+.keyboard_box table td{border:1px solid #e1e1e1;text-align:center;font-size:2.4rem;width:33.333%;}
+.keyboard_box table .delete_k{background:#d9d9d9 url(../images/key_delete.png) no-repeat center center/3rem auto;}
+.password_keyboard .delete_reset,.keyboard_num .delete_reset{background:#D9D9D9;}
+.password_keyboard table .delete_k,.keyboard_num table .delete_k{background:#D9D9D9 url(../images/key_delete.png) no-repeat center center/3rem auto;}
+/*
+*键盘 end
+ */
+
+/*
+*绑定会员卡/找回密码 start
+ */
+.bind_card_box_backs{}
+.bind_card_box_backs_top{height:4.5rem;line-height:4.5rem;background:#FFF;padding:0 1.5rem;border-bottom:1px solid #d9d9d9;}
+.bind_card_box_backs_top span{color:#333;font-size:1.6rem;}
+.bind_card_box_backs_tips{padding:0 1.5rem;margin-top:2rem;}
+.bind_card_box_backs_tips span{color:#999999;font-size:1.2rem;}
+
+.bind_card_box{padding:1.5rem;}
+.bind_card_list li{margin-bottom:1rem;font-size:1.6rem;color:#333;}
+.bind_card_list li:after{content:"";display:block;clear:both;}
+.bind_card_list li .obj_txt{border:2px solid transparent;height:5rem;float:left;width:100%;box-sizing:border-box;line-height:4.5rem;padding:0 0.5rem 0 1rem;background:#fff;position:relative;}
+.bind_card_list li .obj_txt.focus{border:2px solid #FFD105;}
+.bind_card_list li .git_code{height:5rem;line-height:5rem;box-sizing:border-box;background:#FFD105;text-align:center;padding:0;width:12.5rem;white-space:nowrap;overflow:hidden;float:right;}
+.bind_card_list li .git_code.disabled{color:#fff;background:#FFED9B;}
+.bind_card_list li .obj_txt b{padding-right:0.5rem;}
+.bind_card_list li .obj_txt .placeholed{color:#ccc;}
+.bind_card_list li .card_list_tel{position:relative;}
+.bind_card_list li .card_list_tel .reset_nums{display:none;position:absolute;padding:1rem;right:0.5rem;top:50%;margin-top:-2rem;width:2rem;height:2rem;margin-left:0.2rem;background:url(../images/reset_ico.png) no-repeat center center/2rem auto;border-radius:50px;}
+.bind_card_list li .card_list_tel.focus .reset_nums{display:block;}
+.bind_card_list li .card_list_pwd{position:relative;}
+.bind_card_list li .card_list_pwd .look_pwd{position:absolute;padding:1rem;right:0rem;top:50%;height:2rem;margin-top:-2rem;width:2.5rem;background:url(../images/look_pwd.png) no-repeat center center/2.5rem auto;}
+.bind_card_list li .card_list_pwd .look_pwd.not{background-image:url(../images/look_pwd_no.png)}
+/*
+*绑定会员卡/找回密码 end
+ */

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/member/member_list.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/enterprise_redpacket.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>
+        <script  type="text/javascript" src="./js/enterprise_redpacket.js"></script>    
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+
+	</head>
+
+<body >
+<div class="Cover_layer"  style="display: none;"></div>
+<!--弹出层 start-->
+<!--查看详情 弹出框 start-->
+<div class="Pop_layer" id="activityDetails">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">查看详情</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('activityDetails')" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="activity_redpackets_pop">            
+            <!-- <div class="activity_redpackets_pop_title">
+                <div class="activity_redpackets_pop_title_box">
+                    <span class="activity_redpackets_pop_title_l">付款金额：</span>
+                    <span class="activity_redpackets_pop_title_r">￥77979797.00</span>
+                </div>
+            </div> -->
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动名称：</span>
+                    <span>活动123号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动状态：</span>
+                    <span>待发布</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动类型：</span>
+                    <span>吸粉活动</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效类型：</span>
+                    <span>时间段</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效时间：</span>
+                    <span>2016/8/18-2016-9-9</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：</span>
+                    <span>不限制</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>使用红包：</span>
+                    <span>红包10068号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span style="display:block;float:left;">固定金额：</span>
+                    <span style="display:block;float:left;">
+                        <span style="display:block;padding-bottom:8px;">5元-100元</span>
+                        <span style="display:block;padding-bottom:8px;">5元-100元</span>
+                        <span style="display:block;padding-bottom:8px;">5元-100元</span>
+                    </span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>创建时间：</span>
+                    <span>2016/8/18 12:00:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure" href="javascript:void(0);" onclick="myHide('activityDetails')">关闭</a>
+            <!-- <a class="perfect_information_pop_button_cancel " onclick="myHide('payDetails')"  href="javascript:void(0);">取消</a> -->
+        </div>
+    </div>
+</div>
+<!--查看详情 弹出框 end-->
+<!--删除活动 弹出框 start-->
+<div class="Pop_layer" id="activityDelete">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">删除活动</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('activityDelete')" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="activity_redpackets_pop">            
+            <div class="activity_redpackets_pop_title">
+                <div class="activity_redpackets_pop_title_box">
+                    <span class="activity_redpackets_pop_title_l">您是否确定删除该活动？</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动名称：</span>
+                    <span>活动123号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动状态：</span>
+                    <span>已发布</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动类型：</span>
+                    <span>吸粉活动</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效类型：</span>
+                    <span>时间段</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效时间：</span>
+                    <span>2016/8/18-2016-9-9</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：</span>
+                    <span>不限制</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>使用红包：</span>
+                    <span>红包10068号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>固定金额：</span>
+                    <span>5元</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>创建时间：</span>
+                    <span>2016/8/18 12:00:00</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>发布时间：</span>
+                    <span>2016/8/18 12:00:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure" href="javascript:void(0);">删除</a>
+             <a class="perfect_information_pop_button_cancel " onclick="myHide('activityDelete')"  href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--删除活动 弹出框 end-->
+<!--下线活动 弹出框 start-->
+<div class="Pop_layer" id="activityOffline">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">下线活动</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('activityOffline')" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="activity_redpackets_pop">            
+            <div class="activity_redpackets_pop_title">
+                <div class="activity_redpackets_pop_title_box">
+                    <span class="activity_redpackets_pop_title_l">您是否确定下线该活动？</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动名称：</span>
+                    <span>活动123号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动状态：</span>
+                    <span>已发布</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动类型：</span>
+                    <span>吸粉活动</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效类型：</span>
+                    <span>时间段</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效时间：</span>
+                    <span>2016/8/18-2016-9-9</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：</span>
+                    <span>不限制</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>使用红包：</span>
+                    <span>红包10068号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>固定金额：</span>
+                    <span>5元</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>创建时间：</span>
+                    <span>2016/8/18 12:00:00</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>发布时间：</span>
+                    <span>2016/8/18 12:00:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure" href="javascript:void(0);">下线</a>
+             <a class="perfect_information_pop_button_cancel " onclick="myHide('activityOffline')"  href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--下线活动 弹出框 end-->
+<!--发布活动 弹出框 start-->
+<div class="Pop_layer" id="activityPublish">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">发布活动</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('activityPublish')" href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="activity_redpackets_pop">            
+            <div class="activity_redpackets_pop_title">
+                <div class="activity_redpackets_pop_title_box">
+                    <span class="activity_redpackets_pop_title_l">您是否确定发布该活动？</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动名称：</span>
+                    <span>活动123号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>活动类型：</span>
+                    <span>吸粉活动</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效类型：</span>
+                    <span>时间段</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>有效时间：</span>
+                    <span>2016/8/18-2016-9-9</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：</span>
+                    <span>不限制</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>使用红包：</span>
+                    <span>红包10068号</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>固定金额：</span>
+                    <span>5元</span>
+                </div>
+            </div>
+            <div class="activity_redpackets_pop_item">
+                <div class="activity_redpackets_pop_item_box">
+                    <span>创建时间：</span>
+                    <span>2016/8/18 12:00:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure" href="javascript:void(0);">发布</a>
+             <a class="perfect_information_pop_button_cancel " onclick="myHide('activityPublish')"  href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--发布活动 弹出框 end-->
+<!--弹出层 end-->
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>企业红包</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="enterprise_redpacket_index.html">包红包<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="enterprise_redpacket_activity.html">发红包<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="enterprise_redpacket_detail.html">领红包记录<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="enterprise_redpacket_statistics.html">红包统计<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="javascript:void(0);">群发红包<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+            <div class="content_right_box">
+                <div class="content_right_nav">
+                    <a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="enterprise_redpacket_index.html">企业红包</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="enterprise_redpacket_index.html">发红包</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--二维码收款 start-->
+                <div class="enterprise_redpacket_index">
+                    <div class="enterprise_redpacket_index_box">
+                        <div class="enterprise_redpacket_index_list">
+                            <div class="enterprise_redpacket_index_list_search">
+                                <table class="enterprise_redpacket_index_list_search_table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="enterprise_redpacket_index_list_search_td_t">活动名称：</td>
+                                            <td class="enterprise_redpacket_index_list_search_td">
+                                                <input type="text">
+                                            </td>
+                                            <td class="enterprise_redpacket_index_list_search_td_t">活动类型：</td>
+                                            <td class="enterprise_redpacket_index_list_search_td">
+
+                                                <select style="background-color:transparent">
+                                                    <option>全部321312312</option>
+                                                    <option>全部</option>
+                                                    <option>全部</option>
+                                                </select>
+                                                
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr><td height="20"></td></tr>
+                                        <tr>
+                                            <td class="enterprise_redpacket_index_list_search_td_t">有效类型：</td>
+                                            <td class="enterprise_redpacket_index_list_search_td">
+
+                                                <select style="background-color:transparent">
+                                                    <option>全部321312312</option>
+                                                    <option>全部</option>
+                                                    <option>全部</option>
+                                                </select>
+                                                
+                                            </td> 
+                                            <td class="enterprise_redpacket_index_list_search_td_t">活动状态：</td>
+                                            <td class="enterprise_redpacket_index_list_search_td">
+
+                                                <select style="background-color:transparent">
+                                                    <option>全部321312312</option>
+                                                    <option>全部</option>
+                                                    <option>全部</option>
+                                                </select>
+                                                
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr><td height="20"></td></tr>
+                                        <tr>
+                                            <td class="enterprise_redpacket_index_list_search_td_t">活动时间：</td>
+                                            <td class="enterprise_redpacket_index_list_search_td activity_search_width">
+                                                <input type="text">
+                                                <span>-</span> 
+                                                <input type="text">                                               
+                                            </td> 
+                                            <td class="enterprise_redpacket_index_list_search_td_t">红包名称：</td>
+                                            <td class="enterprise_redpacket_index_list_search_td">
+
+                                                <select style="background-color:transparent">
+                                                    <option>全部321312312</option>
+                                                    <option>全部</option>
+                                                    <option>全部</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="enterprise_redpacket_index_list_search_btn">
+                                    <a href="javascript:void(0);" class="enterprise_redpacket_index_list_search_td_btn">查&nbsp;&nbsp;询</a>
+                                    <a href="javascript:void(0);" class="enterprise_redpacket_index_list_search_td_btn enterprise_redpacket_index_list_search_td_btn_b">清空条件</a>
+                                    
+                                </div>
+                            </div>
+                            <div class="enterprise_redpacket_index_list_title"> 
+                              <a href="enterprise_redpacket_create.html" target="_blank" class="enterprise_redpacket_index_list_title_a" >创建活动</a>
+                            </div>
+                            <div class="enterprise_redpacket_index_list_con">
+
+                                <table class="enterprise_redpacket_index_list_con_table"><tbody>
+                                    <tr>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">活动名称</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">活动类型</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">有效类型</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">有效时间</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">单个金额</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">个数限制</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">当前消耗</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">状态</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">创建时间</th>
+                                        <th class="enterprise_redpacket_index_list_con_td_t">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="enterprise_redpacket_index_list_con_td">1号红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">吸粉红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">永久</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016/8/9-2016/9/9</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">￥10000.00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">1000</td>
+                                        <td class="enterprise_redpacket_index_list_con_td" style="line-height:30px;"><p>总个数：999个</p><p>总金额：600.00</p></td>
+                                        <td class="enterprise_redpacket_index_list_con_td">已下线</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016-3-8 12:00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDetails')">查看</a>
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDelete')">删除</a>
+                                            <a href="enterprise_redpacket_create.html" target="_blank">复制</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="enterprise_redpacket_index_list_con_td">1号红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">吸粉红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">永久</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016/8/9-2016/9/9</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">￥10000.00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">1000</td>
+                                        <td class="enterprise_redpacket_index_list_con_td" style="line-height:30px;"><p>总个数：999个</p><p>总金额：600.00</p></td>
+                                        <td class="enterprise_redpacket_index_list_con_td">进行中</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016-3-8 12:00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityOffline')">下线</a>
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDetails')">查看</a>
+                                            <a href="enterprise_redpacket_create.html" target="_blank">复制</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="enterprise_redpacket_index_list_con_td">1号红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">吸粉红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">永久</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016/8/9-2016/9/9</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">￥10000.00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">1000</td>
+                                        <td class="enterprise_redpacket_index_list_con_td" style="line-height:30px;"><p>总个数：999个</p><p>总金额：600.00</p></td>
+                                        <td class="enterprise_redpacket_index_list_con_td">待发布</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016-3-8 12:00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td" style="line-height:30px;">
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityPublish')">发布</a>
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDetails')">查看</a>
+                                            <a href="enterprise_redpacket_create.html" target="_blank">修改</a><br />
+                                            <a href="enterprise_redpacket_create.html" target="_blank">复制</a>
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDelete')">删除</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="enterprise_redpacket_index_list_con_td">1号红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">吸粉红包</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">永久</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016/8/9-2016/9/9</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">￥10000.00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">1000</td>
+                                        <td class="enterprise_redpacket_index_list_con_td" style="line-height:30px;"><p>总个数：999个</p><p>总金额：600.00</p></td>
+                                        <td class="enterprise_redpacket_index_list_con_td">已下线</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">2016-3-8 12:00</td>
+                                        <td class="enterprise_redpacket_index_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDetails')">查看</a>
+                                            <a href="javascript:void(0);" onclick="mySwitch('activityDelete')">删除</a>
+                                            <a href="enterprise_redpacket_create.html" target="_blank">复制</a>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                            <div class="enterprise_redpacket_index_list_page">
+                                此处放页码
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--二维码收款 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+
+
+
+<script language="javascript">
+		$(function(){
+			
+			//编辑分组js start
+			$(".new_member_pop_group_items").live("click",function() {
+					$(this).addClass("new_member_pop_group_items_select").siblings().removeClass("new_member_pop_group_items_select");
+				});
+			
+			
+			$(".new_member_pop_group_item").click(function() {
+					$(this).addClass("new_member_pop_group_item_select").siblings().removeClass("new_member_pop_group_item_select");
+			});
+			//编辑分组js end
+		});
+		
+		
+
+</script>
+
+
+</body>
+</html>

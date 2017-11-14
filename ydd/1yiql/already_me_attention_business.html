@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/public_style.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/attention_business.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script src="./js/jquery.js"></script>
+        <script  type="text/javascript" src="./js/frame_js.js"></script>   
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>  
+       
+	</head>
+
+<body >
+<div class="Cover_layer" style="display:none;"></div>
+<div class="Pop_layer" style="display:none; top:150px; left:600px;">
+	<div class="latest_activity_pop">
+    	<div class="latest_activity_pop_close">
+        	<a class="latest_activity_pop_close_a" href="javascript:void(0);"></a>
+        </div>
+        <div class="latest_activity_pop_con">
+        	<div class="latest_activity_pop_con_t">
+            	温馨提示
+            </div>
+            <div class="latest_activity_pop_con_c">
+            	收藏失败，尚未关注该活动的商家，点击关注后自动加入
+            </div>
+        </div>
+        <div class="latest_activity_pop_btn">
+        	<a class="latest_activity_pop_btn_follow" href="javascript:void(0);">关注</a>
+            <a class="latest_activity_pop_btn_no" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>关注商家</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="attention_business.html">关注总览<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="not_attention_business.html">未关注的商家<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd "><a class="content_left_dd_a" href="already_attention_business.html">已关注的商家<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="already_me_attention_business.html">关注我的商家<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="attention_business.html">关注商家</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="already_me_attention_business.html">关注我的商家</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--已关注的商家 start-->
+            	<div class="latest_activity">
+                	<div class="latest_activity_search">
+                    	<table class="latest_activity_search_table">
+                        	<tbody>
+                                <tr>
+                                    <td class="latest_activity_search_td_t">省&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份</td>
+                                    <td class="latest_activity_search_td">
+                                    	<select>
+                                        	<option>省</option>
+                                            <option>广东省</option>
+                                            <option>广东省</option>
+                                        </select>
+                                    </td>
+                                    <td class="latest_activity_search_td">
+                                    	<select>
+                                        	<option>市</option>
+                                            <option>深圳市</option>
+                                            <option>深圳市</option>
+                                        </select>
+                                    </td>
+                                    <td class="latest_activity_search_td">
+                                    	<select>
+                                        	<option>区域</option>
+                                            <option>南山区</option>
+                                            <option>宝安区</option>
+                                        </select>
+                                    </td>
+                                    <td class="latest_activity_search_td">
+                                    	<select>
+                                        	<option>商圈</option>
+                                            <option>南山区</option>
+                                            <option>宝安区</option>
+                                        </select>
+                                    </td>
+                                    <td class="latest_activity_search_td_t">距&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;离</td>
+                                    <td class="latest_activity_search_td">
+                                    	<select>
+                                        	<option>100m</option>
+                                            <option>1000m</option>
+                                            <option>1500m</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td height="20"></td></tr>
+                                <tr>
+                                    <td class="latest_activity_search_td_t">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</td>
+                                    <td class="latest_activity_search_td" colspan="2">
+                                    	<select>
+                                        	<option>行业类别</option>
+                                            <option>餐饮</option>
+                                            <option>影视</option>
+                                        </select>
+                                    </td>
+                                    <td class="latest_activity_search_td_t">关键字</td>
+                                    <td class="latest_activity_search_td" colspan="2">
+                                    	<input type="text" />
+                                    </td>
+                                    <td class="latest_activity_search_td" align="center"><a class="latest_activity_search_td_btn" href="javascript:void(0);">查询</a></td>
+                                </tr>
+                        	</tbody>
+                        </table>
+                    </div>
+                    <div class="latest_activity_search_nav">
+                    	<a class="latest_activity_search_nav_a latest_activity_search_nav_a_select" href="javascript:void(0);">热门</a>
+                        <a class="latest_activity_search_nav_a" href="javascript:void(0);">最新</a>
+                        <a class="latest_activity_search_nav_a" href="javascript:void(0);">周边</a>
+                        <a class="latest_activity_search_nav_a" href="javascript:void(0);">全部</a>
+                    </div>
+                    <div class="latest_activity_label">
+                    	<div class="latest_activity_label_box">
+                        	<span class="latest_activity_label_span">全部结果<i></i></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                            <span class="latest_activity_label_one">省份：广东省深圳市<a class="latest_activity_label_one_a" href="javascript:void(0);"></a></span>
+                        </div>
+                    </div>
+                    <div class="not_attention_business_con">
+                    	<div class="not_attention_business_con_box">
+                            <!--重复区 start-->
+                            <div class="not_attention_business_con_item">
+                                <div class="not_attention_business_con_item_left">
+                                	<img class="not_attention_business_con_item_left_img" src="../resources/images/123.png" />
+                                </div>
+                                <div class="not_attention_business_con_item_right">
+                                	<div class="not_attention_business_con_item_right_title">
+                                    	<a class="not_attention_business_con_item_right_title_a"  href="javascript:void(0);">岳阳烧烤</a>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_tips">
+                                    	<span class="not_attention_business_con_item_right_tips_l">教育培训</span>
+                                        <span class="not_attention_business_con_item_right_tips_line">|</span>
+                                        <span class="not_attention_business_con_item_right_tips_r">广东省&nbsp;深圳市</span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_number">
+                                        <span class="not_attention_business_con_item_right_number_l">关注(3000000)</span>
+                                        <span class="not_attention_business_con_item_right_number_c">商品(10000000)</span>
+                                        <span class="not_attention_business_con_item_right_number_r">会员(10000000)</span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_star">
+                                        <span class="not_attention_business_con_item_right_star_l">
+                                            <i class="not_attention_business_con_item_right_star_i"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_star_r">
+                                        	评论（300）
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_follow">
+                                    	<span class="not_attention_business_con_item_right_follow_l">
+                                        	<i class="not_attention_business_con_item_right_follow_l_onei"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_follow_r">
+                                        	已互相关注
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_btn">
+                                    	<a class="not_attention_business_con_item_right_btn_onea not_attention_business_click"  href="javascript:void(0);">
+                                        	取消关注
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--重复区 end-->
+                            <!--重复区 start-->
+                            <div class="not_attention_business_con_item">
+                                <div class="not_attention_business_con_item_left">
+                                	<img class="not_attention_business_con_item_left_img" src="../resources/images/124.jpg" />
+                                </div>
+                                <div class="not_attention_business_con_item_right">
+                                	<div class="not_attention_business_con_item_right_title">
+                                    	<a class="not_attention_business_con_item_right_title_a"  href="javascript:void(0);">岳阳烧烤</a>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_tips">
+                                    	<span class="not_attention_business_con_item_right_tips_l">教育培训</span>
+                                        <span class="not_attention_business_con_item_right_tips_line">|</span>
+                                        <span class="not_attention_business_con_item_right_tips_r">广东省&nbsp;深圳市</span>
+                                    </div>
+
+                                    <div class="not_attention_business_con_item_right_star">
+                                        <span class="not_attention_business_con_item_right_star_l">
+                                            <i class="not_attention_business_con_item_right_star_i"></i>
+                                            <i class="not_attention_business_con_item_right_star_i"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_star_r">
+                                        	评论（300）
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_follow" style="display:none;">
+                                    	<span class="not_attention_business_con_item_right_follow_l">
+                                        	<i class="not_attention_business_con_item_right_follow_l_i"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_follow_r">
+                                        	已被他关注
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_btn">
+                                    	<a class="not_attention_business_con_item_right_btn_a not_attention_business_click"  href="javascript:void(0);">
+                                        	<i class="not_attention_business_con_item_right_btn_a_i"></i>关注
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--重复区 end-->
+                             <!--重复区 start-->
+                            <div class="not_attention_business_con_item">
+                                <div class="not_attention_business_con_item_left">
+                                	<img class="not_attention_business_con_item_left_img" src="../resources/images/123.png" />
+                                </div>
+                                <div class="not_attention_business_con_item_right">
+                                	<div class="not_attention_business_con_item_right_title">
+                                    	<a class="not_attention_business_con_item_right_title_a"  href="javascript:void(0);">岳阳烧烤</a>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_tips">
+                                    	<span class="not_attention_business_con_item_right_tips_l">教育培训</span>
+                                        <span class="not_attention_business_con_item_right_tips_line">|</span>
+                                        <span class="not_attention_business_con_item_right_tips_r">广东省&nbsp;深圳市</span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_star">
+                                        <span class="not_attention_business_con_item_right_star_l">
+                                            <i class="not_attention_business_con_item_right_star_i"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_star_r">
+                                        	评论（300）
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_follow">
+                                    	<span class="not_attention_business_con_item_right_follow_l">
+                                        	<i class="not_attention_business_con_item_right_follow_l_onei"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_follow_r">
+                                        	已互相关注
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_btn">
+                                    	<a class="not_attention_business_con_item_right_btn_onea not_attention_business_click"  href="javascript:void(0);">
+                                        	取消关注
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--重复区 end-->
+                            <!--重复区 start-->
+                            <div class="not_attention_business_con_item">
+                                <div class="not_attention_business_con_item_left">
+                                	<img class="not_attention_business_con_item_left_img" src="../resources/images/124.jpg" />
+                                </div>
+                                <div class="not_attention_business_con_item_right">
+                                	<div class="not_attention_business_con_item_right_title">
+                                    	<a class="not_attention_business_con_item_right_title_a"  href="javascript:void(0);">岳阳烧烤</a>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_tips">
+                                    	<span class="not_attention_business_con_item_right_tips_l">教育培训</span>
+                                        <span class="not_attention_business_con_item_right_tips_line">|</span>
+                                        <span class="not_attention_business_con_item_right_tips_r">广东省&nbsp;深圳市</span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_star">
+                                        <span class="not_attention_business_con_item_right_star_l">
+                                            <i class="not_attention_business_con_item_right_star_i"></i>
+                                            <i class="not_attention_business_con_item_right_star_i"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                            <i class="not_attention_business_con_item_right_star_i_no"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_star_r">
+                                        	评论（300）
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_follow" style="display:none;">
+                                    	<span class="not_attention_business_con_item_right_follow_l">
+                                        	<i class="not_attention_business_con_item_right_follow_l_i"></i>
+                                        </span>
+                                        <span class="not_attention_business_con_item_right_follow_r">
+                                        	已被他关注
+                                        </span>
+                                    </div>
+                                    <div class="not_attention_business_con_item_right_btn">
+                                    	<a class="not_attention_business_con_item_right_btn_a not_attention_business_click"  href="javascript:void(0);">
+                                        	<i class="not_attention_business_con_item_right_btn_a_i"></i>关注
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--重复区 end-->
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="latest_activity_page">
+                    	asdfasfasdf
+                    </div>
+                </div>
+                <!--已关注的商家 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+<script type="text/javascript">
+$(function(){
+	if($(".content_left").height() > $(".content_right").height()){
+		$(".content_right").css("height",$(".content_left").height()) 
+	}else{
+		$(".content_left").css("height",$(".content_right").height()) 
+	}
+})
+
+</script>
+
+</body>
+</html>

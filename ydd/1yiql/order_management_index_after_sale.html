@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/order_management.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+<div class="Cover_layer" id="DIV2" style="display:none;"></div>
+<div class="Pop_layer" id="DIV1" style="display:none; top:150px; left:600px;">
+	<div class="latest_activity_pop">
+    	<div class="latest_activity_pop_close">
+        	<a class="latest_activity_pop_close_a" onClick="myHide()" href="javascript:void(0);"></a>
+        </div>
+        <div class="latest_activity_pop_con">
+        	<div class="latest_activity_pop_con_t">
+            	温馨提示
+            </div>
+            <div class="latest_activity_pop_con_c">
+            	收藏失败，尚未关注该活动的商家，点击关注后自动加入
+            </div>
+        </div>
+        <div class="latest_activity_pop_btn">
+        	<a class="latest_activity_pop_btn_follow" id="btnChageColor" onClick="myHide(),myCollection()" href="javascript:void(0);">关注</a>
+            <a class="latest_activity_pop_btn_no"  onClick="myHide()" href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>我的订单</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="order_management_index.html">自营商品订单<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="order_management_index_after_sale.html">售后服务订单<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="order_management_promotion_goods.html">推广商品订单<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="order_management_index.html">订单管理</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="order_management_index_after_sale.html">售后服务订单</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--订单管理 start-->
+            	<div class="order_management">
+                	<div class="order_management_search">
+                    	<table class="order_management_search_table">
+                        	<tbody>
+                                <tr>
+                                    <td class="order_management_search_td_t">订单号</td>
+                                    <td class="order_management_search_td">
+                                    	<input type="text" />
+                                    </td>
+                                    <td class="order_management_search_td_t">订单来源</td>
+                                    <td class="order_management_search_td" >
+                                    	<input type="text" />
+                                    </td>
+                                </tr>
+                                <tr><td height="20"></td></tr>
+                                <tr>
+                                    <td class="order_management_search_td_t">买&nbsp;&nbsp;&nbsp;&nbsp;家</td>
+                                    <td class="order_management_search_td">
+                                        <input type="text" />
+                                    </td>
+                                    <td class="order_management_search_td_t">申请类型</td>
+                                    <td class="order_management_search_td" >
+                                        <select name="" id="">
+                                            <option value="">换货</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr><td height="20"></td></tr>
+                                <tr>
+                                    <td class="order_management_search_td_t">申请时间</td>
+                                    <td class="order_management_search_td" >
+                                    	<input type="date" /><span class="order_management_search_td_line">-</span><input type="date" />
+                                    </td>
+                                    <td class="order_management_search_td" colspan="2" >
+                                    	<a class="order_management_search_td_a_select" href="javascript:void(0);">今天</a>
+                                        <a class="order_management_search_td_a"  href="javascript:void(0);">最近7天</a>
+                                        <a class="order_management_search_td_a"  href="javascript:void(0);">15天</a>
+                                        <a class="order_management_search_td_a"  href="javascript:void(0);">30天</a>
+                                        <a class="order_management_search_td_btn" href="javascript:void(0);">查询</a>
+                                    </td>
+                                </tr>
+                        	</tbody>
+                        </table>
+                    </div>
+                    <div class="order_management_search_nav">
+                    	<ul>
+                            <li class="order_management_search_li">
+                            	<a class="order_management_search_nav_a order_management_search_nav_a_select" href="javascript:void(0);">全部<span class="search_nav_span">(100)</span></a>
+                            </li>
+                            <li class="order_management_search_li">
+                            	<a class="order_management_search_nav_a" href="javascript:void(0);">申请退换<span class="search_nav_span">(100)</span></a></li>
+                            <li class="order_management_search_li"><a class="order_management_search_nav_a" href="javascript:void(0);">已审核<span class="search_nav_span">(100)</span></a>
+                            </li>
+                            <li class="order_management_search_li">
+                            	<a class="order_management_search_nav_a" href="javascript:void(0);">待退款<span class="search_nav_span">(100)</span></a>
+                            </li>
+                            <li class="order_management_search_li">
+                            	<a class="order_management_search_nav_a" href="javascript:void(0);">已退款<span class="search_nav_span">(100)</span></a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    
+                    <div class="order_management_con">
+						<table class="order_management_con_table"><tbody>
+                        	<tr>
+                                <th class="order_management_con_td_t">订单编号</th>
+                            	<th class="order_management_con_td_t">来源订单</th>
+                                <th class="order_management_con_td_t">金额</th>
+                                <th class="order_management_con_td_t">状态</th>
+                                <th class="order_management_con_td_t">申请方式</th>
+                                <th class="order_management_con_td_t">支付时间</th>
+                                <th class="order_management_con_td_t">买家</th>
+                                <th class="order_management_con_td_t">操作</th>
+                            </tr>
+                            <tr>
+                                <td class="order_management_con_td">41613123121</td>
+                            	<td class="order_management_con_td">2341234123</td>
+                                <td class="order_management_con_td">￥500.00</td>                                
+                                <td class="order_management_con_td">申请退换</td>
+                                <td class="order_management_con_td">退货退款</td>
+                                <td class="order_management_con_td">2016/2/26 24:58</td>
+                                <td class="order_management_con_td">林志颖  15888888888</td>                               
+                                <td class="order_management_con_td"><a class="order_management_con_td_a_s" href="order_management_index_deal_after_sale_details.html">查看详情</a></td>
+                            </tr>
+                             <tr>
+                                <td class="order_management_con_td">41613123121</td>
+                            	<td class="order_management_con_td">213412341234</td>
+                                <td class="order_management_con_td">￥500.00</td>                               
+                                <td class="order_management_con_td">已审核</td>
+                                <td class="order_management_con_td">退款</td>
+                                <td class="order_management_con_td">2016/2/26 24:58</td>
+                                <td class="order_management_con_td">林志颖  15888888888</td>
+                                <td class="order_management_con_td"><a class="order_management_con_td_a_s" href="order_management_index_deal_after_sale.html">处理</a></td>
+                            </tr>
+
+                        </tbody></table>
+                    </div>
+                    <div class="latest_activity_page">
+                    	asdfasfasdf
+                    </div>
+                </div>
+                <!--最新活动 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+<script type="text/javascript">
+$(function(){
+	if($(".content_left").height() > $(".content_right").height()){
+		$(".content_right").css("height",$(".content_left").height()) 
+	}else{
+		$(".content_left").css("height",$(".content_right").height()) 
+	}
+})
+</script>
+<script language="javascript">
+function mySwitch(){ 
+	document.getElementById('DIV1').style.display = "block";//显示
+	document.getElementById('DIV2').style.display = "block";//显示
+}
+function myHide(){
+	document.getElementById('DIV1').style.display = "none";//隐藏
+	document.getElementById('DIV2').style.display = "none";//隐藏
+	}
+
+
+
+</script>
+<script type="text/javascript">
+		$('#DIV1').css('left', ($(window).width()-($('#DIV1').width()))/2)
+	  	$('#DIV1').css('top', $(window).height() / 2 - ($('#DIV1').height() / 2))
+
+</script>
+</body>
+</html>

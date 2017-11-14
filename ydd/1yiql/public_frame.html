@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <title>亿企联</title>     
+        <script src="./js/jquery.js"></script>   
+	</head>
+
+<body >
+
+<!--最上面的欢迎栏 start-->
+<div class="full_screen_width">
+	<div class="common_width welcome">欢迎您，深圳真心科技有限公司   &nbsp;&nbsp;&nbsp;&nbsp;<a href="">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;帮助中心</div>
+</div>
+<!--最上面的欢迎栏 start-->
+
+
+<!--logo和nav start-->
+<div class="top" style="height:54px;width:1200px;margin:31px auto 12px auto;">
+	<div class="logo float_left">
+        <img src="../resources/images/logo.png">
+    </div>
+    <div class="slogan float_left">亿企联.联接世界</div>
+     <ul class="nav float_left clearfix">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">最新活动</a></li>
+        <li><a href="#">关注商家</a></li>
+        <li><a href="#">我的服务</a></li>
+        <li><a href="#">我的账户</a></li>
+        <li><a href="#">系统管理</a></li>
+    </ul>
+</div>
+
+<div class="black_line"></div>
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>最新活动</span></dt>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="javascript:void(0);">商品<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="javascript:void(0);">卡券<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left">
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="javascript:void(0);">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">最新活动</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">商品</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+            	<div class="latest_activity"></div>
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div class="footer">
+	<div class="footer_box">
+	<p>copyright@2015.亿企联 All rights reserved.</p>
+    <p>粤ICP备14099822号</p>
+    </div>
+</div>
+<!--footer end-->
+<script type="text/javascript">
+$(function(){
+	if($(".content_left").height() > $(".content_right").height()){
+		$(".content_right").css("height",$(".content_left").height()) 
+	}else{
+		$(".content_left").css("height",$(".content_right").height()) 
+	}
+})
+</script>
+</body>
+</html>

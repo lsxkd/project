@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/member/member_list.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/enterprise_redpacket.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>
+        <script  type="text/javascript" src="./js/enterprise_redpacket.js"></script>   
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+
+	</head>
+
+<body >
+<div class="Cover_layer"  style="display: none;"></div>
+<!--弹出层 start-->
+
+<!--弹出层 end-->
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>企业红包</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="enterprise_redpacket_index.html">包红包<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="enterprise_redpacket_activity.html">发红包<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="enterprise_redpacket_detail.html">领红包记录<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="enterprise_redpacket_statistics.html">红包统计<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="javascript:void(0);">群发红包<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="enterprise_redpacket_index.html">企业红包</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="enterprise_redpacket_statistics.html">红包统计</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--红包统计 start-->
+            	<div class="redpacket_stats">
+                    <div class="redpacket_stats_box">
+                        <div class="redpacket_stats_list">
+                            <div class="redpacket_stats_list_search">
+                                <table class="redpacket_stats_list_search_table">
+                                    <tbody>
+                                        <tr> 
+                                            <td class="redpacket_stats_list_search_td_t">起止时间：</td>
+                                            <td class="redpacket_stats_list_search_td widthss">
+                                                <input type="text"><span class="redpacket_stats_list_search_td_line">-</span><input type="text">
+                                            </td>
+                                            
+                                            <td class="redpacket_stats_list_search_td">
+                                                <a href="javascript:void(0);" class="redpacket_stats_list_search_td_btn">查&nbsp;&nbsp;询</a>
+                                                <a href="javascript:void(0);" class="redpacket_stats_list_search_td_btn redpacket_stats_list_search_td_btn_b">清空条件</a>
+                                            </td>
+                                            <td class="redpacket_stats_list_search_td_t">&nbsp;</td>
+                                        </tr>
+                                        <tr><td height="20"></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="redpacket_stats_list_statistics">
+                                <div class="redpacket_stats_list_statistics_title">
+                                  <span class="redpacket_stats_list_statistics_title_l">|</span>
+                                  <span class="redpacket_stats_list_statistics_title_r">收款数据统计</span>
+                                </div>
+                                <div class="redpacket_stats_list_statistics_con">
+                                    <div class="redpacket_stats_list_statistics_con_top">
+                                        <div class="redpacket_stats_list_statistics_con_top_l">
+                                            <h4>累计收款金额：</h4>
+                                            <p>￥216.00</p>
+                                        </div>
+                                        <div class="redpacket_stats_list_statistics_con_top_r">
+                                            <p>累计交易笔数：<span>1600</span>笔</p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="redpacket_stats_list_statistics_con_line"></div> -->
+                                    <div class="redpacket_stats_list_statistics_con_center">
+                                        <table class="redpacket_stats_list_con_table"><tbody>
+                                            <tr>
+                                                <th class="redpacket_stats_list_con_td_t">活动名称</th>
+                                                <th class="redpacket_stats_list_con_td_t">初始会员</th>
+                                                <th class="redpacket_stats_list_con_td_t">实名会员</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="redpacket_stats_list_con_td">人数</td>
+                                                <td class="redpacket_stats_list_con_td">1500人</td>
+                                                <td class="redpacket_stats_list_con_td">500人</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="redpacket_stats_list_con_td">转化红包</td>
+                                                <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="redpacket_stats_list_con_td">消费红包</td>
+                                                <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="redpacket_stats_list_con">
+                                <table class="redpacket_stats_list_con_tableone"><tbody>
+                                    <tr>
+                                        <th class="redpacket_stats_list_con_td_t">日期</th>
+                                        <th class="redpacket_stats_list_con_td_t">红包总金额</th>
+                                        <th class="redpacket_stats_list_con_td_t">红包发放总数量</th>
+                                        <th class="redpacket_stats_list_con_td_t">操作</th>
+                                    </tr>
+                                    <!-- 重复区  start -->
+                                    <tr>
+                                        <td class="redpacket_stats_list_con_td">2016-3-8 12:00</td>
+                                        <td class="redpacket_stats_list_con_td">￥4545</td>
+                                        <td class="redpacket_stats_list_con_td">100</td>
+                                        <td class="redpacket_stats_list_con_td"><a href="javascript:void(0);" class="open_details_click">查看更多明细</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                           <table class="redpacket_stats_list_con_tabletwo"><tbody>
+                                                <tr>
+                                                    <th class="redpacket_stats_list_con_td_t">活动名称</th>
+                                                    <th class="redpacket_stats_list_con_td_t">初始会员</th>
+                                                    <th class="redpacket_stats_list_con_td_t">实名会员</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">人数</td>
+                                                    <td class="redpacket_stats_list_con_td">1500人</td>
+                                                    <td class="redpacket_stats_list_con_td">500人</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">转化红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">消费红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                            </tbody></table> 
+                                        </td>
+                                    </tr>
+                                    <!-- 重复区  start -->
+                                    <!-- 重复区  start -->
+                                    <tr>
+                                        <td class="redpacket_stats_list_con_td">2016-3-8 12:00</td>
+                                        <td class="redpacket_stats_list_con_td">￥4545</td>
+                                        <td class="redpacket_stats_list_con_td">100</td>
+                                        <td class="redpacket_stats_list_con_td"><a href="javascript:void(0);"  class="open_details_click">查看更多明细</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                           <table class="redpacket_stats_list_con_tabletwo"><tbody>
+                                                <tr>
+                                                    <th class="redpacket_stats_list_con_td_t">活动名称</th>
+                                                    <th class="redpacket_stats_list_con_td_t">初始会员</th>
+                                                    <th class="redpacket_stats_list_con_td_t">实名会员</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">人数</td>
+                                                    <td class="redpacket_stats_list_con_td">1500人</td>
+                                                    <td class="redpacket_stats_list_con_td">500人</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">转化红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">消费红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                            </tbody></table> 
+                                        </td>
+                                    </tr>
+                                    <!-- 重复区  start -->
+                                    <!-- 重复区  start -->
+                                    <tr>
+                                        <td class="redpacket_stats_list_con_td">2016-3-8 12:00</td>
+                                        <td class="redpacket_stats_list_con_td">￥4545</td>
+                                        <td class="redpacket_stats_list_con_td">100</td>
+                                        <td class="redpacket_stats_list_con_td"><a href="javascript:void(0);"  class="open_details_click">查看更多明细</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                           <table class="redpacket_stats_list_con_tabletwo"><tbody>
+                                                <tr>
+                                                    <th class="redpacket_stats_list_con_td_t">活动名称</th>
+                                                    <th class="redpacket_stats_list_con_td_t">初始会员</th>
+                                                    <th class="redpacket_stats_list_con_td_t">实名会员</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">人数</td>
+                                                    <td class="redpacket_stats_list_con_td">1500人</td>
+                                                    <td class="redpacket_stats_list_con_td">500人</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">转化红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">消费红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                            </tbody></table> 
+                                        </td>
+                                    </tr>
+                                    <!-- 重复区  start -->
+                                    <!-- 重复区  start -->
+                                    <tr>
+                                        <td class="redpacket_stats_list_con_td">2016-3-8 12:00</td>
+                                        <td class="redpacket_stats_list_con_td">￥4545</td>
+                                        <td class="redpacket_stats_list_con_td">100</td>
+                                        <td class="redpacket_stats_list_con_td"><a href="javascript:void(0);" class="open_details_click">查看更多明细</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                           <table class="redpacket_stats_list_con_tabletwo"><tbody>
+                                                <tr>
+                                                    <th class="redpacket_stats_list_con_td_t">活动名称</th>
+                                                    <th class="redpacket_stats_list_con_td_t">初始会员</th>
+                                                    <th class="redpacket_stats_list_con_td_t">实名会员</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">人数</td>
+                                                    <td class="redpacket_stats_list_con_td">1500人</td>
+                                                    <td class="redpacket_stats_list_con_td">500人</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">转化红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">消费红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="redpacket_stats_list_con_td">吸粉红包</td>
+                                                    <td class="redpacket_stats_list_con_td">1000个<span>总金额：￥1000.00</span></td>
+                                                    <td class="redpacket_stats_list_con_td">500个<span>总金额：￥1000.00</span></td>
+                                                </tr>
+                                            </tbody></table> 
+                                        </td>
+                                    </tr>
+                                    <!-- 重复区  start -->
+                                </tbody></table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--红包统计 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+
+
+</body>
+</html>

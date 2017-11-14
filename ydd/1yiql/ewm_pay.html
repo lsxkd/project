@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/public_style.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/ewm_pay.css" type="text/css"/>
+
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script> 
+        <script  type="text/javascript" src="./js/wifi_js.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+<div class="Cover_layer"  style="display:none;"></div>
+<!--详情 弹出框 start-->
+<div class="Pop_layer" id="payDetails" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">详情</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('payDetails')"  href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="ewm_pay_pop">            
+            <div class="ewm_pay_pop_title">
+                <div class="ewm_pay_pop_title_box">
+                    <span class="ewm_pay_pop_title_l">付款金额：</span>
+                    <span class="ewm_pay_pop_title_r">￥77979797.00</span>
+                </div>
+            </div>
+            <div class="ewm_pay_pop_item">
+                <div class="ewm_pay_pop_item_box">
+                    <span>当前状态：</span>
+                    <span>已支付</span>
+                </div>
+            </div>
+            <div class="ewm_pay_pop_item">
+                <div class="ewm_pay_pop_item_box">
+                    <span>交易时间：</span>
+                    <span>2016-8-18 12:22:20</span>
+                </div>
+            </div>
+            <div class="ewm_pay_pop_item">
+                <div class="ewm_pay_pop_item_box">
+                    <span>支付方式：</span>
+                    <span>微信支付</span>
+                </div>
+            </div>
+            <div class="ewm_pay_pop_item">
+                <div class="ewm_pay_pop_item_box">
+                    <span>交易凭证号：</span>
+                    <span>4564646454654646645646</span>
+                </div>
+            </div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure"  href="javascript:void(0);" onclick="myHide('payDetails')">关闭</a>
+            <!-- <a class="perfect_information_pop_button_cancel " onclick="myHide('payDetails')"  href="javascript:void(0);">取消</a> -->
+        </div>
+    </div>
+</div>
+<!--详情 弹出框 end-->
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>二维码收款</span></dt>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="ewm_pay.html">收银台<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="ewm_checkstand_record.html">收款记录<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="ewm_checkstand_status.html">收款状况<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="ewm_pay.html">二维码收款</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="ewm_pay.html">收银台</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+
+                <!--二维码收款 start-->
+            	<div class="ewm_pay">
+                    <div class="ewm_pay_box">
+                        <div class="ewm_pay_top">
+                            <div class="ewm_pay_top_box">
+                                <div class="ewm_pay_top_l">
+                                    <div class="ewm_pay_top_l_box">
+                                        <div class="ewm_pay_top_l_logo">
+                                            <div class="ewm_pay_top_l_logo_item">
+                                                <img src="../resources/images/ewm_pay/ewm_pay_vip.png" id="myVipImages">
+                                                <p>会员卡支付</p>
+                                            </div>
+                                            <div class="ewm_pay_top_l_logo_item" style="display:none;">
+                                                <img src="../resources/images/ewm_pay/ewm_pay_wechat.png" id="myWechatImages">
+                                                <p>微信支付</p>
+                                            </div>
+                                        </div>
+                                        <div class="ewm_pay_top_l_code">
+                                            <img src="../resources/images/ewm_pay/lsxkd_ewm.jpg" id="myEwmImages" alt="">
+                                            <p id="myBusinessName">蓝色星空岛sdfasdfasf4646546464645</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="ewm_pay_top_r">
+                                    <div class="ewm_pay_top_r_title">
+                                        收款支付方式配置
+                                    </div>
+                                    <div class="ewm_pay_top_r_select">
+                                        <span class="ewm_pay_top_r_select_l"><input class="ewm_pay_select_wechat" type="checkbox"></span>
+                                        <span class="ewm_pay_top_r_select_c">微信支付</span>
+                                        <span class="ewm_pay_top_r_select_r"><a href="javascript:void(0);">点我去申请微信支付</a></span>
+                                    </div>
+                                    <div class="ewm_pay_top_r_select">
+                                        <span class="ewm_pay_top_r_select_l"><input type="checkbox" checked disabled></span>
+                                        <span class="ewm_pay_top_r_select_c">余额支付</span>
+                                    </div>
+                                    <div class="ewm_pay_top_r_btn">
+                                        <a class="ewm_pay_top_r_btn_aa" href="javascript:void(0);">保存</a>
+                                        <a class="ewm_pay_top_r_btn_bb no_clicks" href="javascript:void(0);">下载</a>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="ewm_pay_list">
+                            <div class="ewm_pay_list_title">
+                              <span class="ewm_pay_list_title_l">|</span>
+                              <span class="ewm_pay_list_title_r">最新收款情况</span>
+                              <a href="javascript:void(0);" class="ewm_pay_list_title_a">刷新列表</a>
+                              <a href="javascript:void(0);" class="ewm_pay_list_title_a">查看全部</a>
+                            </div>
+                            <div class="ewm_pay_list_con">
+                                <table class="ewm_pay_list_con_table"><tbody>
+                                    <tr>
+                                        <th class="ewm_pay_list_con_td_t">买家</th>
+                                        <th class="ewm_pay_list_con_td_t">会员卡号</th>
+                                        <th class="ewm_pay_list_con_td_t">手机号</th>
+                                        <th class="ewm_pay_list_con_td_t">交易单号</th>
+                                        <th class="ewm_pay_list_con_td_t">金额</th>
+                                        <th class="ewm_pay_list_con_td_t">支付方式</th>
+                                        <th class="ewm_pay_list_con_td_t">支付时间</th>
+                                        <th class="ewm_pay_list_con_td_t">状态</th>
+                                        <th class="ewm_pay_list_con_td_t">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">蓝色星空岛</td>
+                                        <td class="ewm_pay_list_con_td">No.1321231231</td>
+                                        <td class="ewm_pay_list_con_td">15888888888</td>
+                                        <td class="ewm_pay_list_con_td">13456546565</td>
+                                        <td class="ewm_pay_list_con_td">￥10000.00</td>
+                                        <td class="ewm_pay_list_con_td">微信</td>
+                                        <td class="ewm_pay_list_con_td">2016-3-8 12:00</td>
+                                        <td class="ewm_pay_list_con_td">已支付</td>
+                                        <td class="ewm_pay_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('payDetails')">详情</a>
+                                            <a href="javascript:void(0);">退款</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">蓝色星空岛</td>
+                                        <td class="ewm_pay_list_con_td">No.1321231231</td>
+                                        <td class="ewm_pay_list_con_td">15888888888</td>
+                                        <td class="ewm_pay_list_con_td">13456546565</td>
+                                        <td class="ewm_pay_list_con_td">￥10000.00</td>
+                                        <td class="ewm_pay_list_con_td">微信</td>
+                                        <td class="ewm_pay_list_con_td">2016-3-8 12:00</td>
+                                        <td class="ewm_pay_list_con_td">已支付</td>
+                                        <td class="ewm_pay_list_con_td"><a href="javascript:void(0);">详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">蓝色星空岛</td>
+                                        <td class="ewm_pay_list_con_td">No.1321231231</td>
+                                        <td class="ewm_pay_list_con_td">15888888888</td>
+                                        <td class="ewm_pay_list_con_td">13456546565</td>
+                                        <td class="ewm_pay_list_con_td">￥10000.00</td>
+                                        <td class="ewm_pay_list_con_td">微信</td>
+                                        <td class="ewm_pay_list_con_td">2016-3-8 12:00</td>
+                                        <td class="ewm_pay_list_con_td">已支付</td>
+                                        <td class="ewm_pay_list_con_td"><a href="javascript:void(0);">详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">蓝色星空岛</td>
+                                        <td class="ewm_pay_list_con_td">No.1321231231</td>
+                                        <td class="ewm_pay_list_con_td">15888888888</td>
+                                        <td class="ewm_pay_list_con_td">13456546565</td>
+                                        <td class="ewm_pay_list_con_td">￥10000.00</td>
+                                        <td class="ewm_pay_list_con_td">微信</td>
+                                        <td class="ewm_pay_list_con_td">2016-3-8 12:00</td>
+                                        <td class="ewm_pay_list_con_td">已支付</td>
+                                        <td class="ewm_pay_list_con_td"><a href="javascript:void(0);">详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">蓝色星空岛</td>
+                                        <td class="ewm_pay_list_con_td">No.1321231231</td>
+                                        <td class="ewm_pay_list_con_td">15888888888</td>
+                                        <td class="ewm_pay_list_con_td">13456546565</td>
+                                        <td class="ewm_pay_list_con_td">￥10000.00</td>
+                                        <td class="ewm_pay_list_con_td">微信</td>
+                                        <td class="ewm_pay_list_con_td">2016-3-8 12:00</td>
+                                        <td class="ewm_pay_list_con_td">已支付</td>
+                                        <td class="ewm_pay_list_con_td"><a href="javascript:void(0);">详情</a></td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--二维码收款 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+<img src="../resources/images/ewm_pay/ewm_pay_bg.png" id="myBgImage"  style="display:none">
+<canvas id="myCanvas"  style="display:block;position:absolute;top:500px;" width="1417" height="2008"></canvas>
+<div id="myImagess" style="display:none"></div>
+<script  type="text/javascript">
+    $(function(){
+        //判断是否选中微信支付
+        $(".ewm_pay_select_wechat").live("click",function(){
+            if($(this).attr("checked")){
+                $(".ewm_pay_top_l_logo_item").eq(1).css("display","inline-block");
+                myCanvas(myArray);
+            }else{
+                $(".ewm_pay_top_l_logo_item").eq(1).css("display","none");
+                myCanvas(myArray2); 
+            }
+        })
+        t=setTimeout(function(){
+          myCanvas(myArray2);  
+        },1000)
+    })
+</script>
+<script type="text/javascript">
+    $(function(){
+        myArray = [{
+            'img':document.getElementById("myVipImages"),
+            'img_x':'330',
+            'img_y':'290',
+            'img_width':'200',
+            'img_height':'200',
+            'font':'会员卡支付',
+            'font_x':'310',
+            'font_y':'520'
+        },
+        {
+            'img':document.getElementById("myWechatImages"),
+            'img_x':'915',
+            'img_y':'290',
+            'img_width':'200',
+            'img_height':'200',
+            'font':'微信支付',
+            'font_x':'920',
+            'font_y':'520'
+        }];
+        myArray2 = [{
+            'img':document.getElementById("myVipImages"),
+            'img_x':'590',
+            'img_y':'290',
+            'img_width':'200',
+            'img_height':'200',
+            'font':'会员卡支付',
+            'font_x':'570',
+            'font_y':'520'
+        }];
+    })
+    
+
+    function myCanvas(array){
+      var mycv = document.getElementById("myCanvas");  
+      var myctx = mycv.getContext("2d");
+      myctx.clearRect( 0, 0,1417,2008);
+      var myBgImage = new Image();
+      myBgImage = document.getElementById("myBgImage")
+      var myEwmImages = new Image();
+      myEwmImages = document.getElementById("myEwmImages");
+
+
+      myctx.drawImage(myBgImage, 0, 0,1417,2008);
+      for(var i=0;i<array.length;i++){
+        myctx.drawImage(array[i].img,array[i].img_x,array[i].img_y,array[i].img_width,array[i].img_height);
+        myctx.font = 'normal 48px 微软雅黑';
+        myctx.textAlign = 'left';
+        myctx.textBaseline = 'top';
+        myctx.fillStyle = '#323131';
+        myctx.fillText(array[i].font, array[i].font_x, array[i].font_y);
+      }
+      myctx.drawImage(myEwmImages, 330, 700,785,785);
+
+      // 二维码下面字体 start
+      var fontss = document.getElementById("myBusinessName").innerHTML;
+      var n = 1;
+      for(var i=0 ; i<fontss.length;i++){
+          if(/[\u4e00-\u9fff]/.test(fontss[i])){
+              n+=2;
+          }else if(/\D|\d/.test(fontss[i])){
+              n++;
+          }
+      }
+      var fontss_x = (1417-n*24)/2;                              
+      
+      myctx.font = 'normal 48px 微软雅黑';
+      myctx.textAlign = 'left';
+      myctx.textBaseline = 'top';
+      myctx.fillStyle = '#323131';
+      myctx.fillText(fontss, fontss_x, 1550);
+      // 二维码下面字体  end
+      
+      // 将canvas转换为图片；
+      var type="png";
+      imgData = mycv.toDataURL(type);
+      var _fixType = function(type) {
+          type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+          var r = type.match(/png|jpeg|bmp|gif/)[0];
+          return 'image/' + r;
+      };
+      imgData = imgData.replace(_fixType(type),'image/octet-stream');
+      var saveFile = function(data, filename){
+          var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+          save_link.href = data;
+          save_link.download = filename;
+          var event = document.createEvent('MouseEvents');
+          event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+          save_link.dispatchEvent(event);
+      };
+
+      // 下载后的问题名
+      
+      var bd= new Image();
+      bd.src=imgData;
+      document.getElementById("myImagess").innerHTML="";
+      document.getElementById("myImagess").appendChild(bd); 
+      var filename =  fileNamesss+ '.' + type;
+      saveFile(imgData,filename)
+
+
+    }
+</script>
+<script language="javascript">
+function mySwitch(id){
+    $("#"+id).show();
+    $('.Cover_layer').show();
+    $("#"+id).css('left', ($(window).width()-($("#"+id).width()))/2)
+    $("#"+id).css('top', $(window).height() / 2 - ($("#"+id).height() / 2))
+}
+function myHide(id){
+    $("#"+id).hide();
+    $('.Cover_layer').hide();
+}
+</script>
+</body>
+</html>

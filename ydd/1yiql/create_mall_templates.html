@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/mall.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content content_padding_top">
+	<div class="content_box content_box_border">
+    	<!--微商城 start-->
+        
+        <!--内容title start-->
+        <div class="mall_title">
+        	<div class="mall_title_box">
+            	<span>我的商城列表</span>
+            </div>
+        </div>
+        <!--内容title end-->
+        
+        <!--子导航 start-->
+        <div class="mall_subnav">
+        	<div class="mall_subnav_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">微会员商城</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">创建商城模板</a>
+                </div>
+            </div>
+        </div>
+        <!--子导航 end-->
+        
+        <!--内容更换部分 start-->
+        
+        <!--创建商城模板 start-->
+        <div class="create_mall_templates">
+        	<div class="create_mall_templates_box">
+            	<div class="create_mall_templates_search">
+                	<span class="create_mall_templates_search_l">
+                    	<input class="create_mall_templates_search_l_input" type="text" placeholder="请输入名称" />
+                    </span>
+                    <span class="create_mall_templates_search_r">
+                    	<a href="javascript:void(0);">模板选择</a>
+                    </span>
+                </div>
+                
+                <div class="create_mall_templates_con">
+                	<div class="create_mall_templates_con_l">
+                    	<div class="create_mall_templates_con_l_phone">
+                            <div class="create_mall_templates_con_l_titile">
+                                <span class="create_mall_templates_con_l_titile_s"><img src="../resources/images/mall/create_mall_templates_wechat.png" /></span>
+                            </div>
+                            
+                            <div class="create_mall_templates_con_l_c">
+                            	<!--<img src="../resources/images/mall/shilie1.png" />-->
+                                <iframe src="http://duchunyang.com/zhlt/1yiql/phone/index.html" width="100%" height="100%" style="border:none;"></iframe>
+                            </div>     
+                        </div>
+                        <div class="create_mall_templates_con_l_btn">
+                            <a class="create_mall_templates_con_l_btn_a" href="create_mall_product.html">保存</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="create_mall_templates_con_r">
+                    	<div class="create_mall_templates_con_r_box">
+                        	<div class="create_mall_templates_con_r_title">
+                            	<ul>
+                                	<li class="create_mall_templates_con_r_title_li_select"><a class="create_mall_templates_con_r_title_a" href="javascript:void(0);">模板选择</a></li>
+                                    
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                            
+                            <div class="create_mall_templates_con_r_c">
+                            	<div class="create_mall_templates_con_r_c_width">
+                                	<!--变换区 start-->
+                                    
+                                    <!--模板选择 start-->
+                                    <div class="create_mall_templates_con_r_c_box">
+                                        <div class="create_mall_templates_con_r_item">
+                                            <a id="select1" onClick="selectProduct('select1')" class="create_mall_templates_con_r_item_a create_mall_templates_con_r_item_a_select">
+                                                <i class="create_mall_templates_con_r_item_i"></i>
+                                                <img src="../resources/images/mall/shilie2.png" />
+                                            </a>
+                                        </div>
+                                        <div class="create_mall_templates_con_r_item">
+                                            <a id="select2" onClick="selectProduct('select2')" class="create_mall_templates_con_r_item_a">
+                                                <i class="create_mall_templates_con_r_item_i"></i>
+                                                <img src="../resources/images/mall/shilie2.png" />
+                                            </a>
+                                        </div>
+                                        <div class="create_mall_templates_con_r_item">
+                                            <a id="select3" onClick="selectProduct('select3')" class="create_mall_templates_con_r_item_a">
+                                                <i class="create_mall_templates_con_r_item_i"></i>
+                                                <img src="../resources/images/mall/shilie2.png" />
+                                            </a>
+                                        </div>
+                                        <div class="create_mall_templates_con_r_item">
+                                            <a id="select4" onClick="selectProduct('select4')" class="create_mall_templates_con_r_item_a" >
+                                                <i class="create_mall_templates_con_r_item_i"></i>
+                                                <img src="../resources/images/mall/shilie2.png" />
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!--模板选择 end-->
+                                    
+                                    <!--变换区 end-->
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--创建商城模板 end-->
+        
+        <!--内容更换部分 end-->
+        
+        <!--微商城 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+<script language="javascript">
+function selectProduct(styleId){
+		$(".create_mall_templates_con_r_item_a").removeClass("create_mall_templates_con_r_item_a_select");
+		$("#"+styleId).addClass("create_mall_templates_con_r_item_a_select");
+}
+</script>
+
+</body>
+</html>

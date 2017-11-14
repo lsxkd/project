@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/attention_business.css" type="text/css"/>
+        <title>亿企联</title>     
+        <script src="./js/jquery.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>   
+	</head>
+
+<body >
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>关注商家</span></dt>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="attention_business.html">关注总览<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="not_attention_business.html">未关注的商家<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="already_attention_business.html">已关注的商家<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="already_me_attention_business.html">关注我的商家<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left">
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="attention_business.html">关注商家</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="attention_business.html">关注总览</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+            	<div class="attention_business">
+                	<div class="attention_business_title">
+                    	<span class="attention_business_title_left attention_business_title_left_border">
+                        	<span class="attention_business_title_left_t">
+                            	已关注的商家
+                            </span>
+                            <span class="attention_business_title_left_c">
+                            	<a  href="javascript:void(0);">100</a>个
+                            </span>
+                        </span>
+                        <span class="attention_business_title_left">
+                        	<span class="attention_business_title_left_t">
+                            	关注我的商家
+                            </span>
+                            <span class="attention_business_title_left_c">
+                            	<a  href="javascript:void(0);">200</a>个
+                            </span>
+                        </span>
+                    </div>
+                    
+                    <div class="attention_business_con">
+                    	<div class="attention_business_con_box">
+                        	<div class="attention_business_con_div"></div>
+                            <div class="attention_business_con_div"></div>
+                            <div class="clear"></div>
+                            <div class="attention_business_con_div"></div>
+                            <div class="attention_business_con_div"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+<script type="text/javascript">
+$(function(){
+	if($(".content_left").height() > $(".content_right").height()){
+		$(".content_right").css("height",$(".content_left").height()) 
+	}else{
+		$(".content_left").css("height",$(".content_right").height()) 
+	}
+})
+</script>
+</body>
+</html>

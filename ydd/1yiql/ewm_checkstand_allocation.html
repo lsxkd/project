@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/public_style.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/ewm_pay.css" type="text/css"/>
+
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script> 
+        <script  type="text/javascript" src="./js/wifi_js.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+        <style>
+        /*
+         *收款配置 start*
+        */
+        .ewm_pay_list_allocation_tips{width: 100%;margin: 10px auto;height: 34px;line-height: 34px;}
+        .ewm_pay_list_allocation_tips_r{padding-left: 2px;font-size:14px; color: #323131;}
+        a.ewm_pay_list_allocation_tips_a{float: right;display: block;height: 32px;margin-left: 10px;line-height: 32px;font-size:16px; color:#4a9ce8;}
+        a.ewm_pay_list_allocation_tips_a:hover{color:#ff0202;}
+        .ewm_pay_list_con_td_allocation_img{width:60px;height:60px;margin:10px auto;}
+        .ewm_pay_list_con_td_allocation_img img{width:100%;height:100%;}
+        .ewm_pay_list_allocation_note{width: 100%;margin: 10px auto;}
+
+        .ewm_pay_pop_collection{min-height: 200px;width:700px;margin:30px auto;}
+        .ewm_pay_pop_collection_box{width:90%;margin: 0 auto;overflow: hidden;}
+
+        .ewm_pay_top_r_adds a{color:#FF0202;font-size:14px;}
+        .ewm_pay_list_con_td_allocation_default{background:#FF0202;color:#FFF;font-size:14px;padding:0 5px;margin-right:8px;border-radius:5px;}
+
+
+
+        /*
+         *收款配置 end*
+        */
+        </style>
+	</head>
+
+<body >
+<div class="Cover_layer"  style="display:none;"></div>
+<!--退款 弹出框 start-->
+<div class="Pop_layer" id="collection_allocation" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">查看配置</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('collection_allocation')"  href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="ewm_pay_pop_collection">            
+            <div class="ewm_pay_pop_collection_box">
+                <div class="ewm_pay_top_l">
+                    <div class="ewm_pay_top_l_box">
+                        <div class="ewm_pay_top_l_logo">
+                            <div class="ewm_pay_top_l_logo_item">
+                                <img src="../resources/images/ewm_pay/ewm_pay_vip.png" id="myVipImages">
+                                <p>会员卡支付</p>
+                            </div>
+                            <div class="ewm_pay_top_l_logo_item" style="display:none;">
+                                <img src="../resources/images/ewm_pay/ewm_pay_wechat.png" id="myWechatImages">
+                                <p>微信支付</p>
+                            </div>
+                        </div>
+                        <div class="ewm_pay_top_l_code">
+                            <img src="../resources/images/ewm_pay/lsxkd_ewm.jpg" id="myEwmImages" alt="">
+                            <p id="myBusinessName">蓝色星空岛sdfasdfasf4646546464645</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="ewm_pay_top_r">
+                    <div class="ewm_pay_top_r_title">
+                        支付渠道：兴业银行
+                    </div>
+                    <div class="ewm_pay_top_r_select">
+                        <span class="ewm_pay_top_r_select_l"><input class="ewm_pay_select_wechat" type="checkbox"></span>
+                        <span class="ewm_pay_top_r_select_c">会员卡支付</span>
+                    </div>
+                    <div class="ewm_pay_top_r_select">
+                        <span class="ewm_pay_top_r_select_l"><input type="checkbox" checked="" disabled=""></span>
+                        <span class="ewm_pay_top_r_select_c">微信支付</span>
+                    </div>
+                    <div class="ewm_pay_top_r_adds">
+                        <a href="javascript:void(0);">还有更多支付渠道，去添加~</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure"  href="javascript:void(0);">保存</a> 
+            <a class="perfect_information_pop_button_cancel " onclick="myHide('collection_allocation')"  href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--退款 弹出框 end-->
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>二维码收款</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="ewm_pay.html">收银台<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="ewm_checkstand_record.html">收款记录<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="ewm_checkstand_status.html">收款状况<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="ewm_pay.html">二维码收款</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="ewm_checkstand_allocation.html">收款配置</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--二维码收款 start-->
+            	<div class="ewm_pay">
+                    <div class="ewm_pay_box">
+                        <div class="ewm_pay_top">
+                            
+                        </div>
+                        <div class="ewm_pay_list">
+                            <div class="ewm_pay_list_allocation_tips">
+                              <span class="ewm_pay_list_allocation_tips_r">温馨提示：为了更方便消费者付款，请您自行设置商城的默认“付款通道”。</span>
+                              <a href="javascript:void(0);" class="ewm_pay_list_allocation_tips_a">开通更多支付渠道请点我~</a>
+                            </div>
+                            <div class="ewm_pay_list_con">
+
+                                <table class="ewm_pay_list_con_table"><tbody>
+                                    <tr>
+                                        <th class="ewm_pay_list_con_td_t">支付渠道</th>
+                                        <th class="ewm_pay_list_con_td_t">状态</th>
+                                        <th class="ewm_pay_list_con_td_t">支付方式</th>
+                                        <th class="ewm_pay_list_con_td_t">二维码</th>
+                                        <th class="ewm_pay_list_con_td_t">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td"><span class="ewm_pay_list_con_td_allocation_default">默认</span>兴业银行</td>
+                                        <td class="ewm_pay_list_con_td">已开通</td>
+                                        <td class="ewm_pay_list_con_td">微信支付，会员卡支付，支付宝支付....</td>
+                                        <td class="ewm_pay_list_con_td">
+                                            <div class="ewm_pay_list_con_td_allocation_img">
+                                                <img src="../resources/images/ewm_pay/ewm_pay_ewm.png" alt="">
+                                            </div>
+                                        </td>       
+                                        <td class="ewm_pay_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('collection_allocation')">查看</a>
+                                            <a href="javascript:void(0);" >下载</a>
+                                            <a href="javascript:void(0);" >默认设置</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">会员账户</td>
+                                        <td class="ewm_pay_list_con_td">已开通</td>
+                                        <td class="ewm_pay_list_con_td">会员卡支付</td>
+                                        <td class="ewm_pay_list_con_td">
+                                            <div class="ewm_pay_list_con_td_allocation_img">
+                                                <img src="../resources/images/ewm_pay/ewm_pay_ewm.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="ewm_pay_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('collection_allocation')">查看</a>
+                                            <a href="javascript:void(0);" >下载</a>
+                                            <a href="javascript:void(0);" >设为默认</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ewm_pay_list_con_td">财付通</td>
+                                        <td class="ewm_pay_list_con_td">已停用</td>
+                                        <td class="ewm_pay_list_con_td">微信支付，会员卡支付</td>
+                                        <td class="ewm_pay_list_con_td">
+                                            <div class="ewm_pay_list_con_td_allocation_img">
+                                                <img src="../resources/images/ewm_pay/ewm_pay_ewm.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td class="ewm_pay_list_con_td">
+                                            <a href="javascript:void(0);" onclick="mySwitch('collection_allocation')">查看</a>
+                                            <a href="javascript:void(0);" >下载</a>
+                                            <a href="javascript:void(0);" >设为默认</a>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--二维码收款 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+<script language="javascript">
+function mySwitch(id){
+    $("#"+id).show();
+    $('.Cover_layer').show();
+    $("#"+id).css('left', ($(window).width()-($("#"+id).width()))/2)
+    $("#"+id).css('top', $(window).height() / 2 - ($("#"+id).height() / 2))
+}
+function myHide(id){
+    $("#"+id).hide();
+    $('.Cover_layer').hide();
+}
+</script>
+<script  type="text/javascript">
+    $(function(){
+        //判断是否选中微信支付
+        $(".ewm_pay_select_wechat").live("click",function(){
+            if($(this).attr("checked")){
+                $(".ewm_pay_top_l_logo_item").eq(1).css("display","inline-block");
+            }else{
+                $(".ewm_pay_top_l_logo_item").eq(1).css("display","none");
+            }
+        })
+        
+    })
+</script>
+</body>
+</html>

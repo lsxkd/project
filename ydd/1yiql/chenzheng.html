@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<div id="myDiv">
+  <h1>标题</h1>
+  <div style="height:100px;width:100px;border:1px solid #ccc;">
+  </div>
+</div>
+<hr>
+<p style='text-align:center'>我是分隔线</p>
+<hr>
+<canvas id="myCanvas" width=200 height=200 style='display:none'></canvas>
+<img src="0.jpg" id="myImg" style="display:none">
+<input type="button" value="下载" id="myInput">
+<script>
+window.onload=function(){
+    // 获取需要转换区域的内容
+    var htmlSvg = document.getElementById("myDiv").innerHTML;
+    // 将内容转换为SVG
+    var data = "data:image/svg+xml," +
+    "<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' >" +
+    "<foreignObject width='100%' height='100%'>" +
+    "<div xmlns='http://www.w3.org/1999/xhtml'>" +
+    htmlSvg +
+    "</div>" +
+    "</foreignObject>" +
+    "</svg>";
+    // 将SVG转换为CANVAS
+    var img = new Image();
+    img.src = data;
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    context.drawImage(img, 0, 0);
+    // 插入另一张图片
+    var imgs=document.getElementById("myImg");
+    context.drawImage(imgs, 0, 40,100,100);
+    // 将canvas转换为图片；
+    var type="png";
+    var imgData = canvas.toDataURL(type);
+    var _fixType = function(type) {
+        type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+        var r = type.match(/png|jpeg|bmp|gif/)[0];
+        return 'image/' + r;
+    };
+    imgData = imgData.replace(_fixType(type),'image/octet-stream');
+    var saveFile = function(data, filename){
+        var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+        save_link.href = data;
+        save_link.download = filename;
+
+        var event = document.createEvent('MouseEvents');
+        event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        save_link.dispatchEvent(event);
+    };
+    // 下载后的问题名
+    var filename =  "img"+ '.' + type;
+    document.getElementById("myInput").onclick=function(){
+      saveFile(imgData,filename)
+    }
+}
+
+</script>
+</body></html>

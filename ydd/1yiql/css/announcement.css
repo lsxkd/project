@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,img,p,ul,li,a,h2,h4,p{ margin:0; padding:0; list-style:none; font-family:Microsoft YaHei;}
+a{ text-decoration:none; color:#333;}
+a:hover{ text-decoration:none; }
+.clear{ clear:both;}
+
+.body{ width:100%; height:100%; background:#f3f3f3;}
+.ad_container1{ width:100%; background:#f3f3f3; min-width:1200px;}
+
+/*头部*/
+.ad_head1{ width:100%; height:82px; border-bottom:4px solid #020202; background:#FFF; min-width:1200px;}
+.ad_head_box{ width:1200px; height:82px; margin:0 auto;}
+.ad_head_logo{ float:left; width:40%; height:82px;}
+.ad_head_logo img{ height:41px; margin-top:20px;}
+
+.ad_head_font{ float:right; width:60%; height:82px; text-align:right; line-height:82px; color:#d5d5d5;}
+.ad_head_font a{ font-family:Microsoft YaHei ; font-size:16px; color:#000; padding:0 5px;}
+.ad_head_font a:hover{ color:#F00;}
+a.ad_head_font_red{ color:#F00;}
+
+
+/*系统公告列表*/
+.ad_main1{ width:100%;}
+.ad_main_box{ width:1200px; margin:0 auto; height:100%;}
+.ad_main_box_div{ margin-top:20px; border:1px solid #dcdcdd; height:170px; background:#FFF;}
+.ad_main_box_div_img{ float:left; margin:20px;}
+.ad_main_box_div_img_a{ width:180px; height:130px; display:table-cell; text-align:center; vertical-align:middle;}
+.ad_main_box_div_img img{ vertical-align:middle; max-width:180px; max-height:130px;}
+
+.ad_main_box_div_font{ float:left; margin:20px; width:930px; overflow:hidden;}
+.ad_main_box_div_font_title{ color:#2f3535; overflow:hidden;height: 27px;}
+.ad_main_box_div_font_title a{color:#2f3535; font-size:18px;font-family:Microsoft YaHei; font-weight:bold;}
+.ad_main_box_div_font_title a:hover{ color:#fe2626;}
+
+.ad_main_box_div_font_info{ margin-top:10px; overflow:hidden;}
+.ad_main_box_div_font_info_sapn{ color:#9d9d9d; font-size:14px;font-family:Microsoft YaHei; padding-right:15px;}
+.ad_main_box_div_font_info_sapn a{ color:#Fe2626;}
+.ad_main_box_div_font_p{ overflow:hidden; color:#595d5d; font-size:14px;font-family:Microsoft YaHei; height:60px; margin-top:10px; }
+.ad_main_box_div_font_p p{ color:#595d5d; font-size:14px;font-family:Microsoft YaHei; line-height:27px;}
+
+
+
+/*系统公告详情*/
+
+.ad_main_box_details{margin-top: 20px;border: 1px solid #dcdcdd;background: #FFF; min-height:500px;}
+.ad_main_box_details_con{ width:1028px; margin:0 auto; overflow:hidden;}
+.ad_main_box_details_con_t{ margin-top:50px;}
+.ad_main_box_details_con_t span{    color: #2f3535;font-size:22px;font-family: Microsoft YaHei;font-weight: bold;}
+.ad_main_box_details_con_info{margin-top: 10px;overflow: hidden;}
+.ad_main_box_details_con_info_sapn{color: #9d9d9d;font-size: 16px;font-family: Microsoft YaHei;padding-right: 15px;}
+.ad_main_box_details_con_info_sapn a{ color:#Fe2626;font-family: Microsoft YaHei;}
+.ad_main_box_details_con_c{ margin:38px 0;}
+.ad_main_box_details_con_c p{color:#595d5d;font-size: 16px;font-family: Microsoft YaHei; line-height:28px;}
+.ad_main_box_details_con_c img{ width:100%; display:block; margin:35px 0;}
+
+
+/*页码*/
+.ad_main_box_page{ margin:20px 0; border:1px solid #dcdcdd; height:60px; background:#FFF;}
+
+
+/*底部*/
+.ad_foot{ height:76px; margin-top:20px; width:100%; background:#0d0d0d; min-width:1200px;}
+.ad_foot_box{ width:1200px; margin:0 auto; text-align:center;}
+.ad_foot_box p{ color:#FFF; font-size:14px; text-align:center; line-height:28px;}
+.ad_foot_box_p{ padding-top:15px;}

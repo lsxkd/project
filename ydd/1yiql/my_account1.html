@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/public_pop_layer.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/my_account.css" type="text/css"/>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+              <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+        <title>亿企联</title>        
+    </head>
+
+    <script type="text/javascript">
+        var myul = document.getElementsByTagName("ul")[1];
+        var list = myul.getElementsByTagName("li");
+         
+        function foo(){
+            for(var i = 0, len = list.length; i < len; i++){
+                var that = list[i];
+                list[i].onclick = (function(k){
+                    var info = that.innerHTML;
+                    return function(){
+                        alert(k + "----" + info);
+                    };
+                })(i);
+            }
+        }
+        foo();
+    </script>
+
+<body >
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content clearfix" >
+	<div style="    width: 1200px; height: 960px;margin: 0 auto;background: #fff; margin-bottom: 30px;border-bottom: 1px solid #dcdcdd;border-right: 1px solid #dcdcdd;">
+    <!--内容左边菜单 start-->
+    <div class="content_left float_left">
+        <div class="content_current_nav">我的账户</div>
+        <ul class="content_current_nav_ul">
+            <li><a href="my_account.html">账户总览<span class="gt">&gt;</span></a></li>
+            <li><a href="my_account_trade_recorder.html">交易记录<span class="gt">&gt;</span></a></li>
+            <li><a href="my_account_trade_recorder.html">佣金记录<span class="gt">&gt;</span></a></li>
+            <li><a href="my_account_trade_recorder.html">充值记录<span class="gt">&gt;</span></a></li>
+            <li><a href="my_account_trade_recorder.html">提现记录<span class="gt">&gt;</span></a></li>
+            <li><a href="my_account_trade_recorder.html">服务购物记录<span class="gt">&gt;</span></a></li>
+
+        </ul>
+    </div>
+    <!--内容左边菜单 end-->
+    
+    <!--内容右边 start-->
+    <div class="content_right float_left">
+        <!--nav path start-->
+        <div class="path">
+            <ul class="clearfix">
+                <li><a href="index.html">首页</a></li><span>&gt;</span>
+                <li><a href="my_account.html">我的账户</a></li><span>&gt;</span>
+                <li><a href="my_account.html">账户总览</a></li>
+            </ul>
+        </div>
+        <!--nav path end-->
+        <div  class="content_right_border">
+            <div class="clearfix" style="margin-top:33px;">
+                <strong class="float_left account_balance_vertical">账户余额</strong>
+                <span class="account_balance float_left">
+                    <span class="money">0.00元</span>
+                    <span class="recharge float_right"><a href="javascript:void(0);">充值</a></span>
+                    <span class="withdraw_div float_right"><a class="withdraw_a" href="javascript:void(0);">提现</a></span>
+                </span> 
+            </div>
+            <div class="clearfix" style="margin-top:60px;">
+                <strong class="float_left account_balance_vertical">提现账户</strong>
+                 <span class="account_balance float_left">
+                    
+                    <span class="recharge float_right"><a href="javascript:void(0);">账户绑定</a></span>
+                    <span class="withdraw_div float_right"><a class="withdraw_a" href="javascript:void(0);">暂未绑定</a></span>
+                </span> 
+            </div>
+            <div class="clearfix" style="margin-top:60px;">
+                <strong class="float_left account_balance_vertical">提现账户</strong>
+                 <span class="withdraw_account float_left">
+                    <div class="withdraw_account_table float_left">
+                         <div class="withdraw_account_row">
+                            <div class="withdraw_account_cell">账户信息</div>
+                            <div class="withdraw_account_cell">5555 5555 5555 5555 23</div>
+                        </div>
+                        <div class="withdraw_account_row">
+                            <div class="withdraw_account_cell">账户信息</div>
+                            <div class="withdraw_account_cell">中国农业银行高新园支行</div>
+                        </div>
+                        <div class="withdraw_account_row">
+                            <div class="withdraw_account_cell">账户名称</div>
+                            <div class="withdraw_account_cell">深圳市智慧联盟科技有限公司</div>
+                        </div>
+                    </div>
+                    <span class="change_account float_right"><a href="javascript:void(0);">更换账户</a></span> 
+                </span> 
+            </div>
+        </div>
+        <!--operator manage end -->
+    </div>
+    <!--内容右边 end-->
+</div>
+</div>
+<!--内容区 end-->
+
+
+
+
+
+<!--遮罩start-->
+<div class="Cover_layer"></div>
+<!-- <div class="zhezhao" style=""></div> -->
+<!--遮罩end-->
+
+<!--弹出框 start-->
+<div class="Pop_layer" style="top:120px; left:515px;">
+    <div class="Pop_layer_box">
+    <!--绑定账户 start-->
+    <div class="pop_layer_bind_account " style="display:none;" >
+        <div class="pop_layer_top clearfix">
+            <span class="float_left title"><strong>绑定账户</strong></span>
+            <img src="../../resources/images/close.png" class="float_right" style="margin-top:13px;margin-right:24px;"/>
+        </div>
+        <div class="clearfix" style="margin-top:30px;">
+            <!--表单的table start-->
+            <div class="bind_account_table float_left">
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">银行名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="select_style">
+                            <select>
+                                <option></option>
+                                <option>text</option>
+                                <option>AAAAAAAA</option>
+                                <option>BBBBBBBB</option>
+                            <select/>
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">支行名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="select_style">
+                            <select>
+                                <option></option>
+                                <option>text</option>
+                                <option>AAAAAAAA</option>
+                                <option>BBBBBBBB</option>
+                            <select/>
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">账户名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">账号</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">法人名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">法人手机号</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title" style="height:62px;">手机验证码</div>
+                    <div class="bind_account_cell_text clearfix" style="height:62px;">
+                        <input type="text" class="check_code_text"/>
+                        <a href="javascript:void(0);"  class="check_code_a float_right">获取验证码</a>
+                    </div>
+                </div>
+            </div>
+            <!--表单的table end-->
+            <div class="account_tip float_left">
+                <p class="p_1"><b>商户为“公司/企业”类型：</b>请填写开户许可证账户名称及账号；</p>
+                <p class="p_2"><b>商户为“个体工商户”类型：</b>请填写法人银行卡账户及账号；</p>
+                <p class="p_3">请按要求严格真是准确填写，以确保提现款项及时到帐。</p>
+            </div>
+
+        </div>
+        <div class="pop_layer_bottom ">
+            <a href="javascript:void(0);"  class="sure_a">确定</a>
+        </div>
+    </div>
+    <!--绑定账户 end-->
+    <!--账户更换 start-->
+    <div class="pop_layer_bind_account" style="display:none;">
+        <div class="pop_layer_top clearfix">
+            <span class="float_left"><strong>账户更换</strong></span>
+            <img src="../../resources/images/close.png" class="float_right" style="margin-top:13px;margin-right:24px;"/>
+        </div>
+        <div class="clearfix" style="margin-top:30px;display:none;">
+            <!--表单的table start-->
+            <div class="bind_account_table float_left">
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">银行名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="select_style">
+                            <select>
+                                <option></option>
+                                <option>text</option>
+                                <option>AAAAAAAA</option>
+                                <option>BBBBBBBB</option>
+                            <select/>
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">支行名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="select_style">
+                            <select>
+                                <option></option>
+                                <option>text</option>
+                                <option>AAAAAAAA</option>
+                                <option>BBBBBBBB</option>
+                            <select/>
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">账户名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">账号</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">法人名称</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title">法人手机号</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title" style="height:62px;">手机验证码</div>
+                    <div class="bind_account_cell_text clearfix" style="height:62px;">
+                        <input type="text" class="check_code_text"/>
+                        <a href="javascript:void(0);"  class="check_code_a float_right">获取验证码</a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="pop_layer_bottom ">
+            <a href="javascript:void(0);"  class="sure_a">确定</a>
+        </div>
+    </div>
+    <!--账户更换 end-->
+
+    <!--提现 start-->
+    <div class="pop_layer_bind_account"  style="display:none;">
+        <div class="pop_layer_top clearfix">
+            <span class="float_left title"><strong>提取余额到银行卡</strong></span>
+            <span class="float_left withdraw_yue">账户余额：0.00元</span>
+            <img src="../../resources/images/close.png" class="float_right" style="margin-top:13px;margin-right:24px;"/>
+        </div>
+        <div class="clearfix" style="margin-top:30px;">
+            <!--表单的table start-->
+            <div class="bind_account_table float_left">
+           
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title_withdraw">银行账号</div>
+                    <div class="bind_account_cell_text">
+                        <div class="text_style">
+                            123456789
+                        </div>
+                    </div>
+                </div>
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title_withdraw">提取现金</div>
+                    <div class="bind_account_cell_text">
+                        <div class="withdraw_money">
+                            <input type="text" />元
+                        </div>
+                    </div>
+                </div>                
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title_withdraw" style="height:62px;">提现验证码</div>
+                    <div class="bind_account_cell_text clearfix" style="height:62px;">
+                        <input type="text" class="check_code_text"/>
+                        <a href="javascript:void(0);"  class="check_code_a float_right">获取验证码</a>
+                    </div>
+                </div>
+            </div>
+            <!--表单的table end-->
+            <div class="account_tip float_left">
+                <p class="p_1"><b>提现到帐时间：</b></p>
+                <p>（1）提现原则T+1到帐（即提现后的第二天到帐）；</p>
+                <p class="p_2">（2）商户在当日16：00前进行提现，财务将于当日处理，到帐时间视具体银行的规定；</p>
+                <p class="">（3）商户在当日16：00后进行提现，财务将于次日处理，到帐时间视具体银行的规定。</p>
+            </div>
+
+        </div>
+        <div class="pop_layer_bottom ">
+            <a href="javascript:void(0);"  class="sure_a">确定</a>
+        </div>
+    </div>
+    <!--提现 end-->
+    <!--充值 start-->
+     <div class="pop_layer_bind_account " style="display:block;">
+        <div class="pop_layer_top clearfix">
+            <span class="float_left title"><strong>账户充值</strong></span>
+            <img src="../../resources/images/close.png" class="float_right" style="margin-top:13px;margin-right:24px;"/>
+        </div>
+        <!-- 充值输入 start-->
+        <div style="">
+            <div class="recharge_nav clearfix" style="margin-top:30px;">
+            <!--<div class="recharge_nav_one float_left">储蓄卡</div> -->
+                <div class="recharge_nav_one float_left">微信</div>
+            <!-- <div class="recharge_nav_one float_left">支付宝</div> -->
+                <div class="recharge_nav_one_end float_left"></div>      
+            </div>
+            <!-- 充值表单的table start-->
+            <div class="bind_account_table" style="margin-top:30px;">
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title_withdraw">充值金额</div>
+                    <div class="bind_account_cell_text">
+                        <div class="withdraw_money">
+                            <input type="text" />元
+                        </div>
+                    </div>
+                </div>  
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title_withdraw">手机号码</div>
+                    <div class="bind_account_cell_text">
+                        <div class="withdraw_money">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>                      
+                <div class="bind_account_row">
+                    <div class="bind_account_cell_title_withdraw" style="height:62px;">付款验证码</div>
+                    <div class="bind_account_cell_text clearfix" style="height:62px;">
+                        <input type="text" class="check_code_text"/>
+                        <a href="javascript:void(0);"  class="check_code_a float_right">获取验证码</a>
+                    </div>
+                </div>
+            </div>
+            <!--充值表单的table end-->
+            <div class="pop_layer_bottom ">
+                <a href="javascript:void(0);"  class="sure_a">下一步</a>
+            </div>
+        </div>
+        <!-- 充值输入 end-->
+        <!-- 充值二维码 start-->
+        <div class="two_dimensional_code">
+            <img src="../../resources/images/erweima.png" />
+            <div style=""> 充值成功！</div>
+        </div>
+        <!-- 充值二维码 end-->
+    </div>
+    <!--充值 end-->
+</div>
+</div>
+<!--弹出框 end-->
+
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+</body>
+</html>

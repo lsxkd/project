@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/shop_center_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/shop_center.js"  charset="UTF-8"></script>
+	<script src="js/js_c.js"></script>
+	<title>我要发券</title>
+
+
+</head>
+<body>
+	<div id="wrap" class="shop_center_wrap">
+		<!-- 遮罩层  start -->
+		<div class="pop_cover_bg" style="display:none;"></div>
+		<!-- 遮罩层  end -->
+
+		<!-- 使用时间段弹出框  start -->
+		<div class="times_selects_pop time_quantum_pop">
+			<div class="times_selects_pop_box">
+				<!-- 无限制  start -->
+				<div class="times_selects_pop_item on">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">无限制</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 无限制  end -->
+
+				<!-- 每天  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">每天</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 每天  end -->
+
+				<!-- 每周  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">每周</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 每周  end -->
+
+				<!-- 关闭按钮  start -->
+				<div class="times_selects_pop_closes">
+					<span>关闭</span>
+				</div>
+
+				<!-- 关闭按钮  start -->
+
+			</div>
+		</div>
+		<!-- 使用时间段弹出框  start -->
+
+		<!--   领取限制弹出框  start -->
+		<div class="times_selects_pop get_limit_pop">
+			<div class="times_selects_pop_box">
+				<!-- 仅可领取一次  start -->
+				<div class="times_selects_pop_item on">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">仅可领取一次</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 仅可领取一次  end -->
+
+				<!-- 每天可领一次  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">每天可领一次</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 每天可领一次  end -->
+
+				
+				<!-- 关闭按钮  start -->
+				<div class="times_selects_pop_closes">
+					<span>关闭</span>
+				</div>
+
+				<!-- 关闭按钮  start -->
+
+			</div>
+		</div>
+		<!-- 领取限制弹出框  start -->
+
+		<!-- 日期选择弹出框  start -->
+		<div class="area_select_pops coupon_time_pops"  style="display:none;">
+			<div class="area_select_pops_box">
+				<div class="area_select_pops_title">
+					<div class="area_select_pops_title_cancle area_select_reset">
+						<span>取消</span>
+					</div>
+					<div class="area_select_pops_title_con">
+						<p class="next_steps" style="color:#000;font-size:1.8rem; text-align:center;">开始时间</p>
+					</div>
+					<div class="area_select_pops_title_save area_select_right" style="width:5em">
+						<span>保存</span>
+					</div>
+				</div>
+				<div class="area_select_pops_con">
+					<!-- <div class="area_select_pops_con_top_pop"></div> -->
+
+					<div class="selects_area_pop"></div>
+
+					<div class="area_select_pops_con_box main_box_all">
+						<div class="area_select_pops_con_uls area_select_pops_con_one">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_ones">
+								<li>2015年</li>
+								<li>2016年</li>
+								<li>2017年</li>
+								<li>2018年</li>
+								<li>2019年</li>
+								<li>2020年</li>
+								<li>2021年</li>
+								<li>2022年</li>
+								<li>2023年</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_two">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_twos">
+								<li>01月</li>
+								<li>02月</li>
+								<li>03月</li>
+								<li>04月</li>
+								<li>05月</li>
+								<li>06月</li>
+								<li>07月</li>
+								<li>08月</li>
+								<li>09月</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_three">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_threes">
+								<li>01日</li>
+								<li>02日</li>
+								<li>03日</li>
+								<li>04日</li>
+								<li>05日</li>
+								<li>06日</li>
+								<li>07日</li>
+								<li>08日</li>
+								<li>09日</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+
+					</div>
+					<!-- <div class="area_select_pops_con_bottom_pop"></div> -->
+				</div>
+			</div>
+		</div>
+		<!-- 日期选择弹出框  end -->
+
+		<header></header>
+		<div class="shop_center_main">
+			<div class="shop_center_main_box padding_bottoms_none">
+				<div class="send_coupon_info">
+					<div class="send_coupon_info_box">
+						<!-- 发券 start -->
+						<div class="send_coupon_info_item">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_img"></span>
+									<span class="send_coupon_info_item_title_font">代金券</span>
+								</div>
+							</div>
+						</div>
+						<!-- 发券 end -->
+
+						<!-- 面额 start -->
+						<div class="send_coupon_info_item">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_font">面额</span>
+								</div>
+								<div class="send_coupon_info_item_cona">
+									<div class="send_coupon_info_item_cona_amount">
+										<span class="cona_amount_l">
+											<input class="input_placeholders" type="text" placeholder="0">
+										</span>
+										<span class="cona_amount_r">元</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- 面额 end -->
+
+						<!-- 券有效期 start -->
+						<div class="send_coupon_info_item">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_font">券有效期</span>
+								</div>
+								<div class="send_coupon_info_item_cona cona_padding">
+									<div class="send_coupon_info_item_cona_amount coupon_time">
+										<span class="date_time_l">
+											2017-02-02 至 2017-04-04
+										</span>
+									</div>
+								</div>
+								<span class="send_coupon_info_item_drow"></span>
+							</div>
+						</div>
+						<!-- 券有效期 end -->
+
+						<!-- 使用时间 start -->
+						<div class="send_coupon_info_item info_item_lefts">
+							<div class="send_coupon_info_item_box dashed_class">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_font">使用时间</span>
+								</div>
+								<div class="send_coupon_info_item_cona cona_padding">
+									<div class="send_coupon_info_item_cona_amount time_quantum_click">
+										<span class="date_time_l">无限制</span>
+									</div>
+								</div>
+								<span class="send_coupon_info_item_drow"></span>
+							</div>
+						</div>
+						<!-- 使用时间 end -->
+
+						<!-- 选择周 start -->
+						<div class="send_coupon_info_item week_select_click" style="display:none;">
+							<div class="send_coupon_info_item_box info_item_box_dashed">
+								<div class="info_weeks info_weeks_click">
+									<ul>
+										<li class="on">一</li>
+										<li class="on">二</li>
+										<li class="on">三</li>
+										<li class="on">四</li>
+										<li class="on">五</li>
+										<li>六</li>
+										<li>日</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- 选择周 end -->
+
+						<!-- 选择时间段 start -->
+						<div class="send_coupon_info_item day_select_click info_item_lefts" style="display:none;">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title time_quantums">
+									<span class="time_quantums_font time_quantums_font_click">周一、二、三、四、五</span>
+								</div>
+								<div class="send_coupon_info_item_cona cona_padding time_quantums_padding">
+									<div class="send_coupon_info_item_cona_amount time_other_bts">
+										<span class="quantum_time_l">选择时间段</span>
+									</div>
+								</div>
+								<span class="send_coupon_info_item_drow"></span>
+							</div>
+						</div>
+						<!-- 选择时间段 end -->
+
+						<!-- 消费限制 start -->
+						<div class="send_coupon_info_item margin_topss">
+							<div class="send_coupon_info_item_box ">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_font">消费限制</span>
+								</div>
+								<div class="send_coupon_info_item_cona">
+									<div class="send_coupon_info_item_cona_amount">
+										<span class="button_switch_g"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 消费限制 end -->
+
+						<!-- 消费 start -->
+						<div class="send_coupon_info_item" style="display:none;">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title">
+									<span class="time_quantums_font">消费</span>
+								</div>
+								<div class="send_coupon_info_item_cona">
+									<div class="send_coupon_info_item_cona_amount">
+										<span class="cona_amount_r">满</span>
+										<span class="cona_amount_l">
+											<input class="input_placeholders" type="text" placeholder="0">
+										</span>
+										<span class="cona_amount_r">元可用</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- 消费 end -->
+
+						<!-- 发放限制 start -->
+						<div class="send_coupon_info_item">
+							<div class="send_coupon_info_item_box ">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_font">发放限制</span>
+								</div>
+								<div class="send_coupon_info_item_cona">
+									<div class="send_coupon_info_item_cona_amount">
+										<span class="button_switch_g"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 发放限制 end -->
+
+						<!-- 发放数量 start -->
+						<div class="send_coupon_info_item" style="display:none;">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title">
+									<span class="time_quantums_font">发放数量</span>
+								</div>
+								<div class="send_coupon_info_item_cona">
+									<div class="send_coupon_info_item_cona_amount">
+										<span class="cona_amount_l">
+											<input  class="input_placeholders" type="text" placeholder="0">
+										</span>
+										<span class="cona_amount_r">张</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- 发放数量 end -->
+
+						<!-- 领取限制 start -->
+						<div class="send_coupon_info_item get_limit_click info_item_lefts">
+							<div class="send_coupon_info_item_box">
+								<div class="send_coupon_info_item_title">
+									<span class="send_coupon_info_item_title_font">领取限制</span>
+								</div>
+								<div class="send_coupon_info_item_cona cona_padding">
+									<div class="send_coupon_info_item_cona_amount">
+										<span class="date_time_l">每天可领一次</span>
+									</div>
+								</div>
+								<span class="send_coupon_info_item_drow"></span>
+							</div>
+						</div>
+						<!-- 领取限制 end -->
+
+						<!-- 发布至 start -->
+						<div class="release_to">
+							<span class="release_to_title">发布至</span>
+							<span class="release_to_gr release_to_ye release_to_click">卡商城</span>
+							<span class="release_to_gr release_to_ye release_to_click">聚优惠</span>
+						</div>
+						<!-- 发布至 end -->
+
+						<!-- 发布 start -->
+						<div class="business_certification_item_btns my_publish_click">
+							<a class="noss_selecteds" href="javascript:void(0);">发布</a>
+						</div>
+						<!-- 发布 end -->
+
+					</div>
+				</div>
+			<!-- <div class="shop_center_bottom_logos">
+					<img src="./images/bottom_logo.png" alt="">
+				</div> -->
+			</div>
+		</div>
+
+		<div class="back_to_top scroll_top">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<footer></footer>
+	</div>
+	<script>
+	$(function(){
+		$(".release_to_click").on({
+			"tap":function(){
+				$(this).toggleClass("release_to_ye")
+				return false;
+			}
+		})
+	})
+	</script>
+</body>
+</html>

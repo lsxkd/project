@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<!--离线应用的另一个技巧-->
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<!--指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link type="text/css" rel="stylesheet" href="./css/reset.css" />
+<link type="text/css" rel="stylesheet" href="./css/login.css" />
+<script type="text/javascript" src="./js/DD_roundies_min.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
+DD_roundies.addRule('.div_circle', '45px 45px 45px 45px', true);
+	$(function(){
+		$("#falseImg").on("click",function(){
+			$("#falseDiv").hide();	
+			$("#trueDiv").show();
+			$("#rememberMe").val("0");
+		});
+		$("#trueImg").on("click",function(){
+			$("#falseDiv").show();	
+			$("#trueDiv").hide();
+			$("#rememberMe").val("1");
+		});
+	});
+	
+	function clickRememberMe(){
+		var rememberMe = $("#rememberMe").val();
+		if(rememberMe == "1"){
+			$("#falseDiv").hide();	
+			$("#trueDiv").show();
+			$("#rememberMe").val("0");
+		}else{
+			$("#falseDiv").show();	
+			$("#trueDiv").hide();
+			$("#rememberMe").val("1");
+		}
+		alert($("#rememberMe").val());
+	}
+
+</script>
+<script type="text/javascript">
+    $(function(){
+        $("#labels_top").load("top.html");
+        $("#labels_footer").load("footer.html");
+    });
+</script>
+</head>
+<body>
+	<!--top start-->
+    
+    <div class="top clearfix">
+        <img src="../resources/images/logo.png" class="logo"/>
+        <div class="help">
+            <a href="#" class="little">一点点云</a> 
+            <span class="v_line">|</span> 
+            <a href="help.html" class="help_a">帮助</a> 
+        </div>
+    </div>
+
+    <!--top end-->
+    <!--login start-->
+    <div class="login_bg">
+        <div class="login_content">        	
+            <div class="login">
+            	<div class="login_opacity"></div>
+            	<div class="login_div">
+                    <div class="welconme_login">欢迎登陆</div>
+                   
+                    <form action="" method="post" id="login_form">
+                    
+                    	 <!--错误提示start-->
+                    <div class="login_error" >
+                    	<div class="error_icon">
+                        <img src="../resources/images/error_close.png" />
+                        </div>
+                        <div class="error_content">用户名或密码错误</div>
+                    </div>
+                     <!--错误提示end-->
+                     
+                        <div class="user clearfix">                        
+                            <img class="user_icon" src="../resources/images/login_user_name_icon.png">
+                            <input type="text"  value="请输入用户名" maxlength="19"/>                            
+                        </div>
+                        
+                        
+                        <div class="user clearfix pswd_margin_top ">                        
+                            <img class="user_icon" alt="" src="../resources/images/login_user_pswd_icon.png" />
+                           <input type="text" value="请输入密码"  maxlength="19"/>                      		
+                        </div>
+                        
+                        <div class="about_pswd clearfix">                   	
+                                                                                       
+                                <div class="remeber_pswd" id="remeber_pswd">
+               							<div id="trueDiv"><img src="../resources/images/checkout_ture.png" id="trueImg"/></div>
+                                    	<div id="falseDiv"><img src="../resources/images/checkout_false.png" id="falseImg"/></div>
+                                        
+                                   
+                                </div>
+                                <label onclick="clickRememberMe();">记住密码</label>
+                                <input id="rememberMe" type="hidden" value="1"/> 
+                                <span class="forgot_pswd"><a href="">忘记密码？</a></span>    
+                                                   
+                        </div>
+                        
+                        
+                        <div class="check_code clearfix">
+                        
+                            <input type="text" name="check_code_text" value="验证码" id="check_code" maxlength="6"/>
+                                 <img src="../resources/images/checkcode.gif" />
+                                                  
+                        </div>
+                                              
+                        <div class="login_submit">                        
+                            <a href="index.html"><input type="button" name="login_submit"  value="登 陆"/>      </a>                      
+                        </div>
+                        
+                        <div class="register">
+                         没有账号？<a href="3">立即注册</a>
+                        </div>                       
+                    </form>
+               	</div>        
+          	</div>
+        </div>       
+    </div>
+    <!--login end-->
+    
+    
+    <!-- system notice start-->     
+    <div class="system_notice clearfix">
+       <div class="system_notice_name">系统公告</div>
+       <ul>
+           <li><a href="system_announcement_details.html">快餐品牌肯德基入驻亿企联平台！</a></li>
+           <li><a href="system_announcement_details.html">快餐品牌肯德基入驻亿企联平台！</a></li>
+       </ul>
+       <div class="more"> <a href="system_announcement.html" target="_blank">查看更多&gt;&gt;</a></div>
+    </div>   
+    <!-- system notice end-->
+    
+    
+    <!--success cases start-->    
+    <div class="success_case_title">
+    	成功案例
+    </div>
+    <div class="succes_cases">
+        <ul class="succes_cases_list">
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>
+            <li><div class="div_circle"><img src="../resources/images/success_case.gif" alt=""/></div><div class="case_name">中国银行</div></li>       
+        </ul>   
+    </div>
+    <!--success cases end-->
+
+<div style="height:200px;"></div>
+<!--footer start-->
+<style>
+    .footer{height:auto;}
+</style>
+<div id="labels_footer"></div>
+<!--footer end-->
+</body>
+</html>
