@@ -1,0 +1,179 @@
+
+/*中秋节页面 start*/
+
+.centent_body{
+    min-width: 1200px;
+}
+
+.zq_bg{
+    width:100%;
+    background:url(../images/zq_repeat_bg.jpg) repeat-y center center/100% auto;
+}
+
+.zq_tuy{
+    background:url(../images/zq_bg.jpg) no-repeat top center/100% auto;
+}
+.zq_tuy_box{
+    position:relative;
+}
+
+.zq_house_top{width:100%;}
+.zq_house_box{
+    background:url(../images/house_bg_c.png) repeat-y center center/100% auto;
+
+}
+.pop_pics{
+    width:12%;
+    height:auto;
+    position:absolute;
+    left:20%;
+    top:0.2%;
+}
+.font_title{
+    position:absolute;
+    top:0.4%;
+    left:50%;
+    width:20%;
+    margin:0 auto;
+    text-align:center;
+    margin-left:-9%;
+}
+.zq_house_con{
+    width:70%;
+    margin:0 auto;
+    position:relative;
+}
+.zq_house_c{
+    width:100%;
+    position:absolute;
+    left:1%;
+    top:-85px;
+}
+.zq_item{
+    margin-right:2%;
+    margin-left:3%;
+}
+.zq_item_h2{
+    padding:0;
+    margin:0;
+    font-size:22px;
+    color:#333333;
+    border-top:1px solid #cd9668;
+    border-bottom:1px solid #cd9668;
+    text-align:center;
+    height: 34px;
+    line-height: 32px;
+    font-weight: bold;
+    margin-top:30px;
+}
+.zq_item_b{
+    width:100%;
+    height:300px;
+    position:relative;
+    background:url(../images/bottom_bg.png) no-repeat bottom center/100% auto;
+    text-align:center;
+    display:block;
+}
+.zq_item_img{
+    max-width:80%;
+    max-height:70%;
+    position:absolute;
+    bottom:21%;
+    left:5%;
+    margin-left:0;
+}
+.item_price{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+}
+.item_price_l{
+    font-size:16px;
+}
+.item_price_r{
+    font-size:28px;
+    font-weight:bold;
+}
+.tuzis{
+    right: 18%;
+    left:auto;
+}
+.nqsy .zq_item{
+    margin-right: 0;
+    margin-left:2%;
+    margin-bottom: 15px;
+}
+
+
+.nav_rights{
+    position:fixed;
+    height:320px;
+    width:140px;
+    background:url(../images/nav_rights.png) no-repeat center center/100% 100%;
+    right:100px;
+    bottom:100px;
+    z-index:999;
+}
+.nav_rights_box{
+    margin-top:100px;
+    position:relative;
+}
+.gotos{
+    width:80%;
+    margin:0 auto;
+    display:block;
+    height:30px;
+    position:absolute;
+    left:15px;
+}
+.goto_one{
+    top:28px;
+}
+.goto_two{
+    top:58px;
+}
+.goto_three{
+    top:90px;
+}
+.backtop{
+    top:120px;
+}
+
+.clo_w{color:#FFF;}
+.wh_25{width:23%;}
+.wh_50{width:45%;}
+.wh_80{width:80%;}
+.mar_au{margin:0 auto;}
+.wh_980{width:1020px;}
+.marg_bot30{margin-bottom:30px;}
+
+/*中秋节页面 end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*特色中华内页 start*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+body{font-family: 'Arial','Times New Roman','Microsoft YaHei','SimHei' ;padding: 0;margin: 0;overflow: auto}
+*{margin: 0;padding: 0;}
+img{margin: 0;padding: 0;border: 0; outline-width:0px;vertical-align:top; max-width: 100%;}
+a:hover,a{text-decoration: none}
+
+
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+-webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}
+
+.guoqingBg{
+	position: relative;
+	max-width: 640px;
+    margin: auto;
+	background-size: 100%;
+
+}
+.gqcontent{
+
+	max-width: 640px;
+	min-height: 100px;
+	background: #ffc100;
+	padding-bottom: 0.1rem;
+}
+.gqicon{
+	margin: 0 auto;
+	width: 96%;
+
+	min-height: 100px;
+	border-radius:10px ;
+	margin-bottom: 0.4rem;
+	position: relative;
+	padding-top: 0.5rem;
+    box-sizing: border-box;
+    background: #f2f2f3;
+    padding-left: 2%;
+}
+.middle{
+	position: absolute;
+	z-index: 2;
+	margin-top: -0.63rem;
+		
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.4rem;
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+	   margin-bottom: 0.5rem;
+}
+.middle img{
+	margin: 0 auto;
+	text-align: center;
+	width: 5rem;
+ 
+}
+
+.imgbox{
+	margin-top: 0.3rem;
+}
+
+.imgbox div{
+    float: left;
+    width: 48%;
+    
+    padding-right: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+ 
+    vertical-align: middle;
+}
+.imgbox img{
+
+}
+.gqiconClear{
+	clear: both;
+}
+
+
+.backtop{
+	display: none;
+	    margin-right: 0.5rem;
+    margin-bottom: 0.8rem;
+	    position: fixed;
+    z-index: 12;
+    bottom: 0;
+    right: 0;
+}
+.backtop img{
+	width: 0.7rem;
+}
+.gqtableBox{
+	background: #fff;
+	padding: 0.5rem 0;
+}
+.gqtable{
+	margin: 0 auto;
+	display: table;
+	width: 80%;
+	background: #fff;
+}
+.gqtable div{
+	display: table-cell;
+	background: #fff;
+	text-align: center;
+}
+.gqtable div img{
+	width: 5rem;
+}
+.gqtable div span{
+  font-size: 1.2rem;
+  color: ;
+}

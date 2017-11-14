@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投诉商家</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <div class="activity-cont">
+        <header class="bar bar-nav bg-f92 c-fff">
+            <a class="button button-link button-nav pull-left back bar-left" href="/demos">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title c-fff">投诉结果</h1>
+            <!-- <a class="button button-link button-nav pull-right back bar-left" href="/demos">
+                <img src="images/fx-icon.png" style="margin-right:3px;" alt="" width="17">
+            </a> -->
+        </header>
+        <div class="activity-mid">
+            <div class="complaint_body">
+                <img class="drow_duis" src="./images/drow_icon_dui.png" alt="">
+                <h2 class="drow_h2s c_262">提交成功</h2>
+                <p class="drow_ps c_999 fs_26">投诉申请已提交，等待客服处理（处理时间2-3个工作日）给你带来不便，敬请谅解。</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豌豆充值中心</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body class="game-box2">
+    <div class="over">
+        <div class="game-mid">
+            <form action="">
+                <div class="game-form-box pt20 set-box">
+                    <div class="row mg0 over">
+                        <div class="pr0 text-left set-text line38 pull-left">
+                            支付密码
+                        </div>
+                        <div class="pull-left pl0"  style="width: 70%">
+                            <input type="password" class="form-control bor_r6" placeholder="支付密码由6个数字组成">
+                            <div style="height: 25px;margin-top: 3px;" class="fs14 c-f92"></div>
+                        </div>
+                    </div>
+                    <div class="row mg0 over">
+                        <div class="pr0 text-left set-text line38 pull-left">
+                            确认密码
+                        </div>
+                        <div class="pull-left pl0"  style="width: 70%">
+                            <input type="password" class="form-control bor_r6" placeholder="请再次输入您的密码，保证无误">
+                            <div style="height: 25px;margin-top: 3px;" class="fs14 c-f92"></div>
+                        </div>
+                    </div>
+                    <div class="row mg0 over">
+                        <div class="pr0 text-left set-text line38 pull-left">
+                            手机号码
+                        </div>
+                        <div class="pull-left pl0"  style="width: 70%">
+                            <input type="text" class="form-control bor_r6" placeholder="注册时的手机号码">
+                            <div style="height: 25px;margin-top: 3px;" class="fs14 c-f92"></div>
+                        </div>
+                    </div>
+                    <div class="row mg0 over">
+                        <div class="pr0 text-left set-text line38 pull-left">
+                            验证码
+                        </div>
+                        <div style="width: 65%;" class="pull-left">
+                            <div class="pl0 pull-left" style="width: 50%">
+                                <input type="text" class="form-control bor_r6" placeholder="请输入验证码">
+                                <div style="height: 25px;margin-top: 3px;" class="fs14 c-f92"></div>
+                            </div>
+                            <div class="fs14 hint pull-left" style="width: 15%">
+                                <input type="button" id="note-btn" value="获取验证码" onclick="settime(this)" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="game-post-btn text-center mt15 mb15">
+            <input type="submit" value="确定提交">
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var countdown=60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value="获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value="重新发送(" + countdown + ")";
+            countdown--;
+        }
+        setTimeout(function() {
+                settime(obj) }
+            ,1000)
+    }
+
+</script>
+</html>

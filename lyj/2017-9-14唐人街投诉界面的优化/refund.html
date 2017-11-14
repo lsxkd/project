@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择退款方式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+    <div class="activity-cont">
+        <header class="bar bar-nav bg-f92 c-fff">
+            <a class="button button-link button-nav pull-left back bar-left" href="/demos">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title c-fff">选择退款方式</h1>
+            <!-- <a class="button button-link button-nav pull-right back bar-left" href="/demos">
+                <img src="images/fx-icon.png" style="margin-right:3px;" alt="" width="17">
+            </a> -->
+        </header>
+        <div class="activity-mid">
+            <div class="complaint_body">
+                <h2 class="refund_h2_t">请选择退款类型:</h2>
+                <div class="item_refund">
+                    <ul class="item_refund_ul click_lis">
+                        <li class="item_refund_li">
+                            <img class="item_refund_li_l" src="./images/icon_tuikuan.png" alt="">
+                            <div class="item_refund_li_c">仅退款</div>
+                            <span class="item_refund_li_r click_spans selected"></span>
+                        </li>
+                        <li class="item_refund_li">
+                            <img class="item_refund_li_l" src="./images/icon_tuikuantuihuo.png" alt="">
+                            <div class="item_refund_li_c">退款退货</div>
+                            <span class="item_refund_li_r click_spans"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 仅退款 start -->
+                <div class="item_tips click_conss">
+                    <h4 class="item_tips_h4">须知：</h4>
+                    <p class="item_tips_ps">无需退还商品时可以选择仅退款，只需要卖家同意即可收到退款；</p>
+
+                    <h4 class="item_tips_h4 mar_top">退款步骤：</h4>
+                    <p class="item_tips_ps">1.申请仅退款，并填写退款详情</p>
+                    <p class="item_tips_ps">2.卖家同意退款；</p>
+                    <p class="item_tips_ps">3.收到退款</p>
+                </div>
+                <!-- 仅退款 end -->
+                <!-- 退款退货 start -->
+                <div class="item_tips click_conss"  style="display:none;">
+                    <h4 class="item_tips_h4">须知：</h4>
+                    <p class="item_tips_ps">退还商品时，可以选择退货退款。卖家同意之后，需要在<span class="red">5日</span>之内寄回商品并<span class="red">填写物流信息</span>，否则将自动取消退款；</p>
+
+                    <h4 class="item_tips_h4 mar_top">退款步骤：</h4>
+                    <p class="item_tips_ps">1.申请退货退款，并填写退款详情；</p>
+                    <p class="item_tips_ps">2.卖家同意退款；</p>
+                    <p class="item_tips_ps">3.寄出商品并填写物流信息；</p>
+                    <p class="item_tips_ps">4.卖家收到商品，确认无误；</p>
+                    <p class="item_tips_ps">5.买家收到尾款；</p>
+                </div>
+                <!-- 退款退货 start -->
+                
+
+                <a class="refund_btns" href="javascript:;">我已知晓，下一步</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+<script>
+    $(function(){
+        $(".click_lis li").on({
+            "click":function(){
+                $(".click_lis li .click_spans").removeClass("selected")
+                $(this).find(".click_spans").addClass("selected")
+                $(".click_conss").hide();
+                $(".click_conss").eq($(this).index()).show()
+            }
+        })
+    })
+</script>
+</html>

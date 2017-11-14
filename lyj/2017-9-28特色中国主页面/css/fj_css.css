@@ -1,0 +1,259 @@
+
+/**
+ * 特色中华福建馆样式
+ */
+
+.fj_bodys{
+    min-width:1200px;
+}
+
+.hot_titles{
+    height:90px;
+    line-height:90px;
+    text-align:center;
+    background:#f6f6f6;
+}
+
+.hots_s{
+
+}
+.hots_s_imgs{
+    padding:0;
+    margin:0;
+    border:2px solid #b1b1b2;
+    margin-left:10px;
+    margin-top:10px;
+}
+.hots_s_imgs img{
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border:none;
+}
+.widths_600{
+    width:586px;
+    height:288px;
+}
+.widths_290{
+    width:288px;
+    height:288px;
+}
+
+.fj_pro_item{
+    width:479px;
+}
+.pc_rughts_con{
+
+}
+
+.fj_pro_item .left_img{
+    width:240px;
+    height:248px;
+}
+.left_img .items_img_a{
+    width:240px;
+    height:248px;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.left_img .items_img_a img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.left_fonts{
+    width:200px;
+    margin-left: 10px;
+}
+.p_topas{
+    padding: 0;
+    margin: 0 auto;
+    margin-top:60px;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.p_topas a{
+    font-size:16px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height:40px;
+    line-height:20px;
+}
+.items_boixs{
+    overflow:hidden;
+}
+.items_boixs{
+
+}
+.items_boixs p{
+    padding:2px 0px;
+    margin:0;
+}
+.items_boixs del{
+    color: #999999;
+    font-size: 12px;
+}
+.items_boixs span{
+    color: #dd0000;
+    font-size: 16px;
+    font-weight:bold;
+}
+.items_btnsa{
+    color:#FFF;
+    font-size:16px;
+    background:#c81623;
+    display:block;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border-radius:5px;
+    margin-top:5px;
+
+}
+.items_btnsa:hover{
+    color:#FFF;
+}
+
+.public_box{
+    margin-bottom:0px;
+    margin-top:10px;
+}
+
+.back_topsa{
+    text-align:center;
+    margin-top:5px;
+}
+
+
+.title_navsb{
+    position:relative;
+    height:70px;
+    line-height:70px;
+    border-bottom:3px solid #c81623;
+}
+.title_navsb img{
+    height:65px;
+    padding-bottom:5px;
+}
+.title_navsb a{
+    font-size:16px;
+    color:#000000;
+    display:block;
+    position:absolute;
+    right:0;
+    top:35px;
+    height:25px;
+    line-height: 25px;
+}
+
+
+/**
+ * 特色中华主页面
+ */
+
+.venue_entrance{
+    margin-top:30px;
+}
+.v_enter_box{
+
+}
+.v_enter_item{
+    width:300px;
+    height:245px;
+    position:relative;
+    text-align:center;
+}
+.v_enter_item_a{
+    width:245px;
+    height:245px;
+    display:block;
+    border-radius:50%;
+    background:#f9eaeb;
+    overflow:hidden;
+    margin-left:27px;
+    text-align:center;
+}
+.v_enter_item_a img{
+    min-height: 75%;
+}
+.v_enter_item_p{
+    margin:0;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#FFF;
+    padding:10px 0 30px 0;
+}
+.v_enter_item_p_a{
+    display:block;
+    height:45px;
+    line-height:45px;
+    background:#FFF url(../images/enter_bg_icon_b.png) no-repeat center center/auto auto;
+    font-size:20px;
+    color:#333333;
+    position:relative;
+    padding-left:80px;
+    padding-right:130px;
+    text-align: left;
+    overflow:hidden;
+}
+.v_enter_item_p_a:hover{
+    font-size:20px;
+    color:#333333;
+}
+.go_class{
+    padding-left:10px;
+    display:block;
+    position:absolute;
+    right:75px;
+    top:0;
+}
+.te_imgs img{
+    width: 35%;
+    min-height: auto;
+    margin-top: 43px;
+}
+
+.title_bgsa{
+    background:#FFF url(../images/title_nasv_bg.png) no-repeat center center/100% auto;
+    height:60px;
+    line-height:60px;
+    border-bottom:0;
+}
+.title_bgsa_f{
+    font-size:22px;
+    color:#FFF;
+    padding-left: 40px;
+}
+.title_bgsa a{
+    font-size: 16px;
+    color: #FFF;
+    display: block;
+    position: absolute;
+    right:25px;
+    top: 18px;
+    height: 25px;
+    line-height: 25px;
+}
+.ewm_tips{
+    padding-left:20px;
+}
+.ewm_tips img{
+    height:auto;
+}
+
+.public_box {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+

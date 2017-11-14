@@ -1,0 +1,140 @@
+/**
+ * 2017-9-4  蓝色星空岛 
+ * 乐兑个人中心
+ */
+a,a:active,a:hover,a:link{text-decoration:none;}
+*{padding: 0;margin: 0;-webkit-tap-highlight-color:transparent}
+table,tbody,thead,tfoot,tr,td,ul,ol,li,a,img,b,h1,h2,h3,h4,h5,h6,em,i,b,span,div,p{font-style:normal;vertical-align:middle;font-weight:normal;border-collapse: collapse;border:0;text-decoration: none;list-style-type:none;}
+
+.title_t{
+	line-height:30px;
+}
+.btn_a_c{
+	border:1px solid #cccccc;
+	padding:2px 15px;
+	border-radius:5px;
+	margin-right:10px;
+}
+.item_ss{
+
+}
+
+.title_tab_li.on{
+	border-bottom:2px solid #fbc819;
+}
+
+.cons_tab_table{
+	width:100%;
+}
+.cons_tab_table th{
+	text-align:center;
+	color: #555555;
+	font-size:14px;
+}
+.cons_tab_table td{
+	text-align:center;
+	color: #555555;
+	font-size:14px;
+}
+.withdraw_cash{
+	width:50%;
+	margin:0 auto;
+}
+.withdraw_item{
+	margin:10px auto;
+}
+
+
+
+.bg_gray{
+	background:#f7f7f7;
+}
+.bor_b{
+	border-bottom:1px solid #f7f7f7;
+}
+.hs_30{
+	height:30px;
+	line-height:30px;
+}
+.hs_40{
+	height:40px;
+	line-height:40px;
+}
+.pl_20{
+	padding-left:20px;
+}
+.pr_20{
+	padding-right:20px;
+}
+.pdlr_5{
+	padding:0 5px;
+}
+.pdlr_20{
+	padding:0 20px;
+}
+.mt_20{
+	margin-top:20px;
+}
+.mt_30{
+	margin-top:30px;
+}
+.mb_30{
+	margin-bottom:30px;
+}
+.ml_20{
+	margin-left:20px;
+}
+.mr_20{
+	margin-right:20px;
+}
+.f_b{
+	font-weight:bold;
+}
+.fs_12{
+	font-size:12px;
+}
+.fs_14{
+	font-size:14px;
+}
+.fs_18{
+	font-size:18px;
+}
+
+.fc_444{
+	color:#444444;
+}
+.fc_555{
+	color:#555555;
+}
+.fc_666{
+	color:#666666;
+}
+.fc_999{
+	color:#999999;
+}
+.ov_e_s{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.ta_c{
+	text-align:center;
+}
+.whs_25{
+	width:25%;
+}
+.whs_350{
+	width:350px;
+}
+
+.ws_30{width:30%;}
+.pr{position:relative;}
+.pab{position:absolute;}
+.hs_180{height:4.5rem;}
+.w_50{width:50%;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix{zoom:1}.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+
+
+

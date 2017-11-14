@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/css.css">		
+	</head>
+	<body>
+		
+<!-- 模态框（Modal）:兑换成功 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content zpmodalbg">
+		
+		   <div class="game-form-box pt20 set-box bg1 mt15 bor_r6 pd10 text-center" style="width: 75%;min-height: 230px;">
+		   	
+		   	  <div class="mt35">兑换成功</div>
+			  <div> 
+			             请在“
+			    <span class="textColor2">唐人街-个人中心-我的抵用券</span>
+			    ”中查看.
+			  </div> 
+			  
+            </div>
+
+
+            <div class="modal-footer text-center" style="border:none">
+				<input type="button"  class="mt10 boxliBtn2" value="关闭"  data-dismiss="modal"/>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+		
+
+
+<!-- 模态框（Modal）:兑换失败 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content zpmodalbg">
+		
+		   <div class="game-form-box pt20 set-box bg1 mt15 bor_r6 pd10 text-center" style="width: 75%;min-height: 230px;">
+		   	
+		   	  <div class="mt80">兑换失败，请重新提交。</div>
+			
+			  
+            </div>
+
+
+            <div class="modal-footer text-center" style="border:none">
+				<input type="button"  class="mt10 boxliBtn2" value="关闭"  data-dismiss="modal"/>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- 模态框（Modal）:充值 -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content zpmodalbg">
+		
+		   <div class="game-form-box pt20 set-box bg1 mt15 bor_r6 pd10 text-center" style="width: 75%;min-height: 230px;">
+		   	
+		   	    <div class="row mg0 over mt15">
+                        <div class="pr0 text-left set-text line38 pull-left" style="width: 100%;">
+                                                                                           请确认充值手机号码
+                        </div>
+               
+                </div>
+			
+			    <div class="row mg0 over">
+                        <div class="pr0 text-left set-text set-text2 line38 pull-left" >
+                                                                                             手机号码
+                        </div>
+                    	<div class="pull-left pl0" style="width: 70%">
+							<input type="number" class="form-control bor_r6" placeholder="请输入手机号码">
+							<div style="height: 25px;margin-top: 3px;" class="fs14 c-f92"></div>
+						</div>
+                </div>
+			  
+            </div>
+
+
+            <div class="modal-footer text-center" style="border:none">
+				<input type="button"  class="mt10 boxliBtn2" value="关闭"  data-dismiss="modal"/>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+		
+		<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+	开始演示模态框
+</button>
+
+		<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+	开始演示模态框
+</button>
+
+		<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+	手机充值
+</button>
+	</body>
+	<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

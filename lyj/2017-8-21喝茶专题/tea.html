@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>喝茶，你不得不知的事儿</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <div class="activity-cont">
+        <header class="bar bar-nav bg-f92 c-fff">
+            <a class="button button-link button-nav pull-left back bar-left" href="/demos">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title c-fff">喝茶，你不得不知的事儿</h1>
+            <a class="button button-link button-nav pull-right back bar-left" href="/demos">
+                <img src="images/fx-icon.png" style="margin-right:3px;" alt="" width="17">
+            </a>
+        </header>
+        <div class="activity-mid">
+            <div class="amg">
+                <img src="images/tea_img_01.jpg" alt="">
+                <img src="images/tea_img_02.png" alt="">
+                <img src="images/tea_img_03.png" alt="">
+                <a href="https://m.trj.cc/Goods/view/id/824138">
+                    <img src="images/tea_img_04.png" alt="">
+                </a>
+                <a href="https://m.trj.cc/Goods/view/id/890134">
+                    <img src="images/tea_img_05.png" alt="">
+                </a>
+                <img src="images/tea_img_06.png" alt="">
+                <div class="over">
+                    <div class="pull-left amg" style="width:40.5%">
+                        <a href="https://m.trj.cc/Goods/view/id/705873">
+                        <img src="images/tea_img_07.png" alt="">
+                        </a>
+                    </div>
+                    <div class="pull-left amg" style="width: 59.5%">
+                        <img src="images/tea_img_07-1.png" alt="">
+                        <a href="https://m.trj.cc/Goods/view/id/1720535">
+                        <img src="images/tea_img_08.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <img src="images/tea_img_09.png" alt="">
+                <img src="images/tea_img_10.png" alt="">
+                <div class="over">
+                    <div class="pull-left amg" style="width: 50%">
+                        <a href="https://m.trj.cc/Goods/view/id/797844">
+                        <img src="images/tea_img_11.png" alt="">
+                        </a>
+                    </div>
+                    <div class="pull-left amg" style="width: 50%">
+                        <a href="https://m.trj.cc/Goods/view/id/754552">
+                        <img src="images/tea_img_12.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <img src="images/tea_img_13.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+</html>

@@ -1,0 +1,24 @@
+/*手机端rem基本公共样式开始*/
+.fs20rem{font-size: .50rem}
+.fs18rem{font-size: .45rem}
+.fs16rem{font-size: .40rem}
+.fs14rem{font-size: .35rem}
+.fs12rem{font-size: .30rem}
+.pd5rem{ padding: .121rem}
+.pd10rem{padding: .2416rem}
+.pd15rem{padding: .363rem}
+.pt0rem{padding-top: 0}
+.pt5rem{padding-top: .121rem}
+.pt10rem{padding-top: .242rem}
+.pt15rem{padding-top: .363rem}
+.pt20rem{padding-top: .484rem}
+.pt25rem{padding-top: .604rem}
+.pt30rem{padding-top: .725rem}
+.pr0rem{padding-right: 0}
+.pr5rem{padding-right: .121rem}
+.pr10rem{padding-right: .242rem}
+.pt15rem{padding-right: .363rem}
+.pt20rem{padding-right: .484rem}
+.pt25rem{padding-right: .604rem}
+.pt30rem{padding-right: .725rem}
+/*手机端rem基本公共样式结束*/
