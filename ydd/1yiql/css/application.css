@@ -1,0 +1,141 @@
+/*body{background-color: #e7e8ec;}*/
+* ul li dt dl dd{padding:0;margin:0}
+/*body{background-color: #e7e8eb;}*/
+body{font-family: Microsoft YaHei;}
+a:hover{text-decoration: none;}
+.content_right_border{width:916px;margin:0 31px;border-top: 1px solid #dedede;color:#333333;overflow: hidden;font-size: 14px;}
+.body_top{height: 42px;background-color: #fafafa; margin-top: 24px; line-height: 42px;overflow: hidden;}
+.body_top_left{display: inline-block; background-image: url(../images/application/myapplication/tubiao1.png);
+				background-repeat: no-repeat;text-indent: 40px;background-position: 5px 10px;}
+.body_top_right{float: right;}
+.body_top_right>ul>li{float: left;width: 90px;text-align: center;font-size: 14px;cursor: pointer;}
+.body_top_right>ul>li:after{border:1px solid #333;}
+.body-content{margin: 10px;overflow: hidden;}
+.body-content>ul>li{float: left;width: 220px;text-align: center}
+.body-content>ul>li>img{margin:10px auto;}
+.body_content_red{color: red;font-size: 18px;margin-top: 10px;}
+
+/*选项卡事件的添加样式*/
+.body_top_tab{background-color: #fb6c6c;color: #fff;}
+
+/*分页*/
+.page_top{margin: 50px auto}
+/*.page_turn{margin-top:50px;}*/
+#page_navigation a{
+	padding:3px;
+	border:1px solid #e7e8ec;
+	margin:2px;
+	color:black;
+	text-decoration:none;
+	font-size:14px;
+	font-family:"Microsoft YaHei";
+}
+#page_navigation a:hover{
+	border-color:red;
+}
+.active_page{
+	background:red;
+	color:white !important;
+}
+
+
+/*设备列表*/
+.list-aontent{overflow: hidden;margin-top: 16px;margin-bottom: 16px;}
+.list-content-top{display: inline-block;width: 288px;height: 44px;background-image: url(../../resources/images/myapplication/no6.jpg);
+					background-repeat: no-repeat;text-align: center;line-height: 44px; font-size: 14px;}
+.list-aontent>div{float: right;}
+.list-aontent img{cursor: pointer;}
+.list-content>table,.list-content tr,.list-content th,.list-content td{border: 1px solid #dedede;text-align: center;height: 58px;}
+.table_img{overflow: hidden;}
+.table_img>div{float: left;width: 65px;height: 56px;line-height: 56px;text-align: center;color: red;padding-left: 12px}
+.table_img a{color: red;cursor: pointer;}
+.table_img>div img{margin:20px auto;cursor: pointer;}
+.application_box{width: 200px;height: 34px; border: 0;background-color: #fff;}
+
+
+/*申请设备弹出框*/
+.list-sqsb select{width: 210px;height: 36px;border: 1px solid #dcdcdd;font-size: 14px;color: #5c5c5c;}
+.list-sqsb input[type="text"],.list-sqsb input[type="password"]{width: 210px;height: 36px;border: 1px solid #dcdcdd;font-size: 14px;color: #5c5c5c;}
+/*.list-sqsb{width: 622px;height: 494px;border: 1px solid #f4f5f9;position: fixed;top: 100px;left: 550px;background-color: #fff;}*/
+/*.list-sqsb>table,.list-sqsb>.dest>table{width: 622px;background-color: #fff;}*/
+.list-sqsb>table tr td:first-child,.list-sqsb>.dest>table tr td:first-child{width:120px;text-align: right;padding-right: 14px; }
+.list-top-table tr td{padding-top: 10px;font-size: 14px;}
+.list-sqsb-top{height: 44px;background-color: #f4f5f9;line-height: 44px;}
+/*.list-sqsb>div{padding:5px 20px;}*/
+.list_ts{overflow: hidden;margin-top: 20px;margin-bottom: 20px;}
+.list_ts>div{float: left;font-size: 14px; }
+.list-footer{height: 72px;background-color: #f4f5f9;overflow: hidden;}
+.list-footer-btn1{width: 120px;height: 40px;line-height: 40px;background-color: red;border-radius: 5px;
+	float: left;margin:10px 30px 10px 120px;color: #fff;text-align: center;}
+.list-footer-btn2{width: 120px;height: 40px;line-height: 40px;background-color: #fff;;border-radius: 5px;
+	float: left;margin:10px 30px;color: #fff;text-align: center;border: 1px solid red}
+.list-footer-btn1>a{color: #fff}
+.list-footer-btn2>a{color: red}
+.list-textarea{margin:20px 10px;}
+.list-textarea textarea{padding:10px;color:#999999;border:1px solid #dedede;}
+.list-top-table-sp{font-size: 12px;background-image: url(../../resources/images/myapplication/tishixx.jpg);display:inline-block;background-repeat: no-repeat;text-indent: 22px;margin-left: 20px;}
+
+/*查看详情页面*/
+.app-case-top{overflow: hidden;margin-top: 22px; }
+.app-case-top-left{width: 672px ;border-bottom: 1px solid red;height: 45px;line-height: 45px;background-image: url(../../resources/images/myapplication/honggang.jpg);background-position: 2px 8px;;background-repeat: no-repeat;;text-indent: 12px;float: left;}
+.app-case-top-right{float: right;overflow: hidden;height: 46px;}
+.app-case-top-right>ul>li{float: left;width: 120px;height: 44px;line-height: 44px;text-align: center;border:1px solid #dedede;
+							cursor: pointer;border-bottom: 1px solid red;border-top: -2px;}
+.app-case-body1,.app-case-body0{margin-top: 20px;}
+.app-case-body1 select,.app-case-body0 select{width: 128px;height: 36px;border: 1px solid #dedede;}
+.app-case-body1 input,.app-case-body0 .case-input{width: 160px;height: 36px;border: 1px solid #dedede ;padding-right: 8px;/*background-image: url(../../resources/images/date.png);background-repeat: no-repeat;background-position: right;*/}
+.app-case-qk{cursor: pointer;width: 94px;height: 36px;line-height: 36px;text-align: center;background: #fff;color: red;border-radius: 4px;border: 1px solid red;}
+.app-case-ss{cursor: pointer;width: 96px;height: 38px;line-height: 38px;text-align: center;background: red;color: #fff;border-radius: 4px;}
+.app-case-ss:hover{background-color: #fa4545;}
+.app-case-qk:hover{background-color: #fafafa;}
+.app-case-bdtop{overflow: hidden;}
+.app-case-bdtop>div,.app-case-bdtop>label{float: left;margin-right: 26px}
+.app-case-tables{width: 916px;margin-top: 20px;}
+.app-case-tables tr:first-child{background-color: #fafafa;height: 46px;}
+.tb-float>div,.tb-float>label{float: left;margin-left: 14px}
+.app-case-body0-top,.app-case-body0-top tr,.app-case-body0-top td{border:none;}
+.app-case-body0 .cases-input{width: 160px;height: 36px;border: 1px solid #dedede ;padding-right: 8px;background-image: url(../../resources/images/myapplication/money.png);background-repeat: no-repeat;background-position: 10px;text-indent: 20px}
+.case-syjl{margin-top: 20px;}
+.case-syjl tr:first-child{background-color: #fafafa;}
+.app-case-top .on{border:1px solid red ;border-top: 4px solid red;}
+
+
+
+/*账号管理*/
+.manage-add{overflow: hidden;}
+.manage-top{cursor: pointer;float: right;margin-top: 20px;width: 96px;height: 40px;line-height: 40px;text-align: center;background-color: red;color: #fff;border-radius: 4px;}
+.manage-top:hover{background-color: #fa4545;}
+.manage-table{width: 916px; margin-top: 20px;}
+.manage-table table{width: 916px;}
+.manage-table table tr:first-child{background-color: #fafafa;}
+.manage-table table tr th:last-child{width: 25%;}
+.manage-td{overflow: hidden;padding-left: 14px}/*3.27这一行和下一行都是有更改内容的*/
+.manage-td>div{float: left;width: 50px;height: 56px;line-height: 56px;padding-right: 5px;color: red;margin:0 5px;}
+.manage-td>div img{margin:20px auto;cursor: pointer;}
+.manage-td>div a:hover{cursor: pointer;color: red;}
+.list_ckxq_span>a{color: red;}
+
+
+/*弹出框*/
+.manage-alert-table,.manage-alert-table tr,.manage-alert-table th,.manage-alert-table td{border: 0;height: 52px;color:#5c5c5c;font-size: 14px;}
+.manage-alert-table tr td:last-child{text-align: left;}
+/*.manage-alert-table tr:nth-child(1) td{padding-top: 10px;}*/
+.manage-alert-table{margin:-40px 0;}
+.box-checkbox{width: 20px;height: 20px;line-height: 20px;display:inline-block;padding: 10px 10px 10px 0;vertical-align:middle;}
+.box-checkbox img{display: inline-block;}
+.bg-checkbox{display: none;}
+.manage-ul-float{overflow: hidden;}
+.manage-ul-float>li{float: left;padding-right: 10px;}
+
+.model-delete,.model-delete-err{background-color: #fff;	width: 360px;height:326px;text-align: center;border:1px solid #e7e8eb;overflow: hidden;position: relative;margin:auto;}
+.model-delete>h2,.model-delete-err>h2{font-size: 20px;font-weight: bold;margin-top: 52px;margin-bottom: 42px;}
+.model-delete>p,.model-delete-err>p{margin-bottom: 82px;}
+.model-delete>.moder-delete-btn1{width: 120px;height: 40px;line-height: 40px;background-color: red;background-color: red;border-radius: 5px;float: left;margin-left: 42px;color: #fff;}
+.model-delete>.moder-delete-btn1>a{color: #fff;}
+.model-delete>.moder-delete-btn2{width: 120px;height: 40px;line-height: 40px;background-color: #fff;border:1px solid red;border-radius: 5px;float: left;margin-left: 42px;}
+.model-delete>.moder-delete-btn2>a{color: red;}
+.model-delete>.model-close,.model-delete-err>.model-close{position: absolute;top: 10px;right: 12px;}
+.model-delete-err>.moder-delete-btn3{width: 120px;height: 40px;line-height: 40px;background-color: red;background-color: red;border-radius: 5px;margin: auto;}
+.model-delete-err>.moder-delete-btn3>a{color: #fff;}
+.delete-alerts{position: fixed;top: 200px;left: 700px;background-color: #fff;}
+

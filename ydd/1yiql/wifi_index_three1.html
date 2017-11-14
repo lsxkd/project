@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/public_style.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/wifi.css" type="text/css"/>
+
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script> 
+        <script type="text/javascript" src="./js/jquery.qrcode.min.js"></script> 
+        <script type="text/javascript">
+            $(function(){
+                $("#labels_top").load("top.html");
+                $("#labels_footer").load("footer.html");
+            });
+        </script>       
+	</head>
+<body>
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+<div class="wifi_bg">
+  <div class="wifi_register_content">
+      <div class="wifi_nav">
+      	<div class="wifi_nav_step_box wifi_nav_step_box_three">
+          	<div class="wifi_nav_step_box_font">1 店铺信息</div>
+              <div class="wifi_nav_step_box_font">2 添加设备</div>
+              <div class="wifi_nav_step_box_font wifi_nav_step_box_font_color">3 下载连网二维码</div>
+          </div>
+      </div>
+      <div class="wifi_perfect_information">
+      	<div class="wifi_perfect_information_box">
+              <!--first of perfect_information  start-->
+              <div class="wifi_information_first">
+                 <div class="wifi_index_three">
+                     <p class="wifi_index_three_p">
+                         打印以下二维码并于店内张贴。请确保有人（顾客或店员）用<em class="fontss_blue">6.1以上安卓版微信</em>或<em class="fontss_blue">6.2.2以上IOS版微信</em>扫码连接WiFi，连网成功即表示设备添加成功。
+                     </p>
+                     <div class="wifi_index_three_con">
+                         <div class="wifi_index_three_con_box" id="myDiv" style="display:block;">
+                             <div class="wifi_index_three_con_titile">
+                                 <span class="wifi_index_three_con_titile_span">智能WIFI</span>
+                             </div>
+                             <div class="wifi_index_three_con_content">
+                                 <div class="wifi_index_three_con_content_ewm">
+                                     <img src="../resources/images/erweima.jpg" alt="">
+                                 </div>
+                                 <p class="wifi_index_three_con_content_p">
+                                     一点点
+                                 </p>
+                                 <h2>微信扫一扫连WIFI</h2>
+                                 <div class="wifi_index_three_logo">
+                                    <span class="wifi_index_three_logo_l">
+                                        <img src="../resources/images/yidiandian.png" alt="">
+                                    </span>
+                                    <span class="wifi_index_three_logo_r">
+                                        <img src="../resources/images/yiqilian.png" onclick="SaveAs5(this.src)" alt="">
+                                    </span>
+                                 </div>
+                             </div>
+                         </div>
+                         <canvas id="myCanvas" width="280" height="390" style="margin-top:20px;border: 1px solid #DCDCDC;border-radius: 5px;box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);display:block;"></canvas>
+
+                         <div id="aaaaa" style="margin-top:20px;border: 1px solid #DCDCDC;border-radius: 5px;box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);display:none;"></div>
+
+                     </div>
+
+                      
+                      <img src="../resources/images/huang_icon.png" id="myImage" style="display:none">
+                      <img src="../resources/images/erweima.jpg" id="myImage1" style="display:none">
+                      <img src="../resources/images/yidiandian.png" id="myImage2" style="display:none">
+                      <img src="../resources/images/yiqilian.png" id="myImage3" style="display:none">
+                      <p id="font_names" style="display:none">蓝色星空岛</p>
+
+
+                      <p class="wifi_index_three_con_tips">
+                      备注：请下载(ie浏览器点击图片右击另存图片)物料并张贴于门店内  你也可以立即扫码体验连网流程
+                      </p>
+                      <div id="qrcode"></div>
+                 </div>
+              </div>
+              <!--first of perfect_information end-->
+
+          </div>
+          <div class="wifi_information_button">
+          	<a class="wifi_information_button_last" href="javascript:void(0);">完成</a>
+          	<a class="wifi_information_button_next" id="myInput" href="javascript:void(0);">下载二维码</a>
+          </div>    
+    	</div>
+  </div>
+</div>
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+<script type="text/javascript">
+    var browser_height=document.documentElement.clientHeight-295;
+    var browser_width=document.documentElement.clientWidth;
+    $(".wifi_register_content").css("min-height",browser_height);
+</script>
+<script type="text/javascript">
+window.onload=function(){
+  var mycv = document.getElementById("myCanvas");  
+  var myctx = mycv.getContext("2d");
+  var myImage = new Image();
+  myImage = document.getElementById("myImage");
+  var myImage1 = new Image(); 
+  myImage1 = document.getElementById("myImage1");
+  var myImage2 = new Image();
+  myImage2 = document.getElementById("myImage2");
+  var myImage3 = new Image();
+  myImage3 = document.getElementById("myImage3");
+  var fontss = document.getElementById("font_names").innerHTML;
+  var fontss_x = 140-fontss.length*14/2;
+
+
+  myctx.fillStyle='#FFF';
+  myctx.fillRect(0,0,280,390);
+
+  myctx.drawImage(myImage, 0, 0);
+
+  myctx.font = 'bold 16px 微软雅黑';
+  myctx.textAlign = 'left';
+  myctx.textBaseline = 'top';
+  myctx.fillStyle = '#FFF';
+  myctx.fillText('智能WIFI', 105, 10);
+
+  myctx.font = 'normal 14px 微软雅黑';
+  myctx.textAlign = 'left';
+  myctx.textBaseline = 'top';
+  myctx.fillStyle = '#5c5c5c';
+  myctx.fillText(fontss, fontss_x, 220);
+
+  myctx.font = 'bold 18px 微软雅黑';
+  myctx.textAlign = 'left';
+  myctx.textBaseline = 'top';
+  myctx.fillStyle = '#5c5c5c';
+  myctx.fillText('微信扫一扫连WIFI', 66, 260);
+  
+  myctx.drawImage(myImage1, 62, 60,159,159);
+  myctx.drawImage(myImage2, 24, 300,106,45);
+  myctx.drawImage(myImage3, 160, 300,106,45);
+
+  // 将canvas转换为图片；
+  var type="jpg";
+  imgData = mycv.toDataURL(type);
+  var _fixType = function(type) {
+      type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+      var r = type.match(/png|jpeg|bmp|gif/)[0];
+      return 'image/' + r;
+  };
+  imgData = imgData.replace(_fixType(type),'image/octet-stream');
+  var saveFile = function(data, filename){
+      var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+      save_link.href = data;
+      save_link.download = filename;
+
+      var event = document.createEvent('MouseEvents');
+      event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+      save_link.dispatchEvent(event);
+  };
+  // 下载后的问题名
+  var bd= new Image();
+  bd.src=imgData;
+  document.getElementById("aaaaa").appendChild(bd); 
+
+
+  var filename =  "img"+ '.' + type;
+  document.getElementById("myInput").onclick=function(){
+    document.getElementById("myCanvas").style.display="none";
+    document.getElementById("aaaaa").style.display="block";
+    saveFile(imgData,filename)
+  }
+
+
+}
+  
+
+
+
+</script>
+
+<script> 
+function SaveAs5(imgURL) 
+{ 
+  //var ss = new Image();
+  //ss.src = imgURL;
+var oPop = window.open(imgURL,"","width=1, height=1, top=5000, left=5000"); 
+//oPop.document.body.appendChild(ss);
+for(; oPop.document.readyState != "complete"; ) 
+{ 
+if (oPop.document.readyState == "complete")break; 
+} 
+oPop.document.execCommand("SaveAs"); 
+oPop.close(); 
+} 
+
+</script> 
+<script>
+$(function(){
+    //生成二维码
+  $("#qrcode").html("");
+  $("#qrcode").qrcode({
+      render: "table", //table方式 
+      width: 200, //宽度 
+      height:200, //高度 
+      text: "http://mp.weixin.qq.com/mp/wifi?q=056539dc0dbaa39d" //任意内容 
+  });
+})
+
+
+</script>
+</body>
+</html>

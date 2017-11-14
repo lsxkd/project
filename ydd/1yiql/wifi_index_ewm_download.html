@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/public_style.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/wifi.css" type="text/css"/>
+
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script> 
+        <script  type="text/javascript" src="./js/wifi_js.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+<div class="Cover_layer" id="DIV2" style="display:none;"></div>
+<!--修改网络名称和密码 弹出框 start-->
+<div class="Pop_layer" id="DIV1" style="display: none;">
+    <div class="Pop_layer_box">
+        <div class="pop_layer_title">
+            <span class="pop_layer_title_span">修改网络名称和密码</span>
+            <span class="pop_layer_title_span_close">
+                <a class="pop_layer_title_span_close_a" onclick="myHide('div1,div2')"  href="javascript:void(0);"></a>
+            </span>
+        </div>
+        <div class="wifi_edit_pop">            
+            <div class="wifi_edit_pop_box">
+                <div class="wifi_edit_pop_item">
+                    <div class="wifi_edit_pop_item_bg">
+                        <span class="wifi_edit_pop_item_fonts_l"><i class="wifi_edit_pop_item_fonts_i"></i></span>
+                        <span class="wifi_edit_pop_item_fonts">网络名称(密码)修改后，需同步修改所有设备的网络名称(密码)，否则将无法正常上网！</span>
+                    </div>
+                </div>
+                <div class="wifi_edit_pop_item">
+                    <span class="wifi_edit_pop_item_title">网络名称</span>
+                    <span class="wifi_edit_pop_item_con">
+                        <input class="wifi_edit_pop_item_con_name" type="text" maxlength="11" placeholder="WX-IPUNION" />
+                    </span>
+                    <p class="wifi_edit_pop_item_p">网络名称或密码必须有一个以大写“WX”开头，且32个字符以内，不支持中文</p>
+                </div>
+                <div class="wifi_edit_pop_item">
+                    <span class="wifi_edit_pop_item_title">网络密码</span>
+                    <span class="wifi_edit_pop_item_con">
+                        <input class="wifi_edit_pop_item_con_name" type="text" placeholder="qwee123456" />
+                    </span>
+                    <p class="wifi_edit_pop_item_p">8-24个字符</p>
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="perfect_information_pop_button perfect_information_pop_button_wechat">
+            <a class="perfect_information_pop_button_sure"  href="javascript:void(0);">确定</a>
+            <a class="perfect_information_pop_button_cancel " onclick="myHide('div1,div2')"  href="javascript:void(0);">取消</a>
+        </div>
+    </div>
+</div>
+<!--修改网络名称和密码 弹出框 end-->
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>智能WIFI</span></dt>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="wifi_index.html">设备管理<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="wifi_index_ewm_download.html">二维码下载<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="wifi_index.html">智能WIFI</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="wifi_index.html">设备管理</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--智能wifi首页 start-->
+            	<div class="wifi_indexs_con">
+                    <div class="wifi_indexs_con_box" style="border:none;">
+                        <div class="wifi_index_three_con">
+                         <div class="wifi_index_three_con_box" id="myDiv" style="display:block;">
+                             <div class="wifi_index_three_con_titile">
+                                 <span class="wifi_index_three_con_titile_span">智能WIFI</span>
+                             </div>
+                             <div class="wifi_index_three_con_content">
+                                 <div class="wifi_index_three_con_content_ewm">
+                                     <img src="../resources/images/erweima.jpg" alt="">
+                                 </div>
+                                 <p class="wifi_index_three_con_content_p">
+                                     一点点
+                                 </p>
+                                 <h2>微信扫一扫连WIFI</h2>
+                                 <div class="wifi_index_three_logo">
+                                    <span class="wifi_index_three_logo_l">
+                                        <img src="../resources/images/yidiandian.png" alt="">
+                                    </span>
+                                    <span class="wifi_index_three_logo_r">
+                                        <img src="../resources/images/yiqilian.png" onclick="SaveAs5(this.src)" alt="">
+                                    </span>
+                                 </div>
+                             </div>
+                         </div>
+                         <canvas id="myCanvas" width="280" height="390" style="margin-top:20px;border: 1px solid #DCDCDC;border-radius: 5px;box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);display:none;"></canvas>
+
+                         <!-- <div id="aaaaa" style="margin-top:20px;"></div> -->
+                         <div id="aaaaa" style="margin-top:20px;border: 1px solid #DCDCDC;border-radius: 5px;box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);-webkit-box-shadow: 0 1px 3px 2px rgba(0,0,0,.2);"></div>
+                     </div>
+
+                      
+                      <img src="../resources/images/huang_icon.png" id="myImage"  style="display:none">
+                      <img src="../resources/images/erweima.jpg" id="myImage1" style="display:none">
+                      <img src="../resources/images/yidiandian.png" id="myImage2" style="display:none">
+                      <img src="../resources/images/yiqilian.png" id="myImage3" style="display:none">
+                      <p id="font_names" style="display:none">蓝色星d撒旦法空岛dfasdfssasd</p>
+
+
+                      <p class="wifi_index_three_con_tips">
+                      备注：请下载(ie浏览器点击图片右击另存图片)物料并张贴于门店内  你也可以立即扫码体验连网流程
+                      </p>
+
+                        <div>
+                            <div class="wifi_information_button">
+                                <a class="wifi_information_button_next wifi_font_limit_click" id="myInput" href="javascript:void(0);">下载</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!--智能wifi首页 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+<script type="text/javascript">
+$(function(){
+	if($(".content_left").height() > $(".content_right").height()){
+		$(".content_right").css("height",$(".content_left").height()) 
+	}else{
+		$(".content_left").css("height",$(".content_right").height()) 
+	}
+})
+</script>
+<script language="javascript">
+function mySwitch(){ 
+    document.getElementById('DIV1').style.display = "block";//显示
+    document.getElementById('DIV2').style.display = "block";//显示
+}
+function myHide(){
+    document.getElementById('DIV1').style.display = "none";//隐藏
+    document.getElementById('DIV2').style.display = "none";//隐藏
+    }
+</script>
+<script type="text/javascript">
+		$('#DIV1').css('left', ($(window).width()-($('#DIV1').width()))/2)
+	  	$('#DIV1').css('top', $(window).height() / 2 - ($('#DIV1').height() / 2))
+
+</script>
+<script type="text/javascript">
+window.onload=function(){
+  var mycv = document.getElementById("myCanvas");  
+  var myctx = mycv.getContext("2d");
+  var myImage = new Image();
+  myImage = document.getElementById("myImage");
+  var myImage1 = new Image();
+  myImage1 = document.getElementById("myImage1");
+  var myImage2 = new Image();
+  myImage2 = document.getElementById("myImage2");
+  var myImage3 = new Image();
+  myImage3 = document.getElementById("myImage3");
+
+  var fontss = document.getElementById("font_names").innerHTML;
+  var n = 0;
+  for(var i=0 ; i<fontss.length;i++){
+      if(/[\u4e00-\u9fff]/.test(fontss[i])){
+          n+=2;
+      }else if(/[a-zA-Z]/.test(fontss[i])){
+          n++;
+      }
+  }
+  var fontss_x = 140-n*7/2;
+
+
+  myctx.fillStyle='#FFF';
+  myctx.fillRect(0,0,280,390);
+
+  myctx.drawImage(myImage, 0, 0);
+
+  myctx.font = 'bold 16px 微软雅黑';
+  myctx.textAlign = 'left';
+  myctx.textBaseline = 'top';
+  myctx.fillStyle = '#FFF';
+  myctx.fillText('智能WIFI', 105, 10);
+
+  myctx.font = 'normal 14px 微软雅黑';
+  myctx.textAlign = 'left';
+  myctx.textBaseline = 'top';
+  myctx.fillStyle = '#5c5c5c';
+  myctx.fillText(fontss, fontss_x, 220);
+
+  //线条的颜色 
+  myctx.strokeStyle="#DCDCDD"; 
+  //线条的宽度像素 
+  myctx.lineWidth=2; 
+  //线条的两关形状 
+  myctx.lineCap="round"; 
+  //开始一个新的绘制路径 
+  myctx.beginPath(); 
+  //定义直线的起点坐标为(10,10) 
+  myctx.moveTo(0, 0); 
+  //定义直线的终点坐标为(50,10) 
+  myctx.lineTo(0, mycv.height+6); 
+  //沿着坐标点顺序的路径绘制直线 
+  // myctx.moveTo(0, 0); 
+  //定义直线的终点坐标为(50,10) 
+  myctx.lineTo(mycv.width, mycv.height+6); 
+  //沿着坐标点顺序的路径绘制直线 
+  // myctx.moveTo(0, 0); 
+  //定义直线的终点坐标为(50,10) 
+  myctx.lineTo(mycv.width, 0); 
+  //沿着坐标点顺序的路径绘制直线 
+  myctx.lineTo(0, 0);
+
+  myctx.stroke(); 
+  //关闭当前的绘制路径 
+  myctx.closePath(); 
+
+  myctx.font = 'bold 18px 微软雅黑';
+  myctx.textAlign = 'left';
+  myctx.textBaseline = 'top';
+  myctx.fillStyle = '#5c5c5c';
+  myctx.fillText('微信扫一扫连WIFI', 66, 260);
+  
+  myctx.drawImage(myImage1, 62, 60,159,159);
+  myctx.drawImage(myImage2, 24, 300,106,45);
+  myctx.drawImage(myImage3, 160, 300,106,45);
+
+  // 将canvas转换为图片；
+  var type="png";
+  imgData = mycv.toDataURL(type);
+  var _fixType = function(type) {
+      type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+      var r = type.match(/png|jpeg|bmp|gif/)[0];
+      return 'image/' + r;
+  };
+  imgData = imgData.replace(_fixType(type),'image/octet-stream');
+  var saveFile = function(data, filename){
+      var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+      save_link.href = data;
+      save_link.download = filename;
+
+      var event = document.createEvent('MouseEvents');
+      event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+      save_link.dispatchEvent(event);
+  };
+  // 下载后的问题名
+  var bd= new Image();
+  bd.src=imgData;
+
+  document.getElementById("aaaaa").appendChild(bd); 
+ //document.getElementById("aaaaa").getElementsByTagName("img")[0].style.width="500px";
+
+
+  var filename =  "img"+ '.' + type;
+  document.getElementById("myInput").onclick=function(){
+    saveFile(imgData,filename)
+  }
+
+
+}
+  
+
+
+
+</script>
+</body>
+</html>

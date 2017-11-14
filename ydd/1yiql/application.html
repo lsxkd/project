@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/member/member_list.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        	<link rel="stylesheet" type="text/css" href="css/application.css">
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/application.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+<div class="Cover_layer" style="display: none;"></div>
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content">
+	<div class="content_box">
+        <!--内容左边菜单 start-->
+        <div class="content_left float_left">
+            <dl class="content_left_dl">
+                <dt class="content_left_dt"><span>会员管理</span></dt>
+                <dd class="content_left_dd content_left_dd_select"><a class="content_left_dd_a" href="application.html">设备经营概况<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="app-list.html">设备列表<i class="content_left_dd_i"></i></a></dd>
+                <dd class="content_left_dd"><a class="content_left_dd_a" href="manage.html">账号管理<i class="content_left_dd_i"></i></a></dd>
+            </dl>
+        </div>
+        <!--内容左边菜单 end-->
+        
+        <!--内容右边 start-->
+        <div class="content_right float_left" >
+        	<div class="content_right_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="my_service.html">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="member_list.html">会员管理</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="member_list_deal_details.html">交易详情</a>
+                </div>
+                <div class="content_right_nav_line"></div>
+                <!--内容右边更换区 start-->
+                
+                <!--设备经营概况 start-->
+            	<div class="content_right_border" >
+        	<div class="body_top">
+        		<div class="body_top_left"><b>蛇口沃尔玛POS机1</b></div>
+        		<div class="body_top_right">
+	        		<ul class="tab_top">
+	        			<li class="body_top_tab">今天</li>
+	        			<li>昨天</li>
+	        			<li>近7天</li>
+	        			<li>近30天</li>
+	        		</ul>
+	        	</div>
+        	</div>
+        	<!-- 今天 -->
+        	<div class="tab_content">
+	        	<div class="body-content">
+	        		<ul>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no1.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">1000000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no2.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">10000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no3.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">1000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no4.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">10000.00</div>
+	        			</li>
+	        		</ul>
+	        	</div>
+        	</div>
+        	<!-- 昨天 -->
+        	<div class="tab_content"  style="display: none">
+	        	<div class="body-content">
+	        		<ul>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no1.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">10000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no2.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">1000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no3.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">10.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no4.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">100.00</div>
+	        			</li>
+	        		</ul>
+	        	</div>
+        	</div>
+        	<!-- 最近7天 -->
+        	<div class="tab_content" style="display: none">
+	        	<div class="body-content">
+	        		<ul>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no1.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">1000000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no2.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">10000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no3.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">1000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no4.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">10000.00</div>
+	        			</li>
+	        		</ul>
+	        	</div>
+        	</div>
+        	<!-- 最近30天 -->
+        	<div class="tab_content" style="display: none">
+	        	<div class="body-content">
+	        		<ul>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no1.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">1000000.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no2.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">400.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no3.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">100.00</div>
+	        			</li>
+	        			<li>
+	        				<img src="../resources/images/myapplication/no4.png">
+	        				<div><b>现金支付</b></div>
+	        				<div class="body_content_red">77700.00</div>
+	        			</li>
+	        		</ul>
+	        	</div>
+        	</div>
+        </div>
+                <!--设备经营概况 end-->
+                
+                <!--内容右边更换区 end-->
+            </div>
+        </div>
+        <!--内容右边 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+
+<script  type="text/javascript" src="./js/public_js.js"></script> 
+
+
+
+</body>
+</html>

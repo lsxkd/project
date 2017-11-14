@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/public_reset.css" type="text/css" />
+<link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+<link rel="stylesheet"  href="css/perfect_information.css" type="text/css"/>
+<script  type="text/javascript" src="./js/jquery.js"></script>
+<title>亿企联</title>
+</head>
+<body>
+
+<!--弹出层 start-->
+<div class="Cover_layer" id="DIV1"></div>
+
+<!--添加图片 start-->
+<div class="Pop_layer" id="DIV2">
+  <div class="Pop_layer_box">
+    <div class="pop_layer_title"> <span class="pop_layer_title_span">选择图片</span> <span class="pop_layer_title_span_close"> <a class="pop_layer_title_span_close_a" onClick="myHide()" href="javascript:void(0);"></a> </span> </div>
+    <div class="perfect_information_pop">
+      <div class="dialog_wrp_img_pop">
+        <div class="dialog_wrp_img_pop_btn"> <a href="javascript:;" class="dialog_wrp_img_pop_btn_a" onClick="showhidediv("msg")">本地上传</a> </div>
+        <div class="dialog_wrp_img_pop_con">
+          <ul class="dialog_wrp_img_pop_con_ul">
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a" onClick="showhidediv("msg")"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/123.png" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+              <div class="dialog_wrp_img_pop_con_li_mask"  id="msg" style="display:block;">
+                <div class="dialog_wrp_img_pop_con_li_inner"></div>
+                <div class="dialog_wrp_img_pop_con_li_icon"></div>
+              </div>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/124.jpg" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/124.jpg" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/124.jpg" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/123.png" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/123.png" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/124.jpg" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/124.jpg" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/123.png" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <li class="dialog_wrp_img_pop_con_li"> <a href="" class="dialog_wrp_img_pop_con_li_a"><img class="dialog_wrp_img_pop_con_li_img" src="../resources/images/123.png" /></a>
+              <p class="dialog_wrp_img_pop_con_li_p">阿萨德发生的发生地方</p>
+            </li>
+            <div style="clear:both;"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="perfect_information_pop_button"> <a class="perfect_information_pop_button_sure" onClick="myHide()" href="javascript:void(0);">确定</a> <a class="perfect_information_pop_button_cancel" onClick="myHide()" href="javascript:void(0);">取消</a> </div>
+  </div>
+</div>
+<!--添加图片 end--> 
+
+<!--添加文字 start-->
+<div class="Pop_layer"  id="DIV3">
+  <div class="Pop_layer_box">
+    <div class="pop_layer_title"> <span class="pop_layer_title_span">添加文字</span> <span class="pop_layer_title_span_close"> <a class="pop_layer_title_span_close_a" onClick="myHide1()" href="javascript:void(0);"></a> </span> </div>
+    <div class="perfect_information_pop">
+      <div class="perfect_information_pop_font"> <span class="perfect_information_pop_font_span">
+        <textarea></textarea>
+        </span> </div>
+    </div>
+    <div class="perfect_information_pop_button"> <a class="perfect_information_pop_button_sure" onClick="myHide1()" href="javascript:void(0);">确定</a> <a class="perfect_information_pop_button_cancel" onClick="myHide1()" href="javascript:void(0);">取消</a> </div>
+  </div>
+</div>
+<!--添加文字 end--> 
+
+<!--弹出层 end-->
+
+<div class="top">
+  <div class="logo"><img src="../resources/images/logo.png" alt="亿企联"/></div>
+</div>
+<div class="register_content">
+  <div class="nav">
+    <div class="nav_step_box nav_step_box_two">
+      <div class="nav_step_box_font">1 商户基本信息</div>
+      <div class="nav_step_box_font nav_step_box_font_color">2 商户推广营销信息</div>
+      <div class="nav_step_box_font">3 商户认证信息</div>
+      <div class="nav_step_box_font ">4 等待审核反馈</div>
+    </div>
+  </div>
+  <div class="perfect_information">
+    <div class="perfect_information_box"> 
+      <!--first of perfect_information  start--> 
+      
+      <!--first of perfect_information end--> 
+      
+      <!--second of perfect_information  start-->
+      <div class="perfect_information_second">
+        <div >
+          <div class="goods_desc_t_title">商品图（环境图、菜品图等）:</div>
+          <div class="goods_desc" style="width:74%;">
+            <div class="goods_desc_content js_goods_desc_content">
+              <div class="edit_wrp"> <img src="../resources/images/123.png" alt="">
+                <div class="edit_mask"> <span class="vm_box"></span> <a href="javascript:;" class="icon18_common up_gray js_up">up</a> <a href="javascript:;" class="icon18_common down_gray js_down">down</a> <a href="javascript:;" onClick="mySwitch()" class="icon18_common edit_gray js_edit"></a> <a href="javascript:;" class="icon18_common del_gray js_delete"></a> </div>
+              </div>
+              <div class="edit_wrp">
+                <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                <div class="edit_mask"> <span class="vm_box"></span> <a href="javascript:;" class="icon18_common up_gray js_up">up</a> <a href="javascript:;" class="icon18_common down_gray js_down">down</a> <a href="javascript:;" onClick="mySwitch1()" class="icon18_common edit_gray js_edit"></a> <a href="javascript:;" class="icon18_common del_gray js_delete"></a> </div>
+              </div>
+              <div class="edit_wrp"> <img src="../resources/images/124.jpg" alt="">
+                <div class="edit_mask"> <span class="vm_box"></span> <a href="javascript:;" class="icon18_common up_gray js_up">up</a> <a href="javascript:;" class="icon18_common down_gray js_down">down</a> <a href="javascript:;" onClick="mySwitch()" class="icon18_common edit_gray js_edit"></a> <a href="javascript:;" class="icon18_common del_gray js_delete"></a> </div>
+              </div>
+              <div class="edit_wrp">
+                <p>哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                <div class="edit_mask"> <span class="vm_box"></span> <a href="javascript:;" class="icon18_common up_gray js_up">up</a> <a href="javascript:;" class="icon18_common down_gray js_down">down</a> <a href="javascript:;" onClick="mySwitch1()" class="icon18_common edit_gray js_edit"></a> <a href="javascript:;" class="icon18_common del_gray js_delete"></a> </div>
+              </div>
+              <div class="edit_wrp"> <img src="../resources/images/123.png" alt="">
+                <div class="edit_mask"> <span class="vm_box"></span> <a href="javascript:;" class="icon18_common up_gray js_up">up</a> <a href="javascript:;" class="icon18_common down_gray js_down">down</a> <a href="javascript:;" onClick="mySwitch()" class="icon18_common edit_gray js_edit"></a> <a href="javascript:;" class="icon18_common del_gray js_delete"></a> </div>
+              </div>
+              <div class="edit_wrp">
+                <p>哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                <div class="edit_mask"> <span class="vm_box"> </span> <a href="javascript:;" class="icon18_common up_gray js_up">up</a> <a href="javascript:;" class="icon18_common down_gray js_down">down</a> <a href="javascript:;" onClick="mySwitch1()" class="icon18_common edit_gray js_edit"></a> <a href="javascript:;" class="icon18_common del_gray js_delete"></a> </div>
+              </div>
+            </div>
+            <span class="create_access"> <i class="icon36_common add_gray"> </i> <a href="javascript:;" onClick="mySwitch()" class="btn_add_pic"> <i class="icon_add_pic"></i> <strong>添加图片</strong> </a> <a href="javascript:;" onClick="mySwitch1()" class="btn_add_txt"> <i class="icon_add_txt multi"></i> <strong>添加文字</strong> </a> </span> </div>
+          <p class="frm_tips"><span class="js_txtlimit">最多上传10张照片，每张不超过3M，支持格式为JPG、JPEG、PNG、BMP。</span></p>
+        </div>
+      </div>
+      <!--second of perfect_information end--> 
+      
+      <!--third of perfect_information start--> 
+      
+      <!--third of perfect_information end--> 
+    </div>
+    <div class="perfect_information_button"> <a class="perfect_information_button_last" href="perfect_information.html">上一步</a> <a class="perfect_information_button_next" href="perfect_information_third.html">下一步</a> </div>
+  </div>
+</div>
+
+<!--footer start-->
+<div class="footer"> copyright@2015.亿企联All rights reserved.<br/>
+  粤ICP备14099822号 </div>
+<!--footer start--> 
+<script language="javascript">
+function mySwitch(){ 
+	document.getElementById('DIV1').style.display = "block";//显示
+	document.getElementById('DIV2').style.display = "block";//显示
+}
+function myHide(){
+	document.getElementById('DIV1').style.display = "none";//隐藏
+	document.getElementById('DIV2').style.display = "none";//隐藏
+	}
+function mySwitch1(){ 
+	document.getElementById('DIV3').style.display = "block";//显示
+	document.getElementById('DIV1').style.display = "block";//显示
+}
+function myHide1(){
+	document.getElementById('DIV3').style.display = "none";//隐藏
+	document.getElementById('DIV1').style.display = "none";//隐藏
+	}
+
+</script> 
+<script type="text/javascript">
+		$('#DIV2').css('left', ($(window).width()-($('#DIV2').width()))/2)
+	  	$('#DIV2').css('top', $(window).height() / 2 - ($('#DIV2').height() / 2))
+		$('#DIV3').css('left', ($(window).width()-($('#DIV3').width()))/2)
+	  	$('#DIV3').css('top', $(window).height() / 2 - ($('#DIV3').height() / 2))
+</script>
+</body>
+</html>
+<script type="text/javascript">
+function changeBG(dom){
+	dom.style.background = "#dd0504";		
+}
+
+</script>

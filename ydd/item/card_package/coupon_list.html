@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/card_package_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/card_package.js"></script>
+	<title>券列表</title>
+	
+</head>
+<body>
+	<div id="wrap" class="card_package_wrap">
+		<header></header>
+		<!-- 遮盖层 start -->
+		<div class="popup_bg wrap_box_pop"></div>
+		<!-- 遮盖层 end -->
+		<div class="card_package_main card_package_main_touch">
+			<div class="card_package_main_box">
+				<div class="card_package_main_cons" style="margin-top:0;">
+					<div class="card_package_main_cons_title">
+						<ul class="condition_clicks">
+							<li class="dropdown_list_click class_name_two">
+								<span  data-name="类型">类型</span>
+								<span class="lis_arrows">
+									<i class="arrow_top_yellow"></i>
+									<i class="arrow_bottom_gray"></i>
+									<i class="arrow_bottom_yellow"></i>
+								</span>
+							</li>
+							<li class="dropdown_list_click class_name_one">
+								<span class="lis_names">有效期</span>
+								<span class="lis_arrows">
+									<i class="arrow_top_gray"></i>
+									<i class="arrow_top_yellow"></i>
+									<i class="arrow_bottom_gray"></i>
+									<i class="arrow_bottom_yellow"></i>
+								</span>
+							</li>
+							<li>
+								<span>领取量</span>
+								<span class="lis_arrows">
+									<i class="arrow_top_gray"></i>
+									<i class="arrow_top_yellow"></i>
+									<i class="arrow_bottom_gray"></i>
+									<i class="arrow_bottom_yellow"></i>
+								</span>
+							</li>
+						</ul>
+						<div class="condition_clicks_list_divs">
+							<ul class="condition_clicks_list list_dropdown_click">
+								<li class="on">
+									<span class="condition_clicks_list_span_l">全部</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">新券优先</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">领取量优先</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">距离优先</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="condition_clicks_list_divs">
+							<ul class="condition_clicks_list_02 list_dropdown_click">
+								<li class="on">
+									<span class="condition_clicks_list_span_l">全部</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">代金券</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">折扣券</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								
+
+							</ul>
+						</div>
+					</div>
+					<div class="coupons_lists">
+						<div class="coupons_lists_box">
+
+							<!-- 代金券  start -->
+							<div class="coupons_lists_item">
+								<div class="coupons_lists_item_logo jiaotong_cash_click">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left jiaotong_cash_click">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg"><span class="left_msg_l">￥</span><span class="left_msg_c">200</span><span class="left_msg_r">满2000元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right yellow_bgs jiaotong_cash_click_over">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+												<div class="box">
+													<div class="box_box">
+														<div class="box_font">
+															<span class="center_span01">已抢</span>
+															<span class="center_span02">90%</span>
+														</div>
+														<div class="ratote">
+															<!-- 进度中圆角 start -->
+															<div class="radius_bg">
+																<div>
+																	<span></span>
+																</div>
+															</div>
+															<!-- 进度中圆角 end -->
+
+															<!-- 两端圆角 start -->
+															<div class="radius_bg01">
+																<div class="after">
+																	<span></span>
+																</div>
+																<div class="before">
+																	<span></span>
+																</div>
+															</div>
+															<!-- 两端圆角 end -->
+															<div class="left"></div>
+															<div class="right"></div>
+															<div class="center"></div>
+														</div>
+														<div class="popu"></div>
+														<input type="range" name="" class="change" max=272 min=0 value=0>
+													</div>
+												</div>
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box yellow_styles">
+													<span class="con_right_bottom_box_span">
+														立即领取
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券  end -->
+							<!-- 代金券 未认证  start -->
+							<div class="coupons_lists_item">
+								<div class="coupons_lists_item_logo jiaotong_cash_click_na">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left jiaotong_cash_click_na">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg">
+											<span class="left_msg_l">￥</span>
+											<span class="left_msg_c">10</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right yellow_bgs jiaotong_cash_click_nos">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+												<div class="box">
+													<div class="box_box">
+														<div class="box_font">
+															<span class="center_span01">已抢</span>
+															<span class="center_span02">90%</span>
+														</div>
+														<div class="ratote">
+															<!-- 进度中圆角 start -->
+															<div class="radius_bg">
+																<div>
+																	<span></span>
+																</div>
+															</div>
+															<!-- 进度中圆角 end -->
+
+															<!-- 两端圆角 start -->
+															<div class="radius_bg01">
+																<div class="after">
+																	<span></span>
+																</div>
+																<div class="before">
+																	<span></span>
+																</div>
+															</div>
+															<!-- 两端圆角 end -->
+															<div class="left"></div>
+															<div class="right"></div>
+															<div class="center"></div>
+														</div>
+														<div class="popu"></div>
+														<input type="range" name="" class="change" max=272 min=0 value=0>
+													</div>
+												</div>
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box yellow_styles">
+													<span class="con_right_bottom_box_span">
+														立即领取
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 未认证  end -->
+							<!-- 折扣券  start -->
+							<div class="coupons_lists_item">
+								<div class="coupons_lists_item_logo jiaotong_cut_click">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left jiaotong_cut_click">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg red_colors_fonts">
+											
+											<span class="left_msg_c">9.9</span>
+											<span class="left_msg_l">折</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right red_bgs">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+												<div class="box">
+													<div class="box_box">
+														<div class="box_font">
+															<span class="center_span01">已抢</span>
+															<span class="center_span02">10%</span>
+														</div>
+														<div class="ratote">
+															<!-- 进度中圆角 start -->
+															<div class="radius_bg">
+																<div>
+																	<span></span>
+																</div>
+															</div>
+															<!-- 进度中圆角 end -->
+
+															<!-- 两端圆角 start -->
+															<div class="radius_bg01">
+																<div class="after">
+																	<span></span>
+																</div>
+																<div class="before">
+																	<span></span>
+																</div>
+															</div>
+															<!-- 两端圆角 end -->
+															<div class="left"></div>
+															<div class="right"></div>
+															<div class="center">
+
+															</div>
+														</div>
+														<div class="popu"></div>
+														<input type="range" name="" class="change" max=272 min=0 value=0>
+													</div>
+												</div>
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box red_styles">
+													<span class="con_right_bottom_box_span">
+														立即领取
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券  end -->
+							<!-- 多人人已抢  start -->
+							<div class="coupons_lists_item">
+								<div class="coupons_lists_item_logo">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg">
+											<span class="left_msg_l">￥</span>
+											<span class="left_msg_c">10</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right yellow_bgs">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+												<div class="box center_round">
+													<div class="box_grabs box_grabs_yellow">
+														<span>9999人已抢</span>
+															<span class="center_span02" style="display:none">99</span>
+													</div>
+													<div class="box_box">
+													<!-- <div class="box_font">
+														<span class="center_span01">已抢</span>
+														<span class="center_span02">50</span>
+													</div> -->
+														<div class="ratote">
+															<!-- 进度中圆角 start -->
+															<div class="radius_bg">
+																<div>
+																	<span></span>
+																</div>
+															</div>
+															<!-- 进度中圆角 end -->
+
+															<!-- 两端圆角 start -->
+															<div class="radius_bg01">
+																<div class="after">
+																	<span></span>
+																</div>
+																<div class="before">
+																	<span></span>
+																</div>
+															</div>
+															<!-- 两端圆角 end -->
+															<div class="left"></div>
+															<div class="right"></div>
+															<div class="center"></div>
+														</div>
+														<div class="popu"></div>
+														<input type="range" name="" class="change" max=272 min=0 value=0>
+													</div>
+												</div>
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box yellow_styles">
+													<span class="con_right_bottom_box_span">
+														立即领取
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 多人人已抢  end -->
+							<!-- 全部抢完  start -->
+							<div class="coupons_lists_item">
+								<div class="coupons_lists_item_logo">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg red_colors_fonts">
+											<span class="left_msg_c">9</span>
+											<span class="left_msg_l">折</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right red_bgs">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+												<div class="box center_round">
+													<div class="box_grabs box_grabs_red">
+														<span>全部抢完</span>
+													</div>
+													<div class="box_box">
+														<!-- <div class="box_font">
+															<span class="center_span01">已抢</span>
+															<span class="center_span02">50</span>
+														</div> -->
+														<div class="ratote">
+															<!-- 进度中圆角 start -->
+															<div class="radius_bg">
+																<div>
+																	<span></span>
+																</div>
+															</div>
+															<!-- 进度中圆角 end -->
+
+															<!-- 两端圆角 start -->
+															<div class="radius_bg01">
+																<div class="after">
+																	<span></span>
+																</div>
+																<div class="before">
+																	<span></span>
+																</div>
+															</div>
+															<!-- 两端圆角 end -->
+															<div class="left"></div>
+															<div class="right"></div>
+															<div class="center"></div>
+														</div>
+														<div class="popu"></div>
+														<input type="range" name="" class="change" max=272 min=0 value=0>
+													</div>
+												</div>
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box red_styles">
+													<span class="con_right_bottom_box_span">
+														进店逛逛
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 全部抢完  end -->
+							<!-- 已领取  start -->
+							<div class="coupons_lists_item">
+
+								<div class="coupons_lists_item_logo">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg">
+											<span class="left_msg_l">￥</span>
+											<span class="left_msg_c">10</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right red_bgs">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+
+											</div>
+											<div class="coupons_lists_item_brought_up">
+												<img src="./images/have_to_receive.png" alt="">
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box yellow_styles">
+													<span class="con_right_bottom_box_span">
+														马上使用
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 已领取  end -->
+							<!-- 已领取  start -->
+							<div class="coupons_lists_item">
+
+								<div class="coupons_lists_item_logo">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg">
+											<span class="left_msg_l">￥</span>
+											<span class="left_msg_c">10</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right yellow_bgs">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+
+											</div>
+											<div class="coupons_lists_item_brought_up">
+												<img src="./images/have_to_receive.png" alt="">
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box yellow_styles">
+													<span class="con_right_bottom_box_span">
+														马上使用
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 已领取  end -->
+							<!-- 已领取  start -->
+							<div class="coupons_lists_item">
+
+								<div class="coupons_lists_item_logo">
+									<div class="coupons_lists_item_logo_div">
+										<span class="logo_img_span_02">
+											<img src="./images/pay_user_ico111.png" alt="">
+											<i class="logo_i_icons_02"></i>
+										</span>
+									</div>
+								</div>
+								<div class="coupons_lists_item_con">
+									<div class="coupons_lists_item_con_left">
+										<div class="coupons_lists_item_con_left_title">
+											<span>MORE磨</span>
+										</div>
+										<div class="coupons_lists_item_con_left_msg">
+											<span class="left_msg_l">￥</span>
+											<span class="left_msg_c">10</span>
+											<span class="left_msg_r">满50元可用</span>
+										</div>
+									</div>
+									<div class="coupons_lists_item_con_right yellow_bgs">
+										<div class="coupons_lists_item_con_right_box">
+											<div class="coupons_lists_item_con_right_top">
+
+											</div>
+											<div class="coupons_lists_item_brought_up">
+												<img src="./images/have_to_receive.png" alt="">
+											</div>
+											<div class="coupons_lists_item_con_right_bottom">
+												<div class="con_right_bottom_box yellow_styles">
+													<span class="con_right_bottom_box_span">
+														马上使用
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 已领取  end -->
+
+						</div>
+					</div>
+				</div>
+				<div class="bottom_logos">
+					<img src="./images/bottom_logo.png" alt="">
+				</div>
+			</div>
+
+		</div>
+		
+		<div class="back_to_top scroll_top">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<footer>
+			<div class="footers_list">
+				<ul class="tab_selected_click">
+					<li>
+						<div class="footer_list_pic vip_icon_bottom_01 vip_icon_bottom_02">
+							<em></em>
+						</div>
+						<h5 class="selecteda">我的卡</h5>
+					</li>
+					<li>
+						<div class="footer_list_pic coupons_icon_bottom_01 coupons_icon_bottom_02">
+							<em></em>
+						</div>
+						<h5  class="selecteda">我的券</h5>
+					</li>
+					<li class="on">
+						<div class="footer_list_pic privilege_icon_bottom_01 privilege_icon_bottom_02">
+							<!-- <em>2</em> -->
+						</div>
+						<h5  class="selecteda">聚优惠</h5>
+					</li>
+					<li>
+						<div class="footer_list_pic supermarket_icon_bottom_01 supermarket_icon_bottom_02">
+							<!-- <em>2</em> -->
+						</div>
+						<h5  class="selecteda">卡超市</h5>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+	<!-- 获得红包 start -->
+	<div class="popup redPage_popup" id="redPage_popup">
+		<span class="close_popup"></span>
+		<div class="redPage_popup_box">
+			<img src="images/red_page01.png">
+			<div class="gain_red_page">
+				<div class="user_ico">
+					<img src="images/pay_user_ico.png">
+				</div>
+				<h4 class="gain_red_user">MORE 磨</h4>
+				<div class="gain_red_money">
+					<div class="red_money_mun clear_fix">
+					</div>
+					<span>元</span>
+				</div>
+				<div class="gain_red_type">会员红包</div>
+			</div>
+			<p class="gain_red_item">红包和大礼包已自动放入您的会员账户</p>
+		</div>
+	</div>
+	<!-- 获得红包 end -->
+	<script>
+		// $(function(){
+		// 	show_popup("#redPage_popup",0.8);
+		// 	rotateNum(305.05,$("#redPage_popup"))
+		// })
+	</script>
+	<script>
+		$(function(){
+			// 显示/隐藏数值条
+			$(".change_bts").click(function(){
+				if($(this).hasClass("visible")){
+					$(this).removeClass("visible");
+					$(".box").animate({
+						"height":"90px"
+					})
+				}else{
+					$(this).addClass("visible");
+					$(".box").animate({
+						"height":"120px"
+					})
+				}
+			})
+
+			// 改变事件
+			$(".change").on({
+				"input":function(){
+					var ratote=$(this).closest(".box").find(".ratote"),
+							right=$(this).closest(".box").find(".right"),
+							left=$(this).closest(".box").find(".left"),
+							center=$(this).closest(".box").find(".center_span02"),
+							radius_bg=$(this).closest(".box").find(".radius_bg"),
+							radius_bg01=$(this).closest(".box").find(".radius_bg01");
+					// 小于180执行的事件
+					if($(this).val()<=180){
+						// 起始圆角 start
+						if($(this).val()/272*100 < 0.5){
+							radius_bg.find("span").hide();
+							radius_bg01.find(".before").removeClass("changeColor")
+						}else{
+							radius_bg.find("span").show();
+							radius_bg01.find(".before").addClass("changeColor")
+						}
+						// 起始圆角 end
+
+						// ratote.css("background","#FFAB00");
+						right.css({
+							"zIndex":1,
+							"transform":"rotate("+parseInt($(this).val()-180)+"deg)"
+						})
+						left.css({
+							"zIndex":2,
+							"transform":"rotate(0)"
+						});
+						// 大于180执行的事件
+					}else{
+						ratote.css("background","#fff");
+						left.css({
+							"zIndex":1,
+							"transform":"rotate("+parseInt($(this).val()-180)+"deg)"
+						})
+						right.css({
+							"zIndex":2,
+							"transform":"rotate(0)"
+						});
+						// 结束圆角 start
+						if($(this).val()/272*100 < 100){
+								radius_bg01.find(".after").removeClass("changeColor")
+						}else{
+								radius_bg01.find(".after").addClass("changeColor")
+						}
+						// 结束圆角 end
+
+					}
+					center.html(parseInt($(this).val()/272*100)+"%");
+					var rotate=78 + (345-78)*($(this).val()/272);
+					radius_bg.css({
+						"transform":"rotate("+ rotate +"deg)"
+					})
+				}
+			})
+
+			// 遍厉需要执行的元素
+			$(".box").each(function(){
+				var centes = parseInt($(this).find(".center_span02").html());
+				if(centes){
+					new chang($(this).find(".change"),parseInt(centes));
+				}
+			})
+		})
+
+		// 改变数值函数;
+		function  chang(obj,num){
+			// 环形进度条根据传值来确定位置;
+			// 注: 此进度计算方法只适用于当前环形;
+			var num=(num+0.5)*272/100;
+			obj.animate({
+				// 指定一个无用值
+				"font-size":num
+			},{
+				// 运行时即时执行改变事件
+				step:function(n,i){
+					obj.val(n).trigger("input")
+				},
+				duration:num*10,
+				// 重置无用值
+				done:function(){
+					obj.css("font-size","")
+				}
+			})
+		}
+	</script>
+
+</body>
+</html>

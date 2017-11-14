@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* -------------------------------------------------
+ * frame css
+ * copyright: 
+ * author: 
+ * -------------------------------------------------
+*/
+
+.border{border:1px solid #000;}
+.white_bg{background:#fff;border:1px solid #fff;}
+.float_left{display:block; float:left;}
+.float_right{display:block; float:right;}
+.border{border:1px solid #000;}
+
+/*最顶端欢迎栏目 start*/
+.full_screen_width{width:100%;height:40px;background:#fafafa;text-align:center;}
+.common_width{width:1200px;height:40px;margin:0 auto;}
+.welcome{height:40px;background:#fafafa;color:#999999;text-align:right;}
+.welcome a:link{color:#999999;}
+/*最顶端欢迎栏目 end*/
+
+
+/*logo and nav start*/
+.top{height:54px;width:1200px;margin:31px auto 12px auto;}
+.logo{width:217px;height:52px; display:inline-block;border-right:1px solid #ccc;}
+.logo img{margin-top:0;}
+.slogan{width:165px; height:52px; display:inline-block;line-height:52px;text-align:right;font-size:18px;color:#999999;}
+.nav{padding-left:31px;}
+.nav li{width:130px;height:52px;line-height:52px;font-size:16px;display:inline-block;float:left;}
+/*logo and nav end*/
+
+.black_line{width:100%;height:4px;background:#000;}
+.content{width:1200px;height:960px;margin:0 auto;}
+
+/*内容左边的菜单 start*/
+.content_left{width:222px;height:100%;border-left:1px solid #dcdcdd;border-right:1px solid #dcdcdd;}
+.content_current_nav{color:#fff;width:193px;padding-left:30px;height:50px;line-height:50px;background-image:url(../../resources/images/system_manage/nav_bg.png);margin-right: -1px;}
+.content_current_nav_ul{}
+.content_current_nav_ul li{width:140px;padding-left:52px;padding-right:30px;height:46px;line-height: 46px; display:block;}
+.content_current_nav_ul li:hover{background: #f3f3f4;}
+.content_current_nav_ul li:hover .gt{color:#636363;}
+.gt{display: block;width:14px; float: right;color:#bababc;}
+/*内容左边的菜单 end*/
+
+/*content right menu path start*/
+.content_right{width:975px;}
+.path{padding-left:35px;height:50px;}
+.path ul li,.path ul span{ display: block; float:left;margin-right:7px;height:50px;line-height: 50px;}
+/*content right menu path end*/
+
+.footer{font-size:12px; text-align:center;width:100%;padding-top:26px;height:52px;background:#0d0d0d; color:#868686;}

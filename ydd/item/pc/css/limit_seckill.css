@@ -1,0 +1,145 @@
+
+
+/**
+*蓝色星空岛 css  2017-8-23
+*/
+
+.title_limit{
+	margin:10px auto;
+}
+.sechill_goods{
+	position:relative;
+	width:100%;
+}
+.left_drops{
+	position:absolute;
+	z-index:99;
+	left:-45px;
+	top:100px;
+}
+.left_drops a{
+	display: block;
+	padding:10px;
+}
+.right_drops{
+	position:absolute;
+	z-index:99;
+	right:-45px;
+	top:100px;
+}
+.right_drops a{
+	display: block;
+	padding:10px;
+}
+.sechill_goods_box{
+	width:100%;
+	overflow:hidden;
+}
+
+.sechill_ul{
+	margin-left:-7px;
+}
+
+.border_gray{
+	border:1px solid #b9b9b9;
+	width:290px;
+	margin-left:9px;
+	position:relative;
+}
+.limit_img{
+	text-align:center;
+	margin:0 auto;
+	height:172px;
+}
+.limit_img img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.limit_info{
+
+}
+.limit_info_l{
+	width:65%;
+	border-top:1px solid #b9b9b9;
+}
+.limit_price{
+	height:35px;
+	line-height:35px;
+	overflow:hidden;
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+	padding:0 5px;
+}
+.limit_price span{
+	color:#d70e0e;
+	font-size:16px;
+	
+}
+.limit_price span em{
+	color:#d70e0e;
+	font-size:24px;
+	font-style:normal;
+	font-weight:bold;
+
+}
+.limit_price del{
+	color:#69656a;
+	font-size:14px;
+}
+
+.limit_stock{
+	padding:0 5px;
+}
+.limit_stock_t{
+	color:#69656a;
+	font-size:14px;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
+.limit_stock_t span{
+	color:#69656a;
+	font-size:14px;
+}
+.hs_6{
+	height:6px;
+	margin-bottom:1px;
+	margin-top:3px;
+}
+.bg_co_gr{
+	background:#b8b8b8;
+}
+.bg_co{
+	background:#d70e0e;
+}
+
+.limit_info_btn{
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	font-size:21px;
+	color:#FFF;
+	font-weight:bold;
+	background:#d70e0e;
+	width:35%;
+}
+.layer_pop{
+	position:absolute;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	z-index: 100;
+}
+.layer_begin{
+	background:url(../images/pop_begin.png) no-repeat center center/auto 100%;
+}
+.layer_over{
+	background:url(../images/pop_over.png) no-repeat center center/auto 100%;
+}
+
+

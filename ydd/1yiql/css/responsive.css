@@ -1,0 +1,20 @@
+@media screen and (max-width : 1024px) {                    
+/* 样式写在这里 */          
+}  
+@media screen and (max-width : 800px) {              
+/* 样式写在这里 */          
+}   
+@media screen and (max-width : 640px) {              
+/* 样式写在这*/            
+}  
+@media screen and (max-device-width: 1024px) and (orientation: landscape) {              
+/* 样式写在这 */            
+} 
+
+@media screen and (max-device-width: 768px) and (orientation: portrait) {         
+/* ipad竖版显屏*/            
+}
+
+@media screen and (min-device-width: 320px) and (min-device-width: 480px) {              
+/* iPhone 和 Smartphones */            
+}  

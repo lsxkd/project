@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* -------------------------------------------------
+ * reset css
+ * author: 
+ * -------------------------------------------------
+*/
+
+.top{width:1200px;height:82px;margin:0 auto;}
+.logo{width:168px;height:47px;display:inline-block;float:left;margin-top:22px;}
+.v_line{font-size:13px;line-height:16px;padding:0;color:#d5d5d5;}
+.help{width:140px;height:16px;line-height:16px;display:inline-block;float:right;text-align:right;font-size:16px;
+	font-family:Microsoft YaHei;margin-top:45px;margin-right:22px;}
+.help a[class="little"]{color:red;}
+.help a[class="help_a"]{color:#000;}
+.login_bg{width:100%;height:460px;margin-bottom:30px;background:url(../../resources/images/login/login_bg.png) no-repeat;
+ background-position:center center; background-size:1920px 460px;}
+.login_content{width:1200px;height:460px;margin:0 auto;position:relative;}
+.login_opacity{
+	width:370px;height:380px;right:21px;padding-left:50px;top:15px;border-radius:3px;display:inline-block;
+	 position:absolute; z-index:2;background:#fff; -moz-opacity:0.60;filter:alpha(opacity=60);opacity:0.6;}
+.login{width:100%;height:100%; }
+.login_div{position:absolute;z-index:3;width:370px;height:380px;right:21px;padding-left:50px;top:15px;border-radius:3px;
+	display:inline-block;float:right;}
+.welconme_login{margin-top:26px;margin-bottom:8px;color:#565551;font-size:18px;}
+.login_error{display:inline-block;border:1px solid #dd8293;width:318px;height:20px; line-height:20px; font-size:12px;
+	color:#dd8293; background:#fff;margin-bottom:3px; vertical-align:middle;}
+.error_content{ display:inline-block;float:left;}
+.error_icon{ display:inline-block; float:left;height:12px;width:12px;margin:1px 10px;}
+.user{background:#ccc;width:320px;height:52px;border-radius:2px;}
+.user img,.user input{display:inline-block;float:left;}
+.user input{color:#333333;width:270px;padding-left:3px;height:50px;line-height:50px;font-size:16px;border:0;margin-top:1px;}
+.pswd_margin_top{margin-top:19px;}
+.about_pswd{margin-top:10px;margin-bottom:10px;font-size:14px;line-height:14px; vertical-align:top;}
+.remeber_pswd{width:13px;height:13px;display:inline-block; position:relative;}
+.remeber_pswd img{ position:absolute; top:2px;}
+.checkbox_out{display:inline-block;width:13px;height:13px;}
+.checkbox_out img{width:13px;height:14px;}
+.checkbox_out input[type="text"]{color:#333333;}
+.checkbox_out input[type="text"]:focus{color:#000;}
+.forgot_pswd{color:#F00;display:inline-block;float:right;margin-right:50px;}
+.forgot_pswd a:link,.forgot_pswd a:visited{color:red;}
+.check_code{height:40px; position:relative;margin-top:10px;margin-bottom:30px;}
+.check_code input{width:112px;height:36px;line-height:36px;padding-left:18px; margin-top:0;border:0;outline:none;font-size:16px;color:#CCC;}
+.check_code img{position:absolute; left:146px; top:0;width:95px;height:36px;}
+.login_submit input{ position:absolute;bottom:40px;width:318px;height:46px;border:0;color:#fff;font-size:16px; 
+	background:url(../../resources/images/login/login_submit_normal.png);}
+.login_submit input:hover{background:url(../../resources/images/login/login_submit_click.png);}
+.register{position:absolute;bottom:10px;margin-top:10px;width:318px;font-size:16px;text-align:center;}
+.register a:link,.register a:visited{color:red;}
+.system_notice{padding-left:25px;font-size:14px;line-height:44px;width:1175px;height:44px;border:1px solid #ccc;margin:0 auto;}
+.system_notice a:link,.system_notice a:visited{color:#000;}
+.system_notice a:hover,.system_notice a:active{color:red;}
+.system_notice_name{width:135px;display:inline-block;float:left;}
+.system_notice ul li{float:left;list-style-image:url(../../resources/images/login/login_list_style_image.png);padding-right:34px;}
+.system_notice ul li:first-child{color:red;}
+.more{width:100px;display:inline-block;float:right;text-align:right;padding-right:20px;font-size:14px;}
+.success_case_title{width:1200px;height:18px;margin:46px auto 29px auto;font-size:18px;}
+.succes_cases{width:1200px;height:92px;margin:0 auto;}
+.succes_cases_list li{display:inline-block;float:left;width:92px;height:92px;margin:0 39px;}
+.succes_cases_list li .div_circle{width:90px;height:90px;border-radius:50%;border:1px solid #ccc;}
+.case_name{text-align:center;margin-top:10px; font-size:14px;}

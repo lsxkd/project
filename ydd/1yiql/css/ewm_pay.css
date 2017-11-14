@@ -1,0 +1,161 @@
+html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+    padding: 0;
+    margin: 0;
+}
+body{ background:#f3f3f3; font-family:Microsoft YaHei; font-size:14px;}
+
+
+.ewm_pay{width: 100%;margin: 0 auto;}
+.ewm_pay_box{width: 100%;margin: 0 auto;}
+
+.ewm_pay_top{width: 100%;margin:20px auto;}
+.ewm_pay_top_box{width: 100%;margin: 0 auto;border:1px solid #dcdcdd;overflow:hidden;}
+.ewm_pay_top_box:after{content:"";display:block;clear:both;}
+.ewm_pay_top_l{margin:20px;float:left;width:250px;min-height: 20px;height:351px;}
+.ewm_pay_top_l_box{border:1px solid #dcdcdd;background:url(../../resources/images/ewm_pay/ewm_pay_bg.png) no-repeat;background-size:cover;height:351px;}
+.ewm_pay_top_l_logo{width:70%;margin:0 auto;text-align:center;margin-top:45px;}
+.ewm_pay_top_l_logo_item{display:inline-block;text-align:center;width:48%;margin:0 auto;}
+.ewm_pay_top_l_logo_item img{width:30%;display:inline-block;}
+.ewm_pay_top_l_logo_item p{font-size:12px;color:#323131;text-align:center;}
+
+.ewm_pay_top_l_code{width:100%;margin:0 auto;text-align:center;margin-top: 11px;}
+.ewm_pay_top_l_code img{display:inline-block;width:56%;}
+.ewm_pay_top_l_code p{font-size:14px;color:#323131;text-align:center;width:90%;overflow: hidden;height: 25px;line-height:25px;margin:0 auto;}
+
+
+
+.ewm_pay_top_r{float:left;margin:20px;margin-top:30px;margin-left:50px;}
+.ewm_pay_top_r_title{font-weight: bold;font-size: 16px;color: #323131;}
+.ewm_pay_top_r_select{height:45px;line-height:45px;}
+.ewm_pay_top_r_select_l{display:inline-block;}
+.ewm_pay_top_r_select_l input[type="checkbox"]{width:20px;height:20px;}
+.ewm_pay_top_r_select_c{display:inline-block;padding:0 15px;font-size:16px;color:#555;}
+.ewm_pay_top_r_select_r{display:inline-block;}
+.ewm_pay_top_r_select_r a{font-size:16px;color:#4a9ce8;}
+.ewm_pay_top_r_select_r a:hover{font-size:16px;color:#FF0202;}
+
+.ewm_pay_top_r_btn{margin-top:80px;width:267px;}
+a.ewm_pay_top_r_btn_aa{color: #FFF;background: #ff0202;display:block;text-align: center;border-radius: 5px;margin-bottom:20px;height:40px;line-height: 40px;}
+a.ewm_pay_top_r_btn_aa:hover{ background:#e50606;color:#FFF;}
+a.ewm_pay_top_r_btn_bb{color: #ff0202;background: #FFF;display:block;text-align: center;border-radius: 5px;margin-bottom:20px;height:40px;line-height: 40px;border:1px solid #ff0202;}
+a.ewm_pay_top_r_btn_bb:hover{ background:#e50606;color:#FFF;}
+a.no_clicks{cursor: no-drop;}
+a.no_clicks:hover{background:#fff;color:#e50606;}
+
+.ewm_pay_list{width: 100%;margin: 0 auto;margin-bottom: 60px;}
+.ewm_pay_list_title{width: 100%;margin:10px auto;height:34px;line-height:34px;}
+.ewm_pay_list_title_l{color: #FF0202;background: #FF0202;}
+.ewm_pay_list_title_r{    padding-left: 2px;font-weight: bold;font-size: 16px;color: #323131;}
+.ewm_pay_list_title:after{content:"";display:block;clear:both;}
+a.ewm_pay_list_title_a{float:right;display:block;height:32px;margin-left:10px;line-height:32px;text-align:center;width:100px;border:1px solid #dcdcdd;border-radius:5px;background: url(../../resources/images/activity/collect_bg.png) repeat-x;}
+
+
+.ewm_pay_list_con{width: 100%;margin: 0 auto;}
+.ewm_pay_list_con_table{width: 100%;border: 1px solid #dcdcdd;}
+.ewm_pay_list_con_td_t{    padding: 0 5px;border-right: 1px solid #dcdcdd;border-bottom: 1px solid #dcdcdd;text-align: center;height: 45px;line-height: 45px;
+background: #FAFAFA;color: #333333;font-style: normal;font-weight: normal;}
+.ewm_pay_list_con_td{border-right: 1px solid #dcdcdd;border-bottom: 1px solid #dcdcdd;text-align: center;height: 50px;line-height: 50px;color: #333333;}
+
+.ewm_pay_list_con_td a{color:#4a9ce8;}
+.ewm_pay_list_con_td a:hover{color:#ff0202;}
+
+.ewm_pay_list_search{ width:100%;}
+.ewm_pay_list_search_table{ width:100%; margin-top:20px;    font-family: Microsoft YaHei;color: #5a5a5a;}
+.ewm_pay_list_search_table td{  color:#5c5c5c;}
+.ewm_pay_list_search_td{width:32%;height:35px; line-height:35px;}
+.algin_right{text-align:right;}
+.ewm_pay_list_search_td_t{ width:8%; text-align:right; padding-right:10px; font-size:14px; color:#5c5c5c;height:35px; line-height:35px;}
+
+.ewm_pay_list_search_td select{ height:35px; line-height:35px; width:100%; border:1px solid #dcdcdd; color:#5c5c5c; text-align:center; vertical-align:middle; padding:0; }
+.ewm_pay_list_search_td input[type=text]{ height:35px; line-height:35px; width:90%; border:1px solid #dcdcdd; color:#5c5c5c; text-align:left; padding:0 5px;}
+.widthss input{width:38% !important;}
+.ewm_pay_list_search_td select{ height:37px; line-height:37px; width:90%; border:1px solid #dcdcdd; color:#5c5c5c; text-align:left;padding:0 5px;}
+.ewm_pay_list_search_td_line{ display:inline-block; width:8%; text-align:center;}
+.ewm_pay_list_search_td select option{color:#5c5c5c; text-align:center;}
+.ewm_pay_list_search_td_fonts{ display:inline-block; width:18%; text-align:center;}
+
+.ewm_pay_list_search_btn{height:35px;line-height:35px;margin:20px auto;text-align:right;width:93%;}
+.ewm_pay_list_search_btn:after{content:"";display:block;clear:both;}
+a.ewm_pay_list_search_td_a{ padding:0 8px;}
+a.ewm_pay_list_search_td_a:hover{ color:#ff0202;}
+a.ewm_pay_list_search_td_a_select{ color:#ff0202; padding:0 8px;}
+a.ewm_pay_list_search_td_btn{ color:#FFF; background:#ff0202; display:inline-block; width:90px; text-align:center; border-radius:5px;    float: right;margin-right: 6px;}
+a.ewm_pay_list_search_td_btn:hover{ background:#e50606;color:#FFF;}
+
+a.ewm_pay_list_search_td_btn_b{border:1px solid #FF0202;background:#FFF;color:#FF0202;}
+a.ewm_pay_list_search_td_btn_b:hover{background:#e50606;color:#FFF;}
+
+
+.ewm_pay_list_statistics{border:1px solid #dcdcdd;margin:20px auto;margin-bottom:40px;}
+.ewm_pay_list_statistics_title{margin:0 auto;height:34px;line-height:34px;border-bottom:1px solid #dcdcdd;background:#f3f3f4;padding:7px 20px 7px 10px;}
+.ewm_pay_list_statistics_title_l{color: #FF0202;background: #FF0202;}
+.ewm_pay_list_statistics_title_r{padding-left: 2px;font-weight: bold;font-size: 16px;color: #323131;}
+.ewm_pay_list_statistics_title:after{content:"";display:block;clear:both;}
+a.ewm_pay_list_statistics_title_a{float:right;display:block;height:32px;margin-left:10px;line-height:32px;text-align:center;width:100px;border:1px solid #dcdcdd;border-radius:5px;background: url(../../resources/images/activity/collect_bg.png) repeat-x;}
+
+.ewm_pay_list_statistics_con{margin:10px auto;width:95%;}
+.ewm_pay_list_statistics_con_top{margin:30px auto;}
+.ewm_pay_list_statistics_con_top:after{content:"";display:block;clear:both;}
+.ewm_pay_list_statistics_con_top_l{float:left;}
+.ewm_pay_list_statistics_con_top_l h4{font-size:16px;color:#5c5c5c;font-weight:normal;}
+.ewm_pay_list_statistics_con_top_l p{font-size:24px;color:#FF0202;}
+
+.ewm_pay_list_statistics_con_top_r{float:left;padding-left:100px;}
+.ewm_pay_list_statistics_con_top_r p{margin-top: 32px;font-size:16px;color:#5c5c5c;}
+.ewm_pay_list_statistics_con_top_r p span{font-size:16px;color:#4a9ce8;}
+
+.ewm_pay_list_statistics_con_line{height:2px;width:100%;border-bottom:1px dashed #dcdcdd;}
+
+.ewm_pay_list_statistics_con_center{margin:30px auto;overflow:hidden;width:100%;}
+.ewm_pay_list_statistics_con_center:after{content:"";display:block;clear:both;}
+.ewm_pay_list_statistics_con_center_item{width:25%;float:left;text-align:center;overflow:hidden;}
+.ewm_pay_list_statistics_con_center_item h4{text-align:center;font-size:16px;color:#5c5c5c;border-left:1px solid #dcdcdd;font-weight:normal;}
+h4.borderleft{border-left:none;}
+.ewm_pay_list_statistics_con_center_item p{font-size:24px;color:#5c5c5c;text-align:center;width:100%;overflow:hidden;white-space:nowrap;}
+
+
+
+/*
+ *收款配置 start*
+*/
+.ewm_pay_list_allocation_tips{width: 100%;margin: 10px auto;height: 34px;line-height: 34px;}
+.ewm_pay_list_allocation_tips_r{padding-left: 2px;font-size:14px; color: #323131;}
+a.ewm_pay_list_allocation_tips_a{float: right;display: block;height: 32px;margin-left: 10px;line-height: 32px;font-size:16px; color:#4a9ce8;}
+a.ewm_pay_list_allocation_tips_a:hover{color:#ff0202;}
+.ewm_pay_list_con_td_allocation_img{width:60px;height:60px;margin:10px auto;}
+.ewm_pay_list_con_td_allocation_img img{width:100%;height:100%;}
+.ewm_pay_list_allocation_note{width: 100%;margin: 10px auto;}
+
+.ewm_pay_pop_collection{min-height: 200px;width:700px;margin:30px auto;}
+.ewm_pay_pop_collection_box{width:90%;margin: 0 auto;overflow: hidden;}
+
+.ewm_pay_top_r_adds a{color:#FF0202;font-size:14px;}
+.ewm_pay_list_con_td_allocation_default{background:#FF0202;color:#FFF;font-size:14px;padding:0 5px;margin-right:8px;border-radius:5px;}
+
+
+/*
+ *收款配置 end*
+*/
+
+
+/*
+ *弹出框 start*
+*/
+.ewm_pay_pop{min-height:200px;width:600px;margin-bottom:50px;}
+.ewm_pay_pop_title{width:90%;margin:20px auto;text-align:left;border-bottom:1px dashed #dcdcdd;padding-bottom:25px;margin-top:40px;}
+.ewm_pay_pop_title_box{width:70%;margin:0 auto;overflow:hidden;white-space:nowrap;}
+.ewm_pay_pop_title_l{font-size:18px;color:#5c5c5c;font-weight:bold;}
+.ewm_pay_pop_title_r{font-size:18px;color:#5c5c5c;font-weight:bold;}
+
+.ewm_pay_pop_item{width:90%;margin:20px auto;text-align:left;}
+.ewm_pay_pop_item_box{width:70%;margin:0 auto;overflow:hidden;white-space:nowrap;}
+.ewm_pay_pop_item_box span{font-size:16px;color:#5c5c5c;}
+
+.ewm_pay_pop_item_box_input input[type=text]{height: 35px;line-height: 35px;width:180px;border: 1px solid #dcdcdd;color: #5c5c5c;vertical-align: middle; padding:0 3px;font-size:16px;}
+span.ewm_pay_pop_item_box_tips{color:#ff0202;display:none;}
+span.ewm_pay_pop_item_tipss{color:#ff0202;font-size:14px;}
+
+/*
+ *弹出框 end*
+*/

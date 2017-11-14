@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/shop_center_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/shop_center.js"  charset="UTF-8"></script>
+	<script src="js/js_c.js"></script>
+	<script src="js/city.js"></script>
+	<title>二维码收款申请</title>
+	
+	
+</head>
+<body>
+	<div id="wrap" class="shop_center_wrap">
+		<!-- 遮罩层  start -->
+		<div class="pop_cover_bg" style="display:none;"></div>
+		<!-- 遮罩层  end -->
+
+		<!-- 持证商家弹出框  start -->
+		<div class="times_selects_pop limits_quantum_pop">
+			<div class="times_selects_pop_box">
+				<!-- 持证商家  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">持证商家</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 持证商家  end -->
+				
+				<!-- 非持证商家  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">非持证商家</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 非持证商家  end -->
+				
+				<!-- 关闭按钮  start -->
+				<div class="times_selects_pop_closes">
+					<span>关闭</span>
+				</div>
+
+				<!-- 关闭按钮  start -->
+
+			</div>
+		</div>
+		<!-- 持证商家弹出框  start -->
+
+		<!-- 对公账户出框  start -->
+		<div class="times_selects_pop accounts_quantum_pop">
+			<div class="times_selects_pop_box">
+				<!-- 对公账户  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">对公账户</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 对公账户  end -->
+				
+				<!-- 对私账户  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">对私账户</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 对私账户  end -->
+				
+				<!-- 关闭按钮  start -->
+				<div class="times_selects_pop_closes">
+					<span>关闭</span>
+				</div>
+
+				<!-- 关闭按钮  start -->
+
+			</div>
+		</div>
+		<!-- 对公账户弹出框  start -->
+
+		<!-- 开户银行选择弹出框  start -->
+		<div class="area_select_pops bank_namess_pops bank_address_date_mark">
+			<div class="area_select_pops_box">
+				<div class="area_select_pops_title">
+					<div class="area_select_pops_title_cancle area_select_reset">
+						<span>取消</span>
+					</div>
+					<!-- <div class="area_select_pops_title_con">
+						<span><input type="text" placeholder="搜索区域" /></span>
+					</div> -->
+					<div class="area_select_pops_title_save area_select_right bank_saves_click">
+						<span>保存</span>
+					</div>
+				</div>
+				<div class="area_select_pops_con">
+					<!-- <div class="area_select_pops_con_top_pop"></div> -->
+
+					<div class="selects_area_pop"></div>
+
+					<div class="area_select_pops_con_box main_box_all">
+						<div class="area_select_pops_con_uls area_select_pops_con_one">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_ones">
+								<li>中国农业银行</li>
+								<li>中国工商银行</li>
+								<li>中国招商银行</li>
+								<li>中国建设银行</li>
+								<li>中国民生银行</li>
+								<li>中国华夏银行</li>
+								<li>中国平安银行</li>
+								<li>上海浦发银行</li>
+								<li>中国民生银行</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_two biaoshi_click">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_twos">
+								<li>广东1</li>
+								<li>广东2</li>
+								<li>广东3</li>
+								<li>广东4</li>
+								<li>广东5</li>
+								<li>广东6</li>
+								<li>广东7</li>
+								<li>广东8</li>
+								<li>广东9</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						
+					</div>
+					<!-- <div class="area_select_pops_con_bottom_pop"></div> -->
+				</div>
+			</div>
+		</div>
+		<!-- 开户银行选择弹出框  end -->
+
+		<!-- 有效期弹出框  start -->
+		<div class="times_selects_pop times_selects_pop_type">
+			<div class="times_selects_pop_box">
+				<!-- 永久有效  start -->
+				<div class="times_selects_pop_item ">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">永久有效</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 永久有效  end -->
+				
+				<!-- 固定有效  start -->
+				<div class="times_selects_pop_item">
+					<div class="times_selects_pop_item_box">
+						<span class="times_selects_pop_item_font">固定有效</span>
+						<span class="times_selects_pop_item_check"></span>
+					</div>
+				</div>
+				<!-- 固定有效  end -->
+				
+				<!-- 关闭按钮  start -->
+				<div class="times_selects_pop_closes">
+					<span>关闭</span>
+				</div>
+
+				<!-- 关闭按钮  start -->
+
+			</div>
+		</div>
+		<!-- 有效期弹出框  start -->
+		
+		<!-- 日期选择弹出框  start -->
+		<div class="area_select_pops"  style="display:none;">
+			<div class="area_select_pops_box">
+				<div class="area_select_pops_title">
+					<div class="area_select_pops_title_cancle area_select_reset">
+						<span>取消</span>
+					</div>
+					<!-- <div class="area_select_pops_title_con">
+						<span><input type="text" placeholder="搜索区域" /></span>
+					</div> -->
+					<div class="area_select_pops_title_save area_select_right">
+						<span>保存</span>
+					</div>
+				</div>
+				<div class="area_select_pops_con">
+					<!-- <div class="area_select_pops_con_top_pop"></div> -->
+					
+					<div class="selects_area_pop"></div>
+
+					<div class="area_select_pops_con_box main_box_all">
+						<div class="area_select_pops_con_uls area_select_pops_con_one">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_ones">
+								<li>2015年</li>
+								<li>2016年</li>
+								<li>2017年</li>
+								<li>2018年</li>
+								<li>2019年</li>
+								<li>2020年</li>
+								<li>2021年</li>
+								<li>2022年</li>
+								<li>2023年</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_two">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_twos">
+								<li>01月</li>
+								<li>02月</li>
+								<li>03月</li>
+								<li>04月</li>
+								<li>05月</li>
+								<li>06月</li>
+								<li>07月</li>
+								<li>08月</li>
+								<li>09月</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						<div class="area_select_pops_con_uls area_select_pops_con_three">
+							<div class="area_select_pops_con_top_pop"></div>
+							<ul class="ul_threes">
+								<li>01日</li>
+								<li>02日</li>
+								<li>03日</li>
+								<li>04日</li>
+								<li>05日</li>
+								<li>06日</li>
+								<li>07日</li>
+								<li>08日</li>
+								<li>09日</li>
+							</ul>
+							<div class="area_select_pops_con_bottom_pop"></div>
+						</div>
+						
+					</div>
+					<!-- <div class="area_select_pops_con_bottom_pop"></div> -->
+				</div>
+			</div>
+		</div>
+		<!-- 日期选择弹出框  end -->
+
+		<header></header>
+		<div class="shop_center_main">
+			<div class="shop_center_main_box padding_bottoms_none">
+				<div class="shop_center_main_con">
+					<div class="business_certification">
+						
+						<!-- 商家类型  start -->
+						<div class="business_certification_item buss_limit_click certification_item_lefts">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>商家类型</span>
+								</div>
+								<div class="business_certification_item_box_con">
+									<h3>
+										<input type="text"  placeholder="请选择商家类型" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 商家类型  end -->
+
+						<!-- 账户类型  start -->
+						<div class="business_certification_item account_limit_click  certification_item_lefts" style="display:none;">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>账户类型</span>
+								</div>
+								<div class="business_certification_item_box_con">
+									<h3>
+										<input type="text"  placeholder="请选择账户类型" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 账户类型  end -->
+
+						<!-- 开户名称  start -->
+						<div class="business_certification_item margin_top_a">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>开户名称</span>
+								</div>
+								<div class="business_certification_item_box_con">
+									<h3>
+										<input type="text"  placeholder="请输入开户名称" />
+									</h3>
+								</div>
+								<!-- <span class="business_certification_item_box_drow"></span> -->
+							</div>
+						</div>
+						<!-- 开户名称  end -->
+
+						<!-- 开户银行  start -->
+						<div class="business_certification_item">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>开户银行</span>
+								</div>
+								<div class="business_certification_item_box_con bank_nameas_click">
+									<h3>
+										<input type="text"  placeholder="请选择开户银行" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 开户银行  end -->
+
+						<!-- 所属省市  start -->
+						<div class="business_certification_item">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>所属省市</span>
+								</div>
+								<div class="business_certification_item_box_con bank_nameas_click bank_nameas_click_02">
+									<h3>
+										<input type="text"  placeholder="请选择开户银行所属省市" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 所属省市  end -->
+
+						<!-- 所属支行  start -->
+						<div class="business_certification_item">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>所属支行</span>
+								</div>
+								<div class="business_certification_item_box_con bank_nameas_click">
+									<h3>
+										<input type="text"  placeholder="请选择所属支行" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 所属支行  end -->
+
+						<!-- 银行卡账号  start -->
+						<div class="business_certification_item certification_item_lefts">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>银行卡账号</span>
+								</div>
+								<div class="business_certification_item_box_con">
+									<h3>
+										<input type="text"  placeholder="请输入银行卡账号" />
+									</h3>
+								</div>
+								<!-- <span class="business_certification_item_box_drow"></span> -->
+							</div>
+						</div>
+						<!-- 银行卡账号  end -->
+
+						<!-- 营业执照号  start -->
+						<div class="business_certification_item margin_top_a">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>营业执照号</span>
+								</div>
+								<div class="business_certification_item_box_con">
+									<h3>
+										<input type="text"  placeholder="请输入营业执照注册号" />
+									</h3>
+								</div>
+								<!-- <span class="business_certification_item_box_drow"></span> -->
+							</div>
+						</div>
+						<!-- 营业执照号  end -->
+
+						<!-- 有效期类型  start -->
+						<div class="business_certification_item certification_item_lefts">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>有效期类型</span>
+								</div>
+								<div class="business_certification_item_box_con type_select_pop">
+									<h3>
+										<input type="text"  placeholder="请选择营业执照有效期类型" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 有效期类型  end -->
+
+						<!-- 有效期  start -->
+						<div class="business_certification_item certification_item_lefts" style="display:none;">
+							<div class="business_certification_item_box">
+								<div class="business_certification_item_box_title">
+									<span>有效期</span>
+								</div>
+								<div class="business_certification_item_box_con time_select_pop">
+									<h3>
+										<input type="text"  placeholder="请选择营业执照有效期" />
+									</h3>
+								</div>
+								<span class="business_certification_item_box_drow"></span>
+							</div>
+						</div>
+						<!-- 有效期  end -->
+						
+						<!-- 下一步  start -->
+						<div class="business_certification_item_btns qr_code_payment_application_click_03">
+							<a class="noss_selecteds" href="javascript:void(0);">下一步</a>
+						</div>
+						<!-- 下一步  end -->
+						
+					</div>
+				</div>
+				<!-- <div class="shop_center_bottom_logos">
+					<img src="./images/bottom_logo.png" alt="">
+				</div> -->
+			</div>
+		</div>
+		
+		<div class="back_to_top scroll_top">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<footer></footer>
+	</div>
+	<script>
+		$(function(){
+			$(".time_select_pop").on({
+				"tap":function(){
+					$(".area_select_pops,.pop_cover_bg").show();
+					$(".change_this").removeClass("change_this")
+					$(this).addClass("change_this");
+				}
+			});
+
+			$(".type_select_pop").on({
+				"tap":function(){
+					$(".times_selects_pop_type,.pop_cover_bg").show();
+					$(".change_this").removeClass("change_this")
+					$(this).addClass("change_this")
+				}
+			})
+
+
+		$(".addr_pop_item").on({
+			"tap":function(){
+				$(".change_this").removeClass("change_this")
+				$(this).addClass("change_this");
+				$(".area_time_select_pops,.pop_cover_bg").show();
+			}
+		})
+
+			$(".times_selects_pop_item").on({
+				"tap":function(){
+					var htmls=$(this).find(".times_selects_pop_item_font").html();
+					$(".change_this").find("input").val($(this).find(".times_selects_pop_item_font").html());
+					$(this).addClass("on").siblings().removeClass("on")
+					if(htmls=='永久有效') {
+						$(".change_this").closest(".business_certification_item").next(".business_certification_item").hide();
+						$(".change_this").closest(".business_certification_item").addClass("certification_item_lefts")
+					}else{
+						$(".change_this").closest(".business_certification_item").next(".business_certification_item").show();
+						$(".change_this").closest(".business_certification_item").removeClass("certification_item_lefts")
+					}
+				
+					$(".times_selects_pop,.pop_cover_bg").hide();
+					$(".change_this").removeClass("change_this");
+					return false;
+				}
+			})
+
+
+			$(".area_select_pops_title_save ").on({
+				"tap":function(){
+					var prent=$(this).closest(".area_select_pops");
+					var htmls="";
+					$(".area_select_pops_con_uls",prent).each(function(){
+						htmls+=$("ul",$(this)).find("li").eq(-parseInt($("ul",$(this)).css("marginTop"))/$("li",$(this)).outerHeight()).html();
+					})
+					$(".change_this input").val(htmls);				
+					$(".change_this").removeClass("change_this");
+					$(".area_select_pops,.pop_cover_bg").hide();
+					return false;
+				}
+			})
+			 
+
+			 // 关闭日期选择
+			  $(".times_selects_pop_closes").on({
+			    "tap":function(){
+			      $(".times_selects_pop,.pop_cover_bg").hide();
+			      return false;
+			    }
+			  })
+		})
+	</script>
+</body>
+</html>

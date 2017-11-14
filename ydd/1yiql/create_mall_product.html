@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/public_reset.css" type="text/css" />
+        <link rel="stylesheet"  href="./css/public_frame.css" type="text/css"/>
+        <link rel="stylesheet"  href="./css/mall.css" type="text/css"/>
+        <link rel="stylesheet"  href="css/public_pop_layer.css" type="text/css"/>
+        <title>亿企联</title> 
+        <script  type="text/javascript" src="./js/jquery.js"></script>  
+        <script type="text/javascript">
+			$(function(){
+				$("#labels_top").load("top.html");
+				$("#labels_footer").load("footer.html");
+			});
+	    </script>
+	</head>
+
+<body >
+
+<!--top start-->
+<div id="labels_top"></div>
+<!--top end-->
+
+
+<!--内容区 start-->
+<div class="content content_padding_top">
+	<div class="content_box content_box_border">
+    	<!--微商城 start-->
+        
+        <!--内容title start-->
+        <div class="mall_title">
+        	<div class="mall_title_box">
+            	<span>我的商城列表</span>
+            </div>
+        </div>
+        <!--内容title end-->
+        
+        <!--子导航 start-->
+        <div class="mall_subnav">
+        	<div class="mall_subnav_box">
+            	<div class="content_right_nav">
+                	<a class="content_right_nav_a" href="index.html">首页</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">我的服务</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">微会员商城</a>
+                    <i class="content_right_nav_i"></i>
+                    <a class="content_right_nav_a" href="javascript:void(0);">创建商城模板</a>
+                </div>
+            </div>
+        </div>
+        <!--子导航 end-->
+        
+        <!--内容更换部分 start-->
+        
+        <!--创建商城模板 start-->
+        <div class="create_mall_templates">
+        	<div class="create_mall_templates_box">
+            	<div class="create_mall_templates_search">
+                	<span class="create_mall_templates_search_l">
+                    	<input class="create_mall_templates_search_l_input" type="text" placeholder="请输入名称" />
+                    </span>
+                    <span class="create_mall_templates_search_r">
+                    	<a href="javascript:void(0);">模板选择</a>
+                    </span>
+                </div>
+                
+                <div class="create_mall_templates_con">
+                	<div class="create_mall_templates_con_l">
+                    	<div class="create_mall_templates_con_l_phone">
+                            <div class="create_mall_templates_con_l_titile">
+                                <span class="create_mall_templates_con_l_titile_s"><img src="../resources/images/mall/create_mall_templates_wechat.png" /></span>
+                            </div>
+                            
+                            <div class="create_mall_templates_con_l_c">
+                            	<img src="../resources/images/mall/shilie1.png" />
+                            </div>     
+                        </div>
+                        <div class="create_mall_templates_con_l_btn">
+                            <a class="create_mall_templates_con_l_btn_a" href="create_mall_coad.html">保存</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="create_mall_templates_con_r">
+                    	<div class="create_mall_templates_con_r_box">
+                        	<div class="create_mall_templates_con_r_title">
+                            	<ul>
+                                	<li class="create_mall_templates_con_r_title_li_select"><a class="create_mall_templates_con_r_title_a" href="javascript:void(0);">自营产品</a></li>
+                                    <li class="create_mall_templates_con_r_title_li"><a class="create_mall_templates_con_r_title_a" href="javascript:void(0);">推广产品</a></li>
+                                    
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                            
+                            <div class="create_mall_templates_con_r_c">
+                            	<div class="create_mall_templates_con_r_c_width">
+                                	<!--变换区 start-->
+                                    
+                                    <!--商品选择 start-->
+                                    <div class="create_mall_templates_product">
+                                    	
+                                        <!--重复区 start-->
+                                        <div class="create_mall_templates_product_div">
+                                            <h2 class="create_mall_templates_product_div_h2"><a class="create_mall_templates_product_div_h2_a" href="latest_activity_details.html" target="_blank"><img src="../resources/images/123.png" /></a></h2>
+                                            <p class="create_mall_templates_product_div_p"><a href="javascript:void(0);">炫酷XXXXXXXXXXXXXX摄像头</a></p>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d promotional_price">推广价<span class="vip_price">￥240.00</span></div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d">佣金<span class="commission_price">￥5</span></div>
+                                                <div class="create_mall_templates_product_div_price_d align_right">按成交结算</div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_shop">东门XXX专业店铺</div>
+                                                <div class="create_mall_templates_product_div_collection"><a href="javascript:void(0);" class="boldStuff" onClick="mySwitch()"><i class="collection_shop_no"><!--这是未收藏，已收藏样式名字为collection_shop --></i>收藏</a></div>
+                                            </div>
+                                            
+                                            <div class="create_mall_templates_product_btn">
+                                            	<a id="product1" onClick="selectProducts('product1')" class="create_mall_templates_product_btn_a"  href="javascript:void(0);">加入</a>
+                                            </div>
+                                        </div>
+                                        <!--重复区 end-->
+                                        
+                                        <!--重复区 start-->
+                                        <div class="create_mall_templates_product_div">
+                                            <h2 class="create_mall_templates_product_div_h2"><a class="create_mall_templates_product_div_h2_a" href="latest_activity_details.html" target="_blank"><img src="../resources/images/123.png" /></a></h2>
+                                            <p class="create_mall_templates_product_div_p"><a href="javascript:void(0);">炫酷XXXXXXXXXXXXXX摄像头</a></p>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d promotional_price">推广价<span class="vip_price">￥240.00</span></div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d">佣金<span class="commission_price">￥5</span></div>
+                                                <div class="create_mall_templates_product_div_price_d align_right">按成交结算</div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_shop">东门XXX专业店铺</div>
+                                                <div class="create_mall_templates_product_div_collection"><a href="javascript:void(0);" class="boldStuff" onClick="mySwitch()"><i class="collection_shop_no"><!--这是未收藏，已收藏样式名字为collection_shop --></i>收藏</a></div>
+                                            </div>
+                                             <div class="create_mall_templates_product_btn">
+                                            	<a id="product2" onClick="selectProducts('product2')"  class="create_mall_templates_product_btn_a_select"  href="javascript:void(0);">已加入</a>
+                                            </div>
+                                        </div>
+                                        <!--重复区 end-->
+                                        
+                                        <!--重复区 start-->
+                                        <div class="create_mall_templates_product_div">
+                                            <h2 class="create_mall_templates_product_div_h2"><a class="create_mall_templates_product_div_h2_a" href="latest_activity_details.html" target="_blank"><img src="../resources/images/123.png" /></a></h2>
+                                            <p class="create_mall_templates_product_div_p"><a href="javascript:void(0);">炫酷XXXXXXXXXXXXXX摄像头</a></p>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d promotional_price">推广价<span class="vip_price">￥240.00</span></div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d">佣金<span class="commission_price">￥5</span></div>
+                                                <div class="create_mall_templates_product_div_price_d align_right">按成交结算</div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_shop">东门XXX专业店铺</div>
+                                                <div class="create_mall_templates_product_div_collection"><a href="javascript:void(0);" class="boldStuff" onClick="mySwitch()"><i class="collection_shop_no"><!--这是未收藏，已收藏样式名字为collection_shop --></i>收藏</a></div>
+                                            </div>
+                                             <div class="create_mall_templates_product_btn">
+                                            	<a id="product3" onClick="selectProducts('product3')"  class="create_mall_templates_product_btn_a"  href="javascript:void(0);">加入</a>
+                                            </div>
+                                        </div>
+                                        <!--重复区 end-->
+                                        
+                                        <!--重复区 start-->
+                                        <div class="create_mall_templates_product_div">
+                                            <h2 class="create_mall_templates_product_div_h2"><a class="create_mall_templates_product_div_h2_a" href="latest_activity_details.html" target="_blank"><img src="../resources/images/123.png" /></a></h2>
+                                            <p class="create_mall_templates_product_div_p"><a href="javascript:void(0);">炫酷XXXXXXXXXXXXXX摄像头</a></p>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d promotional_price">推广价<span class="vip_price">￥240.00</span></div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_price_d">佣金<span class="commission_price">￥5</span></div>
+                                                <div class="create_mall_templates_product_div_price_d align_right">按成交结算</div>
+                                            </div>
+                                            <div class="create_mall_templates_product_div_price">
+                                                <div class="create_mall_templates_product_div_shop">东门XXX专业店铺</div>
+                                                <div class="create_mall_templates_product_div_collection"><a href="javascript:void(0);" class="boldStuff" onClick="mySwitch()"><i class="collection_shop_no"><!--这是未收藏，已收藏样式名字为collection_shop --></i>收藏</a></div>
+                                            </div>
+                                             <div class="create_mall_templates_product_btn">
+                                            	<a id="product4" onClick="selectProducts('product4')"  class="create_mall_templates_product_btn_a" href="javascript:void(0);">加入</a>
+                                            </div>
+                                        </div>
+                                        <!--重复区 end-->
+                                         <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+                                    <!--商品选择 end-->
+                                    
+                                    <!--变换区 end-->
+                            	</div>
+                                <!--页码区 start-->
+                                <div class="create_mall_templates_page">
+                                	asdfasdfasdf
+                            	</div>
+                                <!--页码区 end-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--创建商城模板 end-->
+        
+        <!--内容更换部分 end-->
+        
+        <!--微商城 end-->
+        <div class="clear"></div>
+	</div>
+</div>
+ <div class="clear"></div>
+<!--内容区 end-->
+
+<!--footer start-->
+<div id="labels_footer"></div>
+<!--footer end-->
+
+<script language="javascript">
+function selectProducts(styleId){
+		$("#"+styleId).removeClass("create_mall_templates_product_btn_a");
+		$("#"+styleId).addClass("create_mall_templates_product_btn_a_select");
+		$("#"+styleId).attr("onclick","clearAddProduct('"+styleId+"')");
+		$("#"+styleId).html("已加入");
+}
+function clearAddProduct(styleId){
+		$("#"+styleId).removeClass("create_mall_templates_product_btn_a_select");
+		$("#"+styleId).addClass("create_mall_templates_product_btn_a");
+		$("#"+styleId).attr("onclick","selectProducts('"+styleId+"')");
+		$("#"+styleId).html("加入");
+	}
+</script>
+
+</body>
+</html>

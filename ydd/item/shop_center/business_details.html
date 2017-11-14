@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/shop_center_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/shop_center.js"></script>
+	<script src='js/js_c.js'></script>
+	<title>商家详情</title>
+
+	<script type="text/javascript">
+    	$(function(){
+			$(".item_textarea_keyup").on({
+			"change":function(){
+				$(".item_textarea_keyup_font").html(200-$(this).val().length)
+				},
+			"keyup":function(){
+				$(".item_textarea_keyup_font").html(200-$(this).val().length)
+				}
+				
+			})
+
+		});
+    </script>
+</head>
+<body>
+	<div id="wrap" class="shop_center_wrap">
+
+		<!-- 遮罩层  start -->
+		<div class="pop_cover_bg" style="display:none;"></div>
+		<!-- 遮罩层  end -->
+
+		<!-- 添加文字弹出框  start -->
+		<div class="business_names_pop business_height_detail">
+			<div class="business_names_pop_box">
+				<div class="business_names_pop_title">
+					<span>添加文字</span>
+				</div>
+				<div class="business_names_pop_deail">
+					<span class="business_names_pop_deail_con" >
+						<textarea class="item_textarea_keyup" maxlength="200">
+							不要让那些真正对你好的人，慢慢的从你的生活中消失，无论爱情还是友情，不去经营，都会形同陌路。人生只有两次幸运就好：一次遇见你，一次走到底。喜欢，就算我见过他最丑的样子，领教过他最差的脾气，我还是会忍不住对他好。人生只有两次幸运就好：一次遇见你，一次走到底你已经是个大人了，别再因为一点感情问题就失魂落魄。你可以有一段糟糕的爱情，但不能放纵自己过一个烂透的人生。每座城市，大概都因为有了个特别的人，才赋予了它不平凡的意义。不如就利用孤单一人的时间，使自己变得更优秀，给来的人一个惊喜，也给自己一个好的交代。
+						</textarea>
+					</span>
+					<p class=".business_names_pop_deail_tips">
+						还可以输入<span class="item_textarea_keyup_font">200</span>字
+					</p>
+				</div>
+				<div class="business_names_pop_btns">
+					<a class="business_names_pop_btns_cancel" href="javascript:void(0);">取消</a>
+					<a class="business_names_pop_btns_save" href="javascript:void(0);">保存</a>
+				</div>
+			</div>
+		</div>
+		<!-- 添加文字弹出框  start -->
+
+		<header></header>
+		<div class="shop_center_main">
+			<div class="shop_center_main_box padding_bottoms_none">
+				<div class="shop_center_main_con business_detailss">
+					<div class="business_detailss_main">
+						<div class="business_detailss_main_title">
+							<div class="business_detailss_main_title_l">
+								<span>商家介绍</span>
+							</div>
+							<div class="business_detailss_main_title_c">
+								<label for="file_imgs">
+									<span class="add_imgs">
+										<input id="file_imgs" type="file">
+									</span>
+								</label>
+								<span class="add_fontss"></span>
+							</div>
+							<div class="business_detailss_main_title_r">
+								<span>编辑</span>
+							</div>
+						</div>
+						<div class="business_detailss_main_con">
+
+							<!-- 重复区 start -->
+							<div class="business_detailss_main_con_item">
+								<div class="items_edits_pop">
+									<div class="items_edits_pop_l">
+										<span class="items_edits_pop_l_top"></span>
+										<span class="items_edits_pop_l_bottom"></span>
+									</div>
+									<div class="items_edits_pop_r">
+										<span class="items_edits_pop_r_edit"></span>
+										<span class="items_edits_pop_r_del"></span>
+									</div>
+								</div>
+								<p>蓝色星空岛蓝色星空岛蓝色星空岛蓝色星空岛蓝色星空岛蓝色星空岛蓝色星空岛蓝色星空岛</p>
+							</div>
+							<!-- 重复区 end -->
+
+							<!-- 重复区 start -->
+							<div class="business_detailss_main_con_item">
+								<div class="items_edits_pop">
+									<div class="items_edits_pop_l">
+										<span class="items_edits_pop_l_top"></span>
+										<span class="items_edits_pop_l_bottom"></span>
+									</div>
+									<div class="items_edits_pop_r">
+										<label for="edit_imgs_e"><span class="items_edits_pop_r_edit"><input type="file" id="edit_imgs_e"></span></label>
+
+										<span class="items_edits_pop_r_del"></span>
+									</div>
+								</div>
+								<img src="./images/girl.png" alt="">
+							</div>
+							<!-- 重复区 end -->
+
+							<!-- 重复区 start -->
+							<div class="business_detailss_main_con_item">
+								<div class="items_edits_pop">
+									<div class="items_edits_pop_l">
+										<span class="items_edits_pop_l_top"></span>
+										<span class="items_edits_pop_l_bottom"></span>
+									</div>
+									<div class="items_edits_pop_r">
+										<span class="items_edits_pop_r_edit"></span>
+										<span class="items_edits_pop_r_del"></span>
+									</div>
+								</div>
+								<p>不要让那些真正对你好的人，慢慢的从你的生活中消失，无论爱情还是友情，不去经营，都会形同陌路。
+									人生只有两次幸运就好：一次遇见你，一次走到底。
+									喜欢，就算我见过他最丑的样子，领教过他最差的脾气，我还是会忍不住对他好。
+									人生只有两次幸运就好：一次遇见你，一次走到底
+									你已经是个大人了，别再因为一点感情问题就失魂落魄。你可以有一段糟糕的爱情，但不能放纵自己过一个烂透的人生。
+									每座城市，大概都因为有了个特别的人，才赋予了它不平凡的意义。
+									不如就利用孤单一人的时间，使自己变得更优秀，给来的人一个惊喜，也给自己一个好的交代。
+									想得太多会毁了你。若无其事，才是最好的报复。 何必向不值得的人证明什么，生活得更好，是为了自己。
+									学会干净的语言和安静的笑，跟着风走把孤独当自由。</p>
+							</div>
+							<!-- 重复区 end -->
+
+						</div>
+					</div>
+				</div>
+				<!-- <div class="shop_center_bottom_logos">
+					<img src="./images/bottom_logo.png" alt="">
+				</div> -->
+			</div>
+		</div>
+
+		<div class="back_to_top scroll_top">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<footer></footer>
+	</div>
+
+</body>
+</html>

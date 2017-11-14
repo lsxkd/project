@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/card_package_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/card_package.js"></script>
+	<title>我的券</title>
+</head>
+<body>
+	<div id="wrap" class="card_package_wrap">
+		<!-- 遮盖层 start -->
+		<div class="popup_bg wrap_box_pop"></div>
+		<!-- 遮盖层 end -->
+		<header>
+			<!-- 地址及搜索框  start-->
+			<div class="address_searchs">
+				<div class="address_searchs_left float_l">
+					<span>深圳</span><i></i>
+				</div>
+				<div class="address_searchs_right address_searchs_clicks float_r">
+					<input type="text" class="" placeholder="搜索商家">
+				</div>
+			</div>
+			<!-- 地址及搜索框  end-->
+		</header>
+
+		<div class="card_package_main card_package_main_touch">
+			<div class="card_package_main_box">
+				<div class="card_package_main_cons" style="margin-top:0;">
+					<div class="card_package_main_cons_title">
+						<ul class="condition_clicks">
+							<li class="dropdown_list_click area_identifying class_name_one">
+								<span class="lis_names" data-name="区域">区域</span>
+								<span class="lis_arrows">
+									<i class="arrow_top_yellow"></i>
+									<i class="arrow_bottom_gray"></i>
+									<i class="arrow_bottom_yellow"></i>
+								</span>
+							</li>
+							<li class="dropdown_list_click class_name_two">
+								<span data-name="类型">类型</span>
+								<span class="lis_arrows">
+									<i class="arrow_top_yellow"></i>
+									<i class="arrow_bottom_gray"></i>
+									<i class="arrow_bottom_yellow"></i>
+								</span>
+							</li>
+							<li>
+								<span>距离</span>
+								<span class="lis_arrows">
+									<i class="arrow_top_gray"></i>
+									<i class="arrow_top_yellow"></i>
+									<i class="arrow_bottom_gray"></i>
+									<i class="arrow_bottom_yellow"></i>
+								</span>
+							</li>
+						</ul>
+						<div class="condition_clicks_list_divs">
+							<ul class="condition_clicks_list list_dropdown_click">
+								<li class="on">
+									<span class="condition_clicks_list_span_l">全部</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">罗湖区</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">南山区</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">宝安区</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">龙岗区</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">盐田区</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+							
+							</ul>
+						</div>
+						<div class="condition_clicks_list_divs">
+							<ul class="condition_clicks_list_02 list_dropdown_click">
+								<li class="on">
+									<span class="condition_clicks_list_span_l">全部</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">代金券</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								<li>
+									<span class="condition_clicks_list_span_l">折扣券</span>
+									<span class="condition_clicks_list_span_r"></span>
+								</li>
+								
+
+							</ul>
+						</div>
+					</div>
+					<div class="my_coupons_list">
+						<div class="my_coupons_list_box">
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item jiaotong_my_coupons_list_item_click_dai">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs jiaotong_my_coupons_list_item_click">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9.9</span> 折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item jiaotong_my_coupons_list_item_click_dai">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs jiaotong_my_coupons_list_item_click">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9.9</span> 折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item jiaotong_my_coupons_list_item_click_dai">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs jiaotong_my_coupons_list_item_click">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9.9</span> 折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item jiaotong_my_coupons_list_item_click_dai">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs jiaotong_my_coupons_list_item_click">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9.9</span> 折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item jiaotong_my_coupons_list_item_click_dai">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs jiaotong_my_coupons_list_item_click">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9.9</span> 折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item jiaotong_my_coupons_list_item_click_dai">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs jiaotong_my_coupons_list_item_click">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9.9</span> 折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9</span>折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9</span>折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+							<!-- 代金券 start -->
+							<div class="my_coupons_list_item">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2>￥<span>10</span></h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 代金券 end -->
+
+							<!-- 折扣券 start -->
+							<div class="my_coupons_list_item red_style_bgs">
+								<div class="my_coupons_list_item_left">
+									<div class="my_coupons_list_item_left_box">
+										<span class="my_coupons_list_item_left_point"></span>
+										<div class="my_coupons_list_item_left_title">
+											<h2><span>9</span>折</h2>
+											<p>满50可用</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="my_coupons_list_item_right">
+									<div class="my_coupons_list_item_right_box">
+										<span class="my_coupons_list_item_right_new"></span>
+										<div class="my_coupons_list_item_right_title">
+											<h2>MORE磨</h2>
+										</div>
+										<div class="my_coupons_list_item_right_tips">
+											<ul>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">距您400m</span>
+												</li>
+												<li>
+													<span class="item_right_tips_point"></span>
+													<span class="item_right_tips_font">2016.10.01-2017.10.01</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 折扣券 end -->
+
+						</div>
+						<div class="my_coupons_list_msgs">
+							<span>没有更多券了</span>
+							<a href="javascript:void(0);">查看失效券</a>
+						</div>
+						<div class="my_coupons_list_btns">
+							<a class="jiaotong_coupons_list_csd" href="javascript:void(0);">更多好券，到聚优惠逛逛</a>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_logos">
+					<img src="./images/bottom_logo.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="back_to_top scroll_top">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<footer>
+			<div class="footers_list">
+				<ul class="tab_selected_click">
+					<li>
+						<div class="footer_list_pic vip_icon_bottom_01 vip_icon_bottom_02">
+							<em></em>
+						</div>
+						<h5 class="selecteda">我的卡</h5>
+					</li>
+					<li  class="on">
+						<div class="footer_list_pic coupons_icon_bottom_01 coupons_icon_bottom_02">
+							<em></em>
+						</div>
+						<h5  class="selecteda">我的券</h5>
+					</li>
+					<li>
+						<div class="footer_list_pic privilege_icon_bottom_01 privilege_icon_bottom_02">
+							<!-- <em>2</em> -->
+						</div>
+						<h5  class="selecteda">聚优惠</h5>
+					</li>
+					<li>
+						<div class="footer_list_pic supermarket_icon_bottom_01 supermarket_icon_bottom_02">
+							<!-- <em>2</em> -->
+						</div>
+						<h5  class="selecteda">卡超市</h5>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+	$(function(){
+		// 显示/隐藏数值条
+		$(".change_bts").click(function(){
+			if($(this).hasClass("visible")){
+				$(this).removeClass("visible");
+				$(".box").animate({
+					"height":"90px"
+				})
+			}else{
+				$(this).addClass("visible");
+				$(".box").animate({
+					"height":"120px"
+				})
+			}
+		})
+
+		// 改变事件
+		$(".change").on({
+			"input":function(){
+				var ratote=$(this).closest(".box").find(".ratote"),
+						right=$(this).closest(".box").find(".right"),
+						left=$(this).closest(".box").find(".left"),
+						center=$(this).closest(".box").find(".center_span02"),
+						radius_bg=$(this).closest(".box").find(".radius_bg"),
+						radius_bg01=$(this).closest(".box").find(".radius_bg01");
+				// 小于180执行的事件
+				if($(this).val()<=180){
+					// 起始圆角 start
+					if($(this).val()/272*100 < 0.5){
+						radius_bg.find("span").hide();
+						radius_bg01.find(".before").removeClass("changeColor")
+					}else{
+						radius_bg.find("span").show();
+						radius_bg01.find(".before").addClass("changeColor")
+					}
+					// 起始圆角 end
+
+					// ratote.css("background","#FFAB00");
+					right.css({
+						"zIndex":1,
+						"transform":"rotate("+parseInt($(this).val()-180)+"deg)"
+					})
+					left.css({
+						"zIndex":2,
+						"transform":"rotate(0)"
+					});
+					// 大于180执行的事件
+				}else{
+					ratote.css("background","#fff");
+					left.css({
+						"zIndex":1,
+						"transform":"rotate("+parseInt($(this).val()-180)+"deg)"
+					})
+					right.css({
+						"zIndex":2,
+						"transform":"rotate(0)"
+					});
+					// 结束圆角 start
+					if($(this).val()/272*100 < 100){
+							radius_bg01.find(".after").removeClass("changeColor")
+					}else{
+							radius_bg01.find(".after").addClass("changeColor")
+					}
+					// 结束圆角 end
+
+				}
+				center.html(parseInt($(this).val()/272*100)+"%");
+				var rotate=78 + (345-78)*($(this).val()/272);
+				radius_bg.css({
+					"transform":"rotate("+ rotate +"deg)"
+				})
+			}
+		})
+
+		// 遍厉需要执行的元素
+		$(".box").each(function(){
+			var centes = parseInt($(this).find(".center_span02").html());
+			if(centes){
+				new chang($(this).find(".change"),parseInt(centes));
+			}
+		})
+	})
+
+	// 改变数值函数;
+	function  chang(obj,num){
+		// 环形进度条根据传值来确定位置;
+		// 注: 此进度计算方法只适用于当前环形;
+		var num=(num+0.5)*272/100;
+		obj.animate({
+			// 指定一个无用值
+			"font-size":num
+		},{
+			// 运行时即时执行改变事件
+			step:function(n,i){
+				obj.val(n).trigger("input")
+			},
+			duration:num*10,
+			// 重置无用值
+			done:function(){
+				obj.css("font-size","")
+			}
+		})
+	}
+	</script>
+</body>
+</html>

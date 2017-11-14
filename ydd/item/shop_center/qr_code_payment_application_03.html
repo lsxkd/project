@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link href="css/shop_center_style.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/shop_center.js"  charset="UTF-8"></script>
+	<script src='js/js_c.js'></script>
+	<title>二维码收款申请</title>
+	
+	
+</head>
+<body>
+	<div id="wrap" class="shop_center_wrap">
+		<!-- 遮罩层  start -->
+		<div class="pop_cover_bg background_op" style="display:none;"></div>
+		<!-- 遮罩层  end -->
+
+		<!-- 预览图弹出框  start -->
+		<div class="preview_pops" style="display:none;">
+			<div class="preview_pops_box">
+				<div class="preview_pops_close">
+					<img src="./images/close_pop_iconss.png" alt="">
+				</div>
+				<div class="preview_pops_cons">
+					<img src="" alt="">
+				</div>
+				
+			</div>
+		</div>
+		<!-- 预览图弹出框  end -->
+
+		<!-- 协议预览弹出框  start -->
+		<div class="deals_pops" style="display:none;">
+			<div class="deals_pops_box">
+				<div class="deals_pops_close">
+					<img src="./images/close_pop_iconss.png" alt="">
+				</div>
+				<div class="deals_pops_cons">
+					<div class="deals_pops_cons_font">
+						<p class="MsoNormal" style="text-align:center;margin-bottom:1.5rem;">
+	中国民生银行条码支付收款商户服务协议<span></span>
+</p>
+<p class="MsoNormal">
+	<span>«</span>中国民生银行条码支付收款商户服务协议<span>»(</span>以下筒称“本协议”<span>), </span>是乙方<span>(</span>乙方须是具有中华人民共和国法律规定的完全民事权利能力和民事行为能力<span>, </span>能独立承担民事责任的自然人、
+法人或其他组织<span>,</span>以下筒称“乙方”<span>)</span>与中国民生银行股份有限公司<span>(</span>以下简称甲方”<span>) </span>之间就条码支付收款服务达成的一致协议。
+甲方作为条码支付收款服务提供商<span>, </span>同意为乙方提供条码支付收款服务。
+乙方作为收款商户<span>,</span>同意在其人民币收款业务中使用甲方所提供的条码支付收款服务。现经双方磋商<span>,</span>本着平等互利、优势互补、共同发展的原则<span>, </span>就具体合作事<span>.</span>直达成本协议<span>:</span>
+</p>
+<p class="MsoNormal">
+	一、概念定义<span></span>
+</p>
+<p class="MsoNormal">
+	本协议及其附件中出现的下列概念<span>, </span>除附件另有约定外<span>, </span>按以下定义理解：<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、条码支付收款<span>:</span>甲万为乙万提供的受理<span>W</span>场王流移动支付工具<span>,</span>包括但不限于微信支付、 支付宝、<span> QQ</span>钱包受理服务<span>, </span>并按约定为乙方结算货款的服务。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;&nbsp; 2</span>、微信支付收款<span>: </span>甲方为商户提供微信支付受理及资金结算服务<span>, </span>具体收付方式包括但不限于以下几种支付场景<span>:</span>
+</p>
+<p class="MsoNormal">
+	<span>(1)</span>主动扫码支<span>(</span>包合<span> PC</span>端扫码<span>): </span>指甲方提前预制的接放或张更占在商户柜面的收款二维码<span>,</span>或者是甲方系统根据不同移动支付工具实时生成的订单支付二维码<span>,</span>消费者使用移动支付工具客户端“扫一素<span>9 </span>”完成支付的模式
+。 该模式适用于实体店单品或订单支付、<span> Pc</span>网站支付、
+煤体广告支付等场景<span>&nbsp;&nbsp;&nbsp; (2)</span>扫码支付<span>: </span>指消费者展示移动支付工具客户端钱包内的刷卡条码<span>/</span>二维码”给商户扫描后直接完成支付的模式<span>,</span>主要应用于线下面对面收银的场景。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>(3)</span>公众号支付<span>: </span>指消费者在移动支付工具客户端中里打开商户的<span> H5</span>页面<span>, </span>商户在<span> H5</span>页面通过调用第三方支付接口完成支付。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、 支付宝收款<span>: </span>甲方为商户提供支付宝受理及资金结算服务<span>,</span>具体收付方式包括但不限于以下几种支付场景<span>:</span>
+</p>
+<p class="MsoNormal">
+	<span>(1)</span>主动扫码支付<span>(</span>包合<span> Pc</span>端扫码<span>): </span>指甲方提前预制的接放或张贴在商户柜面的收款二维码<span>, </span>或者是甲方系统根据不同移动支付工具实时生成的订单支付二维码<span>, </span>消费者使用移动支付工具客户端“扫一扫”
+完成支付的模式。
+该模式适用于实体店单品或订单支付、<span>PC</span>网站支付、媒体广告支付等场景；<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(2)</span>被动扫码支付<span>:</span>指消费者展示移动支付工具客户端钱包内的刷卡条码<span>/</span>二维码”
+给商户<span> t9</span>描后直接完成支付的模式<span>, </span>主要应用于线下面对面收银的场景<span></span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、<span> QQ</span>钱包收款<span>: </span>甲方为商户提供<span> QQ</span>钱包支付受理及资金结算服务<span>, </span>具体支付方式包括但不限于以下几种场景<span>:</span>
+</p>
+<p class="MsoNormal">
+	<span>(1)</span>主动扫码支付<span>(</span>包含<span> Pc</span>端扫码<span>): </span>指甲方提前预制的摆放或张贴在商户柜面的收款二维码<span>, </span>或者是甲方系统根据不同移动支付工具实时生成的订单支付二维码<span>, </span>消費者使用移动支付工具客户端
+“扫一扫”完成支付的模式。
+该模式适用于实体店<span></span>
+</p>
+<p class="MsoNormal">
+	品或订单支付、<span> Pc</span>网站支付、
+煤体广告支付等场景<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(2)</span>被动扫码支付<span>: </span>指消費者展示移动支付工具客户端钱包内的刷卡条石<span>_</span>号<span>/</span>二维码”给商户扫描后直接完成支付的模式<span>, </span>主要应用于线下面对面收银的场景。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>5</span>、交易手续费<span>:</span>甲方向乙方收取的手续费<span>,</span>手续费按单笔交易額进行计算<span>, </span>在为乙方进行资金清算时自动扣除。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>6</span>、退款<span>:</span>消费者付款成功后<span>,</span>乙方因缺货、无法运货、重复订单等原因不能为消要者提供产品或服务时<span>, </span>可提出退款申请<span>, </span>将消费者支付的款项退回消费者的原支付账号中
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>7</span>、商务平台<span>:</span>甲方提供给签约乙方使用的系统平台<span>,</span>乙方可在此平台上进行交易查询、
+结算查询等 。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>8</span>、 商户号及登录密码<span>: </span>甲方提供给签约乙方使用的<span>, </span>用于识别签约商家，且登陆商户后台所使用的商户号及登陆密码。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>9</span>、平台识别号及数字证书<span>:</span>甲方提供给乙方用于联机交易的身份识别号<span>,</span>使用乙方的平台识别号和<span>(</span>或<span>)</span>数字证书发送至甲方移动支付收单系统的交易指令构成乙方不可撤销的授权交易指示
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>10</span>、移动支付工具提供方<span>:</span>指提供微信支付、<span> QQ</span>钱包及支付宝服务的第三方<span>,</span>其中<span>,</span>微信支付、<span> QQ</span>钱包移动支付工具提供方为财付通支付科技有限公司<span>, </span>支付宝移动支付工具提供方为支付宝<span>(</span>中国<span>) </span>网络技术有限公司
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>11</span>、商户<span>:</span>给消费者提供商品或服务的商家<span>,</span>本协议中特指乙方。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>12</span>、消费者<span>:</span>指作为买家的移动支付付款方<span>,</span>本协议中统称为消费者。<span></span>
+</p>
+<p class="MsoNormal">
+	二、服务内容及资费标准<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、 甲方向乙方提供条码支付收款业务包括受理微信支付、 支付宝、及<span>QQ</span>钱包。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、乙方享受甲方提供的服务<span>,</span>随乙方每笔交易结算时<span>,</span>向甲方支付交易手续费<span>,</span>手续费标准以申请表填写为准<span>, </span>由甲方在该笔交易结算资金中直接扣取。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、因使用本协议项下服务产生的所有终端的通讯费用由乙方自行承担。<span></span>
+</p>
+<p class="MsoNormal">
+	三、结算方式<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、甲方会在<span> T+1</span>个工作日或者其他甲方认可的结算方式<span>,</span>将相应的交易款扣除相应手续费后<span>,</span>划转到乙方在甲方开立的银行结算账户中，结算账户信息以申请表为准，若乙方因各种原因变更银行结算账户时<span>,</span>需及时向甲方提供变更通知。因乙<span></span>
+</p>
+<p class="MsoNormal">
+	方银行结算账户异常或变更但未及时通知甲方导致增加的额外成本或损失<span>, </span>由乙方承担<span>;</span>如乙方银行结算账户设有开立在甲方<span>, </span>由于跨行结算产生的延退到帳
+、收款行入账失败等异常情形导致的损失<span>, </span>由乙方承担
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、 甲方按照每笔订单金额计算手续费<span>, </span>双方认可因小数点后两位进位而导致手续費存在微小误差<span>, </span>以甲方支付结果为准
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、乙方与甲方对账数据不一致的<span>,</span>以甲方数据为准。<span></span>
+</p>
+<p class="MsoNormal">
+	四、退款处理<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>对于交易过程中出现的、 由于乙方原因包括但不限于缺货、 无法通货、质量同题等等<span>,</span>造成退款处理的情况<span>,</span>按以下规定处理<span> </span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、乙方技本协议约定可通过商户后台或其他甲方认可的方式提交退款申请。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、乙方向甲方提出退款请求时<span>,</span>乙方当日条码支付收款額应大于申请退款的金額<span>, </span>甲方收到退款申请后做出退款处理<span>, </span>退款金额会在退款实际发生后下一个交易日从商户收款入账金额中进行抵扣
+。如因乙方原因或消费者原因导致退款失败的<span>, </span>其后果由乙方自<span></span>
+</p>
+<p class="MsoNormal">
+	行承担。乙方可再次发起退款请求或自行处理退款。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、甲方受理乙方退款的期限为交易发生后的三个月内<span>,</span>具体时限以移动支付工具提供方要求为准。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、 退款时甲方不再另收取手续费<span>, </span>但若移动支付工具提供方需要向乙方另行收取相关费用的<span>, </span>则此费用应由乙方自行承担。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>5</span>、甲方不介<span>:</span>乙方与其消费者之间的退款纠纷。<span></span>
+</p>
+<p class="MsoNormal">
+	五、甲方权利义务<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、准确、实时地处理乙方发来的支付请求<span>,</span>并将处理结果及时、安全、保密地传递给乙方。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、 负责为乙方提供支付信息查询及对照功能 。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、 为乙方提供移动支付服务<span>,</span>负责受理涉及甲方支付平台运转问题出现的投诉并解决相应纠纷 。对乙方因所提供的商品或服务引起的一切消费者投诉或纠纷<span>, </span>甲方不承担责任
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、为乙方提供优质高效服务<span>,</span>在正常工作时间内<span>,</span>对乙方反映的问题<span>, </span>甲方在三个工作日内作出响应。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>5</span>、 甲方有权根据系统升级等需要暂时中止提供条码支付收款服务<span>, </span>一般应提前告知乙方<span>, </span>并预告恢复日期
+。 甲方有权自行决定对支付平台的功能和服务进行改动和升级<span>, </span>但对改进服务事项<span>, </span>应提前公示。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>6</span>、 乙方有下列情形之一的<span>, </span>甲方有权立即中止支付结算服务或终止协议<span>,</span>并有权向乙方索偿或直接从乙方账户中扣划甲方已垫付的款项或损失<span>:</span>
+</p>
+<p class="MsoNormal">
+	<span>(1</span>）单独或与他方串通盜窃、 诈骗资金<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(2)</span>身份证明、企业登记资料、行政许可证、业务范围等与实际不符或虚假的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(3) </span>与他人勾结<span>,</span>或以虚拟交易套取现金<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(4) </span>一定时期内的欺诈、 備冒交易明显高于同类其他收款商户<span></span>
+</p>
+<p class="MsoNormal">
+	（<span>5)</span>无理拒绝通过甲方支付平台而发生的成功交易<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;(6)</span>乙万交易中存在过多的交易纠纷或过大的交易风险、且经双方友好协商无法解决<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(7)</span>乙方没有提供真实有效的联系方式<span>,</span>无法与乙方取得联系<span>,,</span>无法及时得到反馈<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(8)</span>经营不善、停业整顿、申请解散、申请破产或已经停业、破产<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(9)</span>被工商部门注销登记、 吊销营业执照<span>, </span>由于违法被国家机关查处<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(10)</span>司法机关、金融监管机构、发卡行、中国银联出具的要求中止或终止对乙方的支付结算的书面通知<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>(11 ) </span>其他违反监管机构、 各商业银<span>.</span>行关于商户风险管理规定的行为<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(12) </span>故意诋毁或损害甲方支付平台声誉的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>(13)</span>违反<span>«</span>互联网信息服务管理办法<span>»</span>第十五条规定的<span>,</span>具体内容如下<span>:</span>
+</p>
+<p class="MsoNormal">
+	互联网信息服务提供者不得制作、
+复制、 发布、 传播含有下列内容的信息<span>:</span>
+</p>
+<p class="MsoNormal">
+	<span>a.</span>反对宪法所确定的基本原则的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>b.</span>危害国家安全<span>,;</span>泄露国家税密<span>,</span>真興覆国家政权<span>,</span>破坏国家统一的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>c.</span>损害国家荣誉和利益的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>d.</span>煽动民族仇假、民族歧视<span>,</span>破坏民族团结的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>e.</span>破坏国家宗教政策<span>,</span>宣扬牙<span>F</span>教和封建迷信的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>f.</span>散布谣言<span>, </span>扰乱社会秩序<span>, </span>破坏社会稳定的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>g.</span>散布淫移、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>h.</span>侮辱或者<span>iF</span>谤他人<span>, </span>侵害他人合法权益的<span>;</span>
+</p>
+<p class="MsoNormal">
+	<span>i.</span>含有法律、 行政法规禁止的其他内容的 。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>7</span>、 乙方因业务或联络方式变更、 终止而未及时通知甲方的<span>, </span>甲方有权中止本协议<span>, </span>并对消费者提出的退款请求进行处理<span>, </span>将消费者在乙方已支付成功的订单款项退回、、<span>/</span>肖费者的支付帐户中
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>8</span>、 乙方在使用移动支付服务过程中非因甲方原因被消费者投诉的<span>,</span>甲方有权要求乙方及时妥善解决或采取完善补救措施<span>,</span>乙方未能及时完善或补救的<span>, </span>甲方有权视实际情况中止提供移动支付服务<span>,</span>对甲方造成的损失由乙方负责赔偿
+。<span> </span>
+</p>
+<p class="MsoNormal">
+	<span>9</span>、 甲方有权拒绝支付或追索乙方违反国家法律法规或本协议约定的有关款项。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1o</span>、 乙方不得将甲方移动支付服务所包含的各类系统平台、 接口及产品的全部或部分转让给任何第三方<span>, </span>也不得进行任何形式的复制、改编、编译或衍生开发或许可他人使用<span>,</span>包括但不限于<span>:</span>将系统中有关本协议下的业务实现方式、
+业务流规、 技术实现方法等以任何方式用于任何第三方系统的设计及开发中<span>;</span>将甲方提供的交易接<span>l;'</span>再次封装或直接提供给任何第三方接入。一经发现<span>, </span>甲方有权立即中止移动支付服务或终止本协议并追究乙方相应责任。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>11</span>、基于监管要求、风险管理、运营管理或其他风险防控因素的考虑，甲方有权提前十个工作日以书面形式告知乙方暂停、
+中止或终止向乙方提供本协议项下的服务并无需承担任何法律责任。<span></span>
+</p>
+<p class="MsoNormal">
+	六、乙方权利义务<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、乙方在使用甲方提供的支付平台的过程中<span>,</span>发现任何故障或其他不能正常使用的情况<span>, </span>可以随时致电甲方要求修复。方在收到乙方通知后应及时进行修复以恢复正常服务功能<span>,</span>尽最大限度减少对乙方业务活动造成的不利影响。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、乙方有权根据协议约定查询订单交易数据<span>, </span>同时应尽保密义务 。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、乙方应对每日进行资金账户的核对与清算<span>,</span>若发现交易异常应及时通知甲方。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、乙方应妥善保管甲方提供的二维码收银台或通过甲方系统生成的收款二维码<span>, </span>进行柜面收银时应关注收款提醒<span>, </span>收款提醒包括但不限于短信提醒、互联网网站提西星等方式<span>, </span>由于二维码被替换或未关注收款提西里导致的损失由乙方承担
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>5</span>、 乙方在网上发布的信息和从事的商务活动<span>, </span>须严格連守国家的法律法规及政府有关部门的管理规定<span>,</span>具备从事该商务活动所应具备的全部资质条件<span>, </span>依法办理了相应的行政许可手续及各案手续<span>, </span>独自承担与此相应的责任。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>6</span>、 乙方应如实向甲方提供基本业务情况说明及相关法律证明<span>;</span>承担由于其所提供的资质材料不完整、
+不准确、 不真实等情况而导致的经济和法律方面的责任。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>7</span>、乙方应在其网站、移动端及扫码机器页面上如实描述甲方支付重曹业务<span>,</span>乙方不得采用技术手段或其它非法手段截获客户的银行卡信息、
+代客户提交<span>i;J</span>单及进行支付<span>, </span>乙方必须引导客户亲自提交订单及进行支付<span>, </span>否则甲方保留终止为乙方提供条码支付收款服务并追索损失的权利
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>8</span>、 乙方应及时处理乙方商业活动中的各项纠纷<span>,</span>如<span>: </span>佣金纠纷、消费者的消费投诉<span>,</span>货物品质、价格及售后服务纠纷等<span>,</span>由于乙方所提供的商品或服务引起的一切投诉或法律责任<span>, </span>甲方不承担责任
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>9</span>、 当出现消要者拒付或否认交易等纠纷时<span>, </span>乙方应积极配合甲方及相关银行、 移动支付合作机构、 司法机关、 金融监管机构等的调查工作<span>,</span>及时准确地提供相关交易信息和收货单据。否则<span>,</span>乙方应自行承担由此造成的一切损失。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>10</span>、乙方终止服务或业务发生变更<span>,</span>应提前一个月书面通知甲方<span>,,</span>否则造成损失由乙方负责。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>11</span>、 甲方提供给乙方的商户号及登陆密码是乙方进入甲方提供的商户后台的唯一有效凭证<span>, </span>乙方应妥善保管其商户号及登陆密码
+。乙方在任何情况下不应将登陆密码以任何方式提供给包括自称是甲方工作人员在内的任何人。因乙方商户号和登陆密码保管及使用不当造成的损失<span>,</span>责任由乙方承担。对于登陆密码的遗失、被盜情况<span>,</span>乙方须立即告知甲方<span>, </span>并按照甲方规定办理密码重置手续
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>12</span>、在服务有效期内<span>,</span>若条码支付收款时发生技术性障碍<span>,</span>影响实时支付及收款<span>,</span>乙方应积极合作<span>,</span>配合甲方及相关第三方<span>(</span>如发卡第三方支付公司、电信运营商等<span>)</span>查明原因<span>,</span>以求妥善处理。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>13</span>、乙万不<span>1f</span>王动进<span>1</span>丁或协助持卡人进<span>1</span>丁信用卡套现、洗钱、交易分单等违法经营行为<span>,</span>不得出现虚假申请、
+悪意倒闭等严重风险行为<span>, </span>否则<span>, </span>甲方有权立即中止移动支付服务或终止本协议并追究乙方相应责任。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>14</span>、乙方保证发起的移动支付交易基于真实的交易背景<span>,</span>使用甲方提供的移动支付服务时严格按照其营业执照登记的范围开展业务<span>,</span>如因乙方违反上述承诺所带来的损失和风险由乙方自行承担。<span></span>
+</p>
+<p class="MsoNormal">
+	七、风险说明<span></span>
+</p>
+<p class="MsoNormal">
+	鉴于目前网络支付技术及国内、
+国际电子商务环境均尚未成熟<span>, </span>其电子商务立法以及信用体制还不完善<span>,</span>在这种情况下乙方作为商户在开展电子商务业务时存在一定的风险性<span>,</span>包括但不限于犯罪侵权导致的坏英账
+、客户拒付等 。 乙方明确认知该风险的存在并愿意承担此种风险可能带来的损失<span></span>
+</p>
+<p class="MsoNormal">
+	八、安全条款<span></span>
+</p>
+<p class="MsoNormal">
+	对于因甲方原因给乙方造成的直接损失<span>, </span>甲方应负赔偿责任<span>; </span>乙方应对甲方采取的减少损失的措施子以积板协助<span>, </span>对甲方及相关银行或公安部门发现的他人假冒客户名义购物事件的相关调查<span>, </span>乙方要给予积极配合<span>, </span>采取暂缓发货等积极措施<span>; </span>对于因乙方原因给甲方造成的直接损失<span>,</span>乙方应负赔偿责任<span>,</span>甲方应对乙方采取的减少损失的措施子以积极协助。<span></span>
+</p>
+<p class="MsoNormal">
+	九、保密条款<span></span>
+</p>
+<p class="MsoNormal">
+	双方在合作期内获得的信息及本合同和附件内容均为保密信息，保密信息包括但不限于交易手续费率及支付方式、
+结算方式、 接口技术、 安全协议及证书等<span>, </span>任何一方均应当对保密信息严格保密<span>, </span>且仅为本合作之目的使用<span>,</span>未经对方事先书面同意<span>,</span>不得向任何第三方透露保密信息<span>, </span>否则视为违约<span>; </span>守约方除有权主张违约金及损失外还有权终止合同
+。 本条不因本合同的终止而终止。<span></span>
+</p>
+<p class="MsoNormal">
+	十、不可抗力<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、不可抗力指双方在订阅合同时不能预见、对其发生和后果不能避免且不能克服的事件。鉴于网络所具有之特殊性质，不可抗力亦应包括黑客攻击、计算机病毒发作、发卡行调单、电信部门技术调整及线路故障、行业政策调整导致之影响、因政府管制而造成的暂时性关闭等在内的任何影响网络正常经营之情形。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、者由于不可抗力致使一方未能全部或部分履行本协议<span>, </span>应及时书面通知另一方并出具相关证明<span>,</span>则本协议内受影<span>''</span>向之条款可在不能履行之期间及受影响之范围内中止履行。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、 因不可抗力或者其他意外事件<span>, </span>使得本合同的履行不可能、不必要或者无意义的<span>,</span>双方可以协商解除本合同。<span></span>
+</p>
+<p class="MsoNormal">
+	十一、违约贵任<span></span>
+</p>
+<p class="MsoNormal">
+	甲、
+乙双方中的任何一方违反在本协议中所做约定的义务、
+保证、承诺或其他条款<span>, </span>均构成违约。
+违约方在接到守约方违约书面通知之日起三个工作日内未纠正的<span>, </span>守约方有权要求违约方承担违约责任及其因此而造成的一切经济损失<span>:</span>甲方违约，方有权要求甲方赔偿实际损失及主张实际损失的费用。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、乙方违约<span>,</span>甲方有权停止为乙方提供支付结算服务<span>,</span>并要求乙方赔偿实际损失及主张实际损失的费用。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、主张实际损失的费用包括但不限于<span>:</span>诉讼费、律师费、差旅费以及其他有关费用 。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、不可抗力原因导致的违约<span>,</span>双方互不负赔偿责任<span>,</span>但对息于履行通知义务所导致的对方的损失不能免责。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>5</span>、任何一方没有行使其权利或设有就对方的违约行为采取任何行动<span>, </span>不应被视为是对权利的放弃或对追究违约责任或义务的放弃
+。所有放弃均应以书面形式做出
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	十二、
+法律适用及争议解决<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、本合同及为本合同日的所容订的所有协议的<span>iJ</span>立、解释、履行、效力等均适用中华人民共和国法律。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、 如果本合同任何条款根据现行法律被确定为无效或无法实施<span>, </span>本合同的其他所有条款将继续有效。
+此种情况下<span>, </span>双方将以有效的约定替换该约定<span>, </span>且该有效约定应尽可能接近原约定和本合同相应的精神和宗旨
+。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、后继立法除其本身有明确规定外<span>,</span>对本协议不具有溯及力。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、本合同及为本合同目的所签订的所有协议的争议均由双方协商解决<span>,</span>协商不成的<span>,</span>任何一方均可起诉到甲方经营机构所在地人民法院。<span></span>
+</p>
+<p class="MsoNormal">
+	十三、合同期限<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、本协议自双方授权代表签字盖章之日起生效<span>,</span>有效期一年。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、在本协议期满前<span>30</span>日内<span>,</span>双方无书面异议的<span>,</span>协议期限自动延长一个合作周期<span>, </span>即一年<span>, </span>延长期限自本协议约定的到期日的次日起算。依此类推。<span></span>
+</p>
+<p class="MsoNormal">
+	十四、变更与终止<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、本合同及附件未尽事宜由甲、 乙双方友好协商后<span>, </span>以书面形式加以补充。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>2</span>、 乙方违约的<span>, </span>甲方有权解除本协议<span>, </span>并有权向乙方索偿或直接从乙方账户中扣划甲方已垫付的款项或损失。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>3</span>、 在本协议履行过程中<span>, </span>双方经协商一致达成书面协议的<span>, </span>可以变更或解除本协议。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>4</span>、 若任何一方需在对方没有违约的情况下提前终止本协议<span>, </span>必须提前<span>30</span>天以上以书面形式通知对方<span>, </span>在此期问<span>, </span>双方须继续履行本协议<span> </span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	十五、其他条款<span></span>
+</p>
+<p class="MsoNormal">
+	<span>1</span>、本协议一式二份<span>, </span>甲乙双方各持一份<span>, </span>具有同等法律效力 。 本协议自甲方差章、 乙方授权代表签字<span>/</span>盖章之日起生效。<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	甲方<span>:</span>
+</p>
+<p class="MsoNormal">
+	业务联系人<span>: (</span>或授权代理人<span>)</span>
+</p>
+<p class="MsoNormal">
+	联系电话：<span></span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	双方签字<span>/</span>盖章日期<span>:&nbsp;&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+	乙方<span>:</span>
+</p>
+<p class="MsoNormal">
+	<span>&nbsp; </span>法定代表人签字<span>: (</span>商户负责人<span>)</span>
+</p>
+<p class="MsoNormal">
+	联系电话<span>:</span>
+</p>
+					</div>
+					<div class="deals_pops_cons_tips">
+						<p>温馨提示：点击下载最后一页，打印并签订协议后，拍照上传</p>
+					</div>
+					<div class="deals_pops_cons_btns">
+						<div class="deals_pops_cons_btns_box">
+							<a href="./images/11.docx">下载最后一页</a>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- 协议预览弹出框  end -->
+
+		<!-- 银行协议下载成功提示弹出框  start -->
+		<div class="deal_download_succeed_pop" style="display:none;">
+			<div class="deal_download_succeed_pop_title">
+				<span>银行协议下载成功</span>
+			</div>
+			<div class="deal_download_succeed_pop_tips">
+				<span>请打印并签订协议后，拍照上传</span>
+			</div>
+		</div>
+		<!-- 银行协议下载成功提示弹出框  end -->
+
+		<header></header>
+		<div class="shop_center_main" style="-webkit-overflow-scrolling: touch;">
+			<div class="shop_center_main_box padding_bottoms_none" style="background:#FFF;">
+				<div class="shop_center_main_con business_detailss">
+					<div class="business_certification_next">
+						
+						<div class="business_certification_next_title">
+							<h3>资质上传<span>(请参考示例上传符合要求的图片)</span></h3>
+						</div>
+
+						<div class="business_certification_next_con">
+							<!-- 法人身份证正面照  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/card_id_z.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="cardIdFront">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="cardIdFront" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>法人身份证正面照</p>
+							</div>
+							<!-- 法人身份证正面照  end -->
+
+							<!-- 法人身份证反面照  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/card_id_f.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="cardIdTail">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="cardIdTail" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>法人身份证反面照</p>
+							</div>
+							<!-- 法人身份证反面照  end -->
+							
+							<div class="certification_next_con_item_line"></div>
+
+							<!-- 法人手持身份证  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/card_id_r.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="cardIdHand">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="cardIdHand" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>法人手持身份证</p>
+							</div>
+							<!-- 法人手持身份证  end -->
+
+							<!-- 申请人营业执照  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/business_license.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="businessLicense">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="businessLicense" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>申请人营业执照</p>
+							</div>
+							<!-- 申请人营业执照  end -->
+
+							<div class="certification_next_con_item_line"></div>
+
+							<!-- 银行卡正面照  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/bank_card_z.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="cardIdFront">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="cardIdFront" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>银行卡正面照</p>
+							</div>
+							<!-- 银行卡正面照  end -->
+
+							<!-- 银行卡反面照  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/bank_card_f.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="cardIdTail">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="cardIdTail" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>银行卡反面照</p>
+							</div>
+							<!-- 银行卡反面照  end -->
+							
+							<div class="certification_next_con_item_line"></div>
+
+							<!-- 银行协议照片  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/bank_deal_icons.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="cardIdHand">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="cardIdHand" type="file" width="0" height="0" />
+												</span>
+											</label>
+
+											<span class="con_item_add_boxs_fonts view_bank">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>银行协议照片</p>
+							</div>
+							<!-- 银行协议照片  end -->
+
+							<!-- 申请人在店铺门头照合影  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/shop_f_icons.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="businessLicense">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="businessLicense" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>申请人在店铺门头照合影</p>
+							</div>
+							<!-- 申请人在店铺门头照合影  end -->
+
+							<div class="certification_next_con_item_line"></div>
+							
+							<!-- 店铺内景图  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/shop_n_icons.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="businessLicense">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="businessLicense" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>店铺内景图</p>
+							</div>
+							<!-- 店铺内景图  end -->
+
+							<!-- 其他（选填）  start -->
+							<div class="business_certification_next_con_item">
+								<div class="certification_next_con_item_box">
+									<h2><img src="./images/shop_n_icon_02.jpg" alt=""></h2>
+									<div class="certification_next_con_item_add">
+										<div class="con_item_add_boxs">
+											<label for="businessLicense">
+												<span class="con_item_add_boxs_imgs">
+													<img src="./images/add_iconss.png" alt="">
+													<input id="businessLicense" type="file" width="0" height="0" />
+												</span>
+											</label>
+											
+											<span class="con_item_add_boxs_fonts">预览</span>
+										</div>
+									</div>
+								</div>
+								<p>其他(选填)</p>
+							</div>
+							<!-- 其他（选填）  end -->
+
+						</div>
+						
+						<!-- 完成  start -->
+						<div class="business_certification_item_btns qr_code_payment_application_click_04">
+							<a class="noss_selecteds" href="javascript:void(0);">完成</a>
+						</div>
+						<!-- 完成  end -->
+						
+					</div>
+				</div>
+				<!-- <div class="shop_center_bottom_logos">
+					<img src="./images/bottom_logo.png" alt="">
+				</div> -->
+			</div>
+		</div>
+		
+		<div class="back_to_top scroll_top">
+			<img src="./images/back_top_icon.png" alt="">
+		</div>
+		<footer></footer>
+	</div>
+	
+</body>
+</html>

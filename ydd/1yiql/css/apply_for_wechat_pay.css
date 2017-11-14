@@ -1,0 +1,114 @@
+html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+    padding: 0;
+    margin: 0;
+}
+html,body{ min-height:100%;}
+body{ background:#f3f3f3; font-family:Microsoft YaHei; font-size:14px;}
+select{ padding:0;}
+.float_left{display:block;float:left;}
+.float_right{display:block;float:right;}
+
+.clear{ clear:both;}
+.top{background:#fff;height:82px;}
+.register_content{width:1200px;margin:20px auto 70px auto; position:relative;}
+.register_content_accont{ min-height:700px;}
+.nav{height:46px;background:#fff;}
+.nav_first{width:289px;height:44px; background:url(../../resources/images/register_step_bg.png);font-size:14px;line-height:44px;text-align:center;color:#FFF;border-top:1px solid #ff0202;border-bottom:1px solid #ff0202;border-right:1px solid #ff0202;}
+.nav_second{width:289px;height:44px;line-height:44px;background:#fbfcfd; border-top:1px solid #dcdcdd;border-bottom:1px solid #dcdcdd;font-size:14px;text-align:center;}
+.change_second_bg{width:14px;height:44px;background:url(../../resources/images/register_selected_bg.png);border-top:1px solid #dcdcdd;border-bottom:1px solid #dcdcdd;}
+.change_third_bg{width:15px;height:44px;background:url(../../resources/images/register_normal.png);border-top:1px solid #dcdcdd;border-bottom:1px solid #dcdcdd;}
+.change_third_b{width:15px;height:44px;background:url(../../resources/images/register_selected_b.png);border-top:1px solid #FF0202;border-bottom:1px solid #FF0202;}
+.nav_third{width:287px;height:44px;line-height:44px;font-size:14px;text-align:center;background:#fbfcfd; border-top:1px solid #dcdcdd;border-bottom:1px solid #dcdcdd;border-right:1px solid #dcdcdd;}
+sup{font-size: 16px;
+    vertical-align: middle;
+    color: #F00;
+    padding-right: 5px;}
+.nav_step_box{width:1200px; height:100%; }
+.nav_step_box_one{ background:url(../../resources/images/perfect_information/step1.png) no-repeat right center;}
+.nav_step_box_two{ background:url(../../resources/images/perfect_information/step2.png) no-repeat left center; border-right:1px solid #dcdcdd;}
+.nav_step_box_three{ background:url(../../resources/images/perfect_information/step3.png) no-repeat left center;border-right:1px solid #dcdcdd;}
+.nav_step_box_four{ background:url(../../resources/images/perfect_information/step4.png) no-repeat left center;}
+.nav_step_box_font{font-size: 14px; display:inline-block; width:33%; text-align:center; line-height:46px;}
+.nav_step_box_font_color{ color:#FFF;}
+
+
+.apple_content{ width:1200px; margin:30px auto; background:#FFF;}
+.apple_content_box{ width:100%; margin:0 auto; min-height:200px;}
+
+/*微信授权页面 start*/
+
+.authorization_apply{ width:100%; margin:0 auto; text-align:center; height:400px;}
+.authorization_apply_font{ width:100%; margin-top:100px;}
+.authorization_apply_font span{ font-size:16px; color:#2f3535;}
+
+.authorization_apply_btn{ width:100%; margin-top:100px;}
+.authorization_apply_btn a{ display:inline-block; width:200px; height:40px; line-height:40px; text-align:center; background:#ff0202; border-radius:5px; color:#FFF;}
+.authorization_apply_btn a:hover{ background:#FF4545;}
+
+
+
+/*微信授权页面 start*/
+
+/*微信申请 填写信息 start*/
+.apply_wechat_one_box{ width:80%; margin:0 auto; min-height:300px;}
+.apply_wechat_one_box_title{padding:25px 0; width:100%;}
+
+.apply_wechat_one_box_con{ border:1px solid #eeeff3; width:100%;    margin-bottom: 30px;}
+.apply_wechat_one_box_con_t{ height:40px; line-height:40px; width:100%; background:#f4f5f9;border-bottom:1px solid #eeeff3;}
+.apply_wechat_one_box_con_t span{ padding-left:10px; font-size:14px; font-weight:bold;}
+
+.apply_wechat_one_box_con_b{ width:92%; margin:20px auto; margin-bottom:40px;}
+.apply_wechat_one_box_con_bt{ width:100%; height:28px; line-height:28px;margin-top: 20px;}
+.apply_wechat_one_box_con_bt span{ display:inline-block; width:100%; height:18px; line-height:18px; padding-left:10px; border-left:3px solid #35af3b;}
+
+
+.apply_wechat_one_item{ width:95%; overflow:hidden; margin:20px 0;}
+.apply_wechat_one_item_title{ float:left; width:13%; text-align:left; height:40px; line-height:40px; color:#5c5c5c; font-size:14px;font-family:Microsoft YaHei;}
+.apply_wechat_one_item_con{float:left; padding-left:10px;}
+.apply_wechat_one_item_tips{ float:left;padding-left:10px;height:40px; line-height:40px; color:#c4495b; font-size:14px; max-width:300px; overflow:hidden;}
+.apply_wechat_one_item_tips_b{ float:left;padding-left:10px;height:40px; line-height:40px; color:#c4495b; font-size:14px; max-width:300px; overflow:hidden;}
+
+.apply_wechat_one_merchant_name{ width:345px;}
+.apply_wechat_one_merchant_name_span{border:1px solid #dcdcdd; width:100%; display:inline-block; height:38px; line-height:38px; text-align:center; }
+.apply_wechat_one_merchant_name_input{ border:none;height:35px; line-height:38px; width:95%;color:#5c5c5c; font-size:14px;}
+
+.apply_wechat_one_merchant_name_tips{ line-height:28px; font-size:14px; color:#96928e;}
+.apply_wechat_one_line{border-bottom:1px solid #eeeff3; height:2px;}
+
+.apply_wechat_one_business_address{width:600px;}
+.apply_wechat_one_business_abstract_span{ border:1px solid #dcdcdd;width:100%; display:inline-block;line-height:32px;overflow:hidden; text-align:center;}
+.apply_wechat_one_business_abstract_span textarea{ border:none; width:97%; height:120px;    color: #5c5c5c; font-size: 14px;font-family: Microsoft YaHei;line-height:30px;}
+.apply_wechat_one_business_hours{width:580px;}
+.apply_wechat_one_business_hours_line{ width:100%; height:40px; line-height:40px; overflow:hidden; margin-bottom:20px;}
+.apply_wechat_one_business_hours_line_font{color: #5c5c5c; font-size: 14px;font-family: Microsoft YaHei; padding:0 10px;}
+.apply_wechat_one_business_hours_line_time{ width:150px;border:1px solid #dcdcdd;display:inline-block; height:38px; line-height:38px; text-align:center;}
+.apply_wechat_one_business_hours_line_time select{ border:none;color: #5c5c5c;font-size: 14px;font-family: Microsoft YaHei;height:34px; line-height:38px; width:90%;}
+.apply_wechat_one_business_hours_line_time input{ border:none;color: #5c5c5c;font-size: 14px;font-family: Microsoft YaHei;height:34px; line-height:38px; width:90%;}
+.apply_wechat_one_business_hours_line_close{color: #5c5c5c;font-size: 14px;font-family: Microsoft YaHei;height:36px; line-height:38px; display:inline-block; width:80px; padding:0 5px;}
+.apply_wechat_one_business_hours_line_close input[type=checkbox]{ width:25px; height:18px;}
+.apply_wechat_one_business_hours_line_close font{color: #5c5c5c;font-size: 14px;font-family: Microsoft YaHei; padding-left:6px;}
+
+.apply_wechat_one_merchant_file{ width:420px;}
+.apply_wechat_one_merchant_file_font{font-size: 14px;color: #96928e; display:block;}
+.apply_wechat_one_merchant_file_btn{ display: inline-block; position:relative; margin-top:10px; width:115px; height:34px; overflow:hidden;}
+.apply_wechat_one_merchant_file_btn_a{ font-size:14px; color:#5c5c5c;font-family: Microsoft YaHei; display:inline-block; width:110px; height:30px; border:1px solid #dcdcdd; text-align:center; line-height:30px; border-radius:5px;}
+.apply_wechat_one_merchant_file_btn_input{ position:absolute; left:0; top:0; z-index:9999; font-size:100px; opacity:0; cursor:pointer;filter:alpha(opacity=0);}
+.apply_wechat_one_merchant_file_img{ display: table-cell;width:112px;height:112px; text-align:center; vertical-align:middle;}
+.apply_wechat_one_merchant_file_img img{ max-width:112px; max-height:112px; vertical-align:middle;}
+
+.apply_wechat_one_merchant_accont{ line-height:40px;width: 345px;}
+.apply_wechat_one_item_accont{ margin:5px 0;}
+.apply_wechat_one_item_con_select{border:1px solid #dcdcdd; width:345px;height:38px; line-height:38px; display:inline-block;}
+.apply_wechat_one_item_con_select select{ border:none; width:100%;height:34px; line-height:38px; color:#5c5c5c; font-size:14px;font-family:Microsoft YaHei;}
+.apply_wechat_one_merchant_name_num{ width:450px;}
+
+.apply_wechat_one_box_con_t_right{ float:right; padding-right:20px;}
+
+
+
+/*微信申请 填写信息 end*/
+
+
+
+.footer{ font-size:12px;text-align:center;width:100%;padding-top:26px;height:52px;background:#0d0d0d;color:#868686;}
