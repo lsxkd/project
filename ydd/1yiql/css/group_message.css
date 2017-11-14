@@ -1,9 +1,0 @@
-body{ background: #e7e8eb;}
-.content{ background: #fff;}
-.logo{border:none;}
-.exit{float:right;height:20px;padding-top:30px;}
-.group_message{padding-left:35px;height:30px;padding-top: 20px; vertical-align: bottom; font-size:20px;}
-.tab_menu{height:53px;line-height: 53px;border-bottom:1px solid #e7e7eb;}
-.new_message{padding-left:35px;padding-right:20px;padding-bottom:12px;height:39px;margin-bottom: -1px;border-bottom:3px solid red;}
-.already_send{height:53px;padding-left: 20px; padding-right: 20px;}
-.already_send:hover{padding-left:20px;padding-right:20px;padding-bottom:12px;height:39px;margin-bottom: -1px;border-bottom:3px solid #ccc;}
