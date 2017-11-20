@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双11活动预告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/js_css.css">
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/vue.js"></script>
+
+</head>
+<body>
+    <div class="activity-cont">
+        <!-- <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back bar-left" href="javascript:history.go(-1);">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title">双11活动预告</h1>
+        </header> -->
+        <div class="activity-mid" style="background:#ef12ff;margin-top:-2px;overflow: hidden;top:0;">
+            <div class="bannersa amg">
+                <img src="images/banner_js_t.png" alt="">
+            </div>
+            <div class="amg title_navs">
+                <img src="images/title_nav_js_01.png" alt="">
+            </div>
+            <div class="amg shop_cons"  id="xlqg_id">
+               <a class="col-xs-3 mt20" v-bind:href="urlHttp+xlqgItem + '.html'" v-bind:ids="xlqgItem"  v-for="(xlqgItem, index) in xlqgItems">
+                    <img v-bind:No="index" class="" v-bind:src="srcImg + xlqgItem +'.png'" alt="">
+                </a>
+                
+                <div class="clear"></div>
+            </div>
+            <div class="amg title_navs blue_bg_c">
+                <img src="images/title_nav_js_02.png" alt="">
+            </div>
+            <div class="amg shop_boxs blue_bg_c"  id="myzq_id">
+                <a class="col-xs-3 mt20" v-bind:href="urlHttp+xlqgItem + '.html'" v-bind:ids="xlqgItem"  v-for="(xlqgItem, index) in xlqgItems">
+                    <img v-bind:No="index" class="" v-bind:src="srcImg + xlqgItem +'.png'" alt="">
+                </a>
+                <div class="clear"></div>
+            </div>
+
+            <div class="amg title_navs">
+                <img src="images/title_nav_js_03.png" alt="">
+            </div>
+            <div class="amg shop_boxs blue_bg_c"  id="mzzq_id">
+                <a class="col-xs-3 mt20" v-bind:href="urlHttp+xlqgItem + '.html'" v-bind:ids="xlqgItem"  v-for="(xlqgItem, index) in xlqgItems">
+                    <img v-bind:No="index" class="" v-bind:src="srcImg + xlqgItem +'.png'" alt="">
+                </a>
+                <div class="clear"></div>
+            </div>
+
+            <div class="amg title_navs">
+                <img src="images/title_nav_js_04.png" alt="">
+            </div>
+            <div class="amg shop_boxs blue_bg_c"  id="fszq_id">
+                <a class="col-xs-3 mt20" v-bind:href="urlHttp+xlqgItem + '.html'" v-bind:ids="xlqgItem"  v-for="(xlqgItem, index) in xlqgItems">
+                    <img v-bind:No="index" class="" v-bind:src="srcImg + xlqgItem +'.png'" alt="">
+                </a>
+                <div class="clear"></div>
+            </div>
+
+            <div class="amg title_navs">
+                <img src="images/title_nav_js_05.png" alt="">
+            </div>
+            <div class="amg shop_boxs pink_bg_c"  id="mszq_id">
+                <a class="col-xs-3 mt20" v-bind:href="urlHttp+xlqgItem + '.html'" v-bind:ids="xlqgItem"  v-for="(xlqgItem, index) in xlqgItems">
+                    <img v-bind:No="index" class="" v-bind:src="srcImg + xlqgItem +'.png'" alt="">
+                </a>
+                <div class="clear"></div>
+            </div>
+
+            <div class="amg title_navs">
+                <img src="images/title_nav_js_06.png" alt="">
+            </div>
+            <div class="amg shop_boxs blue_bg_c"  id="jjzq_id">
+                <a class="col-xs-3 mt20" v-bind:href="urlHttp+xlqgItem + '.html'" v-bind:ids="xlqgItem"  v-for="(xlqgItem, index) in xlqgItems">
+                    <img v-bind:No="index" class="" v-bind:src="srcImg + xlqgItem +'.png'" alt="">
+                </a>
+                <div class="clear"></div>
+            </div>
+
+           
+
+            
+            <div class="goto_back">
+                <a href="#top">
+                    <img src="images/goto_top.png" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+    $(function(){
+        var xlqg = new Vue({
+            el:"#xlqg_id",
+            data:{
+                urlHttp:"https://item.trj.cc/goods/",
+                srcImg:"images/shop/",
+                xlqgItems:[2536957,2536929,2642551,2642257,2642719,2644827]
+            }
+        })
+
+        var myzq = new Vue({
+            el:"#myzq_id",
+            data:{
+                urlHttp:"https://item.trj.cc/goods/",
+                srcImg:"images/shop/",
+                xlqgItems:[2642507,2642463,2642439,2642441,2642385,2642389,2642391,2642477,2643287,2642461,2642535,2642519]
+            }
+        })
+
+        var mzzq = new Vue({
+            el:"#mzzq_id",
+            data:{
+                urlHttp:"https://item.trj.cc/goods/",
+                srcImg:"images/shop/",
+                xlqgItems:[2533618,2533876,2533942,2533972,2575373,2533966,2597075,2596739,2533668,2575391,2596655,2537011]
+            }
+        })
+
+        var fszq = new Vue({
+            el:"#fszq_id",
+            data:{
+                urlHttp:"https://item.trj.cc/goods/",
+                srcImg:"images/shop/",
+                xlqgItems:[2642741,2642743,2642761,2642759,2642729,2642617,2642593,2642587,2642581,2642575,2642753,2642745]
+            }
+        })
+
+        var mszq = new Vue({
+            el:"#mszq_id",
+            data:{
+                urlHttp:"https://item.trj.cc/goods/",
+                srcImg:"images/shop/",
+                xlqgItems:[2596237,2596229,2534462,2534398,2596231,2596233,2596419,2534460,2534528,2534474,2534470,2534532]
+            }
+        })
+
+        var jjzq = new Vue({
+            el:"#jjzq_id",
+            data:{
+                urlHttp:"https://item.trj.cc/goods/",
+                srcImg:"images/shop2/",
+                xlqgItems:[2534072,2537007,2642007,2643077,2643677,2643811,2643853,2643967,2644149,2644677,2643603,2536929]
+            }
+        })
+
+    })
+</script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+</html>

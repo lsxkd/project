@@ -1,0 +1,73 @@
+.bg-fcbsen{
+	background:#ee12ff;
+}
+
+.gboxss .lzx-presell-li a{
+     margin-right: 10px;
+     margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+#gboxcontent .lzx-presell-li a{
+	margin-bottom: 6px;
+	margin-right: 6px;
+}
+.gbox{
+	     width: 1138px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.cont-1180{
+	width: 1146px;
+    margin: auto;
+  
+}
+img{
+	max-width: 100%;
+}
+.gbuttom{
+       width: 1348px;
+    position: absolute;
+    bottom: 0;
+    margin-left: -674px;
+    left: 50%;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.gleft{
+	width: 637px;
+	height: 7200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+    background: url(../images/web/left.png) repeat-y;
+}
+
+.gright{
+	width: 637px;
+	height: 7200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+    background: url(../images/web/right.png) repeat-y;
+}
+
+
+.gbacktop{
+	    margin-top: 50px;
+	text-align: center;
+	    margin-bottom: 20px;
+}
+.gbacktop img{
+	width: 100px;
+}
+
+.mb30{
+	margin-bottom: 30px;
+}
