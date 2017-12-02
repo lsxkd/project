@@ -120,7 +120,7 @@ div{outline:none;}
 .d_seat_explain_03 .d_seat_explain_item_l{background:url(../images/moviesSeat/d_icon_seat_03.png) no-repeat center center/100% 100%;}
 .d_seat_explain_04 .d_seat_explain_item_l{background:url(../images/moviesSeat/d_icon_seat_04.png) no-repeat center center/100% 100%;width:0.62rem;height:0.433rem;}
 
-.d_seat_area{background:#f6f4f7;height:9.6rem;overflow:hidden;}
+.d_seat_area{background:#f6f4f7;min-height:9.6rem;overflow:hidden;height:11.48rem;}
 .d_seat_area_box{}
 .d_seat_screens{text-align:center;}
 .d_seat_screens_h2{background:url(../images/moviesSeat/d_icon_screen.png) no-repeat center center/100% 100%;color:#666666;font-size:0.32rem;height:0.667rem;line-height:0.667rem;width:4.533rem;margin:0 auto;}
