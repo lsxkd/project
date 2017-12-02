@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+*{padding: 0;margin: 0;}
+table,tbody,thead,tfoot,tr,td,ul,ol,li,a,img,b,h1,h2,h3,h4,h5,h6,em,i,b,span,div,p{font-style:normal;vertical-align:middle;font-weight:normal;border-collapse: collapse;border:0;text-decoration: none;list-style-type:none;}
+div{outline:none;}
+
+/*底部样式 蓝色星空岛*/
+.d_footer{height:1.31rem; border-top: 1px solid #e8e8e8;background: #FFF;position: fixed;left: 0;right: 0;bottom: 0;z-index:9;}
+.d_footer .d_footer_ul{}
+.d_footer .d_footer_list{padding-top:0.2rem;}
+.d_footer_list_img{height:0.587rem;margin: 0 auto;}
+.d_img_bg_01{background: url(../images/footer_icon_11.png) no-repeat center top/auto 100%;}
+.d_img_bg_02{background: url(../images/footer_icon_12.png) no-repeat center top/auto 100%;}
+.d_img_bg_03{background: url(../images/footer_icon_13.png) no-repeat center top/auto 100%;}
+.d_footer_list_font{font-size:0.27rem;color:#999999;}
+
+.selected .d_img_bg_01{background: url(../images/footer_icon_01.png) no-repeat center top/auto 100%;}
+.selected .d_img_bg_02{background: url(../images/footer_icon_02.png) no-repeat center top/auto 100%;}
+.selected .d_img_bg_03{background: url(../images/footer_icon_03.png) no-repeat center top/auto 100%;}
+.selected .d_footer_list_font{font-size:0.27rem;color:#e64239;}
+
+
+/*通用样式*/
+.d_clearfix{zoom:1}.d_clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.d_fl{float:left;}
+.d_wh33{width:33.33%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
