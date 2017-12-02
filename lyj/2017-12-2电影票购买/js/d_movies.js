@@ -36,7 +36,7 @@ $(function(){
 			$(this).closest(".d_order_tickets_pop").hide();
 		}
 	})
-	seatTicket(11,7);
+	seatTicket(12,8);
 })
 
 function seatTicket(m,n){ // m:列 n:排 
