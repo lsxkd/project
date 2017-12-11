@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5定位2</title>
+</head>
+<body>
+	<div id="out"></div>
+</body>
+<script type="text/javascript">
+//获取经纬度坐标
+function getPosition (callback) {
+    if ("geolocation" in navigator) {
+        var geo_options = {
+          enableHighAccuracy: true,
+          maximumAge: 0,
+          timeout : 6000
+        };
+        navigator.geolocation.getCurrentPosition(function(pos) {
+            // 获取到当前位置经纬度
+            var lng = pos.coords.longitude;
+            var lat = pos.coords.latitude;
+            callback(lng,lat);
+        }, function(err){
+            console.log(err.message);
+        }, geo_options);
+    } else {
+         console.log("Browser didnt support geolocation");
+    }
+}
+//测试
+getPosition(function(lng,lat){
+    var out=document.getElementById('out');
+    out.outerHTML='当前经度:'+lng+'<br/>当前纬度'+lat;
+    console.log('当前经度:'+lng+'<br/>当前纬度'+lat)
+});
+</script>
+</html>
