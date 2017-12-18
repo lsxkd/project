@@ -1,0 +1,196 @@
+/**
+ * 蓝色星空岛  2017-10-27
+ */
+
+@charset "UTF-8";
+
+button,img {
+	border:0
+}
+blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textarea,th,ul {
+	margin:0;
+	padding:0
+}
+a,h1,h2,h3,h4,h5,h6,p {
+	font-size:100%
+}
+table {
+	border-style:none
+}
+button {
+	padding:0;
+	cursor:pointer
+}
+img,input,select {
+	vertical-align:middle
+}
+a {
+	outline:0
+}
+
+li,ol,ul {
+	list-style:none
+}
+table {
+	border-collapse:collapse
+}
+textarea {
+	resize:vertical
+}
+html,body{width:100%;height:100%;}
+
+
+.wrap{background:url(../images/live_index_bg.png) repeat-x;}
+.main{overflow: auto;box-sizing: border-box;}
+
+.main_nav{left:10%;top:50px;z-index:99;}
+.main_nav_ul{}
+.main_nav_ul li{float:left;width:140px;height:50px;text-align:center;line-height:50px;}
+.main_nav_ul li a{font-size:30px;color:#b69510;text-decoration:none;}
+.main_nav_ul li.active{background:#b69510;}
+.main_nav_ul li.active a{color:#FFF;}
+
+.main_con{position:relative;overflow:hidden;width:100%;padding-top:50px;height:calc(100% - 50px);}
+.main_phone{width:35%;margin:0 auto;margin-top:100px;height:100%;}
+
+@keyframes myphone
+{
+	from {opacity:0;left:-200px;}
+	to {opacity:1;left:0;}
+}
+
+@-webkit-keyframes myphone /*Safari and Chrome*/
+{
+	from {opacity:0;left:-200px;}
+	to {opacity:1;left:0;}
+}
+.main_phone_box{width:100%;text-align:center;height:100%;animation:myphone 0.8s;-webkit-animation:myphone 0.8s;position:relative;}
+.main_phone_box img{max-width:90%;margin:0 auto;max-height:95%;}
+
+
+.main_con_right{text-align:left;width:64%;margin-left:-80px;}
+@keyframes myddx
+{
+	from {opacity:0;top:-200px;}
+	to {opacity:1;top:0;}
+}
+
+@-webkit-keyframes myddx /*Safari and Chrome*/
+{
+	from {opacity:0;top:-200px;}
+	to {opacity:1;top:0;}
+}
+.main_top_r{width:100%;text-align:center;animation:myddx 0.8s;-webkit-animation:myddx 0.8s;position:relative;}
+.main_top_r img{max-width:80%;margin:0 auto;margin-right:50px;}
+
+@keyframes mynm
+{
+	from {opacity:0;bottom:-200px;}
+	to {opacity:1;bottom:0;}
+}
+
+@-webkit-keyframes mynm /*Safari and Chrome*/
+{
+	from {opacity:0;bottom:-200px;}
+	to {opacity:1;bottom:0;}
+}
+.main_bottom_r{width:100%;position:relative;animation:mynm 0.8s;-webkit-animation:mynm 0.8s;position:relative;}
+
+
+.main_bottom_r_box{width:70%;margin:0 auto;}
+
+.main_bottom_r_box img{max-width:100%;}
+
+.pai_ha{top:0;right:2%;width:15%;}
+.pai_ha img{max-width:100%;}
+
+
+.pai_hoa{bottom:0;right:5%;width:20%;}
+.pai_hoa img{max-width:100%;}
+
+.pai_h5 {bottom:0;left:0;width:20%;}
+.pai_h5 img{max-width:100%;}
+
+.main_foot{bottom:20px;text-align:center;width:100%;overflow:hidden;z-index:99}
+.main_foot p{font-size:18px;color:#8b570c;}
+.main_yun{width:100%;bottom:0;left:0;right:0;}
+.main_yun img{max-width:100%;}
+
+
+.game_con{width:70%;margin:0 auto;height:calc(90% - 130px);margin-top:130px;}
+.game_con_l{width:65%;text-align: right;}
+
+@keyframes mygame01
+{
+	from {opacity:0;left:-20%;top:-140px;}
+	to {opacity:1;left:0;top:0;}
+}
+@-webkit-keyframes mygame01 /*Safari and Chrome*/
+{
+	from {opacity:0;left:-20%;top:-140px;}
+	to {opacity:1;left:0;top:0;}
+}
+.game_con_l_f{width:100%;margin:0 auto;text-align:right;animation:mygame01 0.8s;-webkit-animation:mygame01 0.8s;position:relative;}
+.game_con_l_f img{max-width:100%;}
+
+@keyframes mygame02
+{
+	from {opacity:0;left:-20%;bottom:-140px;}
+	to {opacity:1;left:0;bottom:0;}
+}
+@-webkit-keyframes mygame02 /*Safari and Chrome*/
+{
+	from {opacity:0;left:-20%;bottom:-140px;}
+	to {opacity:1;left:0;bottom:0;}
+}
+.game_con_l_p{width:100%;margin:0 auto;text-align:right;margin-top:20px;animation:mygame02 0.8s;-webkit-animation:mygame02 0.8s;position:relative;}
+.game_con_l_p img{max-width:100%;}
+
+.game_con_r{width:33%;text-align: left;}
+
+@keyframes mygame03
+{
+	from {opacity:0;right:-50%;}
+	to {opacity:1;right:0;}
+}
+@-webkit-keyframes mygame03 /*Safari and Chrome*/
+{
+	from {opacity:0;right:-50%;}
+	to {opacity:1;right:0;}
+}
+.game_con_r_n{width:100%;text-align:left;animation:mygame03 0.8s;-webkit-animation:mygame03 0.8s;position:relative;}
+.game_con_r_n img{max-width:100%;}
+
+.live_game_w{left:-70px;top:50px;}
+.live_game_9{left:-120px;bottom:30%;}
+.live_game_3{right:-10%;top:100px;}
+.live_game_a{right:-10%;bottom:150px;}
+
+
+.live_game_y_l{left:0;top:30%;}
+.live_game_y_r{right:0;top:10px;}
+.live_game_y_t{top:80px;left:40%;}
+
+.game_ewms{right:50px;top:40px;width:20%;z-index:100;width:250px;height:210px;text-align:center;}
+.game_ewms img{max-width:100%;max-height: calc(100% - 30px);}
+.game_ewms p{font-size:18px;text-align:center;color:#333;line-height:26px;}
+.game_ewms p em{font-style:normal;font-weight:bold;}
+
+.wh100{width:100%;height:100%;}
+.por{position:relative;}
+.poa{position:absolute;}
+.fll{float:left;}
+.flr{float:right;}
+.clear:after{clear:both;content:"";display:block;}
+
+
+
+
+
+
+
+
+
+
+
+

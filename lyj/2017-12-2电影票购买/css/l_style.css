@@ -1,43 +1,156 @@
 @charset "utf-8";
-
+html,body{height: 100%;width: 100%}
 *{padding: 0;margin: 0;}
 table,tbody,thead,tfoot,tr,td,ul,ol,li,a,img,b,h1,h2,h3,h4,h5,h6,em,i,b,span,div,p{font-style:normal;vertical-align:middle;font-weight:normal;border-collapse: collapse;border:0;text-decoration: none;list-style-type:none;}
 div{outline:none;}
 
-/*底部样式 蓝色星空岛*/
-.d_footer{height:1.31rem; border-top: 1px solid #e8e8e8;background: #FFF;position: fixed;left: 0;right: 0;bottom: 0;z-index:9;}
-.d_footer .d_footer_ul{}
-.d_footer .d_footer_list{padding-top:0.2rem;}
-.d_footer_list_img{height:0.587rem;margin: 0 auto;}
-.d_img_bg_01{background: url(../images/footer_icon_11.png) no-repeat center top/auto 100%;}
-.d_img_bg_02{background: url(../images/footer_icon_12.png) no-repeat center top/auto 100%;}
-.d_img_bg_03{background: url(../images/footer_icon_13.png) no-repeat center top/auto 100%;}
-.d_footer_list_font{font-size:0.27rem;color:#999999;}
 
-.selected .d_img_bg_01{background: url(../images/footer_icon_01.png) no-repeat center top/auto 100%;}
-.selected .d_img_bg_02{background: url(../images/footer_icon_02.png) no-repeat center top/auto 100%;}
-.selected .d_img_bg_03{background: url(../images/footer_icon_03.png) no-repeat center top/auto 100%;}
-.selected .d_footer_list_font{font-size:0.27rem;color:#e64239;}
+/*电影开始*/
+.l_movie_tab_content{margin-bottom: 1.31rem}
+.l_tab_nav li{padding: 0;display: table-cell;}
+.l_tab_nav li.active a,
+.l_tab_nav li:hover a,
+.l_tab_nav li:focus a{color: #e64239;border-bottom: 2px solid #e64239}
+.l_tab_nav li a{padding: 0 0.533rem;display: inline-block;color: #999999;line-height: 1.066rem;}
+.l_mover_list_ul li{display: inline-block;padding: .25rem;border-bottom: 1px solid #f0f0f0;width: 100%;position: relative;box-sizing: border-box;}
+.l_mover_img{width: 2.2rem;height:2.95rem;display: block;float: left;position: relative;}
+.l_mover_img img{ display: block;width: 100%;}
+.l_mover_right{margin: .1rem 0 0 2.5rem;position: relative;}
+.l_flex_item{overflow: hidden;text-overflow: ellipsis;flex: 1;align-items: center;}
+.l_mover_name{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;color: #222;font-size: .4347rem;margin-right: 1.8rem;margin-bottom:4px}
+.l_mover_buy{position:absolute;right:10px;top:15px;font-size:.3381rem;line-height:.6rem;color:#fff;background-color:#e64239;border-radius:10rem;display:inline-block;width:1.2rem;text-align: center}
+.l_mover_presale{position:absolute;right:10px;top:15px;font-size:.3381rem;line-height:.6rem;color:#fff;background-color:#b08c4a;border-radius:10rem;display:inline-block;width:1.2rem;text-align: center}
+.l_mover_right p{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;line-height: .7rem;}
+/*电影结束*/
+
+/*电影场次开始*/
+.l_showtime_cinema_info{display: flex}
+.l_stci_info{display:block;flex: 1}
+.l_stci_map{display:table-cell;width:1.6rem;flex: 0 0 auto;overflow: hidden;font-size: .3381rem;text-align: center;color: #63acef;position: relative;}
+.l_stci_map:before {content:'';display:inline-block;height:100%;vertical-align:middle;margin-right:-0.25em;}
+.l_stci_map a{display: inline-block;width:1.6rem;height:1.6rem;overflow: hidden;display:inline-block;vertical-align:middle;width:50%;}
+.l_stci_map a:before {border-left:1px solid #d8d8d8;height:.56rem;content:'';margin-right:.4rem;position: absolute;left: 0;display:table-cell;vertical-align:middle;text-align:center;width:100%;top: 50%;margin-top: -0.28rem;}
+.l_swiper_nav{background: url("../images/l_screenings_bg.png") center top no-repeat;background-size: 100% 100%;padding: 25px 0 12px;height: 3.2666rem;position: relative}
+.l_swiper_nav:before{position: absolute;content: '';width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:8px solid #fff;bottom: 0;left: 50%;margin-left: -4px}
+.l_swiper_nav .swiper-slide.swiper-slide-active{-webkit-transform:scale(1.2,1.2);-moz-transform:scale(1.2,1.2);-transform:scale(1.2,1.2);}
+.swiper-slide-active{transition:all 0.5s;-moz-transition:all 0.5s;-webkit-transition:all 0.5s;-o-transition:all 0.5s;}
+.l_swiper_nav img{width: 100%;border: 2px solid #fff}
+.l_data_tab{overflow-x: scroll;    white-space: nowrap;}
+.l_showtime_list_table{width: 100%;background-color: #fff}
+.l_showtime_list_table td{padding: 0px 13px 10px;position: relative}
+.l_stl_time{color:#262626;font-size:.483rem;line-height:.65rem;text-align:left;padding-left:1.5%;height:1.8rem;vertical-align:middle;border-bottom:1px solid #f0f0f0;width: 26%}
+.l_stl_time em{font-size: 0.2898rem;color: #666}
+.l_stl_time_wrap{margin-top: -11px;}
+.l_stl_info{width: 30%;text-align: left;font-size: .3864rem;vertical-align: middle;border-bottom: 1px solid #f0f0f0;line-height: 0.6rem;}
+.l_two_line{margin-top: 2px;}
+.l_stl_price{line-height:.6rem;font-size:.483rem;text-align:center;border-bottom: 1px solid #f0f0f0;width: 20%}
+.l_stl_price .c_e64{margin-top: -11px}
+.l_stl_buy{height:1.26rem;text-align:center;vertical-align:middle;border-bottom:1px solid #f0f0f0;font-size: 0.3rem}
+.l_stl_btn{font-size:.3381rem;line-height: .6rem;color:#e64239;background-color:#fff;border:1px solid #e64239;border-radius:10rem;display:inline-block;position: absolute;right: 10px;top: 11px;width:1.2rem }
+/*电影场次结束*/
+
+/*电影详情开始*/
+.l_data_show_item{background: url("../images/l_screenings_bg.png") center top no-repeat;background-size: 100% 100%;padding: 0.4rem .4rem 0;height: 4.05rem;position: relative}
+.l_data_movie_cover{width: 2.6rem;height: 3.5rem;overflow: hidden;border: solid 2px #fff;float: left}
+.l_data_movie_cover img{width: 100%;}
+.l_data_movie_right{margin-left: 3rem;height: 3.7333rem;display: table}
+.l_data_table{vertical-align: middle;display: table-cell;}
+.l_data_text_expander{height: 1.6rem;}
+.l_data_text_expander.active{height: auto;}
+.l_data_movie_list{width: 100%;overflow-x:scroll;white-space:nowrap;box-sizing:border-box;}
+.l_data_movie_list li{display: inline-block}
+.l_data_name_img{width: 2.133rem;height: 2.133rem;overflow: hidden;border-radius: 0.85rem}
+.l_data_movie_stages{width: 100%;overflow-x:scroll;white-space:nowrap;box-sizing:border-box;}
+.l_data_movie_stages li{display: inline-block;position: relative;}
+.l_data_stages_img{width: 3.4666rem;height: 2.4rem;overflow: hidden;position: relative}
+.l_data_stages_img:after{content:'';position: absolute;width: 0.64rem;height: 0.64rem;background: url("../images/icon_bofang.png") 0 0 no-repeat;left:50%;background-size:100%;top:50%;margin-left:-.32rem;margin-top:-.32rem;display: none}
+.l_data_movie_stages li.movie .l_data_stages_img:after{display: block}
+.l_show_user_img{width: 1.066rem;height: 1.066rem;overflow: hidden;border-radius: 50%;position: absolute;left: 0px;top:10px}
+.l_show_user_img img{width: 100%;vertical-align: top}
+.l_show_li dl{padding: 0.1rem .3623rem .3623rem 1.4666rem;}
+.l_show_star_ranking{background: url("../images/l_star_h.png") 0 0 no-repeat;background-size: auto 100%;width: 70px;height: 9.5px;margin-top: 3px;float: left}
+.l_show_star_ranking_light{background: url("../images/l_star_y.png") 0 0 no-repeat;background-size: auto 100%;width: 70px;height: 9.5px;}
+/*电影详情结束*/
+
+/*电影票开始*/
+.l_movie_buy_ul li{margin-bottom: 10px;background-color: #fff}
+.l_movie_buy_ul li.end .c_262,
+.l_movie_buy_ul li.end .c_666,
+.l_movie_buy_ul li.end .c_e64{color: #999!important;}
+.l_mover_buy_img{width: 1.666rem;height: 2.4rem;float: left}
+.l_mover_buy_img img{width: 100%;}
+.l_movie_buy_right{margin-left: 1.76rem;display: table;height: 2.4rem;}
+/*电影票结束*/
+
+/*城市选择开始*/
+.l_movie_city_ul li{width: 2.5rem;float: left;border: 1px solid #dbdbdb;border-radius: 4px;background-color: #fff;margin-right: 10px;margin-bottom: 10px}
+.l_movie_city_ul li a{padding:6px 0;font-size: .3864rem;text-align: center;display: block;color: #9e8583}
+.l_movie_navbar{position: fixed;top: 50%;right: 0;width: 34px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%);font-size: .2898rem;}
+.l_movie_navbar a{display: block;color: #3997e6;text-align: center}
+.l_city_box {font-size: .3864rem;}
+.l_city_box .city-letter{display: block;background-color: #f6f4f7;padding: .2415rem .3623rem;}
+.l_city_box .city-list p{display: block;background-color: #fff;padding: .3623rem;border-bottom: 1px solid #f0f0f0;color: #262626}
 
 
-/*通用样式*/
-.d_clearfix{zoom:1}.d_clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
-.d_fl{float:left;}
-.d_wh33{width:33.33%;}
+/*城市选择结束*/
 
 
 
+/*公共按钮开始*/
+.l_btn{
+    font-size:.3381rem;
+    padding: 0 2px;
+    line-height: .6rem;
+    display:inline-block;
+    width:1.2rem;
+    text-align: center;
+}
+.l_btn_block{
+    font-size: 0.48rem;
+    width: 100%;
+    text-align: center;
+    line-height: .8rem;
+    padding: 5px 0;
+    display: block;
+}
+/*公共按钮结束*/
+
+/*公共按钮颜色开始*/
+.l_red_bor_btn{
+    color: #e64239;
+    background-color: #fff;
+    border: 1px solid #e64239;
+}
+.l_red_bg_btn{
+    color: #fff;
+    background-color: #e64239;
+    border: 1px solid #e64239;
+}
+/*公共按钮颜色结束*/
 
 
 
-
-
-
-
-
-
-
-
+/*公共样式开始*/
+.c_ff9{color: #ff953f}       /*点睛色橙色*/
+.c_262{color: #262626}       /****黑色***/
+.c_63a{color: #63acef}       /****蓝色***/
+.c_e64{color: #e64239}       /****红色***/
+.c_d5d{color: #d5d3d5}       /****灰色***/
+.c_ccc{color: #cccccc}       /****灰色***/
+.db{display: block}
+.rh40{height: 1.066rem}
+.pull-left{float: left}
+.pull-right{float: right}
+.re{position: relative}
+.text_em 	{text-indent:2em;}
+.bo_r4{border-radius: 4px;}
+.inline-block{display: inline-block}
+.v-align-initial{vertical-align: initial;}
+.bg_faf{background-color: #fafafa}         /*浅灰色*/
+.list-unstyled{padding-left: 0;list-style: none;margin: 0}
+.text_over 	{overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+.col-lzx-6{width: 50%;float: left;position: relative;padding-left: 15px;padding-right: 15px;}
+/*公共样式结束*/
 
 
 
