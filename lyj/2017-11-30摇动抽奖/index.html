@@ -1,0 +1,163 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title></title>
+<link rel="stylesheet" href="css/scratchTicket.css">
+<style type="text/css">
+</style>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/html_size.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".separate_img").removeClass("separate_shake")
+	$(".scratchTicket").on({
+		"click":function(){
+		$(this).addClass("shake");
+		$(".separate_img").removeClass("separate_shake")
+		setTimeout(function(){
+			$(".scratchTicket").removeClass("shake");
+			$(".separate_img").addClass("separate_shake")
+		},2000);
+		setTimeout(function(){
+			$(".scratchTicket").hide();
+			var n = Math.floor(Math.random()*3+1);//0~3之间的随机整数    正式去掉
+			scratchTickets(n,"data")
+		},4000)
+		}
+	});
+	$(".scratchTicket_yes_close").on({
+		"click":function(){
+			$(this).closest(".scratchTicket_yes").fadeOut();
+		}
+	})
+});
+function scratchTickets(types,data){ //打开结果弹框  types:1是店铺优惠券 2是平台现金券  3是没中奖   data:数据
+	$(".scratchTicket_yes_c").hide();
+	if(types == 1){
+		$(".scratchTicket_yes").fadeIn();
+		$(".scratchTicket_types_one").show();
+	}else if(types == 2){
+		$(".scratchTicket_yes").fadeIn();
+		$(".scratchTicket_types_two").show();
+	}else if(types == 3){
+		$(".scratchTicket_yes").fadeIn();
+		$(".scratchTicket_types_three").show();
+	}
+}
+</script>
+</head>
+<body>
+	<div class="scratchTicket">
+		<img src="images/asd23.png" class="redPacket_bg">
+		<div class="separate_btn">
+			<img src="images/separate_icon.png" alt="" class="separate_img">
+		</div>
+	</div>
+	<div class="scratchTicket_yes">
+		<div class="scratchTicket_yes_box">
+			<img src="images/scratchTicket_yes_bg.png" class="scratchTicket_yes_bg">
+
+			<!-- 三张店铺优惠券 start -->
+			<div class="scratchTicket_yes_c scratchTicket_types_one">
+				<!-- 优惠券 start -->
+				<div class="list_details_con_item01 item_box_01">
+	                <div class="list_item01_c_bg">
+	                    <img src="./images/scratchTicket_yes_line.png" alt="">
+	                </div>
+	                <div class="list_item01_l">
+	                    <h2 class="list_item01_l_h2 ovfl_h"><em>￥</em><span>999</span></h2>
+	                    <p class="list_item01_l_p ovfl_h">满205可用</p>
+	                </div>
+	                <div class="list_item01_c">
+	                    <h2 class="list_item01_c_h2 ovfl_h">XXX店铺优惠券</h2>
+	                    <div class="list_item01_c_h2_btn">
+	                    	<a href="javascript:;" class="list_item01_c_a">仅本店可用</a>
+	                    </div>
+	                </div>
+	                <div class="list_item01_r ovfl_h">限12.12</div>
+	            </div>
+	            <!-- 优惠券 end -->
+	            <!-- 优惠券 start -->
+				<div class="list_details_con_item01 item_box_02">
+	                <div class="list_item01_c_bg">
+	                    <img src="./images/scratchTicket_yes_line.png" alt="">
+	                </div>
+	                <div class="list_item01_l">
+	                    <h2 class="list_item01_l_h2 ovfl_h"><em>￥</em><span>999</span></h2>
+	                    <p class="list_item01_l_p ovfl_h">满205可用</p>
+	                </div>
+	                <div class="list_item01_c">
+	                    <h2 class="list_item01_c_h2 ovfl_h">XXX店铺优惠券</h2>
+	                    <div class="list_item01_c_h2_btn">
+	                    	<a href="javascript:;" class="list_item01_c_a">仅本店可用</a>
+	                    </div>
+	                </div>
+	                <div class="list_item01_r ovfl_h">限12.12</div>
+	            </div>
+	            <!-- 优惠券 end -->
+	            <!-- 优惠券 start -->
+				<div class="list_details_con_item01 item_box_03">
+	                <div class="list_item01_c_bg">
+	                    <img src="./images/scratchTicket_yes_line.png" alt="">
+	                </div>
+	                <div class="list_item01_l">
+	                    <h2 class="list_item01_l_h2 ovfl_h"><em>￥</em><span>999</span></h2>
+	                    <p class="list_item01_l_p ovfl_h">满205可用</p>
+	                </div>
+	                <div class="list_item01_c">
+	                    <h2 class="list_item01_c_h2 ovfl_h">XXX店铺优惠券</h2>
+	                    <div class="list_item01_c_h2_btn">
+	                    	<a href="javascript:;" class="list_item01_c_a">仅本店可用</a>
+	                    </div>
+	                </div>
+	                <div class="list_item01_r ovfl_h">限12.12</div>
+	            </div>
+	            <!-- 优惠券 end -->
+			</div>
+			<!-- 三张店铺优惠券 end -->
+
+			<!-- 一张平台现金券 start -->
+			<div class="scratchTicket_yes_c scratchTicket_types_two">
+				<!-- 现金券 start -->
+				<div class="scratchTicket_one">
+					<div class="scratchTicket_one_box">
+						<h2 class="scratchTicket_one_h2 ovfl_h"><em>￥</em><span>999</span></h2>
+						<h3 class="scratchTicket_one_h3 ovfl_h">唐人街现金券</h3>
+						<div class="scratchTicket_one_a ovfl_h"><span>所有店铺通用</span></div>
+						<p class="scratchTicket_one_p">限12.12</p>
+					</div>
+				</div>
+	            <!-- 现金券 end -->
+			</div>
+			<!-- 一张平台现金券 end -->
+			<!-- 没中奖 start -->
+			<div class="scratchTicket_yes_c scratchTicket_types_three">
+				<div class="scratchTicket_two">
+					<div class="scratchTicket_two_box">
+						<h2 class="scratchTicket_two_h2">谢谢惠顾！</h2>
+					</div>
+				</div>
+			</div>
+			<!-- 没中奖 end -->
+			<img src="images/scratchTicket_yes_bop.png" class="scratchTicket_yes_bop">
+		</div>
+		<img src="images/scratchTicket_yes_close.png" class="scratchTicket_yes_close">
+		<!-- <div class="scratchTicket_yes_cbox"> -->
+			<img src="images/scratchTicket_yes_t01.png" class="scratchTicket_yes_cd scratchTicket_yes_t01">
+			<img src="images/scratchTicket_yes_t02.png" class="scratchTicket_yes_cd scratchTicket_yes_t02">
+			<img src="images/scratchTicket_yes_t03.png" class="scratchTicket_yes_cd scratchTicket_yes_t03">
+			<img src="images/scratchTicket_yes_t04.png" class="scratchTicket_yes_cd scratchTicket_yes_t04">
+			<img src="images/scratchTicket_yes_t05.png" class="scratchTicket_yes_cd scratchTicket_yes_t05">
+			<img src="images/scratchTicket_yes_t06.png" class="scratchTicket_yes_cd scratchTicket_yes_t06">
+			<img src="images/scratchTicket_yes_t07.png" class="scratchTicket_yes_cd scratchTicket_yes_t07">
+			<img src="images/scratchTicket_yes_t08.png" class="scratchTicket_yes_cd scratchTicket_yes_t08">
+			<img src="images/scratchTicket_yes_t09.png" class="scratchTicket_yes_cd scratchTicket_yes_t09">
+			<img src="images/scratchTicket_yes_t01.png" class="scratchTicket_yes_cd scratchTicket_yes_t10">
+			<img src="images/scratchTicket_yes_t09.png" class="scratchTicket_yes_cd scratchTicket_yes_t11">
+		<!-- </div> -->
+	</div>
+</body>
+</html>

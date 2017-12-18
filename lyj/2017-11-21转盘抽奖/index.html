@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双12抽奖大转盘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/cj_css.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/cj_js.js"></script>
+    <script src="js/jquery.rotate.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- 遮罩层 start -->
+    <div class="pop_cover_bg"></div>
+    <!-- 遮罩层 end -->
+
+    <!-- 没有抽奖机会 弹出框 start -->
+    <div class="pop_layer cj_pop_12" id="not_draw">
+        <img class="cj_pop_img12" src="./images/pop/cj_pop_12_bg_no.png" alt="">
+        <div class="cj_pop_12_con">
+            
+            <div class="cj_pop_12_con_f cj_not_j">
+                <h2 class="cj_pop_12_con_f_h2">您现在没有抽奖机会哦~</h2>
+                <p class="cj_pop_12_con_f_p">每天单笔订单满122元即可获得一次抽奖机会</p>
+            </div>
+            <div class="cj_pop_12_con_btn">
+                <a href="javascript:;" class="cj_pop_12_con_btn_a">消费抽大奖</a>
+            </div>
+        </div>
+        <a href="javascript:;" class="cj_pop_12_close"><img src="./images/pop/cj_pop_12_close.png" alt=""></a>
+    </div>
+    <!-- 没有抽奖机会 弹出框 end -->
+
+    <!-- 中奖 一种奖项 弹出框 start -->
+    <div class="pop_layer cj_pop_12 cj_zjs" id="winning_draw">
+        <img class="cj_pop_img12" src="./images/pop/cj_pop_12_bg.png" alt="">
+        <div class="cj_pop_12_con">
+            <div class="cj_pop_12_con_t">
+                <img class="cj_pop_12_con_t_img cj_img_jp_00" src="./images/pop/cj_pop_12_jp00.png" alt="">
+                <img class="cj_pop_12_con_t_img cj_img_jp_01" src="./images/pop/cj_pop_12_jp01.png" alt="">
+                <img class="cj_pop_12_con_t_img cj_img_jp_02" src="./images/pop/cj_pop_12_jp02.png" alt="">
+                <img class="cj_pop_12_con_t_img cj_img_jp_03" src="./images/pop/cj_pop_12_jp03.png" alt="">
+                <img class="cj_pop_12_con_t_img cj_img_jp_04" src="./images/pop/cj_pop_12_jp04.png" alt="">
+            </div>
+            <div class="cj_pop_12_con_f">
+                <h2 class="cj_pop_12_con_f_h2"></h2>
+                <p class="cj_pop_12_con_f_p"></p>
+            </div>
+            <div class="cj_pop_12_con_btn">
+                <a href="javascript:;" class="cj_pop_12_con_btn_a">点击领取</a>
+            </div>
+        </div>
+        <a href="javascript:;" class="cj_pop_12_close"><img src="./images/pop/cj_pop_12_close.png" alt=""></a>
+    </div>
+    <!-- 中奖 一种奖项 弹出框 end -->
+
+    <!-- 没中奖 弹出框 start -->
+    <div class="pop_layer cj_pop_12" id="empty_draw">
+        <img class="cj_pop_img12" src="./images/pop/cj_pop_12_bg_no.png" alt="">
+        <div class="cj_pop_12_con">
+            <div class="cj_pop_12_con_t">
+                <img src="./images/pop/cj_pop_12_jp_k.png" alt="">
+            </div>
+            <div class="cj_pop_12_con_f">
+                <h2 class="cj_pop_12_con_f_h2">奖品溜走了~</h2>
+                <p class="cj_pop_12_con_f_p">好可惜！差点就中了~</p>
+            </div>
+            <div class="cj_pop_12_con_btn">
+                <a href="javascript:;" class="cj_pop_12_con_btn_a">消费122再抽一次</a>
+            </div>
+        </div>
+        <a href="javascript:;" class="cj_pop_12_close"><img src="./images/pop/cj_pop_12_close.png" alt=""></a>
+    </div>
+    <!-- 没中奖 弹出框 end -->
+
+    <!-- 规则说明 弹出框 start -->
+    <div class="pop_layer cj_pop_rules" id="rulebooks" style="overflow:auto;">
+        <div class="cj_rule">
+            <a href="javascript:;" class="cj_rule_btn close_click_rules"></a>
+            <h3 class="cj_rule_title">规则说明</h3>
+            <div class="cj_rule_con">
+                <p>1.所有的现金劵及优惠券均由唐人街商城的商家提供；</p>
+                <p>2.若抽中的是现金劵或优惠券，只需点击领取即可领取该现金劵或优惠券，切劵中的现金金额或优惠金额均是随机出现的；</p>
+                <p>3.该现金劵或优惠券仅限于在提供此劵的商家店铺中使用；</p>
+                <p>4.该现金劵或优惠券的有效期均为5天（即从你领取该劵那一刻开始计时，至第五天的同一时间到期），逾期作废；</p>
+                <p>5.若抽中现金劵或优惠券后未计时领取，则视作您放弃领取此劵，该项奖励作废；</p>
+                <p>6.若抽中100积分奖励，则积分会自动添加到您的总积分中去，无需进行其他任何操作；</p>
+                <p>7.所有在中奖页面显示的店铺名称均可直接点击并进去商家店铺进行查看或直接进入商家店铺进行购买其产品（温馨提示：抽到现金劵或优惠券的用户，结算的时候不要忘记使用卷啦）。</p>
+                <p>8.每人每天签到可获取一次免费机会，100唐宝购买一次。</p>
+            </div>
+            <div class="cj_rule_foot">
+                <span>本次活动由大唐天下赞助，与Apple lnc.无关</span>
+            </div>
+        </div>
+    </div>
+    <!-- 规则说明 弹出框 end -->
+
+    <div class="activity-cont wha_100">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back bar-left" href="javascript:history.go(-1);">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title">双12抽奖大转盘</h1>
+            <a href="javascript:;" class="right_btnsa">中奖记录</a>
+        </header>
+        <div class="activity-mid cj_bg cj_hsa" style="">
+            <!-- banner start-->
+            <div class="cj_banner">
+                <img src="./images/cj_title_font.png" alt="">
+            </div>
+            <!-- banner end-->
+            <!-- 主体  start -->
+            <div class="cj_content_bg">
+                <div class="cj_content_body">
+                    <!-- 转盘区 start -->
+                    <div class="cj_turntables">
+                        <img class="turntables_img" src="./images/cj_zp_bg.png" alt="" >
+                        <div class="cj_draw_click">
+                            <img class="rotateArrow" src="./images/cj_zp_round.png" alt="">
+                        </div>
+                    </div>
+                    <!-- 转盘区 end -->
+                </div>
+            </div>
+            <div class="cj_rules">
+                <a href="javascript:;" class="open_click_rules">使用说明</a>
+            </div>
+            <!-- 主体  start -->
+        </div>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+</html>

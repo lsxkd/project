@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中奖详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/cj_css.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/cj_js.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body class="bg_fff">
+    <!-- 遮罩层 start -->
+    <div class="pop_cover_bg"></div>
+    <!-- 遮罩层 end -->
+    <!-- 地址选择 弹出层 start-->
+    <div class="pop_address" id="address_pop">
+        <div class="pop_address_box">
+            <div class="pop_address_t">
+                <span>收货地址选择</span>
+            </div>
+            <div class="pop_address_c">
+                <!-- 地址重复区  start -->
+                <div class="pop_address_c_item actives">
+                    <span class="pop_address_c_item_l"></span>
+                    <div class="pop_address_c_item_c">
+                        <span>广东省广州市天河区天河路589号正佳广场1栋A562c</span>
+                    </div>
+                </div>
+                <!-- 地址重复区  end -->
+                <!-- 地址重复区  start -->
+                <div class="pop_address_c_item">
+                    <span class="pop_address_c_item_l"></span>
+                    <div class="pop_address_c_item_c">
+                        <span>广东省广州市天河区天河路589号正佳广场1栋A562c</span>
+                    </div>
+                </div>
+                <!-- 地址重复区  end -->
+                <!-- 地址重复区  start -->
+                <div class="pop_address_c_item">
+                    <span class="pop_address_c_item_l"></span>
+                    <div class="pop_address_c_item_c">
+                        <span>广东省广州市天河区天河路589号正佳广场1栋A562c</span>
+                    </div>
+                </div>
+                <!-- 地址重复区  end -->
+                
+            </div>
+            <div class="pop_address_btn">
+                <a href="javascript:;" class="">添加收货地址</a>
+            </div>
+        </div>
+    </div>
+    <!-- 地址选择 弹出层 end-->
+    <div class="activity-cont whs_100 bg_fff">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back bar-left" href="javascript:history.go(-1);">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title">中奖详情</h1>
+            <!-- <a href="javascript:;" class="right_btnsa">中奖记录</a> -->
+        </header>
+        <div class="activity-mid" style="">
+            <div class="details_con">
+                <div class="details_con_top">
+                    <div class="details_con_top_l fll">
+                        <img src="./images/phone_icon.png" alt="">
+                    </div>
+                    <div class="details_con_top_r flr">
+                        <h2 class="top_r_h2 ovfl_h">Apple/苹果 iPhone 8 </h2>
+                        <p class="top_r_p ovfl_h">市场价：¥6888-¥7888</p>
+                        <p class="top_r_p ovfl_h">商品属性：iPhone8  黑色  64G</p>
+                        <p class="top_r_p ovfl_h">中奖日期：2017-11-15  18:16:10</p>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                <div class="details_con_info">
+                    <div class="details_con_info_t">
+                        <span>收货地址信息确认</span>
+                    </div>
+                    <div class="details_con_info_c">
+                        <!-- 收货人 start-->
+                        <div class="info_c_item">
+                            <div class="info_c_item_l">
+                                <span>收&nbsp;货&nbsp;&nbsp;人：</span>
+                            </div>
+                            <div class="info_c_item_c">
+                                <input type="text" placeholder="请输入收货人姓名" class="">
+                            </div>
+                        </div>
+                        <!-- 收货人 end-->
+
+                        <!-- 手机号码 start-->
+                        <div class="info_c_item">
+                            <div class="info_c_item_l">
+                                <span>手机号码：</span>
+                            </div>
+                            <div class="info_c_item_c">
+                                <input type="text" placeholder="请输入手机号码" class="">
+                            </div>
+                        </div>
+                        <!-- 手机号码 end-->
+
+                        <!-- 收货地址 start-->
+                        <div class="info_c_item info_c_item_h">
+                            <div class="info_c_item_l">
+                                <span>收货地址：</span>
+                            </div>
+                            <div class="info_c_item_c item_r_p">
+                                <p class="info_c_item_c_p">请选择收货地址</p>
+                                <div class="info_c_item_c_address">
+                                    <span>广东省广州市越秀区广州大道北197号新达城广场27楼</span>
+                                </div>
+                            </div>
+                            <div class="info_c_item_r">
+                                <img src="./images/icon_qianjin.png" alt="">
+                            </div>
+                        </div>
+                        <!-- 收货地址 end-->
+                        
+
+                    </div>
+                    <div class="details_con_info_btn">
+                        <a href="javascript:;" class="no_selects">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<script>
+    $(function(){
+        
+    })
+
+</script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+</html>

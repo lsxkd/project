@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>已发放中奖详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/cj_css.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/cj_js.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body class="bg_fff">
+    <!-- 遮罩层 start -->
+    <div class="pop_cover_bg"></div>
+    <!-- 遮罩层 end -->
+    
+    <div class="activity-cont whs_100 bg_fff">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back bar-left" href="javascript:history.go(-1);">
+                <img src="images/left-icon.png" alt="" width="10">
+            </a>
+            <h1 class="title">已发放中奖详情</h1>
+            <!-- <a href="javascript:;" class="right_btnsa">中奖记录</a> -->
+        </header>
+        <div class="activity-mid" style="">
+            <div class="send_details_con">
+                <div class="send_details_con_t">
+                    <img src="./images/phone_icon.png" alt="">
+                </div>
+                <div class="send_details_con_c">
+                    <div class="send_c_item">
+                        <h2 class="top_r_h2 ovfl_h">Apple/苹果 iPhone 8 </h2>
+                        <p class="top_r_p ovfl_h">市场价：¥6888-¥7888</p>
+                        <p class="top_r_p ovfl_h">商品属性：iPhone8  黑色  64G</p>
+                        
+                    </div>
+
+                    <div class="send_c_item">
+                        <p class="top_r_p ovfl_h">中奖日期：2017-11-15  18:16:10</p>
+                        <p class="top_r_p ovfl_h">领奖日期：2017-11-15</p>
+                    </div>
+
+                    <div class="send_c_item">
+                        <p class="top_r_p ovfl_h">订单状态：已发货</p>
+                        <p class="top_r_p ovfl_h">运单编号：75036952663526</p>
+                    </div>
+                    
+                </div>
+                <div class="send_details_con_banner">
+                    <div class="con_banner">
+                        <img src="./images/ad_banner_icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/config.js"></script>
+<script>
+    $(function(){
+        
+    })
+
+</script>
+<!--<script src="js/sm.js"></script>-->
+<script src="js/sm-extend.js"></script>
+<script>
+	var url=location.href;
+	var reg = /nobar=1/i;
+	if(url.match(reg)){
+		$('header').remove();
+		$('.activity-mid').css({top:0});
+	}
+</script>
+</html>
