@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5定位</title>
+	<script src="jquery-1.9.1.js"></script>
+</head>
+<body>
+	<div id="baidu_geo"></div>
+	<div id="google_geo"></div>
+	<div id="s_s_q"></div>
+</body>
+<script>
+
+	function getLocation(){ 
+		if (navigator.geolocation){ 
+			navigator.geolocation.getCurrentPosition(showPosition1,showError); 
+		}else{ 
+			alert("浏览器不支持地理定位。"); 
+		} 
+	} 
+	function showError(error){ 
+		switch(error.code) { 
+			case error.PERMISSION_DENIED: 
+			alert("定位失败,用户拒绝请求地理定位"); 
+			break; 
+			case error.POSITION_UNAVAILABLE: 
+			alert("定位失败,位置信息是不可用"); 
+			break; 
+			case error.TIMEOUT: 
+			alert("定位失败,请求获取用户位置超时"); 
+			break; 
+			case error.UNKNOWN_ERROR: 
+			alert("定位失败,定位系统失效"); 
+			break; 
+		} 
+	} 
+	function showPosition(position){ 
+		var lat = position.coords.latitude; //纬度 
+		var lag = position.coords.longitude; //经度 
+		alert('纬度:'+lat+',经度:'+lag); 
+	} 
+
+	getLocation()
+	function showPosition1(position){
+		var latlon = position.coords.latitude+','+position.coords.longitude; 
+		console.log(latlon)
+
+		//baidu 
+		var url1 = '<a href="http://api.map.baidu.com/geocoder/v2/?ak=C93b5178d7a8ebdb830b9b557abce78b&callback=renderReverse&location=23.130421,113.305847&output=json&pois=0">http://api.map.baidu.com/geocoder/v2/?ak=C93b5178d7a8ebdb830b9b557abce78b&callback=renderReverse&location=23.130421,113.305847&output=json&pois=0</a>'; 
+		var url = 'https://api.map.baidu.com/geocoder/v2/?ak=C93b5178d7a8ebdb830b9b557abce78b&callback=renderReverse&location='+latlon+'&output=json&pois=0'; 
+		$.ajax({ 
+			type: "GET", 
+			dataType: "jsonp", 
+			url: url, 
+			beforeSend: function(){ 
+				$("#baidu_geo").html('正在定位...'); 
+			}, 
+			success: function (json) { 
+				if(json.status==0){ 
+					$("#baidu_geo").html(json.result.formatted_address);
+					var htmls =  json.result.addressComponent.province +"  "+ json.result.addressComponent.city +"  "+ json.result.addressComponent.district
+					$("#s_s_q").append(htmls)
+					console.log(json.result.addressComponent)
+				} 
+			}, 
+			error: function (XMLHttpRequest, textStatus, errorThrown) { 
+				$("#baidu_geo").html(latlon+"地址位置获取失败"); 
+			} 
+		}); 
+	}; 
+	function showPosition2(position){ 
+		var latlon = position.coords.latitude+','+position.coords.longitude; 
+
+		//google 
+		var url = 'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN'; 
+		$.ajax({ 
+		type: "GET", 
+		url: url, 
+		beforeSend: function(){ 
+			$("#google_geo").html('正在定位...'); 
+		}, 
+		success: function (json) { 
+			if(json.status=='OK'){ 
+				var results = json.results; 
+				$.each(results,function(index,array){ 
+					if(index==0){ 
+					$("#google_geo").html(array['formatted_address']); 
+					} 
+				}); 
+			} 
+		}, 
+		error: function (XMLHttpRequest, textStatus, errorThrown) { 
+			$("#google_geo").html(latlon+"地址位置获取失败"); 
+		} 
+		}); 
+	} 
+</script>
+</html>

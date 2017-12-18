@@ -21,8 +21,22 @@ function getPosition (callback) {
             var lng = pos.coords.longitude;
             var lat = pos.coords.latitude;
             callback(lng,lat);
-        }, function(err){
-            console.log(err.message);
+        }, function(error){
+            console.log(error.message);
+            switch(error.code) { 
+				case error.PERMISSION_DENIED: 
+				alert("定位失败,用户拒绝请求地理定位"); 
+				break; 
+				case error.POSITION_UNAVAILABLE: 
+				alert("定位失败,位置信息是不可用"); 
+				break; 
+				case error.TIMEOUT: 
+				alert("定位失败,请求获取用户位置超时"); 
+				break; 
+				case error.UNKNOWN_ERROR: 
+				alert("定位失败,定位系统失效"); 
+				break; 
+			} 
         }, geo_options);
     } else {
          console.log("Browser didnt support geolocation");
@@ -34,5 +48,7 @@ getPosition(function(lng,lat){
     out.outerHTML='当前经度:'+lng+'<br/>当前纬度'+lat;
     console.log('当前经度:'+lng+'<br/>当前纬度'+lat)
 });
+
+
 </script>
 </html>
